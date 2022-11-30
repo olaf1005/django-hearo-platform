@@ -1,0 +1,896 @@
+@import "helpers.less";
+
+/* Songs listing */
+
+// TODO REFACTOR
+
+div.song.listing.admin,
+div.album.listing.download.admin {
+  > div {
+    &.sl-name {
+      div {
+        color: #ffffff;
+        vertical-align: middle;
+        width: none;
+        text-overflow: ellipsis;
+        width: 240px;
+        margin-top: 5px;
+        display: inline-block;
+        white-space: nowrap;
+      }
+    }
+
+}
+}
+
+div.song.listing,
+div.album.listing.download {
+  width: 100%;
+  font-size: 16px;
+  /* position: relative; */
+  z-index: 10;
+
+  &.song {
+    // height: 40px;
+  }
+  &.album {
+    height: 60px;
+  }
+
+  > div {
+    display: inline-block;
+    .vmiddle;
+    height: 40px;
+
+    // Albums
+
+    &.al-cover.al-cover--download {
+      // jank 15 px right margin
+      .dimen(75,60);
+    }
+
+    &.al-name {
+      width: 240px;
+
+      &.al-name--download {
+	width: 135px;
+      }
+
+      div {
+        text-overflow: ellipsis;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 115px;
+      }
+
+    }
+
+    // Songs
+
+    &.sl-play-button {
+      width: 50px;
+      text-align: center;
+    }
+
+    &.sl-progress {
+      padding-left: 45px;
+      width: 40px;
+      position: relative;
+
+      > div {
+        position: absolute;
+        top: 6px;
+        left: 47px;
+      }
+
+      input {
+        background: none;
+      }
+    }
+
+    &.sl-status {
+      width: 500px;
+    }
+
+    &.sl-name {
+      padding-left: 10px;
+
+      &.sl-name--playlist {
+        width: 330px;
+      }
+
+      &.sl-name--download {
+        width: 200px;
+        padding-left: 10px;
+      }
+
+      &.long {
+        width: 700px;
+      }
+
+      div {
+        vertical-align: middle;
+        text-overflow: ellipsis;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 303px;
+      }
+
+      div.sl-profile {
+        padding: 0px 10px;
+        display: inline-block;
+      }
+
+      input {
+        margin-left: -9px;
+        width: 150px;
+      }
+
+      span.processing {
+        color: @white60;
+        position: relative;
+        left: 20px;
+        cursor: default;
+      }
+      span.processing-error {
+        color: @red40;
+        position: relative;
+        left: 20px;
+        cursor: default;
+      }
+    }
+
+    &.sl-price--download {
+      width: 45px;
+    }
+
+    &.sl-buttons {
+      width: 100%;
+      padding-right: 7px;
+      text-align: right;
+    }
+
+    &.sl-delete {
+      width: 40px;
+      text-align: center;
+    }
+
+    &.pricing {
+      width: 370px;
+      padding-top: 2px;
+      div {
+        display: inline-block;
+      }
+
+      .nyp-opt {
+        width: 120px;
+        font-size: 11px;
+      }
+
+      .price-controls {
+        width: 225px;
+        color: #ffffff;
+
+        span.light {
+          margin-right: 10px;
+          color: #ffffff;
+        }
+      }
+    }
+
+    &.sl-dltype {
+      width: 220px;
+      font-size: 12px;
+
+      > ul.earl {
+        font-size: 12px;
+        display: none;
+        color: #ffffff;
+        li {
+          color: #ffffff;
+        }
+      }
+    }
+
+  }
+
+  button.delete {
+    display: inline-block;
+    margin-right: 9px;
+  }
+
+  &.pending {
+    .bgimg(@fabric-light);
+    border-bottom: 1px solid rgba(75,135,200,0.14);
+    color: @black40;
+    .border-radius-top();
+
+    emph {
+      color: rgba(0,0,0,0.8);
+    }
+  }
+
+  &.song:not(.pending), &.album.download{
+    &:nth-last-child(even) {
+      // background-color: rgba(240, 248, 255, 0.75);
+      border-bottom: 1px solid rgba(75,135,200,0.14);
+
+      div.sl-grip {
+        width: 35px;
+        .bgimg('grip.png');
+        cursor: all-scroll;
+      }
+    }
+
+    &:nth-last-child(odd) {
+      // background-color: rgba(255, 255, 255, 0.75);
+      border-bottom: 1px solid rgba(75,135,200,0.1);
+
+      div.sl-grip {
+        width: 35px;
+        .bgimg('grip.light.png');
+        cursor: all-scroll;
+      }
+    }
+
+    &:last-child {
+
+      &:not(.lifted){
+        .box-shadow(@white-undershadow);
+      }
+    }
+  }
+
+  &.lifted {
+    &.a {
+      .box-shadow(0px 1px 3px rgba(0,0,0,0.1));
+    }
+    &.b {
+      .box-shadow(0px 2px 5px rgba(0,0,0,0.25));
+    }
+    &.c {
+      .box-shadow(0px 3px 6px rgba(0,0,0,0.3));
+    }
+  }
+
+  &.nyp > div {
+    &.sl-price--download {
+      width:60px;
+    }
+  }
+}
+
+/* fix processing alignment */
+.processing .sl-play-button {
+    padding-left: 11px;
+}
+
+.processing .sl-delete {
+    width: 54px !important;
+    /* fix margin on display of singles */
+    button.delete {
+        margin-left: 6px;
+    }
+}
+
+
+
+/* Songs listing container */
+div.songs-container {
+  width: 100%;
+  min-height: 50px;
+  padding-bottom: 80px;
+  overflow: hidden;
+
+  div.songs-list {
+    margin-top: -41px;
+  }
+
+  div.music-uploader {
+    width: 958px;
+    margin: 30px 0px;
+    margin-bottom: -60px;
+
+    button {
+      position: relative;
+    }
+
+    div.upload-hint {
+      width: 100%;
+
+      img {
+        margin-bottom: 20px;
+      }
+
+      > div {
+        text-align: center;
+        .vmiddle;
+        width: 958px;
+      }
+    }
+  }
+}
+
+
+div.music.listing, div.event.listing {
+  .border-box;
+
+  .separator {
+    position: absolute;
+    bottom: 0;
+    left: 1px;
+    width: 100%;
+    height: 1px;
+    background: rgba(0,0,0,0.15);
+    z-index: 100;
+  }
+}
+
+div.event.listing {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  color: #d2d2d2;
+
+  &.big {
+    .dimen(462, 160);
+    height: 160px;
+
+    .artwork-frame {
+      .dimen(160, 160);
+    }
+
+    .info {
+      top: 10px;
+      left: 170px;
+      width: 280px;
+
+      .title {
+        font-size: 16px;
+      }
+
+    }
+
+    .date-icon {
+      top: 10px;
+    }
+    .time-icon {
+      margin-top: 57px;
+    }
+    .date-icon, .time-icon {
+      right: 10px;
+      cursor: default;
+    }
+  }
+
+
+  .artwork-frame {
+    .dimen(100, 100);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .date-icon {
+      @date-icon-red: #e92626;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      .dimen(40, 40);
+      background: @inner-red;
+      .box-shadow(inset 0px 0px 10px @outer-red);
+      border-radius: 4px;
+      border: 1px solid @border-red;
+      overflow: hidden;
+
+      .date-icon-month {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        color: white;
+        text-align: center;
+        padding: 1px 0;
+        font-size: 14px;
+        .text-shadow(0px 1px 0px @border-red);
+        .roboto600;
+      }
+
+      .date-icon-day {
+        width: 40px;
+        background: white;
+        .border-radii(0px, 0px, 4px, 4px);
+        position: absolute;
+        top: 17px;
+        left: 0px;
+        padding: 4px 0;
+        .roboto600;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+
+    .time-icon {
+      position: absolute;
+      top: 52px;
+      right: 5px;
+      background: #302d53;
+      width: 40px;
+      text-align: center;
+      border: 1px solid #17142b;
+      .box-shadow(inset 0px 0px 10px #221f3e);
+      color: white;
+      font-size: 12px;
+      padding: 2px 0;
+      .border-radius();
+      .roboto600;
+      cursor: default;
+    }
+  }
+
+  .info {
+    position: absolute;
+    top: 8px;
+    left: 105px;
+    width: 137px;
+
+    > div {
+      width: 100%;
+    }
+
+    .title, .subtitle {
+      line-height: 1.2;
+    }
+
+    .title {
+      font-size: 12px;
+
+      a {
+        font-weight: bold;
+
+        &:hover {
+          color: @outer-blue;
+        }
+      }
+    }
+
+    .subtitle {
+      margin-top: 5px;
+      font-size: 12px;
+
+      a {
+        font-weight: bold;
+
+        &:hover {
+          color: @outer-blue;
+        }
+      }
+    }
+
+    .description {
+      width: 170px;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  }
+
+  .listing-buttons {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 7px;
+    font-size: 0;
+
+    button {
+      display: inline-block;
+      margin: 0 2px;
+    }
+
+
+  }
+
+  &:active .artwork-frame {
+
+  }
+
+
+  &:not(.big) {
+    a {
+      .subtitle, .title {
+        .ellipsis-overflow;
+      }
+      .title {
+        font-weight: bold;
+      }
+      .subtitle {
+        font-weight: normal;
+      }
+
+      &:hover {
+        img{
+          opacity: 0.95;
+        }
+
+        .info {
+          color: @outer-blue;
+        }
+      }
+    }
+  }
+}
+
+
+div.music.listing {
+  @music-listing-border-radius: 3px;
+  width: 225px;
+  border-radius: @music-listing-border-radius;
+  position: relative;
+  // background: rgba(255, 255, 255, 0.8);
+  margin: 7px 0;
+
+  .music-listing__metadata {
+
+    background-color:#333333;
+    border-top: 1px solid @black20;
+    border-bottom: 1px solid @black20;
+    color: @black90;
+    padding: 10px;
+    .border-radius-bottom(@music-listing-border-radius);
+
+    .title {
+      font-size: 18px;
+      margin-bottom: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 700;
+      line-height: 20px;
+      color: #d2d2d2;
+    }
+
+    .subtitle {
+      margin-bottom: 2px;
+      width: 230px;
+      color: #d2d2d2;
+      .ellipsis-overflow;
+    }
+
+  }
+
+  .artwork-frame {
+    width: 100%;
+    .border-radius-top(@music-listing-border-radius);
+    overflow: hidden;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+
+  button.play-button {
+    position: absolute;
+    top: calc(~"50% - 40px");
+    left: 50%;
+    margin-left: -22.5px;
+    margin-top: -22.5px;
+  }
+
+  &:not(:hover) {
+    button.play-button {
+      opacity: 0.4;
+    }
+  }
+
+
+  a:hover, &:hover {
+    left: 0;
+
+    img {
+      opacity: 0.95;
+    }
+
+    .title, .subtitle {
+      color: @outer-blue;
+    }
+  }
+  a {
+    &:active .artwork-frame {
+
+    }
+  }
+
+  .artist-meta {
+    .roboto400;
+    color:#d2d2d2;
+    width:100%;
+    margin-bottom:5px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+
+    span + span:before {
+      content:'\2022';
+    }
+  }
+
+  .listing-buttons {
+    font-size: 0;
+
+    button {
+      display: inline-block;
+      margin: 0 2px 0 0;
+    }
+  }
+
+  .thatsyou {
+    .roboto400;
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    color: #999;
+  }
+}
+
+
+
+div.album.listing {
+  height: auto;
+  width: 100%;
+  position: relative;
+  // background: @white80;
+  .border-box;
+  &:not(.download) {
+    min-height: 140px;
+  }
+
+  .separator {
+    position: absolute;
+    bottom: 0;
+    left: 1px;
+    width: 100%;
+    height: 1px;
+    background: rgba(0,0,0,0.15);
+    z-index: 100;
+  }
+
+  .artwork-frame {
+    width: 140px;
+    height: 85px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+
+    .artwork-full {
+      position: relative;
+      top: -5%;
+    }
+  }
+
+
+  .artwork-frame {
+    width: 140px;
+    height: 140px;
+
+    .artwork-full {
+      width: 140px;
+      min-height: 140px;
+      top: 0;
+    }
+  }
+
+
+  a {
+    left: 0;
+
+    &.ajax {
+      &:hover {
+        .song-play-button {
+          background-position:0px -29px;
+        }
+      }
+      &:active {
+        .song-play-button {
+          background-position:0px -58px;
+        }
+      }
+    }
+
+    &:hover .title, &:hover .subtitle {
+      color: @outer-blue;
+    }
+  }
+
+  .album-content-header{
+    .title, .subtitle {
+      width: 152px;
+      .ellipsis-overflow;
+      line-height: 1.3;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      position: absolute;
+      top: 10px;
+    }
+
+
+
+    .subtitle {
+      font-size: 14px;
+      font-weight: normal;
+      position: absolute;
+      top: 30px;
+    }
+  }
+
+  .buttons {
+    position: absolute;
+    top: 100px;
+    left: 150px;
+    height: 30px;
+    width: 200px;
+
+    button {
+      margin: 0 3px;
+    }
+  }
+
+
+  .album-content-tracks {
+    margin-bottom: 1px;
+    margin-top: 1px;
+
+    .song.listing {
+      width: 100%;
+      .border-box;
+
+      .sl-name {
+        width: 195px;
+      }
+
+      &:last-child {
+        //border-bottom: none;
+      }
+
+    }
+  }
+
+  .album-content-header {
+    width: 100%;
+
+    .album-info {
+      // width: 80%;
+      height: 200px;
+      // background-color: #f3f9ff;
+      // border-top: 1px solid #d9e6f7;
+      // border-bottom: 1px solid #d9e6f7;
+      position: relative;
+      .border-box;
+      display: inline-block;
+
+      div {
+        left: 15px;
+      }
+
+      .title {
+        width: 550px;
+      }
+    }
+
+    .album-art {
+      height: 200px;
+      display: inline-block;
+      float: left;
+
+      button.play-button {
+        position: absolute;
+        top: 42px;
+        left: 42px;
+      }
+
+      &:hover {
+        button.play-button {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+
+div.video.listing {
+  .dimen(300, 65);
+  margin: 3px;
+  .dark-inset;
+  display: inline-block;
+
+  header {
+    font-size: 14px;
+    margin: 5px;
+    line-height: 1.2;
+    .ellipsis-overflow;
+  }
+
+  button.blue {
+    float: left;
+    margin: 5px;
+    font-family: 'StyreneA-Regular', sans-serif;
+  }
+
+  button.red {
+    float: right;
+    margin: 5px;
+  }
+}
+
+.user.listing.short {
+  position: relative;
+  height: 40px;
+  .border-box;
+
+  .picture-screen {
+    width: 60px;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    img {
+      margin-left: 10px;
+      border-radius: 30px;
+      width: 30px;
+      margin-top: 5px;
+    }
+  }
+
+  .name {
+    font-size: 16px;
+    color: #ffffff;
+    width: 178px;
+    .ellipsis-overflow;
+    position: absolute;
+    top: 13px;
+    left: 70px;
+  }
+
+  &:hover {
+
+    img {
+      opacity: 0.93;
+    }
+    .name {
+      color: @outer-blue;
+    }
+  }
+
+  &:active {
+    .picture-screen {
+    }
+  }
+
+  // .fake-border {
+  //   width: 1px;
+  //   height: 100%;
+  //   background: @black30;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  // }
+  // .fake-border-2 {
+  //   width: 61px;
+  //   height: 1px;
+  //   background: @black30;
+  //   position: absolute;
+  //   top: 39px;
+  //   left: 0;
+  // }
+}
+
+

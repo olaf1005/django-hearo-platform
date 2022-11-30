@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="719px" preserveAspectRatio="none" style="width:1623px;height:719px;background:#00000000;" version="1.1" viewBox="0 0 1623 719" width="1623px" zoomAndPan="magnify"><defs/><g><!--MD5=[42591781c74864aa6bd8b9830e23a81c]
+cluster Docker--><path d="M413.5566,295.2197 C430.0124,266.3142 456.1782,259.8878 476.4021,291.2934 C495.2326,254.8942 522.186,252.3279 545.9721,286.4013 C567.0682,252.9727 596.5971,260.8928 611.8155,292.3645 C629.3572,258.402 661.0174,258.3833 680.9651,289.8204 C696.4505,260.8446 721.0703,257.5283 741.1446,284.9211 C763.1663,245.9771 794.5084,255.6448 814.2867,287.247 C833.7956,254.8307 854.804,258.8439 874.193,287.3648 C896.6757,249.1223 918.5171,248.6895 944.003,284.5351 C969.4413,260.5752 990.0089,260.7941 1005.7196,294.8781 C1021.2981,258.2211 1048.9316,255.361 1073.3468,285.9975 C1098.4876,253.2733 1122.9687,261.3643 1141.5388,292.9634 C1159.1312,260.4975 1184.7745,259.1607 1207.538,287.3352 C1231.4427,259.5125 1255.3073,263.8527 1271.3902,295.7045 C1291.5863,255.8411 1320.3272,253.5835 1344,292.5 C1348.7919,291.0837 1351.5731,293.2081 1350.3712,298.3357 C1379.6849,325.5645 1385.3974,350.9091 1346.5516,374.7301 C1387.9896,388.0825 1384.7566,424.6941 1357.1949,448.0611 C1388.145,476.5128 1390.1475,503.7964 1348.7703,524.2504 C1379.988,549.5908 1382.5646,590.4213 1337,604.5 C1342.3061,601.6333 1345.8112,604.0776 1345.7789,609.896 C1326.7649,642.3056 1296.3514,644.9088 1274.3743,613.1956 C1252.8388,637.4471 1234.7707,637.1778 1214.2575,611.9534 C1196.5573,638.8466 1165.8757,641.1813 1149.2126,610.7762 C1131.6934,647.7796 1102.829,645.3199 1079.7587,616.6466 C1063.2668,656.6283 1030.7086,657.3904 1009.0597,621.4487 C986.5517,650.3613 967.1605,646.7483 948.1791,617.7417 C929.1688,659.5605 899.2912,659.1432 872.8481,625.1249 C851.3849,653.9649 827.7656,648.3461 810.9724,620.0661 C794.6637,654.78 765.9325,652.4817 745.8288,623.9766 C725.833,649.3681 698.9617,653.2824 683.1242,619.5653 C664.959,652.9445 631.9022,650.5136 611.8267,621.7572 C589.6015,651.6533 566.9517,645.9422 549.6332,616.6053 C525.8422,646.11 495.0077,643.065 480.9759,606.4687 C449.9199,642.6627 423.2688,639.6637 401,597.5 C402.1562,598.231 402.1674,599.0965 401.1812,599.9838 C369.9434,576.7193 365.3849,548.4968 402.9075,526.8554 C365.7887,510.9136 358.7528,480.1944 394.2482,455.4469 C354.8831,430.4853 363.8541,393.6227 398.6168,372.5684 C361.7534,339.7156 369.1792,310.1964 408,285.5 C413.8575,285.5778 417.1158,289.7585 413.5566,295.2197 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="847.5" y="304.0352">Docker</text><!--MD5=[f25eed0824fb1f8848d815c6af46f39c]
+cluster Media--><polygon points="709,346.5,719,336.5,1312,336.5,1312,461.5,1302,471.5,709,471.5,709,346.5" style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="1302" x2="1312" y1="346.5" y2="336.5"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="709" x2="1302" y1="346.5" y2="346.5"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="1302" x2="1302" y1="346.5" y2="471.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43" x="985" y="363.0352">Media</text><!--MD5=[37e4e73a15ca43d8be880fe1133d556d]
+entity loadbalancer--><polygon fill="#F8F8F8" points="436.5,394.5,446.5,384.5,581.5,384.5,581.5,437.4766,571.5,447.4766,436.5,447.4766,436.5,394.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="571.5" x2="581.5" y1="394.5" y2="384.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="436.5" x2="571.5" y1="394.5" y2="394.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="571.5" x2="571.5" y1="394.5" y2="447.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="451.5" y="418.0352">Docker Swarm</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="451.5" y="434.5234">(Load Balancer)</text><!--MD5=[4541fb81c80c07473fe4b07432ef0971]
+entity app--><polygon fill="#F8F8F8" points="617,403,627,393,685,393,685,429.4883,675,439.4883,617,439.4883,617,403" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="675" x2="685" y1="403" y2="393"/><line style="stroke:#000000;stroke-width:1.5;" x1="617" x2="675" y1="403" y2="403"/><line style="stroke:#000000;stroke-width:1.5;" x1="675" x2="675" y1="403" y2="439.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="632" y="426.5352">App</text><!--MD5=[0e1fecc31e3549f2a1667c6349b56d9e]
+entity postgres--><path d="M635.5,545 C635.5,535 686,535 686,535 C686,535 736.5,535 736.5,545 L736.5,570.4883 C736.5,580.4883 686,580.4883 686,580.4883 C686,580.4883 635.5,580.4883 635.5,570.4883 L635.5,545 " fill="#F8F8F8" style="stroke:#000000;stroke-width:1.5;"/><path d="M635.5,545 C635.5,555 686,555 686,555 C686,555 736.5,555 736.5,545 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="645.5" y="572.5352">Postgres DB</text><!--MD5=[47c6c16b7923c5c98d772847e5dd1ea6]
+entity elasticsearch--><path d="M771.5,545 C771.5,535 828,535 828,535 C828,535 884.5,535 884.5,545 L884.5,570.4883 C884.5,580.4883 828,580.4883 828,580.4883 C828,580.4883 771.5,580.4883 771.5,570.4883 L771.5,545 " fill="#F8F8F8" style="stroke:#000000;stroke-width:1.5;"/><path d="M771.5,545 C771.5,555 828,555 828,555 C828,555 884.5,555 884.5,545 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="781.5" y="572.5352">Elastic Search</text><!--MD5=[c2074b11afcc9f30307cceb87b6f88b4]
+entity rethinkdb--><path d="M1012,536.5 C1012,526.5 1059,526.5 1059,526.5 C1059,526.5 1106,526.5 1106,536.5 L1106,578.4766 C1106,588.4766 1059,588.4766 1059,588.4766 C1059,588.4766 1012,588.4766 1012,578.4766 L1012,536.5 " fill="#F8F8F8" style="stroke:#000000;stroke-width:1.5;"/><path d="M1012,536.5 C1012,546.5 1059,546.5 1059,546.5 C1059,546.5 1106,546.5 1106,536.5 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="1022" y="564.0352">Rethink DB</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="1022" y="580.5234">(Media DB)</text><!--MD5=[de5dc476b5cd49b5a92d294ad2af7d70]
+entity redis--><path d="M919.5,545 C919.5,535 948,535 948,535 C948,535 976.5,535 976.5,545 L976.5,570.4883 C976.5,580.4883 948,580.4883 948,580.4883 C948,580.4883 919.5,580.4883 919.5,570.4883 L919.5,545 " fill="#F8F8F8" style="stroke:#000000;stroke-width:1.5;"/><path d="M919.5,545 C919.5,555 948,555 948,555 C948,555 976.5,555 976.5,545 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="929.5" y="572.5352">Redis</text><!--MD5=[16ce0407140d89f645ca994002a10c2a]
+entity hederaspringapi--><polygon fill="#F8F8F8" points="436,544.5,446,534.5,600,534.5,600,570.9883,590,580.9883,436,580.9883,436,544.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="590" x2="600" y1="544.5" y2="534.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="436" x2="590" y1="544.5" y2="544.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="590" x2="590" y1="544.5" y2="580.9883"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="451" y="568.0352">Hedera Spring API</text><!--MD5=[4273ef638cd40c975caa1a9697adf652]
+entity downloads--><polygon fill="#F8F8F8" points="1017.5,394.5,1027.5,384.5,1126.5,384.5,1126.5,437.4766,1116.5,447.4766,1017.5,447.4766,1017.5,394.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1116.5" x2="1126.5" y1="394.5" y2="384.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="1017.5" x2="1116.5" y1="394.5" y2="394.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="1116.5" x2="1116.5" y1="394.5" y2="447.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="1032.5" y="418.0352">Download</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="1032.5" y="434.5234">Processor</text><!--MD5=[5cc73742f4f885359ebfbdc1634c0fb4]
+entity images--><polygon fill="#F8F8F8" points="875.5,394.5,885.5,384.5,982.5,384.5,982.5,437.4766,972.5,447.4766,875.5,447.4766,875.5,394.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="972.5" x2="982.5" y1="394.5" y2="384.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="875.5" x2="972.5" y1="394.5" y2="394.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="972.5" x2="972.5" y1="394.5" y2="447.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="890.5" y="418.0352">Image</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="890.5" y="434.5234">Processor</text><!--MD5=[6ee5a697d08536f750bac5cc824bd58e]
+entity uploads--><polygon fill="#F8F8F8" points="733.5,394.5,743.5,384.5,840.5,384.5,840.5,437.4766,830.5,447.4766,733.5,447.4766,733.5,394.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="830.5" x2="840.5" y1="394.5" y2="384.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="733.5" x2="830.5" y1="394.5" y2="394.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="830.5" x2="830.5" y1="394.5" y2="447.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="748.5" y="418.0352">Upload</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="748.5" y="434.5234">Processor</text><!--MD5=[1b22b79248ccb6293af42a8a913dbfdf]
+entity changes--><polygon fill="#F8F8F8" points="1161.5,394.5,1171.5,384.5,1268.5,384.5,1268.5,437.4766,1258.5,447.4766,1161.5,447.4766,1161.5,394.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1258.5" x2="1268.5" y1="394.5" y2="384.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="1161.5" x2="1258.5" y1="394.5" y2="394.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="1258.5" x2="1258.5" y1="394.5" y2="447.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="1176.5" y="418.0352">Change</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="1176.5" y="434.5234">Processor</text><!--MD5=[9eb86c2b3d925a16ba1bdada40016c70]
+entity Internet--><path d="M476.3988,161.8259 C478.9638,155.7893 482.934,155.2086 487.7765,159.2565 C491.2724,154.4522 496.434,153.3207 499.4051,159.7975 C501.2201,154.4323 505.7807,154.207 509.2423,158.0356 C512.801,154.0078 518.5415,153.6781 520.4392,159.8576 C523.8776,155.0845 528.2059,153.9358 531.7597,159.734 C536.2738,154.2606 539.7886,154.8011 543.0842,160.9238 C552.2122,163.5851 555.5899,167.9456 550.4225,177.0942 C556.1656,184.058 551.8882,191.3792 543.9515,192.6537 C541.8116,198.0935 537.8219,199.6123 533.1207,195.5835 C529.9415,201.1922 525.5858,201.9254 521.0572,197.1513 C519.5309,203.275 515.476,205.9758 509.7206,201.8113 C504.5438,205.8499 500.8058,203.6187 499.6306,197.74 C494.2901,202.1715 489.7708,201.7882 486.9358,194.924 C482.8968,198.5061 478.7822,197.2207 477.1123,192.2142 C468.5253,188.5586 467.7721,181.6957 473.9753,175.2975 C467.7384,169.4909 468.2324,165.0415 476.3988,161.8259 " fill="#F8F8F8" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="482" y="180.5352">Internet</text><!--MD5=[e3897b554a38f43a6bf8500946ad5028]
+entity sentry--><rect fill="#F8F8F8" height="62.9766" style="stroke:#383838;stroke-width:1.5;" width="145" x="220.5" y="384.5"/><rect fill="#F8F8F8" height="10" style="stroke:#383838;stroke-width:1.5;" width="15" x="345.5" y="389.5"/><rect fill="#F8F8F8" height="2" style="stroke:#383838;stroke-width:1.5;" width="4" x="343.5" y="391.5"/><rect fill="#F8F8F8" height="2" style="stroke:#383838;stroke-width:1.5;" width="4" x="343.5" y="395.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="235.5" y="418.0352">Sentry</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="235.5" y="434.5234">(Error Logging)</text><!--MD5=[bad208fc3af444c088897ed7a2c6b9d2]
+entity sematext--><rect fill="#F8F8F8" height="62.9766" style="stroke:#383838;stroke-width:1.5;" width="178" x="7" y="384.5"/><rect fill="#F8F8F8" height="10" style="stroke:#383838;stroke-width:1.5;" width="15" x="165" y="389.5"/><rect fill="#F8F8F8" height="2" style="stroke:#383838;stroke-width:1.5;" width="4" x="163" y="391.5"/><rect fill="#F8F8F8" height="2" style="stroke:#383838;stroke-width:1.5;" width="4" x="163" y="395.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="22" y="418.0352">Sematext</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="22" y="434.5234">(Container Logging)</text><!--MD5=[3d99d59a27ec55cd9b0b1490801f78bc]
+entity dev--><ellipse cx="651" cy="14" fill="#F8F8F8" rx="8" ry="8" style="stroke:#383838;stroke-width:1.5;"/><path d="M651,22 L651,49 M638,30 L664,30 M651,49 L638,64 M651,49 L664,64 " fill="none" style="stroke:#383838;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="25" x="638.5" y="80.0352">Dev</text><!--MD5=[670ed58fbcfa18955cb1914f9e6929f5]
+entity gitlab--><rect fill="#F8F8F8" height="62.9766" style="stroke:#383838;stroke-width:1.5;" width="91" x="605.5" y="143.5"/><rect fill="#F8F8F8" height="10" style="stroke:#383838;stroke-width:1.5;" width="15" x="676.5" y="148.5"/><rect fill="#F8F8F8" height="2" style="stroke:#383838;stroke-width:1.5;" width="4" x="674.5" y="150.5"/><rect fill="#F8F8F8" height="2" style="stroke:#383838;stroke-width:1.5;" width="4" x="674.5" y="154.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="620.5" y="177.0352">Gitlab</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="620.5" y="193.5234">(CI/CD)</text><!--MD5=[95b7d373d4d361719b8ec38ac184aaaa]
+entity cloudfiles--><rect fill="#F8F8F8" height="52.9766" rx="35" ry="35" style="stroke:#000000;stroke-width:1.5;" width="89" x="1376.5" y="531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="1386.5" y="554.5352">Cloudfiles</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="1386.5" y="571.0234">(Media)</text><!--MD5=[b165ca7cce796f881c879adda4a6bef9]
+entity s3--><rect fill="#F8F8F8" height="52.9766" rx="35" ry="35" style="stroke:#000000;stroke-width:1.5;" width="117" x="1500.5" y="531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="17" x="1510.5" y="554.5352">S3</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="1510.5" y="571.0234">(Intermediary)</text><!--MD5=[cf191b54df74da3de72895e8ba58549a]
+entity hashgraph--><rect fill="#F8F8F8" height="46.4883" style="stroke:#383838;stroke-width:1.5;" width="115" x="460.5" y="667.5"/><rect fill="#F8F8F8" height="10" style="stroke:#383838;stroke-width:1.5;" width="15" x="555.5" y="672.5"/><rect fill="#F8F8F8" height="2" style="stroke:#383838;stroke-width:1.5;" width="4" x="553.5" y="674.5"/><rect fill="#F8F8F8" height="2" style="stroke:#383838;stroke-width:1.5;" width="4" x="553.5" y="678.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="475.5" y="701.0352">Hashgraph</text><!--MD5=[5a11f22705b9327d3caf492b3988b465]
+link Internet to loadbalancer--><path d="M509,203.31 C509,246.67 509,331.27 509,379.35 " fill="none" id="Internet-loadbalancer" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="509,384.46,513,375.46,509,379.46,505,375.46,509,384.46" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="509,198.06,505,207.06,509,203.06,513,207.06,509,198.06" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="35" x="510" y="250.0684">Https</text><!--MD5=[c1d248f8607345c35acbca2db7c684ff]
+link loadbalancer to app--><path d="M586.89,416 C595.17,416 603.44,416 611.72,416 " fill="none" id="loadbalancer-app" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="616.87,416,607.87,412,611.87,416,607.87,420,616.87,416" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="581.66,416,590.66,420,586.66,416,590.66,412,581.66,416" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[1677410c29ac5cb969364e03967153a6]
+link app to hederaspringapi--><path d="M633.65,443.46 C624.13,457.19 611.69,473.89 599,487.5 C584.49,503.06 566.64,518.59 551.4,530.96 " fill="none" id="app-hederaspringapi" style="stroke:#383838;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#383838" points="547.17,534.36,556.6932,531.8485,551.0702,531.2313,551.6873,525.6082,547.17,534.36" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="636.51,439.3,628.103,444.4305,633.6677,443.4135,634.6846,448.9782,636.51,439.3" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[3ee1fe88393787a77026a35bacdb0b2b]
+link app to postgres--><path d="M657.83,444.22 C664.04,468.99 673.16,505.33 679.33,529.9 " fill="none" id="app-postgres" style="stroke:#383838;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#383838" points="680.6,534.96,682.2977,525.2586,679.3873,530.1093,674.5366,527.1989,680.6,534.96" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="656.55,439.1,654.859,448.8026,657.766,443.9499,662.6188,446.8569,656.55,439.1" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[303a90f30679854cf016cb5d404aae66]
+link app to elasticsearch--><path d="M672.37,442.97 C684.63,457.02 700.77,474.18 717,487.5 C737.47,504.3 762.34,520.12 783.35,532.37 " fill="none" id="app-elasticsearch" style="stroke:#383838;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#383838" points="787.77,534.92,781.977,526.955,783.4403,532.4193,777.9759,533.8826,787.77,534.92" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="669.02,439.09,671.8781,448.515,672.2892,442.8732,677.9311,443.2843,669.02,439.09" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[5432fb743c5f4c1fcca015053eb8b4c7]
+link app to rethinkdb--><path d="M665.54,439.28 C677.37,455.45 695.58,476.37 717,487.5 C744.58,501.83 964.18,517.73 994,526.5 C998.29,527.76 1002.66,529.26 1007,530.91 " fill="none" id="app-to-rethinkdb" style="stroke:#383838;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#383838" points="1011.69,532.75,1004.7745,525.7374,1007.0359,530.9226,1001.8507,533.184,1011.69,532.75" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[32efba120b3006892fe0f5696ec44a3f]
+link app to redis--><path d="M669.23,443.4 C681.1,458.59 697.91,476.74 717,487.5 C753.61,508.12 863.19,510.42 902,526.5 C906.33,528.3 910.7,530.51 914.93,532.91 " fill="none" id="app-redis" style="stroke:#383838;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#383838" points="919.45,535.59,913.7393,527.5658,915.1462,533.0449,909.6671,534.4519,919.45,535.59" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="666.02,439.2,668.3186,448.7769,669.061,443.169,674.6689,443.9113,666.02,439.2" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[c8366c0423b4a19f5ff0c7f4f7e61539]
+reverse link sentry to app--><path d="M302.82,379.47 C316.8,335.68 347.1,264.41 402.5,234 C437.37,214.86 546.63,214.86 581.5,234 C638.13,265.09 648.94,351.1 650.79,392.77 " fill="none" id="sentry-backto-app" style="stroke:#383838;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#383838" points="301.28,384.4,307.795,377.0139,302.7795,379.6301,300.1632,374.6147,301.28,384.4" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[88d9ffe58d9d39ce707251780cc34eff]
+reverse link sematext to Docker--><path d="M108.68,379.8 C126.19,336.1 162.35,264.68 220.5,234 C277.5,203.93 309.01,202.99 365.5,234 C382.9975,243.605 394.1019,259.2325 400.8834,277.402 " fill="none" id="sematext-backto-Docker" style="stroke:#383838;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#383838" points="106.84,384.46,113.8526,377.5445,108.6674,379.8059,106.406,374.6207,106.84,384.46" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[e09a2090e5e1905c5c9c1052dad6c1da]
+link dev to gitlab--><path d="M651,82.65 C651,97.66 651,114.97 651,130.46 " fill="none" id="dev-to-gitlab" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="651,143.49,655,137.49,651,131.49,647,137.49,651,143.49" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[0c51de66f8542e6995af7f9d38bf0424]
+link gitlab to app--><path d="M651,206.76 C651,251.18 651,333.1 651,379.86 " fill="none" id="gitlab-to-app" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="651,392.88,655,386.88,651,380.88,647,386.88,651,392.88" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[202287ee09fdc37fc484326564d49ed0]
+link Media to s3--><path d="M1312.0991,421.4329 C1312.6336,421.7253 1313.1924,422.0309 1313.7747,422.3495 C1314.9393,422.9865 1316.1981,423.6751 1317.5457,424.4123 C1320.2409,425.8867 1323.2914,427.5554 1326.6538,429.3947 C1340.1031,436.7519 1358.5425,446.8388 1379.1975,458.1375 C1420.5075,480.735 1470.68,508.18 1507.52,528.33 " fill="none" id="Media-to-s3" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="1512.29,530.95,1506.3151,523.1206,1507.9038,528.5497,1502.4746,530.1385,1512.29,530.95" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[1767add7e7a7206b5a8ccf7e1bee9617]
+link Media to cloudfiles--><path d="M1312.0648,426.6167 C1312.2338,426.8181 1312.4051,427.0223 1312.5787,427.2292 C1313.2729,428.0568 1314.003,428.9272 1314.7669,429.8378 C1320.8775,437.1225 1329.1425,446.9763 1338.38,457.99 C1356.855,480.0175 1379.22,506.685 1396.02,526.72 " fill="none" id="Media-to-cloudfiles" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="1399.6,530.98,1396.8766,521.5152,1396.385,527.1506,1390.7496,526.6591,1399.6,530.98" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[162be60358f6a6f0bb5fced6242f685c]
+link app to Media--><path d="M653.16,392.94 C658.46,351.54 676.29,265.95 734.5,234 C786.41,205.5 1215.59,205.5 1267.5,234 C1302.53,253.23 1312.1875,296.5325 1312.8338,336.075 C1312.9145,341.0178 1312.8545,345.9019 1312.6856,350.6728 C1312.6012,353.0583 1312.4896,355.4155 1312.3547,357.7376 C1312.2873,358.8987 1312.214,360.051 1312.1355,361.1937 C1312.0962,361.765 1312.0556,362.3339 1312.0138,362.9004 " fill="none" id="app-to-Media" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="1312.0138,362.9004,1315.5952,355.1432,1309.6115,354.701,1312.0138,362.9004" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[cf0da976df9551545ebef44274186941]
+link changes to app--><path d="M1210.69,384.36 C1202.81,340.76 1181.48,264.18 1126.5,234 C1088.32,213.04 772.68,213.04 734.5,234 C679.82,264.02 660.77,341.37 654.27,384.95 " fill="none" id="changes-to-app" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="653.16,392.94,657.2309,385.4282,651.2878,384.6036,653.16,392.94" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[464ae40e00484d479e9bc223aa5213d2]
+reverse link changes to rethinkdb--><path d="M1179.85,453.28 C1168.63,464.5 1155.99,476.73 1144,487.5 C1129.29,500.71 1112.51,514.57 1097.76,526.38 " fill="none" id="changes-backto-rethinkdb" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="1185.59,447.52,1177.8208,451.0752,1182.0741,455.3071,1185.59,447.52" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[6d92c1374ccbe4680f27ade43c7978a5]
+link uploads to rethinkdb--><path d="M815.19,451.64 C827.21,464.49 842.11,478.18 858,487.5 C912.24,519.32 935.06,504.59 994,526.5 C998.28,528.09 1002.67,529.84 1007.04,531.67 " fill="none" id="uploads-rethinkdb" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="1011.79,533.69,1005.0744,526.4858,1007.1891,531.7325,1001.9424,533.8472,1011.79,533.69" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="811.56,447.69,814.7208,457.0179,814.9496,451.3657,820.6018,451.5945,811.56,447.69" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[c76a92eae83ecbd731e5b169bb373b39]
+link images to rethinkdb--><path d="M961.18,451.53 C981.43,473.26 1007.45,501.18 1027.56,522.76 " fill="none" id="images-rethinkdb" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="1030.98,526.44,1027.7815,517.125,1027.5756,522.7781,1021.9224,522.5721,1030.98,526.44" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="957.53,447.61,960.7285,456.925,960.9344,451.2719,966.5876,451.4779,957.53,447.61" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[f86782449231a9a02237d3c7c4de1c16]
+link downloads to rethinkdb--><path d="M1068.68,452.68 C1066.71,473.72 1064.24,500.26 1062.29,521.23 " fill="none" id="downloads-rethinkdb" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="1061.8,526.44,1066.6051,517.8428,1062.2565,521.4609,1058.6385,517.1124,1061.8,526.44" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="1069.15,447.61,1064.3449,456.2072,1068.6935,452.5891,1072.3115,456.9376,1069.15,447.61" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[02d806fe7338b99bd2c4f9765e88350d]
+link hederaspringapi to hashgraph--><path d="M518,586 C518,608.33 518,639.65 518,661.98 " fill="none" id="hederaspringapi-hashgraph" style="stroke:#383838;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#383838" points="518,667.17,522,658.17,518,662.17,514,658.17,518,667.17" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="518,580.72,514,589.72,518,585.72,522,589.72,518,580.72" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[b83703b9c9c0777f572214a931e54012]
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+cloud Internet
+
+cloud Docker {
+    node loadbalancer [
+        Docker Swarm
+        (Load Balancer)
+    ]
+
+    Internet <-down-> loadbalancer : Https
+
+    node app [
+        App
+    ]
+
+    loadbalancer <-> app
+
+
+    node Media {
+        node downloads [
+            Download
+            Processor
+        ]
+        node images [
+            Image
+            Processor
+        ]
+        node uploads [
+            Upload
+            Processor
+        ]
+        node changes [
+            Change
+            Processor
+        ]
+    }
+
+    database postgres  [
+        Postgres DB
+    ]
+    database elasticsearch [
+        Elastic Search
+    ]
+    database rethinkdb [
+        Rethink DB
+        (Media DB)
+    ]
+    database redis [
+        Redis
+    ]
+    node hederaspringapi  [
+        Hedera Spring API
+    ]
+
+    app <.down.> hederaspringapi
+    app <.down.> postgres
+    app <.down.> elasticsearch
+    app .down.> rethinkdb
+    app <.down.> redis
+
+}
+
+component sentry [
+    Sentry
+    (Error Logging)
+]
+
+app .left.> sentry
+
+component sematext [
+    Sematext
+    (Container Logging)
+]
+
+Docker .left.> sematext
+
+actor dev [
+    Dev
+]
+
+component gitlab [
+    Gitlab
+    (CI/CD)
+]
+dev - -* gitlab
+gitlab - -* app
+
+storage cloudfiles [
+    Cloudfiles
+    (Media)
+]
+
+storage s3 [
+    S3
+    (Intermediary)
+]
+
+Media -down-> s3
+Media -down-> cloudfiles
+app ->> Media
+changes ->> app
+changes <<- rethinkdb
+uploads <-> rethinkdb
+images <-> rethinkdb
+downloads <-> rethinkdb
+
+component hashgraph [
+    Hashgraph
+]
+
+hederaspringapi <.down.> hashgraph
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 15:40:07 EAT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

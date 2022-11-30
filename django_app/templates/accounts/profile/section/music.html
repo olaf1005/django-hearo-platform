@@ -1,0 +1,34 @@
+{% load elements mathfilters %}
+<div class="scrollbar" id="scrollbar-screen-releases">
+    <div id="music">
+        {% if not releases_empty %}
+
+        {% if albums %}
+        <h3 class="blue">albums</h3>
+        {% for album in albums %}
+        {% albumlisting album view 1 %}
+        {% endfor %}
+        {% endif %}
+
+        {% if singles %}
+        <h3 class="blue">singles</h3>
+        {% for song in singles %}
+        {% songlisting song view %}
+        {% endfor %}
+        {% endif %}
+
+        {% else %}
+        <div class="empty">
+            <div class="msg">
+                {% if own %}
+                <p>This is where all your music goes!</p>
+                <p>Go upload it in the <a href="/my-account/music/">Dashboard.</a></p>
+                {% else %}
+                <p>{{ profile.name }} hasn't uploaded any music yet,</p>
+                <p>but lots of other people have! <a href="/">Go explore.</a></p>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>

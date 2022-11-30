@@ -1,0 +1,33 @@
+{% load elements %}
+<div class="event listing big">
+  <div class="separator"></div>
+
+  <div class="info">
+    <div class="title">
+      {% if event.title %}
+        <span style="font-weight: bold">{{ event.title }}</span>
+      {% else %}
+        {% for artist in artists %}{% if forloop.last %} and {% elif not forloop.first %}, {% endif %}<a href="/profile/{{ artist.keyword }}">{{ artist.name }}</a>{% endfor %}
+      {% endif %}
+    </div>
+    {% if event.title %}
+    <div class="subtitle">
+      with {% for artist in artists %}{% if forloop.last %} and {% elif not forloop.first %}, {% endif %}<a href="/profile/{{ artist.keyword }}">{{ artist.name }}</a>{% endfor %}
+    </div>
+    {% endif %}
+    <div class="description">
+      {{ event.description }}
+    </div>
+  </div>
+
+  <div class="artwork-frame">
+    <img class="featured-artist-image" src="/{{ featured.primary_photo.square_file }}" width="180" />
+     {% calendar_page month day %}
+     {% time_display time %}
+  </div>
+
+  <div class="listing-buttons">
+    {% fanbutton event view %}
+    {% tixbutton event %}
+  </div>
+</div>

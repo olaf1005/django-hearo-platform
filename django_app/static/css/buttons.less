@@ -1,0 +1,233 @@
+button, div.button,a.next-btn {
+  cursor: pointer;
+  overflow: hidden;
+  display: inline-block;
+
+  &:not(.spinning) {
+    .spinner {
+      display: none;
+    }
+  }
+
+  &.spinning {
+    .button-text {
+      display: none;
+    }
+  }
+
+  &.blue, &.green, &.red, &.orange, &.transblack, &.white {
+    font-size: 16px;
+    height: 34px;
+    min-width: 51px;
+    color: white;
+    padding: 5px;
+    .border-radius();
+    -webkit-font-smoothing: antialiased;
+    cursor: default;
+
+    &.blue {
+      .text-shadow(0px 1px 1px @border-blue);
+      background: @inner-blue;
+    }
+
+    &.green {
+      .text-shadow(0px 1px 0px @border-green);
+      background: @inner-green;
+    }
+
+    &.red {
+      .text-shadow(0px 1px 0px @border-red);
+      background: @inner-red;
+    }
+
+    &.orange {
+      .text-shadow(0px 1px 0px @border-orange);
+      background: @inner-orange;
+    }
+
+    &.transblack {
+      .text-shadow(0px 1px 0px @border-transblack);
+      background: @inner-transblack;
+    }
+
+    &.white {
+      .text-shadow(0px 1px 0px @border-transblack);
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    &.small {
+      font-size: 12px;
+      height: 28px;
+      padding: 4px;
+    }
+
+    // Traffic light buttons:
+
+    &.fan, &.unfan, &.review, &.download, &.tip, &.fanmail, &.tix {
+      .roboto700;
+      padding: 2px;
+      height: 24px;
+      min-width: auto;
+    }
+
+    &.fan, &.unfan {
+      width: 55px;
+    }
+
+    &.review {
+      min-width: 50px;
+    }
+
+    &.tix {
+      min-width: 40px;
+    }
+
+    &.download {
+      width: 44px;
+    }
+
+    &.fanmail {
+      width: 35px;
+      position: relative;
+      top: 1px;
+      .bgimg("fanmail-button.png");
+    }
+
+    .box-shadows(@white-undershadow);
+
+
+
+    &:not(.busy):not(.disabled){
+      cursor: pointer;
+
+      &.blue {
+        border: 1px solid @border-blue;
+      }
+
+      &.green {
+        border: 1px solid @border-green;
+      }
+
+      &.red {
+        border: 1px solid @border-red;
+      }
+
+      &.orange {
+        border: 1px solid @border-orange;
+      }
+
+      &.transblack {
+        border: 1px solid @border-transblack;
+      }
+
+      &.white {
+        border: 1px solid rgba(0,0,0,0.25);
+      }
+
+      &:hover, &.hover {
+        &.blue {
+          background: @inner-blue-hover;
+          color: #ffffff;
+        }
+
+        &.green {
+          background: @inner-green-hover;
+        }
+
+        &.red {
+          background: @inner-red-hover;
+        }
+
+        &.orange {
+          background: @inner-orange-hover;
+        }
+         &.transblack {
+          background: @inner-transblack-hover;
+        }
+
+        &.white {
+          background-color: rgba(255, 255, 255, 0.7);
+          border: 1px solid rgba(0,0,0,0.2);
+        }
+      }
+
+      &:active {
+        &.blue {
+          background: @inner-blue-active;
+          border: 1px solid @border-blue-active;
+        }
+        &.green {
+          background: @inner-green-active;
+          border: 1px solid @border-green-active;
+        }
+        &.red {
+          background: @inner-red-active;
+          border: 1px solid @border-red-active;
+        }
+        &.orange {
+          background: @inner-orange-active;
+          border: 1px solid @border-orange-active;
+        }
+        &.transblack {
+          background: @inner-transblack-active;
+          border: 1px solid @border-transblack-active;
+        }
+        &.white {
+          background-color: rgba(225, 225, 225, 0.5);
+          border: 1px solid rgba(0,0,0,0.3);
+        }
+
+        color: @white80;
+      }
+    }
+    &.busy, &.disabled {
+      background: @black30;
+      pointer-events: none;
+
+      &.disabled {
+        pointer-events: none;
+        .text-shadow(0px 1px 1px rgba(0,0,0,0.2));
+      }
+    }
+  }
+
+
+  &.inline-subtle {
+    background: rgba(0,0,0,0.03);
+    font-size: 12px;
+    .roboto400;
+    padding: 5px 10px;
+    border: @thin10percent;
+    .box-shadow(@white-undershadow);
+    .border-radius(20px);
+    color: #ffffff;
+    margin-left: 20px;
+
+    &:hover {
+      background: rgba(0,0,0,0.05);
+      color: rgba(0,0,0,0.65);
+    }
+
+    &:active {
+      background: rgba(0,0,0,0.09);
+      color: rgba(0,0,0,0.85);
+    }
+  }
+
+  &.delete {
+    .dimen(13, 13);
+    background-color: transparent;
+    background-size: 13px;
+    border: none;
+    .bgimg('ui/delete.button.png');
+
+    &:hover {
+      .bgimg('ui/delete.button.hover.png');
+    }
+
+    &:active {
+      .bgimg('ui/delete.button.active.png');
+    }
+  }
+
+}

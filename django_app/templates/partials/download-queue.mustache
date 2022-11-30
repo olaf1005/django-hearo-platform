@@ -1,0 +1,62 @@
+<div id="downloads" class="player-dropup{{# open }} open{{/ open }}{{# empty }} empty{{/ empty }}">
+
+  {{# empty }}
+  <div class="layout--abs-center-parent">
+    <div class="layout--abs-center type--subtle" style="margin-top:-20px;">
+      <a href="/my-account/wallet/"><button class="blue"><span class="button-text">Go to ɈAM Wallet</span></button></a>
+    </div>
+  </div>
+  {{/ empty }}
+  {{^ empty }}
+  <div id="downloads-content" class="player-dropup__content">
+  </div>
+
+  <div id="download-confirmation">
+    <div>
+      <div class="2 cols" id="download-totals">
+        <div>
+          <div id="downloads-total-songs">{{count}} songs</div>
+        </div>
+        <div>
+          {{# free }}
+          <div id="downloads-total-price">Free</div>
+          {{/ free }}
+          {{^ free }}
+          <div id="downloads-total-price">${{total}}</div>
+          {{/ free }}
+        </div>
+      </div>
+      {{^ free }}
+      <div id="downloads-payment-choice">
+        <div id="download-error" style="display: none;"></div>
+	{{# nocards }}
+	<a href="/payment/card_info/">add a card</a>
+	{{/ nocards }}
+	{{^ nocards }}
+	<a href="/payment/card_info/">new card</a> |
+        card:
+	<select id="card-picker">
+	  {{# cards }}
+	  <option value="{{ stripe_id }}">
+	  {{ type }} ending in {{ last4 }}
+	  </option>
+	  {{/ cards }}
+	</select>
+	{{/ nocards }}
+      </div>
+      {{/ free }}
+      <button class="green js-download-purchase">
+        <span class="button-text">
+          {{# free }}
+          download for free
+          {{/ free }}
+          {{^ free }}
+          purchase &amp; download
+          {{/ free }}
+        </span>
+        <div class="spinner spinner--small"></div>
+      </button>
+    </div>
+  </div>
+  {{/ empty }}
+</div>

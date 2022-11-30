@@ -1,0 +1,101 @@
+{% extends base %}
+
+{% block content %}
+
+
+<script type="text/javascript">
+csrfTOKEN = '{{ csrf_token }}';
+/*
+msgCOUNT = {{ message_list.count }};
+if (msgCOUNT == 1){
+	$('#mail_subhead').html('1 message');
+} else if (msgCOUNT == 0){
+	$('#mail_subhead').html('No messages');
+} else {
+	$('#mail_subhead').html(msgCOUNT + ' messages');
+}
+*/
+
+function deleteMessage(id){
+	$.ajax({
+	  type: 'POST',
+	  url: 'delete/' + id,
+	  data: {'csrfmiddlewaretoken': csrfTOKEN},
+	  success: function(data){
+		//console.log(data);
+		$('#message' + id).fadeOut(200);
+		setTimeout(function(){
+			$('#message' + id).remove();
+		}, 1000);
+	},
+	});
+}
+
+$(document).ready(function(){
+    var myself = new userTab('{{ user.profile.name }}', '{{ user.profile.get_thumb }}', '/profile/{{user.profile.keyword}}');
+    $(myself).css({'position': 'relative', 'top': '3px', 'left': '8px'});
+    $('#from_myself').append(myself);
+
+    var to = new userTab('{{ to_profile.name }}', '{{ to_profile.get_thumb }}', '/profile/{{to_profile.keyword}}');
+    $(to).css({'position': 'relative', 'top': '3px', 'left': '8px'});
+    $('#to').append(to);
+    setupLinks();
+});
+
+
+</script>
+
+<div class="myAccount_header"><span>Fanmail</span></div><br>
+
+
+<div class="myAccount_subheader"><span>Send some fanmail</span></div><br>
+
+<table id="compose_fanmail">
+<tr height="40">
+	<td align="right">
+		<label for="" style="position:relative; top:-8px">From</label>
+	</td>
+	<td>
+		<div id="from_myself"></div>
+	</td>
+</tr>
+<tr height="40">
+	<td width="90" align="right">
+		<label for="to_form" style="position:relative; top:-8px">To</label>
+	</td>
+	<td>
+		<div id="to"></div>
+	</td>
+</tr>
+<tr height="40">
+	<td align="right">
+		<label for="sub_form">Subject</label>
+	</td>
+	<td>
+		<input id="sub_form" type='text' class="compose_input"/>
+	</td>
+</tr>
+<tr height="120">
+	<td  align="right" style="position:relative">
+		<label for="body_form" style="position:relative;bottom:90px">Message</label>
+	</td>
+	<td>
+		<textarea id="body_form" class="compose_input"></textarea>
+	</td>
+</tr>
+
+<tr>
+	<td>
+
+	</td>
+	<td align="right">
+		<div class="button" id="send_fanmail" onclick="sendFanMail('{{to_profile.id}}')">Send</div>
+	</td>
+</tr>
+
+
+</table>
+<div class="successMessage" style="display: none;" id="success">Message sent! <a href="/mail/inbox">inbox</a></div>
+</div>
+
+{% endblock %}

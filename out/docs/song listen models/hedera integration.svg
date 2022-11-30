@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="244px" preserveAspectRatio="none" style="width:331px;height:244px;background:#00000000;" version="1.1" viewBox="0 0 331 244" width="331px" zoomAndPan="magnify"><defs/><g><!--MD5=[f25eed0824fb1f8848d815c6af46f39c]
+cluster Media--><polygon points="16,68.76,65,68.76,72,91.2483,314,91.2483,314,237.76,16,237.76,16,68.76" style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="16" x2="72" y1="91.2483" y2="91.2483"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43" x="20" y="84.2952">Media</text><!--MD5=[3fd616f346a44cd59a91eb10b19e157c]
+class User--><rect codeLine="11" height="40.1328" id="User" style="stroke:#383838;stroke-width:1.5;fill:none;" width="32" x="266" y="142.76"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="26" x="269" y="159.3616">User</text><line style="stroke:#383838;stroke-width:1.5;" x1="267" x2="297" y1="166.8928" y2="166.8928"/><line style="stroke:#383838;stroke-width:1.5;" x1="267" x2="297" y1="174.8928" y2="174.8928"/><!--MD5=[2919ff914df33678f2cf4339b91594c1]
+class Listen--><rect codeLine="14" height="117.8633" id="Listen" style="stroke:#383838;stroke-width:1.5;fill:none;" width="130" x="32" y="103.76"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="33" x="80.5" y="120.3616">Listen</text><line style="stroke:#383838;stroke-width:1.5;" x1="33" x2="161" y1="127.8928" y2="127.8928"/><ellipse cx="43" cy="138.8928" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="29" x="52" y="142.5276">id: pk</text><line style="stroke:#383838;stroke-width:1.0;" x1="33" x2="161" y1="148.8479" y2="148.8479"/><ellipse cx="43" cy="159.8479" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="55" x="52" y="163.4827">user: User</text><ellipse cx="43" cy="172.803" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="52" y="176.4377">datetime: date</text><ellipse cx="43" cy="185.758" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="52" y="189.3928">song: Song</text><ellipse cx="43" cy="198.7131" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="52" y="202.3479">seconds: Integer</text><ellipse cx="43" cy="211.6682" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="104" x="52" y="215.303">payment_date: date</text><!--MD5=[562c4b801d528848837ef3b38203ac7d]
+class Song--><rect height="40.1328" id="Song" style="stroke:#383838;stroke-width:1.5;fill:none;" width="33" x="197.5" y="142.76"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="27" x="200.5" y="159.3616">Song</text><line style="stroke:#383838;stroke-width:1.5;" x1="198.5" x2="229.5" y1="166.8928" y2="166.8928"/><line style="stroke:#383838;stroke-width:1.5;" x1="198.5" x2="229.5" y1="174.8928" y2="174.8928"/><!--MD5=[b7de5942c74928869028783f74502185]
+link Listen to User--><path codeLine="24" d="M123.68,103.34 C148.27,57.58 187.4,6 230.5,30.76 C267.6,52.07 278.06,105.36 280.95,137.33 " fill="none" id="Listen-to-User" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="281.38,142.66,284.621,133.3597,280.966,137.6772,276.6485,134.0221,281.38,142.66" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[1781292a6da05387b1a3f720bf96724b]
+link Listen to Song--><path codeLine="25" d="M162.36,162.76 C172.32,162.76 182.28,162.76 192.25,162.76 " fill="none" id="Listen-to-Song" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="197.46,162.76,188.46,158.76,192.46,162.76,188.46,166.76,197.46,162.76" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[8ef5006f3ce37f79fb7f2db15240932c]
+@startuml hedera integration
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+set namespaceSeparator ::
+
+package Media {
+
+    class User {
+    }
+
+    Class Listen {
+        + id: pk
+        - -
+        + user: User
+        + datetime: date
+        + song: Song
+        + seconds: Integer
+        + payment_date: date
+    }
+
+    Listen -> User
+    Listen -> Song
+}
+
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 15:40:07 EAT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

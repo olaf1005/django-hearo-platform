@@ -1,0 +1,50 @@
+[
+    {
+        "pk": 4, 
+        "model": "accounts.musician", 
+        "fields": {
+            "profileID": "Martin Java"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "accounts.profile", 
+        "fields": {
+            "location": 4, 
+            "rank_all": 0, 
+            "short_name": "Martin Java", 
+            "rank_month": 0, 
+            "rank_today": 0, 
+            "name": "Martin Java", 
+            "keyword": "MartinJava", 
+            "rank_week": 50, 
+            "rank_year": 0, 
+            "user": 4
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "accounts.person", 
+        "fields": {
+            "profile": 4, 
+            "musician": 4, 
+            "user": 4, 
+            "is_musician": true, 
+            "view": 4
+        }
+    },  
+    {
+        "pk": 4, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "martin@example.com", 
+            "first_name": "Martin", 
+            "last_name": "Java", 
+            "is_active": true, 
+            "last_login": "2011-01-21T11:01:31.723", 
+            "password": "pbkdf2_sha256$40000$vMVSNpeDP3C3$YSKzNJZSyIailw0SH2D27DlUilzn+nBiIluzocQZ0dU=",
+            "email": "martin@example.com", 
+            "date_joined": "2011-01-21T11:01:31.723"
+        }
+    }
+]

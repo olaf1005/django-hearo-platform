@@ -1,0 +1,21 @@
+{% load elements mathfilters %}
+<div id="gallery">
+    <div class="visuals-container is-open" id="dropdown-visuals">
+        <div class="visual-elements">
+            {% for photo in profile.photo_set.all %}
+            {% if photo.full_file %}
+            <div picture="/{{ photo.full_file }}" caption="{{photo.caption}}" class="visual-element">
+        <img src="/{{photo.square_file}}" height="160" border="0" />
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for video in videos %}
+            <div video="{{ video.embed_id }}" class="visual-element">
+        <img src="//img.youtube.com/vi/{{ video.embed_id }}/2.jpg" height="160" border="0" />
+        <div class="youtube-play-button">
+        </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

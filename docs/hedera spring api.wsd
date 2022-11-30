@@ -1,0 +1,337 @@
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title Hedera Spring API
+
+Actor "App" as app
+participant "Spring API" as springapi
+participant "Parent" as parent
+participant "Children.." as child
+participant "Hashgraph" as hashgraph
+
+box "Web Apps" #LightBlue
+	participant app
+	participant springapi
+end box
+
+box "Smart Contracts" #LightGreen
+	participant parent
+	participant child
+end box
+
+box "Hedera" #Orange
+	participant hashgraph
+end box
+
+app->>springapi : /account
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Create an account on hedera
+    with certain balance
+    (transferred from default account)
+end Note
+Note right of springapi
+    * startBalance (String) (Default: 0)
+end Note
+Note right of springapi #Pink
+    Implementation needs to be updated
+end Note
+
+springapi ->> parent : account
+parent ->> hashgraph : createAccount(initialBalance)
+hashgraph-->parent: return hederaAccountId
+parent-->parent: getSolidityAddress(hederaAccountId)
+parent ->> parent : +determineShard(solidityAddress)
+parent ->> child : +createAccountWithBalance(account, startBalance)
+child --> parent : return success
+parent --> springapi : return account info
+Note right of springapi
+    {
+        “solidityAddress": "xxx",
+        "myaccNum": "0.0.61538",
+        "mypvtKey": "xxx",
+        "pubKey": "xxx"
+    }
+end Note
+
+springapi --> app : return "
+
+app->>springapi : hbarBalance
+Note right of springapi
+    GET
+end Note
+Note right of springapi
+    Get balance in tinyBars of an account id
+end Note
+Note right of springapi
+    * accountId (String) (Required)
+end Note
+
+springapi->>hashgraph : getAccountBalance(accountId)
+hashgraph-->parent: return balance
+parent-->springapi : return balance
+springapi-->app : return "
+
+app->>springapi : +hbarBalanceContracts
+Note right of springapi #Pink
+    GET
+end Note
+Note right of springapi #Pink
+    Get balance in tinyBars of each contract registered
+end Note
+
+springapi->>parent : getBalancesForContracts()
+loop "For each contract"
+    parent->>hashgraph : getAccountBalance(contractId)
+    parent-->parent : return balances
+end
+parent-->springapi : return array of contract ids and balances
+springapi-->app : return "
+
+app->>springapi : hbarTransfer
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Transfer tinyBars from default account
+end Note
+Note right of springapi #Pink
+    Swagger documentation needs to be updated
+end Note
+Note right of springapi #Pink
+    * amount (+long) (Required) Amount in tiny bars
+    * myAccNum (String) (Required) Transfer from this account
+    * myPvtKey (String) (Required) Private key of this account
+    * toAccountId (String) (Required) Transfer to this account
+end Note
+
+springapi->>parent : transferCrypto(String myAccNum, String myPvtKey, String toAccId, long amount)
+parent-->hashgraph : transferCryptoTo(toAccId, amount)
+hashgraph-->parent : return success
+springapi-->app : return "
+
+app->>springapi : allBalances
+Note right of springapi
+    GET
+end Note
+Note right of springapi #Pink
+   Implementation and Swagger docs need to be updated
+   (Also, do we actually want this in the new implementation?)
+end Note
+Note right of springapi
+   + Returns all balances for all accounts
+end Note
+Note right of springapi #Pink
+   Swagger docs need to be updated (numOfUsers is long)
+end Note
+Note right of springapi
+   * numOfUsers (long) (Required) : Number of users to estimate fees for
+   + contractId (String) (Required) : Contract Id for which to get balances
+end Note
+
+springapi->>parent : allBalances(numOfUsers, contractId)
+parent->>child : allBalances(numOfUsers)
+child-->parent: return array mapping of balances
+parent-->springapi : return array mapping of balances \n ["SolidityAddress1-Balance1", …]
+springapi-->app : return "
+
+app->>springapi : allowance
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Transfer tinyBars from default account
+end Note
+Note right of springapi #Pink
+    * json (Dict) (Required)
+        * myaccNum (String) (? Required/Optional) Example "0.0.21166"
+        * mypvtKey (String) (? Required/Optional) "302e......"
+        * spenderSolidityAddress (String) (? Required/Optional)
+        * tokenOwnerSolidityAddress (String) (? Required/Optional)
+end Note
+
+springapi->>parent : allowance
+parent->>child : allowance(address tokenOwner, address spender)
+child-->parent : returns string allowance in Jam Decimals
+parent-->springapi : return "
+springapi-->app : return "
+
+app->>springapi : approve
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    A hedera account approves a solidity address to spend JAM on its behalf
+end Note
+Note right of springapi #Pink
+    * json (Dict) (Required)
+        * spenderSolidityAddress (String) (? Required/Optional)
+        * useraccNum (String) (? Required/Optional) "0.0.21166"
+        * userpvtKey (String) "302e......",
+        * valueInJamDecimals (Int)
+end Note
+
+springapi->>parent : approve
+parent-->child: approve(address tokenOwner, address spender, uint _value)
+child-->parent: return success
+parent-->springapi : return success
+springapi-->app : return "
+
+app->>springapi : balanceOf
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Check balance JAM Tokens of an address
+end Note
+Note right of springapi #Pink
+    * json (Dict) (Required)
+        * myaccNum (String) (? Required) "0.0.21166"
+        * mypvtKey (String) (? Required) "302e......"
+        * tokenOwnerSolidityAddress (String) (? Required)
+end Note
+
+springapi->>parent : balanceOf
+parent->>child : balanceOf
+child-->parent : return string balance in Jam Decimals
+parent-->springapi : return string balance in Jam Decimals
+springapi-->app : return "
+
+app->>springapi : bulkTransferFrom
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Client account transfers from many addresses
+    to other addresses on their behalf
+end Note
+Note right of springapi #Pink
+    Swagger documentation needs to be updated
+end Note
+Note right of springapi
+    * json (Dict) (Required)
+        * payload (Array of dictionary mappings) (Required)
+            [{
+                "tokenOwnerSolidityAddress": from_user_solidity_address,
+                "toSolidityAddress": to_user_solidity_address,
+                "valueInJamDecimals": transaction_value
+            }, ..]
+end Note
+
+springapi->>parent : bulkTransferFrom
+parent->>child: bulkTransfer
+child-->parent : return string result of transactions on the child
+parent-->springapi : return string result of all transactions in the format \n 000110 where 0 indicates failure, 1 success
+springapi-->app : return "
+
+app->>springapi : info
+Note right of springapi
+    GET
+end Note
+Note right of springapi
+    Swagger return info needs to be updated
+end Note
+Note right of springapi
+    Get basic smart contract information
+end Note
+
+springapi->>parent : info
+parent-->springapi : returns contract info
+
+Note right of springapi
+    {
+        "Owner": "0.0.1117",
+        "ContractSolidityAddress": "00000000000000000000000000000000000052aa",
+        "Symbol": "JAM",
+        "Total Supply": "100000000000000000",
+        "Decimals": "5",
+        "Name": "Jam"
+    }
+end Note
+
+springapi-->app : return "
+
+app->>springapi : transfer
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Transfer JAM tokens from one hedera account to another solidity address
+end Note
+Note right of springapi #Pink
+    Swagger documentation and implementation need to be updated.
+    Note: Do we want to change this from accepting myaccNum to mySolidityAddress?
+end Note
+Note right of springapi
+    * json (Dict) (Required)
+        * myaccNum (String) (Required) "0.0.21166",
+        * mypvtKey (String) (Required) "302e......",
+        * toSolidityAddress (String) (Required)
+        * valueInJamDecimals (Int) (Required) 56788000
+end Note
+
+springapi->>parent : transfer
+parent-->parent : getAccountSolidityAddress(myaccNum)
+parent-->parent : getFromAddressContractShard(fromSolidityAddress)
+parent-->parent : getToAddressContractShard(toSolidityAddress)
+parent-->parent : transfer(contractA, contractB, \nfromSolidityAddress, toSolidityAddress, value)
+parent-->springapi : return success
+springapi-->app : return "
+
+app->>springapi : transferFrom
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    One account transfers JAM on behalf of another
+end Note
+Note right of springapi #Pink
+    Swagger documentation needs to be updated
+end Note
+Note right of springapi
+    * json (Dict) (Required)
+        * myaccNum (? Required/Optional) (String) "0.0.21166"
+        * mypvtKey": "302e......",
+        * toSolidityAddress (String) (? Required/Optional)
+        * tokenOwnerSolidityAddress (String) (? Required/Optional)
+        * valueInJamDecimals (Required) (? Required/Optional) 56788000
+end Note
+
+springapi->>parent : transferFrom
+parent-->springapi : return success
+springapi-->app : return "
+
+app->>springapi : transferOwnership
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Change owner of Jam Token Contract
+end Note
+Note right of springapi #Pink
+    Swagger documentation needs to be updated
+end Note
+Note right of springapi
+    * body (Dict) (Required)
+        * currAccNum (String) (? Required/Optional) "0.0.903"
+        * currPvtKey (String) (? Required/Optional) "302e......"
+        * newAccNum (String) (? Required/Optional) "0.0.1117"
+        * newPvtKey (String) (? Required/Optional) "302e......"
+end Note
+
+springapi->>parent : transferFrom
+parent->>child : transferFrom
+child->>child : transferFrom child A -> child B
+child-->child : return success
+springapi-->app : return "
+
+springapi->>hashgraph : transferOwnership
+hashgraph-->springapi : return success
+
+@enduml

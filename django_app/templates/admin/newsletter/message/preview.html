@@ -1,0 +1,58 @@
+{% extends "admin/base_site.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Preview message" %}{{ block.super }}{% endblock %}
+
+{% block content_title %}
+
+
+<span class="navbar-brand">{% trans "Preview message" %}</span>
+
+</div>
+
+<div id="content-navbar-collapse" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right">
+
+        <li><a href="{% url "admin:newsletter_message_change" message.id %}">{% trans "Change" %}</a></li>
+        <li><a href="{% url "admin:newsletter_message_submit" message.id %}">{% trans "Create submission" %}</a></li>
+
+    </ul>
+    </div>
+
+{% endblock %}
+
+    {% block breadcrumbs %}
+    <ul class="breadcrumb">
+        <li>
+            <a href="../../../../">{% trans "Home" %}</a>
+        </li>
+        <li>
+            <a href="../../../">Newsletter</a>
+        </li>
+        <li>
+            <a href="../../">{% trans "Message" %}</a>
+        </li>
+        <li>
+            <a href="../">{{ message|truncatewords:"18" }}</a>
+        </li>
+        <li>
+            {% trans "Preview" %}
+        </li>
+    </ul>
+    {% endblock %}
+
+    {% block content %}
+    <div id="content-main">
+        {% if message.newsletter.send_html %}
+        <h4>{% trans "HTML" %}</h4>
+        <iframe src="{% url "admin:newsletter_message_preview_html" message.id %}" width="960px" height="720px"></iframe>
+        {% endif %}
+
+        <h4>{% trans "Text" %}</h4>
+        <iframe src="{% url "admin:newsletter_message_preview_text" message.id %}" width="960px" height="720px"></iframe>
+    </div>
+    <br />
+    <br />
+
+    {% endblock %}

@@ -1,0 +1,42 @@
+version: '3.4'
+
+volumes:
+    httpsdata_prod:
+
+networks:
+    cluster:
+
+services:
+    https-portal:
+        tty: true # color log output
+        image: $IMAGE_HTTPS
+        ports:
+            - '80:80'
+            - '443:443'
+        volumes:
+            - httpsdata_prod:/var/lib/https-portal/
+            - /var/run/docker.sock:/var/run/docker.sock
+        networks:
+            - cluster
+        environment:
+            # tune.fm dns is configured on digitalocean, hearo.fm dns is on rackspace
+            DOMAINS: "www.tune.fm => https://tune.fm, tune.fm -> http://django_app:8000, www.hearo.fm => https://tune.fm, hearo.fm => https://tune.fm"
+            STAGE: "production"
+            WEBSOCKET: "true"
+            FORCE_RENEW: "false"
+        deploy:
+            mode: replicated
+            replicas: 1
+            # placement:
+            #     constraints: [node.labels.instance_type == leader]
+            restart_policy:
+                condition: on-failure
+                delay: 3s
+                max_attempts: 3
+                window: 120s
+        logging:
+            # limit logs retained on host to 25MB
+            driver: "json-file"
+            options:
+                max-size: "500k"
+                max-file: "50"

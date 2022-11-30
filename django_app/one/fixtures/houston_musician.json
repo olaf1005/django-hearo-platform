@@ -1,0 +1,187 @@
+[
+    {
+        "pk": 1, 
+        "model": "accounts.musician", 
+        "fields": {
+            "profileID": "Alligator One"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "accounts.profile", 
+        "fields": {
+            "location": 1, 
+            "short_name": "Alligator One", 
+            "name": "Alligator One", 
+            "keyword": "AlligatorOne", 
+            "rank_all": 0, 
+            "rank_month": 0, 
+            "rank_today": 0, 
+            "rank_week": 20, 
+            "rank_year": 0, 
+            "user": 1
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "accounts.person", 
+        "fields": {
+            "profile": 1, 
+            "musician": 1, 
+            "user": 1, 
+            "is_musician": true, 
+            "view": 1
+        }
+    },  
+    {
+        "pk": 1, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "alligator@example.com", 
+            "first_name": "Alligator", 
+            "last_name": "One", 
+            "is_active": true, 
+            "last_login": "2014-01-21T14:04:31.723", 
+            "password": "pbkdf2_sha256$10000$vMVSNpeDP3C3$YSKzNJZSyIailw0SH2D27DlUilzn+nBiIluzocQZ0dU=",
+            "email": "alligator@example.com", 
+            "date_joined": "2014-01-21T14:04:31.723"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "media.musicupload",
+        "fields": {
+            "profile": 1,
+            "upload_date": "2014-01-23",
+            "keyword": "CMM_d6e1fb45-7ad5-4928-b6fe-b38165255f62-07IOnceARhinoceros!YouLookedJustLikeHim!",
+            "rank_today": 0,
+            "rank_week": 0,
+            "rank_month": 0,
+            "rank_year": 0,
+            "rank_all": 0,
+            "downloads": 0,
+            "fans": 0,
+            "download_type": "normal",
+            "portion_donated": null,
+            "price": "10.0"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "media.album",
+        "fields": {
+            "full_cover": "",
+            "title": "Alligator blues",
+            "cover": null,
+            "album_cover": "",
+            "medium_cover": "",
+            "year_released": 2014,
+            "small_cover": ""
+        }
+    },
+    {
+        "pk": 10,
+        "model": "media.musicupload",
+        "fields": {
+            "profile": 1,
+            "upload_date": "2014-01-23",
+            "keyword": "CMM_d6e1fb45-7ad5-4928-b6fe-b38165255f62-07IOnceARhinoceros!YouLookedJustLikeHim!",
+            "rank_today": 0,
+            "rank_week": 60,
+            "rank_month": 0,
+            "rank_year": 0,
+            "rank_all": 0,
+            "downloads": 0,
+            "fans": 0,
+            "download_type": "normal",
+            "portion_donated": null,
+            "price": "0.69"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "media.song",
+        "fields": {
+            "visible": true,
+            "processing": true,
+            "track_num": 1,
+            "length": null,
+            "file": "",
+            "online": false,
+            "title": "I Once A Rhinoceros!"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "media.musicupload",
+        "fields": {
+            "profile": 1,
+            "upload_date": "2014-01-23",
+            "keyword": "CMM_d6e1fb45-7ad5-4928-b6fe-b38165255f62-07IOnceARhinoceros!YouLookedJustLikeHim!",
+            "rank_today": 0,
+            "rank_week": 80,
+            "rank_month": 0,
+            "rank_year": 0,
+            "rank_all": 0,
+            "downloads": 0,
+            "fans": 0,
+            "download_type": "normal",
+            "portion_donated": null,
+            "price": "0.69"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "media.song",
+        "fields": {
+            "visible": true,
+            "processing": true,
+            "track_num": 1,
+            "length": null,
+            "file": "",
+            "online": false,
+            "title": "Now I'm a cowboy"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "media.musicupload",
+        "fields": {
+            "profile": 1,
+            "upload_date": "2014-01-23",
+            "keyword": "CMM_d6e1fb45-7ad5-4928-b6fe-b38165255f62-07IOnceARhinoceros!YouLookedJustLikeHim!",
+            "rank_today": 0,
+            "rank_week": 50,
+            "rank_month": 0,
+            "rank_year": 0,
+            "rank_all": 0,
+            "downloads": 0,
+            "fans": 0,
+            "download_type": "normal",
+            "portion_donated": null,
+            "price": "0.69"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "media.song",
+        "fields": {
+            "visible": true,
+            "processing": true,
+            "track_num": 1,
+            "length": null,
+            "file": "",
+            "online": false,
+            "title": "Now I'm a cowboy"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "media.albumtrack",
+        "fields": {
+            "album": 1,
+            "track_num": 1,
+            "song": 10
+        }
+    }
+]

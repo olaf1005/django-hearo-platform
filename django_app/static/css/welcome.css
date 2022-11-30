@@ -1,0 +1,31 @@
+#welcomeScreen {
+    font-family: "StyreneA-Regular", sans-serif;
+    line-height: 1.8em;
+}
+
+#welcomeScreen h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+#welcomeLinks div.button {
+    width: 150px;
+    height: 50px;
+    color: transparent;
+    display: block;
+    cursor: pointer;
+}
+
+#welcomeLinks #goCreateBand {
+    background: url('/public/images/create-a-band.png') no-repeat;
+}
+
+#welcomeLinks #goAccount {
+    background: url('/public/images/my-account.png') no-repeat;
+}
+
+#welcomeLinks #goCreateVenue {
+    background: url('/public/images/create-a-venue.png') no-repeat;
+}
+

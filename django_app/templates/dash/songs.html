@@ -1,0 +1,20 @@
+<style type="text/css">
+body {
+  font-family: Arial;
+}
+
+td {
+  border-bottom: 1px solid black;
+}
+
+
+</style>
+<h1>Song play counts</h1>
+<table cellpadding="10" cellspacing="0">{% for trio in trios %}<tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ trio.0 }}by<a href="/profile/{{trio.1}}">{{ trio.1 }}</a>
+    </td>
+    <td>
+      <b>{{ trio.2 }}</b>
+    </td>
+</tr>{% endfor %}</table>

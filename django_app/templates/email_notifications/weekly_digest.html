@@ -1,0 +1,92 @@
+{% extends "email_notifications/base_email.html" %}
+{% load inlinecss %}
+{% inlinecss "static/css/compile.css" %}
+
+{% block subject %}
+Your weekly {{ BASE_URL|title }} update
+{% endblock %}
+
+{% block html_body %}
+
+<p>
+Hi {{profile.short_name}},
+<br>
+<br>
+Here's a review of your activity over the past week.
+{% if profile.get_fans_last_week %}
+<hr>
+<h2>Fans</h2>
+<hr>
+
+{% if profile.get_fans_last_week %}
+You have {{ profile.get_fans_last_week }} new fan{{ profile.get_fans_last_week|pluralize }}.
+{% else %}
+You have no new fans.
+{% endif %}
+
+{% if profile.get_fans_last_week %}
+<br>
+<br>
+{{ profile.get_songfans_last_week }} fanned your songs, {{ profile.get_albumfans_last_week }} fanned your albums.
+{% endif %}
+
+{% if profile.get_total_fan_count %}
+<br>
+<br>
+You have a total of {{ profile.get_total_fan_count }}
+fan{{profile.get_total_fan_count|pluralize}}.
+{% endif %}
+</p>
+<p>
+{% endif %}
+
+<hr>
+<h2>Uploads</h2>
+<hr>
+{% if profile.get_songuploads_last_week %}
+You've <a href="https://{{ BASE_URL }}/my-account/downloads/">uploaded</a> {{ profile.get_songuploads_last_week }} song{{ profile.get_songuploads_last_week|pluralize }}
+{% if profile.get_albumuploads_last_week %}
+and {{ profile.get_albumuploads_last_week }} album{{ profile.get_albumuploads_last_week|pluralize }}
+{% endif %}
+.
+{% else %}
+You haven't uploaded any new songs, perhaps you could
+<a href="https://{{ BASE_URL }}/my-account/downloads/">add some songs</a> to attract
+new fans.
+{% endif %}
+
+{% if profile.get_downloadcharges_last_week %}
+<hr>
+<h2>Downloads</h2>
+<hr>
+Users <a href="https://{{ BASE_URL }}/my-account/payment/">downloaded your songs and
+  albums</a> {{profile.get_downloadcharges_last_week}}
+time{{ profile.get_downloadcharges_last_week|pluralize }} for a total of
+{{ profile.get_downloadcharges_value_last_week }}.
+
+{% endif %}
+
+{% if profile.get_library_newsongsfaned_last_week or profile.get_library_newalbumsfaned_last_week or profile.get_library_newprofilesfaned_last_week %}
+<hr>
+<h2>Library</h2>
+<hr>
+In addition, you've added to your
+library:
+<br>
+{% if profile.get_library_newsongsfaned_last_week %}
+<a href="https://{{ BASE_URL }}/profile/{{profile.keyword}}/library">{{ profile.get_library_newsongsfaned_last_week }} song{{ profile.get_library_newsongsfaned_last_week|pluralize }}</a><br>
+{% endif %}
+
+{% if profile.get_library_newalbumsfaned_last_week %}
+<a href="https://{{ BASE_URL }}/profile/{{profile.keyword}}/library">{{ profile.get_library_newalbumsfaned_last_week }} album{{ profile.get_library_newalbumsfaned_last_week|pluralize }}</a><br>
+{% endif %}
+
+{% if profile.get_library_newprofilesfaned_last_week %}
+<a href="https://{{ BASE_URL }}/profile/{{profile.keyword}}/library">{{ profile.get_library_newprofilesfaned_last_week }} profile{{ profile.get_library_newprofilesfaned_last_week|pluralize }}</a><br>
+{% endif %}
+
+</p>
+{% endif %}
+
+{% endblock %}
+{% endinlinecss %}

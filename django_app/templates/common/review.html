@@ -1,0 +1,16 @@
+<div class="user-review" reviewer="{{ reviewer.id }}" itemscope itemtype="http://data-vocabulary.org/Review">
+    <div class="stars">
+        {% if stars > 0 %}<div class="star"></div>{% endif %}
+        {% if stars > 1 %}<div class="star"> </div>{% endif %}
+        {% if stars > 2 %}<div class="star"> </div>{% endif %}
+        {% if stars > 3 %}<div class="star"> </div>{% endif %}
+        {% if stars > 4 %}<div class="star"> </div>{% endif %}
+    </div>
+    {% if review_content %}
+    <div itemprop="description" class="review-content">{{ review_content }}</div>
+    {% endif %}
+    <div class="reviewer">
+        <a href="{{ reviewer_href }}" itemprop="reviewer">{{ reviewer.name }}</a>
+    </div>
+    <meta itemprop="rating" content="{{stars}}">
+</div>

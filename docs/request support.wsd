@@ -1,0 +1,23 @@
+@startuml Hearo request support
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+actor User
+User ->> Email
+Email ->> SupportRequest
+
+actor HearoSupport1
+actor HearoSupport2
+
+HearoSupport1 --> SupportRequest
+HearoSupport2 --> SupportRequest
+
+loop ValidKeys
+    SupportRequest-->SupportRequest: check if valid
+    SupportRequest->> UnlockKey
+end
+UnlockKey ->> SendUserPassAndKeyResetEmail
+@enduml

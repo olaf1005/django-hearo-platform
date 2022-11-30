@@ -1,0 +1,9 @@
+{% if fanned %}
+<div class="small_fand_button fanbutton_{{ type }}_{{ id }}" onmouseover="this.innerHTML='UNFAN'" onmouseout="this.innerHTML='FAN&#39D'" onclick="unfan_this('{{ type }}', {{ id }}, function(){set_small_button_fan('{{ type }}', {{ id }})})" {{ type }}_id="{{ id }}" fan_button="{{ type }}{{ id }}">
+  FAN'D
+</div>
+{% else %}
+<div class="small_fan_button fanbutton_{{ type }}_{{ id }}" onclick="fan_this('{{ type }}',{{id}}, function(){set_small_button_fand('{{ type }}', {{ id }})})" {{ type }}_id="{{ id }}" fan_button="{{ type }}{{ id }}">
+  FAN
+</div>
+{% endif %}

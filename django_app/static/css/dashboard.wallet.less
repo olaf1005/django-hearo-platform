@@ -1,0 +1,75 @@
+
+#content.dashboard.wallet {
+  #myacct-content {
+    code {
+      overflow-wrap: break-word;
+    }
+    // label {
+    //   font-family: "StyreneA-Regular", sans-serif;
+    //   font-size: 16px;
+    //   display: block;
+
+    //   &:not(.major) {
+    //     margin: -8px 20px;
+    //   }
+
+    //   &.major {
+    //     font-family: "Permanent Marker", cursive;
+    //     margin-left: 20px;
+    //     color: black;
+    //     font-size: 18px;
+    //   }
+    // }
+
+    #wallet_widgets {
+      width: 100%;
+      position: relative;
+
+      .left_side {
+        width: 50%;
+        padding: 10px;
+      }
+
+      .right_side {
+        width: 45%;
+        padding: 10px;
+      }
+
+      .wallet_balance {
+        font-size: 2em;
+        color: whitesmoke;
+      }
+    }
+
+    .widget {
+      margin-bottom: 20px;
+      border: 1px solid #ababab;
+      .widget_header {
+        h3 {
+          border-bottom: 1px solid #ababab;
+          padding: 10px;
+        }
+      }
+      .widget_content {
+        padding: 10px;
+      }
+    }
+
+    .global__container,
+    input,
+    .transaction-flow__billing-address-container,
+    .buy-checkout__cc-step-content div {
+      box-shadow: none;
+      background: #191919;
+    }
+
+    ul.wallet_activity {
+      li {
+        margin-bottom: 10px;
+      }
+      .token_value {
+        color: lightblue;
+      }
+    }
+  }
+}

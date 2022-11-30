@@ -1,0 +1,63 @@
+{% extends 'accounts/my-account/index.html' %}
+
+{% block title %}My Account Videos - Tune.fm{% endblock %}
+
+{% block myAccountInnerPage %}
+
+{% load elements %}
+
+<script type="text/javascript">
+embedded = false;
+function embed(video_id){
+var params = { allowScriptAccess: "always" };
+//swfobject.embedSWF(	"http://www.youtube.com/apiplayer?enablejsapi=1&playerapiid=ytplayer", "ytplayer", "401", "220", "8", null, null, params, null);
+swfobject.embedSWF("http://www.youtube.com/v/"+video_id+"&enablejsapi=1&playerapiid=ytplayer", "ytplayer", "500", "350", "8", null, null, params);
+embedded = true;
+}
+
+function loadNewVideo(id, startSeconds) {
+  if(embedded)
+  {
+    ytplayer.loadVideoById(id, startSeconds);
+  }
+  else{
+    $("#player_holder").show();
+    embed(id);
+  }
+}
+csrfTOKEN = '{{ csrf_token }}';
+
+</script>
+<input type="hidden" id="selected_view" value="videos">
+<div class="content">
+  <div class="myAccount_subheader"><span>Upload a youtube video!</span></div><br><br>
+  <div class='myAccount_textareas'>
+      <label for="id_youtube_url">Paste the url</label><br>
+      <input type="text" id="youtube_url" fillertext="Paste the standard YouTube URL here"/>
+      <input type="submit" value="Add video" class="link-btn blue" onclick="addVideo()" class="myAccount_uploadButton" id="add_video_button" />
+      <div class="errorMessage" id="videoErrorMessage" style="display:none;"></div>
+  </div>
+</div>
+<div id="player_holder" style="display: none">
+    <div id="ytplayer">
+        <p> you will need flash 8 or better to view this content </p>
+    </div>
+</div>
+<br><br>
+<div class="content">
+  <div class="myAccount_subheader"><span>Uploaded videos</span></div><br>
+  <div id="videos">
+  <table id="video_table" width="100">
+  {% for video in videos reversed %}
+
+    {% videolisting video %}
+
+  {% endfor %}
+  <div class="empty_media" style="{% if videos %}display:none{% endif %}">
+    You haven't uploaded any videos!
+  </div>
+  </table>
+  </div>
+</div>
+
+{% endblock %}

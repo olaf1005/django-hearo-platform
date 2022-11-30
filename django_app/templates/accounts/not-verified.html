@@ -1,0 +1,25 @@
+{% extends base %}
+
+{% block title %}Account Not Verified - Tune.fm{% endblock %}
+
+{% block content %}
+<div id="not-verified">
+    <br><br>
+    <br><br>
+    <h1 style="color:#ffffff;">Account needs to be verified!</h1><br><br>
+    <span id="verification_email" style="color: white;font-weight: bold; ">{{email}}</span>
+    <button id="send_verification" class="link-btn blue" onclick="sendVerification()"
+        style="float:right;font-size:16px">Resend verification email</button>
+
+    <button class="link-btn green" style="display: none;color: white;float:right;" id="verification_sent">Email sent!
+</div>
+<br />
+<br />
+
+<span style="color: white;">
+    You need to follow the verification link we send you via email to login.
+</span>
+</div>
+
+{% csrf_token %}
+{% endblock %}

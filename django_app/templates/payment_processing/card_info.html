@@ -1,0 +1,64 @@
+{% extends 'accounts/my-account/index.html' %}
+
+{% block myAccountInnerPage %}
+
+{% include "accounts/my-account/_profile_name.html" %}
+
+<script type="text/javascript" src="/public/lib/stripe.js"></script>
+<script type="text/javascript">
+Stripe.setPublishableKey("{{stripe_publishable}}");
+setupStripe();
+</script>
+
+<div class="content">
+  <h2>Your Cards</h2>
+  <div id="myCards">
+    {% for card in cards %}
+    <div class="credit_card" id="card_{{card.pk}}">
+      <div class="card_number">■■■■ ■■■■ ■■■■ {{card.last4}}</div>
+      <div class="card_type {{card.cardType}}"></div>
+      <div class="delete_button" onclick="removeCard({{card.pk}});"></div>
+    </div>
+    {% endfor %}
+
+    <div id="add_card">
+      <div class="title">Add a credit or debit card</div>
+      <label for="card_number" class="card_number">Card Number</label>
+      <label for="card_mm" class="card_expiration">Expiration</label>
+      <label for="card_cvc" class="card_cvc">CVC</label>
+      <input type="text" id="card_number" class="card_number" maxlength="19" />
+      <input type="text" id="card_mm" class="card_mm" maxlength="2" fillertext="MM" />
+      <input type="text" id="card_yyyy" class="card_yyyy" maxlength="4" fillertext="YYYY" />
+      <input type="text" id="card_cvc" class="card_cvc" maxlength="4" />
+      <div class="link-btn blue" id="card-submit"><img src="/public/images/creditcard.png" /> Add</div>
+    </div>
+    <div class="errorMessage" id="payment-errors"></div>
+  </div>
+
+  <div class="hearotip" id="cardpagetooltip">
+    <div class="tooltip_description" style="display:none" title="Security Notice">
+      We take security on our website very seriously. To that end, your
+      banking information is kept private and your money is managed and
+      secured by Silicon Valley Bank. If you have any further questions
+      relating to this matter, please contact us at feedback@{{ BASE_URL }}.
+    </div>
+  </div>
+
+  <div class="cards_supported">
+    <div>
+      <div class="card_logo MasterCard"></div>
+      <div class="card_logo Visa"></div>
+      <div class="card_logo AmericanExpress"></div>
+      <div class="card_logo Discover"></div>
+      <div class="card_logo JCB"></div>
+      <div class="card_logo DinersClub"></div>
+      <br>
+    </div>
+  </div>
+
+  <div id ="stripe_logo" class="secure-form-row">
+    Payments securely processed by <img src="/public/images/credit_cards/stripe.png" />
+  </div>
+</div>
+</div>
+{% endblock %}

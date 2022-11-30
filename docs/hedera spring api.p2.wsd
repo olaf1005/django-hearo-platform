@@ -1,0 +1,130 @@
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title Hedera Spring API
+
+Actor "App" as app
+participant "HTS" as hts
+participant "Parent" as parent
+participant "Children.." as child
+participant "Hashgraph" as hashgraph
+
+box "Web Apps" #LightBlue
+	participant app
+	participant hts
+end box
+
+box "Smart Contracts" #LightGreen
+	participant parent
+	participant child
+end box
+
+box "Hedera" #Orange
+	participant hashgraph
+end box
+
+app->>hts : hbarBalanceContracts
+' Note right of hts #Pink
+Note right of hts
+    GET
+end Note
+' Note right of hts #Pink
+Note right of hts
+    Get balance in tinyBars of each contract registered
+end Note
+
+hts->>parent : getBalancesForContracts()
+loop "For each contract"
+    parent->>hashgraph : getAccountBalance(contractId)
+    parent-->parent : return balances
+end
+parent-->hts : return array of contract ids and balances
+hts-->app : return "
+
+app->>hts : hbarTransfer
+Note right of hts
+    POST
+end Note
+Note right of hts
+    Transfer tinyBars from default account
+end Note
+' Note right of hts #Pink
+'     Swagger documentation needs to be updated
+' end Note
+' Note right of hts #Pink
+'     * amount (+long) (Required) Amount in tiny bars
+'     * myAccNum (String) (Required) Transfer from this account
+'     * myPvtKey (String) (Required) Private key of this account
+'     * toAccountId (String) (Required) Transfer to this account
+' end Note
+Note right of hts
+    * amount (+long) (Required) Amount in tiny bars
+    * myAccNum (String) (Required) Transfer from this account
+    * myPvtKey (String) (Required) Private key of this account
+    * toAccountId (String) (Required) Transfer to this account
+end Note
+
+hts->>parent : transferCrypto(String myAccNum, String myPvtKey, String toAccId, long amount)
+parent-->hashgraph : transferCryptoTo(toAccId, amount)
+hashgraph-->parent : return success
+hts-->app : return "
+
+app->>hts : allBalances
+Note right of hts
+    GET
+end Note
+' Note right of hts #Pink
+'    Implementation and Swagger docs need to be updated
+'    (Also, do we actually want this in the new implementation?)
+' end Note
+Note right of hts
+   + Returns all balances for all accounts
+end Note
+' Note right of hts #Pink
+'    Swagger docs need to be updated (numOfUsers is long)
+' end Note
+Note right of hts
+   * numOfUsers (long) (Required) : Number of users to estimate fees for
+   + contractId (String) (Required) : Contract Id for which to get balances
+end Note
+
+hts->>parent : allBalances(numOfUsers, contractId)
+parent->>child : allBalances(numOfUsers)
+child-->parent: return array mapping of balances
+parent-->hts : return array mapping of balances \n ["SolidityAddress1-Balance1", …]
+hts-->app : return "
+
+app->>hts : allowance
+Note right of hts
+    POST
+end Note
+Note right of hts
+    Transfer tinyBars from default account
+end Note
+' Note right of hts #Pink
+'     * json (Dict) (Required)
+'         * myaccNum (String) (? Required/Optional) Example "0.0.21166"
+'         * mypvtKey (String) (? Required/Optional) "302e......"
+'         * spenderSolidityAddress (String) (? Required/Optional)
+'         * tokenOwnerSolidityAddress (String) (? Required/Optional)
+' end Note
+Note right of hts
+    * json (Dict) (Required)
+        * myaccNum (String) (? Required/Optional) Example "0.0.21166"
+        * mypvtKey (String) (? Required/Optional) "302e......"
+        * spenderSolidityAddress (String) (? Required/Optional)
+        * tokenOwnerSolidityAddress (String) (? Required/Optional)
+end Note
+
+hts->>parent : allowance
+parent->>child : allowance(address tokenOwner, address spender)
+child-->parent : returns string allowance in Jam Decimals
+parent-->hts : return "
+hts-->app : return "
+
+
+@enduml

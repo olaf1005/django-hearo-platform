@@ -1,0 +1,54 @@
+{% load elements mathfilters %}
+<div id="first-col" style="max-height: 1000px; overflow-x: hidden;">
+    <div id="picture-and-buttons" class="scrollbar">
+        <div id="scrollbar-screen-info-modules">
+            <div class="scrollbar" id="info-modules">
+                <div>
+                    {% if badges or bio %}
+                    <div id="info">
+                        {% if bio %}
+                        {{ bio }}
+                        {% endif %}
+                        {% if badges %}
+                        <div id="badges">
+                            {% for text, class in badges %}
+                            {% badge class text %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% else %}
+                    <div class="empty">
+                        <div class="msg">
+                            {% if own %}
+                            <p>Go fill out <a href="/my-account/">your bio!</a></p>
+                            {% else %}
+                            <p>{{ profile.first_name }} is a mystery.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% for header, value in info %}
+                    <div>
+                        <span class="label">{{ header }}</span>
+                        {% for val in value %}
+                        <a href="/{{ val|sub_space|parameterize_val }}/">{{ val }}</a>
+                        {% include "_comma.html" %}
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                    {% if influences %}<div><span class="label">influences</span>{{ influences }}</div>{% endif %}
+                    {% if experience %}<div><span class="label">experience</span>{{ experience }}</div>{% endif %}
+                    {% if goals %}<div><span class="label">goals</span>{{ goals }}</div>{% endif %}
+                    {% if members %}
+                    <div><span class="label">members</span>
+                        {% for member in members %}
+                        <a href="/profile/{{member.keyword}}">{{ member.name }}</a>{% include "_comma.html" %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

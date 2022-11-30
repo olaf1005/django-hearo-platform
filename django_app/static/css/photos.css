@@ -1,0 +1,73 @@
+
+
+#darkbackground {
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color : rgba(0,0,0,0.6);
+    z-index: 2000000002;
+}
+
+#darkbackground #photo_box {
+    background-color : rgba(255,255,255,1);
+    box-shadow: 0 0 7px rgba(0,0,0,0.6);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-bottom: 20px;
+    position: absolute;
+}
+
+#photo_box h1 {
+    text-align: center;
+    font-size: 27px;
+    font-weight: 600;
+    font-family: "StyreneA-Regular", Helvetica, Arial, sans-serif ;
+}
+
+#next_button{
+    position: absolute;
+}
+
+#prev_button{
+    position: absolute;
+}
+
+#close_button{
+    position: absolute;
+}
+
+#captionInput{
+    margin: 10px 10px 10px 10px;
+    background-color: #302226;
+    color:white;
+    border-radius: 4px;
+    padding: 10px;
+    position:relative;
+    top:1px;
+}
+
+#set_profile_pic{
+    padding: 6px;
+    padding-top: -3px;
+    border-bottom:0px;
+    margin-right:10px;
+}
+
+#lowerDiv {
+    left: 35%;
+
+ }
+
+#someSpace {
+    width : 10px;
+    height : 10px;
+    float:right;
+}
+
+div#profile_photo_explanation {
+    font-family:"StyreneA-Regular";
+    margin-top:7px;
+
+}

@@ -1,0 +1,36 @@
+{% load elements mathfilters %}
+<div id="reviews" for=":">
+    <div class="scrollbar" id="review-inner">
+        <div id="reviews-content">
+            <div id="reviews-col1">
+                <div id="reviews-focus-item">
+                    <div id="reviews-focus-item-artwork">
+                    </div>
+                </div>
+                <div id="reviews-stars">
+                    <button value="1" class="reviews-star"></button>
+                    <button value="2" class="reviews-star"></button>
+                    <button value="3" class="reviews-star"></button>
+                    <button value="4" class="reviews-star"></button>
+                    <button value="5" class="reviews-star"></button>
+                </div>
+            </div>
+            <div id="reviews-col2">
+                <div id="reviews-compose-box">
+                    <textarea placeholder="Write a review..." class="standard"></textarea>
+                    <button id="submit-review" class="blue">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div id="average-rating">
+            <p>Average rating</p>
+            <div value="1" class="reviews-star"></div>
+            <div value="2" class="reviews-star"></div>
+            <div value="3" class="reviews-star"></div>
+            <div value="4" class="reviews-star"></div>
+            <div value="5" class="reviews-star"></div>
+        </div>
+        <div id="user-reviews">
+        </div>
+    </div>
+</div>

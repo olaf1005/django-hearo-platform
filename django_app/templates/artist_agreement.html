@@ -1,0 +1,3580 @@
+{% extends base %}
+
+{% block content %}
+{% with user.person.profile as artist %}
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Courier;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 3 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:decorative;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+@font-face
+	{font-family:"GoudyOlSt BT";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:135 0 0 0 27 0;}
+@font-face
+	{font-family:"Times New Roman Bold";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:auto;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+h1
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-indent:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l12 level1 lfo9;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:EN-US;}
+h2
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-indent:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l12 level2 lfo9;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	font-style:italic;}
+h3
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-indent:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	mso-list:l12 level3 lfo9;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+h4
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-indent:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	mso-list:l12 level4 lfo9;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;
+	mso-ansi-language:EN-US;}
+h5
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-indent:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	mso-list:l12 level5 lfo9;
+	font-size:13.0pt;
+	font-family:"Times New Roman",serif;
+	mso-ansi-language:EN-US;
+	font-style:italic;}
+h6
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-indent:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	mso-list:l12 level6 lfo9;
+	font-size:11.0pt;
+	font-family:"Times New Roman",serif;
+	mso-ansi-language:EN-US;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-indent:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	mso-list:l12 level7 lfo9;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-indent:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	mso-list:l12 level8 lfo9;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-indent:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	mso-list:l12 level9 lfo9;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-link:"Comment Text Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-unhide:no;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 216.0pt right 432.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-unhide:no;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 216.0pt right 432.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+span.MsoCommentReference
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:72.0pt;
+	margin-bottom:12.0pt;
+	margin-left:72.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-unhide:no;
+	mso-style-parent:"";
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-unhide:no;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-parent:"Comment Text";
+	mso-style-next:"Comment Text";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-unhide:no;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.MsoRMPane, li.MsoRMPane, div.MsoRMPane
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LS1DBL, li.LS1DBL, div.LS1DBL
+	{mso-style-name:"_LS1\0022DBL";
+	mso-style-unhide:no;
+	mso-style-parent:_LSBodyText;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:36.0pt;
+	line-height:24.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LS1SGL, li.LS1SGL, div.LS1SGL
+	{mso-style-name:"_LS1\0022SGL";
+	mso-style-unhide:no;
+	mso-style-parent:_LSBodyText;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:72.0pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSBlockQuote, li.LSBlockQuote, div.LSBlockQuote
+	{mso-style-name:_LSBlockQuote;
+	mso-style-unhide:no;
+	mso-style-parent:_LSBodyText;
+	mso-style-next:_LSBodyText;
+	margin-top:0cm;
+	margin-right:72.0pt;
+	margin-bottom:12.0pt;
+	margin-left:72.0pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSBodyText, li.LSBodyText, div.LSBodyText
+	{mso-style-name:_LSBodyText;
+	mso-style-unhide:no;
+	mso-style-parent:"Body Text";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSByLine, li.LSByLine, div.LSByLine
+	{mso-style-name:_LSByLine;
+	mso-style-unhide:no;
+	mso-style-parent:_LSBodyText;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:216.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLtrAddress, li.LSLtrAddress, div.LSLtrAddress
+	{mso-style-name:_LSLtrAddress;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLTR-Body;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLtrAuthor, li.LSLtrAuthor, div.LSLtrAuthor
+	{mso-style-name:_LSLtrAuthor;
+	mso-style-unhide:no;
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-indent:64.8pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLtr-Body, li.LSLtr-Body, div.LSLtr-Body
+	{mso-style-name:_LSLtr-Body;
+	mso-style-unhide:no;
+	mso-style-parent:"Body Text";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:64.8pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLtr-cc, li.LSLtr-cc, div.LSLtr-cc
+	{mso-style-name:_LSLtr-cc;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLtr-Body;
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLtr-Closing, li.LSLtr-Closing, div.LSLtr-Closing
+	{mso-style-name:_LSLtr-Closing;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLtr-Body;
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:36.0pt;
+	margin-left:0cm;
+	text-indent:64.8pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLtr-enc, li.LSLtr-enc, div.LSLtr-enc
+	{mso-style-name:_LSLtr-enc;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLtr-Body;
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLtr-Initials, li.LSLtr-Initials, div.LSLtr-Initials
+	{mso-style-name:_LSLtr-Initials;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLtr-Body;
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:64.8pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLtr-RE, li.LSLtr-RE, div.LSLtr-RE
+	{mso-style-name:_LSLtr-RE;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLtr-Body;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:36.0pt;
+	text-align:justify;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.LSLtr-VIA, li.LSLtr-VIA, div.LSLtr-VIA
+	{mso-style-name:_LSLtr-VIA;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLtr-Body;
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:64.8pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.LSTitle, li.LSTitle, div.LSTitle
+	{mso-style-name:_LSTitle;
+	mso-style-unhide:no;
+	mso-style-parent:_LSBodyText;
+	mso-style-next:_LSBodyText;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman Bold";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.LSTitle2, li.LSTitle2, div.LSTitle2
+	{mso-style-name:_LSTitle2;
+	mso-style-unhide:no;
+	mso-style-parent:_LSBodyText;
+	mso-style-next:_LSBodyText;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.LSTitleDbl, li.LSTitleDbl, div.LSTitleDbl
+	{mso-style-name:_LSTitleDbl;
+	mso-style-unhide:no;
+	mso-style-parent:_LSTitle2;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.NOINDENTS, li.NOINDENTS, div.NOINDENTS
+	{mso-style-name:NOINDENTS;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.NOINDENTD, li.NOINDENTD, div.NOINDENTD
+	{mso-style-name:NOINDENTD;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:24.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LeftItalics, li.LeftItalics, div.LeftItalics
+	{mso-style-name:LeftItalics;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Arial;
+	color:black;
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.OurOutline1, li.OurOutline1, div.OurOutline1
+	{mso-style-name:"OurOutline 1";
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:36.0pt;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l14 level1 lfo13;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.OurOutline2, li.OurOutline2, div.OurOutline2
+	{mso-style-name:"OurOutline 2";
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:72.0pt;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	mso-list:l14 level2 lfo13;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.OurOutline3, li.OurOutline3, div.OurOutline3
+	{mso-style-name:"OurOutline 3";
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:108.0pt;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	mso-list:l14 level3 lfo13;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.OurOutline4, li.OurOutline4, div.OurOutline4
+	{mso-style-name:"OurOutline 4";
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:144.0pt;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	mso-list:l14 level4 lfo13;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.OurOutline5, li.OurOutline5, div.OurOutline5
+	{mso-style-name:"OurOutline 5";
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:180.0pt;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	mso-list:l14 level5 lfo13;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.OurOutline6, li.OurOutline6, div.OurOutline6
+	{mso-style-name:"OurOutline 6";
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:216.0pt;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	mso-list:l14 level6 lfo13;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.OurOutline7, li.OurOutline7, div.OurOutline7
+	{mso-style-name:"OurOutline 7";
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:252.0pt;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	mso-list:l14 level7 lfo13;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.OurOutline8, li.OurOutline8, div.OurOutline8
+	{mso-style-name:"OurOutline 8";
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:288.0pt;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	mso-list:l14 level8 lfo13;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.OurOutline9, li.OurOutline9, div.OurOutline9
+	{mso-style-name:"OurOutline 9";
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:324.0pt;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	mso-list:l14 level9 lfo13;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSBT-1Indent, li.LSBT-1Indent, div.LSBT-1Indent
+	{mso-style-name:"_LSBT-1\0022 Indent";
+	mso-style-unhide:no;
+	mso-style-parent:_LSBodyText;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:72.0pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSByLine2, li.LSByLine2, div.LSByLine2
+	{mso-style-name:_LSByLine2;
+	mso-style-unhide:no;
+	mso-style-parent:_LSByLine;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:234.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLTR1DBL, li.LSLTR1DBL, div.LSLTR1DBL
+	{mso-style-name:"_LSLTR1\0022DBL";
+	mso-style-unhide:no;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-indent:72.0pt;
+	line-height:24.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLTR-Body0, li.LSLTR-Body0, div.LSLTR-Body0
+	{mso-style-name:_LSLTR-Body;
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLTR-Author, li.LSLTR-Author, div.LSLTR-Author
+	{mso-style-name:_LSLTR-Author;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLTR-Body;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLTRBlock, li.LSLTRBlock, div.LSLTRBlock
+	{mso-style-name:_LSLTRBlock;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLTR-Body;
+	mso-style-next:_LSLTR-Body;
+	margin-top:0cm;
+	margin-right:72.0pt;
+	margin-bottom:12.0pt;
+	margin-left:72.0pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLTR-cc0, li.LSLTR-cc0, div.LSLTR-cc0
+	{mso-style-name:_LSLTR-cc;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLTR-Body;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLTR-Closing0, li.LSLTR-Closing0, div.LSLTR-Closing0
+	{mso-style-name:_LSLTR-Closing;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLTR-Body;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:36.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLTR-Date, li.LSLTR-Date, div.LSLTR-Date
+	{mso-style-name:_LSLTR-Date;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLTR-Body;
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLTR-DocInfo, li.LSLTR-DocInfo, div.LSLTR-DocInfo
+	{mso-style-name:_LSLTR-DocInfo;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLtrAddress;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:8.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLTR-enc0, li.LSLTR-enc0, div.LSLTR-enc0
+	{mso-style-name:_LSLTR-enc;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLTR-Body;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLTR-Fax, li.LSLTR-Fax, div.LSLTR-Fax
+	{mso-style-name:_LSLTR-Fax;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLTR-Closing;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Courier;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLTR-Initials0, li.LSLTR-Initials0, div.LSLTR-Initials0
+	{mso-style-name:_LSLTR-Initials;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLTR-Body;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLTR-sal, li.LSLTR-sal, div.LSLTR-sal
+	{mso-style-name:_LSLTR-sal;
+	mso-style-unhide:no;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LSLTR-RE0, li.LSLTR-RE0, div.LSLTR-RE0
+	{mso-style-name:_LSLTR-RE;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLTR-sal;
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.LSLTRRE2, li.LSLTRRE2, div.LSLTRRE2
+	{mso-style-name:_LSLTRRE2;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLTR-RE;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.LSLTR-VIA0, li.LSLTR-VIA0, div.LSLTR-VIA0
+	{mso-style-name:_LSLTR-VIA;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLTR-Body;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-variant:small-caps;
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.LSLTR-VIA2, li.LSLTR-VIA2, div.LSLTR-VIA2
+	{mso-style-name:_LSLTR-VIA2;
+	mso-style-unhide:no;
+	mso-style-parent:_LSLTR-VIA;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"GoudyOlSt BT",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-variant:small-caps;
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.LSPOINTNAME, li.LSPOINTNAME, div.LSPOINTNAME
+	{mso-style-name:_LSPOINTNAME;
+	mso-style-unhide:no;
+	mso-style-parent:_LSBlockQuote;
+	mso-style-next:"_LS1\0022DBL";
+	margin-top:0cm;
+	margin-right:72.0pt;
+	margin-bottom:12.0pt;
+	margin-left:72.0pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	border:none;
+	mso-border-bottom-alt:solid windowtext .5pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 1.0pt 0cm;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.NOINDENTS0, li.NOINDENTS0, div.NOINDENTS0
+	{mso-style-name:NO_INDENTS;
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.BULLET, li.BULLET, div.BULLET
+	{mso-style-name:BULLET;
+	mso-style-unhide:no;
+	mso-style-parent:_LSBodyText;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:108.0pt;
+	text-align:justify;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	mso-list:l17 level1 lfo24;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.LEFTFLUSHITALICS, li.LEFTFLUSHITALICS, div.LEFTFLUSHITALICS
+	{mso-style-name:LEFT_FLUSH_ITALICS;
+	mso-style-unhide:no;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.LEFTFLUSH, li.LEFTFLUSH, div.LEFTFLUSH
+	{mso-style-name:LEFT_FLUSH;
+	mso-style-unhide:no;
+	mso-style-parent:_LSTitle2;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.LSTITLE20, li.LSTITLE20, div.LSTITLE20
+	{mso-style-name:LS_TITLE2;
+	mso-style-unhide:no;
+	mso-style-parent:_LSTitle;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman Bold";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-ansi-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.LSSINGLE, li.LSSINGLE, div.LSSINGLE
+	{mso-style-name:LS_SINGLE;
+	mso-style-unhide:no;
+	mso-style-parent:"_LS1\0022DBL";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:36.0pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.NOINDENTD0, li.NOINDENTD0, div.NOINDENTD0
+	{mso-style-name:NO_INDENTD;
+	mso-style-unhide:no;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:24.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.CENTER, li.CENTER, div.CENTER
+	{mso-style-name:CENTER;
+	mso-style-unhide:no;
+	mso-style-parent:Title;
+	margin-top:0cm;
+	margin-right:36.0pt;
+	margin-bottom:12.0pt;
+	margin-left:36.0pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-bidi-font-weight:bold;
+	text-decoration:underline;
+	text-underline:single;}
+span.zzmpTrailerItem
+	{mso-style-name:zzmpTrailerItem;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:windowtext;
+	mso-text-animation:none;
+	position:relative;
+	top:0pt;
+	mso-text-raise:0pt;
+	letter-spacing:0pt;
+	mso-no-proof:yes;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+span.CommentTextChar
+	{mso-style-name:"Comment Text Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"";
+	mso-style-link:"Comment Text";}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("HEARO%20-%20Artist%20Agreement%20\(clean%209-15-19\)%20\(1\).fld/header.html") fs;
+	mso-footnote-continuation-separator:url("HEARO%20-%20Artist%20Agreement%20\(clean%209-15-19\)%20\(1\).fld/header.html") fcs;
+	mso-endnote-separator:url("HEARO%20-%20Artist%20Agreement%20\(clean%209-15-19\)%20\(1\).fld/header.html") es;
+	mso-endnote-continuation-separator:url("HEARO%20-%20Artist%20Agreement%20\(clean%209-15-19\)%20\(1\).fld/header.html") ecs;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-title-page:yes;
+	mso-footer:url("HEARO%20-%20Artist%20Agreement%20\(clean%209-15-19\)%20\(1\).fld/header.html") f1;
+	mso-first-footer:url("HEARO%20-%20Artist%20Agreement%20\(clean%209-15-19\)%20\(1\).fld/header.html") ff1;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-132;
+	mso-list-type:simple;
+	mso-list-template-ids:1036022324;}
+@list l0:level1
+	{mso-level-tab-stop:90.0pt;
+	mso-level-number-position:left;
+	margin-left:90.0pt;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:-131;
+	mso-list-type:simple;
+	mso-list-template-ids:253103248;}
+@list l1:level1
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:-130;
+	mso-list-type:simple;
+	mso-list-template-ids:768223814;}
+@list l2:level1
+	{mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:-129;
+	mso-list-type:simple;
+	mso-list-template-ids:-882077954;}
+@list l3:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4
+	{mso-list-id:-128;
+	mso-list-type:simple;
+	mso-list-template-ids:34489496;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:90.0pt;
+	mso-level-number-position:left;
+	margin-left:90.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:-127;
+	mso-list-type:simple;
+	mso-list-template-ids:1179707220;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:-126;
+	mso-list-type:simple;
+	mso-list-template-ids:998692606;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l7
+	{mso-list-id:-125;
+	mso-list-type:simple;
+	mso-list-template-ids:-405135152;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l8
+	{mso-list-id:-120;
+	mso-list-type:simple;
+	mso-list-template-ids:-1914519342;}
+@list l8:level1
+	{mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l9
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:-469489368;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l10
+	{mso-list-id:4;
+	mso-list-template-ids:-1149437668;}
+@list l10:level1
+	{mso-level-start-at:9;
+	mso-level-reset-level:level1;
+	mso-level-tab-stop:207.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:36.0pt;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-variant:normal !important;
+	color:black;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-font-kerning:0pt;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	mso-bidi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+@list l10:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%2\)";
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:72.0pt;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-variant:normal !important;
+	color:black;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-font-width:100%;
+	mso-font-kerning:0pt;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	mso-bidi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+@list l10:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%3\)";
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	letter-spacing:0pt;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	mso-bidi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+@list l10:level4
+	{mso-level-suffix:none;
+	mso-level-text:"\(%4\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:144.0pt;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	letter-spacing:0pt;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	mso-bidi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+@list l10:level5
+	{mso-level-number-format:none;
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	letter-spacing:0pt;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	mso-bidi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+@list l10:level6
+	{mso-level-number-format:none;
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	letter-spacing:0pt;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	mso-bidi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+@list l10:level7
+	{mso-level-number-format:none;
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	letter-spacing:0pt;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	mso-bidi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+@list l10:level8
+	{mso-level-number-format:none;
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	letter-spacing:0pt;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	mso-bidi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+@list l10:level9
+	{mso-level-number-format:none;
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	letter-spacing:0pt;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	mso-bidi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+@list l11
+	{mso-list-id:416906235;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1314539312 -2023215970 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l11:level1
+	{mso-level-start-at:17;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	mso-ansi-font-style:normal;}
+@list l11:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l11:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l11:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l12
+	{mso-list-id:613558897;
+	mso-list-template-ids:-1610724414;}
+@list l12:level1
+	{mso-level-number-format:roman-lower;
+	mso-level-style-link:"Heading 1";
+	mso-level-suffix:none;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l12:level2
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 2";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l12:level3
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 3";
+	mso-level-suffix:none;
+	mso-level-text:"\(%3\)";
+	mso-level-tab-stop:90.0pt;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l12:level4
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 4";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:126.0pt;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l12:level5
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 5";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:162.0pt;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l12:level6
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 6";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:198.0pt;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l12:level7
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 7";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:234.0pt;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l12:level8
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 8";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:270.0pt;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l12:level9
+	{mso-level-number-format:none;
+	mso-level-style-link:"Heading 9";
+	mso-level-suffix:none;
+	mso-level-text:"";
+	mso-level-tab-stop:306.0pt;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l13
+	{mso-list-id:736391712;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2055587040 3811078 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l13:level1
+	{mso-level-start-at:11;
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-36.0pt;}
+@list l13:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l13:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l13:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l14
+	{mso-list-id:1206328058;
+	mso-list-template-ids:-1034883228;}
+@list l14:level1
+	{mso-level-start-at:5;
+	mso-level-style-link:"OurOutline 1";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l14:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-style-link:"OurOutline 2";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l14:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-style-link:"OurOutline 3";
+	mso-level-text:"\(%3\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l14:level4
+	{mso-level-number-format:alpha-lower;
+	mso-level-style-link:"OurOutline 4";
+	mso-level-text:"\(%4\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l14:level5
+	{mso-level-number-format:roman-lower;
+	mso-level-style-link:"OurOutline 5";
+	mso-level-text:"\(%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l14:level6
+	{mso-level-style-link:"OurOutline 6";
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l14:level7
+	{mso-level-number-format:alpha-lower;
+	mso-level-style-link:"OurOutline 7";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l14:level8
+	{mso-level-number-format:roman-lower;
+	mso-level-style-link:"OurOutline 8";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l14:level9
+	{mso-level-style-link:"OurOutline 9";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:windowtext;
+	mso-text-animation:none;
+	mso-hide:none;
+	text-transform:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l15
+	{mso-list-id:1245649521;
+	mso-list-type:hybrid;
+	mso-list-template-ids:466257836 67698715 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l15:level1
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:right;
+	text-indent:-18.0pt;}
+@list l15:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l15:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l15:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l15:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l16
+	{mso-list-id:1465463822;
+	mso-list-template-ids:1829953590;}
+@list l16:level1
+	{mso-level-number-format:roman-upper;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;}
+@list l16:level2
+	{mso-level-number-format:alpha-upper;
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:36.0pt;
+	text-indent:0cm;}
+@list l16:level3
+	{mso-level-tab-stop:90.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:0cm;}
+@list l16:level4
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%4\)";
+	mso-level-tab-stop:126.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:0cm;}
+@list l16:level5
+	{mso-level-text:"\(%5\)";
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:0cm;}
+@list l16:level6
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	margin-left:180.0pt;
+	text-indent:0cm;}
+@list l16:level7
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%7\)";
+	mso-level-tab-stop:270.0pt;
+	mso-level-number-position:left;
+	margin-left:216.0pt;
+	text-indent:0cm;}
+@list l16:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%8\)";
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	margin-left:252.0pt;
+	text-indent:0cm;}
+@list l16:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%9\)";
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	margin-left:288.0pt;
+	text-indent:0cm;}
+@list l17
+	{mso-list-id:1479492924;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1377209364 1485208372 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l17:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:BULLET;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:93.0pt;
+	mso-level-number-position:left;
+	margin-left:93.0pt;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:12.0pt;
+	font-family:Symbol;
+	color:windowtext;}
+@list l17:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l17:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	margin-left:180.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l17:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	margin-left:216.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l17:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	margin-left:252.0pt;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l17:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	margin-left:288.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l17:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	margin-left:324.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l17:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:360.0pt;
+	mso-level-number-position:left;
+	margin-left:360.0pt;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l17:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:396.0pt;
+	mso-level-number-position:left;
+	margin-left:396.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l18
+	{mso-list-id:1727994808;
+	mso-list-template-ids:617351868;}
+@list l18:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l18:level2
+	{mso-level-text:"%1\.%2\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:39.6pt;
+	text-indent:-21.6pt;
+	mso-ansi-font-weight:bold;}
+@list l18:level3
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%3\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:61.2pt;
+	text-indent:-25.2pt;
+	mso-ansi-font-weight:normal;}
+@list l18:level4
+	{mso-level-text:"%1\.%2\.%3\.%4\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:86.4pt;
+	text-indent:-32.4pt;
+	mso-ansi-font-weight:normal;}
+@list l18:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:111.6pt;
+	text-indent:-39.6pt;}
+@list l18:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:136.8pt;
+	text-indent:-46.8pt;}
+@list l18:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:162.0pt;
+	text-indent:-54.0pt;}
+@list l18:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:187.2pt;
+	text-indent:-61.2pt;}
+@list l18:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:216.0pt;
+	text-indent:-72.0pt;}
+@list l19
+	{mso-list-id:1796554840;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1361875502 67698713 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l19:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-18.0pt;}
+@list l19:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;}
+@list l19:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:144.0pt;
+	text-indent:-9.0pt;}
+@list l19:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:180.0pt;
+	text-indent:-18.0pt;}
+@list l19:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:216.0pt;
+	text-indent:-18.0pt;}
+@list l19:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:252.0pt;
+	text-indent:-9.0pt;}
+@list l19:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:288.0pt;
+	text-indent:-18.0pt;}
+@list l19:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:324.0pt;
+	text-indent:-18.0pt;}
+@list l19:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:360.0pt;
+	text-indent:-9.0pt;}
+@list l20
+	{mso-list-id:1879849654;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-135861042 815009464 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l20:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	mso-ansi-font-style:normal;}
+@list l20:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;}
+@list l20:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:90.0pt;
+	text-indent:-9.0pt;}
+@list l20:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:126.0pt;
+	text-indent:-18.0pt;}
+@list l20:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:162.0pt;
+	text-indent:-18.0pt;}
+@list l20:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:198.0pt;
+	text-indent:-9.0pt;}
+@list l20:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:234.0pt;
+	text-indent:-18.0pt;}
+@list l20:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:270.0pt;
+	text-indent:-18.0pt;}
+@list l20:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:306.0pt;
+	text-indent:-9.0pt;}
+@list l21
+	{mso-list-id:1892036496;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-917459614 815009464 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l21:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-18.0pt;
+	mso-ansi-font-style:normal;}
+@list l21:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l21:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l21:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l21:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l21:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l21:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l21:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l21:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l22
+	{mso-list-id:2015455858;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1220270346 815009464 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l22:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-18.0pt;
+	mso-ansi-font-style:normal;}
+@list l22:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l22:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l22:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l22:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l22:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l22:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l22:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l22:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l14:level1 lfo29
+	{mso-level-start-at:1;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+<div class="artist_agreement_container">
+<div class=WordSection1>
+
+<p class=LSTitle2><span style='font-size:10.0pt;font-family:"Arial",sans-serif'><span
+style='mso-spacerun:yes'> </span><span lang=EN-US>TUNE.FM.<br>
+ARTIST AGREEMENT<o:p></o:p></span></span></p>
+
+<p class=NOINDENTS0 style='margin-left:-4.5pt;mso-prop-change:"Lisa Oratz" 20190912T2152'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>PLEASE READ
+THIS AGREEMENT CAREFULLY. BY CLICKING ON THE “I ACCEPT” BUTTON BELOW OR
+OTHERWISE UPLOADING SONGS TO THE SERVICE, ARTIST AGREES TO BE BOUND BY THE
+TERMS AND CONDITIONS OF THIS AGREEMENT</span><span lang=EN-US> </span><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>INCLUDING
+THE MANDATORY ARBITRATION PROVISION AND CLASS ACTION WAIVER IN SECTION 17.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=NOINDENTS0 style='margin-left:-4.5pt'><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif'>This Artist Agreement
+(“Agreement”) is between hearo.fm, Inc. (“Hearo”) and the individual artist, group,
+duo, band, or entity (referred to as “Artist”) who wishes to upload original music
+in the form of master sound recordings (and the musical compositions embodied
+therein) that are owned or controlled by Artist <span
+style='mso-spacerun:yes'> </span>(each a “Song”) to the tune.fm website (located
+at <a href="https://www.tune.fm">www.tune.fm</a>) (the “Site”).<span
+style='mso-spacerun:yes'>  </span>Such Songs are uploaded by Artist in order to
+facilitate the marketing, streaming, and/or distribution of such Songs by
+Artist directly to users (the “Users”) of the tune.fm music marketplace (the “Service”).
+This Agreement becomes effective at the moment Artist, or Artist’s representative,
+clicks the “I Accept” button below (the “Effective Date”) or otherwise uploads
+Songs to the Service<b style='mso-bidi-font-weight:normal'>.</b> <span
+style='mso-spacerun:yes'> </span>Artist’s use of the Site is also subject to,
+and Artist agrees to be bound by, the tune.fm website Terms of Service <b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'>tune.fm/terms/</i></b>
+(“Site Terms”).<span style='mso-spacerun:yes'>  </span>In the event of any
+conflict between this Agreement and the Site Terms, this Agreement shall
+control.<o:p></o:p></span></p>
+
+<p class=NOINDENTS0 style='margin-left:-4.5pt'><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif'>If you use the Service,
+or create an account, on behalf of an Artist, you represent that you are an
+authorized representative of, and have the authority to bind and enter into this
+Agreement on behalf of, such Artist, and that such Artist agrees to be bound by
+this Agreement. <o:p></o:p></span></p>
+
+<p class=NOINDENTS0 style='margin-left:-4.5pt'><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif'>Hearo reserves the
+right to change or modify the terms and conditions of this Agreement at any
+time and in its sole discretion. If we make material changes, we will provide you
+with notice of such changes, such as by sending an email, providing a notice
+through our Site, or updating the date at the top of this Agreement. <span
+style='mso-spacerun:yes'> </span>If notice is provided, unless we say otherwise
+in our notice, the amended Agreement will be effective thirty (30) days after
+the date such notice was provided. Otherwise, the modified Amendment will be effective
+immediately. <span style='mso-spacerun:yes'> </span>Your continued use of the Site
+or Service following such notice will constitute your acceptance of such
+changes or modifications.<span style='mso-spacerun:yes'>  </span><span
+style='mso-spacerun:yes'>  </span>If you do not agree to the amended Agreement,
+you must stop using our Site and Service.<o:p></o:p></span></p>
+
+<p class=NOINDENTS0 style='margin-left:18.0pt;text-indent:-18.0pt;mso-text-indent-alt:
+-18.0pt;mso-list:l20 level1 lfo25'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>The Service</span></b><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>. The Service
+is an online marketplace platform that enables Artist to market, promote, and
+monetize their Songs through the Service using the tools and features provided by
+Hearo. The Service will enable Artists to offer steams of their Songs to Users in
+exchange for JAM Tokens (as described in the Hearo Terms of Service<b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'> tune.fm/terms/</i></b>)
+and may enable other forms of monetization, as from time-to-time determined by
+Hearo. <o:p></o:p></span></p>
+
+<p class=NOINDENTS0 style='text-indent:-18.0pt !msorm;mso-text-indent-alt:-18.0pt !msorm;
+margin-left:18.0pt;text-indent:-18.0pt;mso-text-indent-alt:-18.0pt;mso-list:
+l20 level1 lfo25;mso-prop-change:"Lisa Oratz" 20190912T0213'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Eligibility</span></b><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>.<span
+style='mso-spacerun:yes'>  </span>In order to use the Service, you need to: (1)
+be 18 years of age or older (or the applicable age of majority in your
+jurisdiction, if other than 18) for individuals and for each member of a group;
+(2) have the power to enter a binding contract with us and not be barred from
+doing so under any applicable laws; and (3) not have been previously barred
+from the Service for violating this Agreement or any other agreement with Hearo.<o:p></o:p></span></p>
+
+<p class=NOINDENTS0 style='margin-left:18.0pt;text-indent:-18.0pt;mso-text-indent-alt:
+-18.0pt;mso-list:l20 level1 lfo25'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Uploading of
+Artist Content</span></b><span lang=EN-US style='font-size:10.0pt;font-family:
+"Arial",sans-serif'>.<span style='mso-spacerun:yes'>  </span>Subject to the
+terms and conditions of this Agreement, Artist may upload, or authorize others
+to upload on their behalf: (a) Songs, in a lossless file format, to Artist’s
+profile page or Artist’s group page on the Site (the “Artist Pages”) during the
+Term (as set forth in Section 10 below), which Songs will be hosted and stored on
+the Site at Artist’s direction; and (b) other Artist content, such as artwork, logos,
+photographs, lyrics, descriptions, comments, bios, text, and metadata, which
+are uploaded to the Site (the “Additional Content”). The Songs and the
+Additional Content will together be referred to as the “Artist Content”.<span
+style='mso-spacerun:yes'>  </span>The uploaded Artist Content may be displayed
+on the applicable page and made available to Users through the Service indefinitely
+unless Artist removes a Song or this Agreement is terminated as set forth
+herein, provided, however, that either party may remove any or all Artist
+Content from the Service at any time in its sole discretion.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=NOINDENTS0 style='margin-left:18.0pt;text-indent:-18.0pt;mso-text-indent-alt:
+-18.0pt;mso-list:l20 level1 lfo25'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Account Creation</span></b><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>. Prior to
+uploading any Songs, Artist is required to create an account and provide Hearo with
+a physical mailing address. <span style='mso-spacerun:yes'> </span><a
+name="_Hlk19445584">Hearo will create a digital wallet for Artist (the “Digital
+Wallet”), and all JAM Tokens earned through the Service (whether from the Songs
+or as a User of the Service) will be deposited into Artist’s Digital Wallet. </a>Artist
+must provide accurate account information and promptly update this information
+if it changes. Artist also must maintain the security of Artist’s account and
+promptly notify Hearo if Artist discovers or suspects that someone has accessed
+Artist’s account or Digital Wallet without permission. If Artist permits others
+to use Artist account credentials, Artist is responsible for the activities of
+such users that occur in connection with Artist’s account.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:
+l14 level1 lfo13'><![if !supportLists]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif;mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Artist Fees</span></b><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>.<o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>The number of JAM Tokens to be paid by Users for
+streaming an Artist Song will be as set forth on the Site (the “Streaming Fee”)
+and may be changed from time to time by Hearo in its sole discretion. <span
+style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>To the extent these features are made available
+on the Service, Artist may, at its option: (i) offer the first stream of the Song
+without charge; (ii) set the maximum amount of Streaming Fees to be paid for
+each Song, after which the User may access unlimited streams of the Song or
+download the Song without further charge; and (iii)<span
+style='mso-spacerun:yes'>  </span>permit the Song to be downloaded by Users for
+a fee (in JAM Tokens) determined by Artist (the “Download Fee”); The Streaming
+Fees and the Download Fees together will be referred to as the “Artist Fees.” <o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>c.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>Artists may also use their JAM Tokens (up to a
+budget established by Artist) to pay rewards to Users for their first stream of
+one or more of their Songs (“JAM Rewards”). When these JAM Rewards are redeemed
+by Users, the applicable JAM Tokens will be deducted from Artist’s Digital Wallet.<span
+style='mso-spacerun:yes'>  </span><span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:
+l14 level1 lfo13'><![if !supportLists]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif;mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Artist Content
+Rules</span></b><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>.<span
+style='mso-spacerun:yes'>  </span>Artist agrees not to upload or post any Songs
+or other Artist Content: (a) that promote or incite hatred, harassment,
+bullying, or violence, (b) that contain obscenities or any sexually explicit,
+defamatory, discriminatory, abusive, threatening, hateful, excessively violent,
+infringing, or other patently offensive or illegal content, or (c) that
+infringe upon or violate the rights of any third party of the terms of this
+Agreement or the Site Terms.<span style='mso-spacerun:yes'>  </span>Hearo has
+the right, but not the obligation, to review the Artist Content prior to and
+after uploading, including, but not limited to, comparing the Artist Content
+against third party databases of copyrighted music for the purpose of identifying
+infringing materials.<span style='mso-spacerun:yes'>  </span>In addition, although
+Hearo has no obligation to screen, monitor, or review Artist Content, Hearo has
+the right, in its sole and absolute discretion, to review, remove or prevent
+the upload of any Artist Content to the Site at any time, with or without
+notice.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-indent:-18.0pt;page-break-after:
+auto;mso-list:l14 level1 lfo13'><a name="_DV_M241"></a><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>License
+Grant &amp; Intellectual Property Rights.<span style='mso-spacerun:yes'>
+</span><o:p></o:p></span></b></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>Artist hereby grants to Hearo, and Hearo hereby
+accepts, a worldwide, non-exclusive, sublicenable, royalty-free right and license
+during the Term to reproduce, distribute, publicly perform, publicly display, adapt,
+reformat, encode, excerpt, edit, compress, analyze, and otherwise use and exploit
+the Artist Content as necessary or appropriate to (i) host and display the Artist
+Content on the Site; (ii) offer and operate the Service; (iii) enable the streaming
+and other licensing and distribution of Songs to Users as facilitated through the
+Service on behalf of Artist, including the right to grant sublicenses, as necessary,
+to allow Users to use and exploit the Songs in accordance with the uses made
+available through the Service on the terms and conditions set forth in the Site
+Terms; (iv)&nbsp;demonstrate, market, and promote the Artist Content, the Site,
+and the Service, and (v) create metadata, improve the Service and the search,
+discovery and recommendation features relating to the Artist Content, and for
+other internal purposes such as research, development, analysis, training, and machine
+learning. To the fullest extent permitted by applicable law, Artist specifically
+waives any moral rights with respect to any Artist Content.<span
+style='mso-spacerun:yes'>  </span>Artist grants Hearo the right to use the name,
+likeness, and biographical information of any individual Artist, or any member
+of a duo, band or group, in connection with the Artist Content and the promotion
+thereof and of the Service.<span style='mso-spacerun:yes'>  </span>Hearo may
+also use any Artist trademarks relating to the Artist Content in order to refer
+to and describe the Artist and the Artist Content, including in promotional materials.
+<o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>All rights in the Site, the Service, and the
+Hearo Content (excluding the Artist Content) belong solely to Hearo, and no
+Intellectual Property Rights of any kind are assigned or transferred to Artist
+under this Agreement.<span style='mso-spacerun:yes'>  </span>Artist shall have
+no right to use the Service, the Site or any information or materials on the
+Site or made available through the Service, including but not limited to data,
+text, graphics, photographs, reports, music, and other materials <span
+style='mso-spacerun:yes'> </span>(collectively the “Hearo Content”) for any
+purpose other than as set forth herein or in the Site Terms.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>c.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>For purposes of this Agreement, “Intellectual Property
+Rights” means all inventions and/or works and any and all rights under U.S. and/or
+foreign patents, trade secrets, know&#8209;how, copyrights, trademarks, and
+other industrial or intangible property rights of a similar nature worldwide;
+all rights pursuant to grants and/or registrations worldwide in connection with
+the foregoing and all other rights with respect thereto; all rights under
+applications for any such grant or registration, all rights of priority under
+international conventions to make such applications and the right to control
+their prosecution, and all rights under amendments, continuations, divisions,
+and continuations-in-part of such applications; and all rights under
+corrections, reissues, reexaminations, patents of addition, extensions, and
+renewals of any such grant, registration, and/or right.<o:p></o:p></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-indent:-18.0pt;page-break-after:
+auto;mso-list:l14 level1 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Fees &amp; Payment
+Terms.<o:p></o:p></span></b></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>Following any paid streaming or other licensing
+by a User of a Song and receipt of the applicable Fee(s) for such license, Hearo
+will collect the Artist Fees (in JAM Tokens) from User on behalf of the Artist
+and <b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'>remit
+</i></b>the applicable Fee(s) to the Artist, less ten (10%) of the Fee(s) as
+Hearo’s commission (the “Commission”).<span style='mso-spacerun:yes'>
+</span>Such remittance will occur by crediting the Artist’s Digital Wallet within
+2 days after receipt of the Fee(s).<span style='mso-spacerun:yes'>  </span>Artist
+is solely responsible for collection of the Artist Fees. <span
+style='mso-spacerun:yes'> </span>At the direction of Artist, Hearo can create multiple
+Digital Wallets for an Artist and split Artist Fees among such Digital Wallets
+as designated by Artist through Artist’s account settings (the “Artist Split”).<span
+style='mso-spacerun:yes'>  </span>Each member of Artist agrees that the amounts
+paid to Artist in accordance with the Artist Split designated through Artist’s
+account will constitute payment in full to Artist and all of its members.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>Artist may use funds from the applicable
+Digital Wallet for Services on the Site, but Artist shall not have the right to
+otherwise withdraw funds from the applicable Digital Wallet or to convert JAM
+Tokens into U.S. dollars or other crypto or fiat currencies. <b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><o:p></o:p></i></b></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;page-break-after:auto;mso-list:l14 level1 lfo13'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Restrictions</span></b><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=OurOutline1 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;page-break-after:auto;mso-list:l19 level1 lfo30'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>Artist shall not, and not permit its employees,
+officers, directors, members, managers, partners, agents, third party service
+providers, or other designated persons (its Representatives”) to, take any of
+the following actions:<span style='mso-spacerun:yes'>  </span>(i)&nbsp;upload
+any Song in which Artist does not own or control all rights in the Song,
+including all rights in the underlying musical composition (i.e. no cover
+songs); (ii) upload any Artist Content that is unlawful, infringes or violates the
+rights or any third party, or otherwise violates the terms of this Agreement or
+(iii)&nbsp;use the Site or the Service in violation of any applicable law or
+regulation. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:l19 level1 lfo30'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>Artist acknowledges that it may be necessary or
+advisable under applicable law for the Company to require certain lockups,
+dribble out rules, or other features to apply to JAM Tokens.<span
+style='mso-spacerun:yes'>  </span>Artist hereby agrees that the Company may
+apply such lockups, dribble out rules, or other features to JAM Tokens received
+by Artist as deemed necessary or advisable in the sole and absolute discretion
+of the Company under then applicable law.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif'><o:p>&nbsp;</o:p></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;page-break-after:auto;mso-list:l14 level1 lfo13'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>10.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Term.</span></b><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'><span
+style='mso-spacerun:yes'>  </span>The term of this Agreement shall commence on
+the Effective Date and continue until terminated by either party as set forth
+herein (the “Term”).<o:p></o:p></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;page-break-after:auto;mso-list:l14 level1 lfo13'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>11.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Termination;
+Modification to Service.<o:p></o:p></span></b></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:
+l14 level2 lfo13'><![if !supportLists]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif;mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>Either party shall have the right to terminate
+this Agreement&nbsp;at any time upon thirty (30) days prior written notice to
+Artist. <o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>All features and content on the Service (other
+than Artist Content) are at the sole discretion of Hearo, and we reserve the
+right to modify the Site and our Service, and to suspend or discontinue the
+Service, or any portion thereof, at any time in our sole discretion.<span
+style='mso-spacerun:yes'>  </span>Hearo is not responsible for any loss or harm
+related to your inability to access or use our Service.<b style='mso-bidi-font-weight:
+normal'><o:p></o:p></b></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>c.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>Upon termination or expiration of this
+Agreement for any reason (i)&nbsp;Artist’s right to use the Services shall
+cease immediately including, without limitation, the right to upload, stream
+and otherwise distribute any Songs on the Site, (ii)&nbsp;the Songs shall be
+removed from the Site, (iii)&nbsp;the Artist’s Digital Wallet will be terminated,
+and (iv)&nbsp;Hearo’s license to host and promote and otherwise use and exploit
+the Songs on the Site shall terminate, provided, however,&nbsp;that any rights or
+licensed with respect to the use of Songs properly granted to Users through the
+Service during the Term will continue in effect after termination in accordance
+with the terms and conditions applicable to such User’s use of the Song.<b
+style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>d.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>Sections 7.b, 9.b, 10, 11, 12, 13, 14, 15, 16, 17,
+and 18 of this Agreement will survive any termination or expiration of this Agreement.
+<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;page-break-after:auto;mso-list:l14 level1 lfo13'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>12.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Confidentiality.<o:p></o:p></span></b></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>As a result of entering into this Agreement,
+Artist has and will have access to certain confidential information (“Confidential
+Information) of Hearo.<span style='mso-spacerun:yes'>  </span>“Confidential
+Information” means any nonpublic Hearo Content or Hearo Intellectual Property and
+other nonpublic information about Hearo that Artist may gain access to in
+connection with the Service.<o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>Confidential Information does not include information
+that is or was, at the time of the disclosure: (i)&nbsp;generally known or available
+to the public; (ii)&nbsp;received by Artist from a third party not subject to
+any obligation of confidentiality; (iii)&nbsp;already in Artist’s possession
+prior to the date of receipt from Hearo, and not subject to any obligation of
+confidentiality; or (iv)&nbsp;independently developed by the Artist provided in
+each case that such information was not obtained by the Artist as a result of
+any unauthorized or wrongful act or omission, or breach of this Agreement, or
+breach of any legal, ethical or fiduciary obligation owed to Hearo.<o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>c.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>At all times the Artist shall: (i)&nbsp;use the
+same standard of care to protect the Confidential Information as it uses to
+protect its own confidential information of a similar nature, but not less than
+a commercially reasonable standard of care, (ii)&nbsp;not use Hearo’s
+Confidential Information other than as necessary to perform its obligations or
+exercise its rights under this Agreement, (iii)&nbsp;not disclose, distribute,
+or disseminate the Confidential Information to any third party (except to
+Representatives, as expressly permitted below), and (iv)&nbsp;disclose Hearo’s
+Confidential Information to its Representatives on a “need to know basis;” provided
+that each Representative is bound by confidentiality obligations at least as
+restrictive as those contained in this Agreement.<o:p></o:p></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:
+l14 level1 lfo13'><![if !supportLists]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif;mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>13.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>Artist Representations and Warranties</span></b><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>.<span
+style='mso-spacerun:yes'>  </span>Artist hereby represents and warrants to
+Hearo as follows:<o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:
+l14 level2 lfo13'><![if !supportLists]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif;mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>it has the right to enter into and perform this
+Agreement and to grant the rights granted herein, without violating the rights
+of, or conflicting with any obligations to, any third party;<o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:
+l14 level2 lfo13'><![if !supportLists]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif;mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>it owns or controls all right, title, and
+interest in and to the Artist Content, including all sound recordings, musical
+compositions and Intellectual Property Rights contained therein, and the rights
+granted by Artist are sufficient to enable Hearo to facilitate the grant of rights
+made available to Users through the Service without the need to obtain any additional
+rights, licenses or permissions and without any financial or other obligations
+to Artist or any third parties (including any payments to artists, songwriters,
+performance rights organizations, or labor unions);<o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:
+l14 level2 lfo13'><![if !supportLists]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif;mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>c.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>the use of the Artist Content and associated
+Intellectual Property Rights, as contemplated under this Agreement, do not, and
+will not, infringe, misappropriate or otherwise violate any Intellectual
+Property Rights or other rights of any third party;<o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:
+l14 level2 lfo13'><![if !supportLists]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif;mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>d.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>the Artist Content shall be free of any “virus”,
+“Trojan Horse” “worm”, “self-destruction”, “disabling”, “lock out”, “metering”
+device or any other malicious code as such terms are understood in the
+technology industry, which could impair access to or use thereof by Hearo
+and/or Users;<o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:
+l14 level2 lfo13'><![if !supportLists]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif;mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>e.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>the Artist Content does not contain misleading
+or false information, constitute libel or slander, or contain any illegal or
+defamatory content, and<o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>f.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>it shall comply with all applicable laws,
+rules, and regulations with respect to its the Artist Content and Artist’s actions
+and obligations under this Agreement.<o:p></o:p></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;page-break-after:auto;mso-list:l14 level1 lfo13'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>14.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>DISCLAIMER
+OF WARRANTIES</span></b><span lang=EN-US style='font-size:10.0pt;font-family:
+"Arial",sans-serif'>.<span style='mso-spacerun:yes'>  </span>THE SITE, THE
+SERVICE, AND THE HEARO CONTENT ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS.<span
+style='mso-spacerun:yes'>  </span>NONE OF HEARO, ITS AFFILIATES, SUBSIDIARIES
+OR ITS OR THEIR OFFICERS, DIRECTORS, EMPLOYEES OR AGENTS (COLLECTIVELY THE “HEARO
+PARTIES”) MAKE ANY, AND HEREBY SPECIFICALLY DISCLAIM, ANY AND ALL, REPRESENTATIONS,
+ENDORSEMENTS, GUARANTEES, AND WARRANTIES, EXPRESS OR IMPLIED, REGARDING THIS
+SITE, THE SERVICE, AND THE HEARO CONTENT INCLUDING WITHOUT LIMITATION, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE,
+TITLE AND NON-INFRINGEMENT OF THIRD-PARTY RIGHTS.<o:p></o:p></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;page-break-after:auto;mso-list:l14 level1 lfo13'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>15.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Limitation
+of Liability</span></b><span lang=EN-US style='font-size:10.0pt;font-family:
+"Arial",sans-serif'>.<o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>IN NO EVENT WILL THE HEARO PARTIES BE LIABLE TO
+ARTIST (NOR TO ANY OTHER PERSON CLAIMING RIGHTS DERIVED FROM ARTIST’S RIGHTS)
+FOR CONSEQUENTIAL, INCIDENTAL, INDIRECT, PUNITIVE OR EXEMPLARY DAMAGES OF ANY
+KIND (INCLUDING WITHOUT LIMITATION LOST REVENUES OR PROFITS, LOSS OF USE, LOSS
+OF COST OR OTHER SAVINGS, LOSS OF GOODWILL OR REPUTATION) OR LOSS OF DATA WITH
+RESPECT TO ANY CLAIMS BASED ON CONTRACT, TORT OR OTHERWISE (INCLUDING
+NEGLIGENCE AND STRICT LIABILITY) ARISING FROM OR RELATING TO THE SERVICE, THE
+SITE, THE HEARO CONTENT, OR OTHERWISE ARISING FROM OR RELATING TO THIS AGREEMENT,
+REGARDLESS OF WHETHER THE HEARO PARTIES WERE ADVISED, HAD OTHER REASON TO KNOW,
+OR IN FACT KNEW OF THE POSSIBILITY THEREOF.<o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>THE HEARO PARTIES MAXIMUM, AGGREGATE LIABILITY
+ARISING FROM OR RELATING TO THIS AGREEMENT, THE SITE, THE SERVICE, OR THE HEARO
+CONTENT, REGARDLESS OF THE CAUSE OF ACTION (WHETHER IN CONTRACT, TORT, BREACH
+OF WARRANTY OR OTHERWISE), WILL NOT EXCEED THE COMMISSION ACTUALLY PAID TO HEARO
+BY ARTIST DURING THE SIX (6) MONTH PERIOD PRECEDING THE DATE ON WHICH THE CLAIM
+AROSE.<o:p></o:p></span></p>
+
+<p class=OurOutline2 style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l14 level2 lfo13'><![if !supportLists]><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>c.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>To the extent the exclusions and limitations of
+liability set forth in this Section is not permitted under applicable law, the Hearo
+Parties liability in such case will be limited to the greatest extent permitted
+by applicable law.<o:p></o:p></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;page-break-after:auto;mso-list:l14 level1 lfo13'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>16.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Indemnification.<span
+style='mso-spacerun:yes'>  </span></span></b><span lang=EN-US style='font-size:
+10.0pt;font-family:"Arial",sans-serif'>Artist shall defend, indemnify, and hold
+the Hearo Parties harmless from and against any and all liabilities, claims, demands,
+losses, damages, costs and expenses, including reasonable attorneys’ fees, related
+to or arising out of (a)&nbsp;any breach or alleged breach of this Agreement by
+Artist, including of any representations or warranties of Artist, (b) any
+violation of this Agreement or the Site Terms by Artist; or (c)&nbsp;any use of
+or inability to use the Artist Content by Hearo or its Users, including any
+claims that the Artist Content infringes or violates the rights of any third
+party.<o:p></o:p></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:
+l14 level1 lfo13'><![if !supportLists]><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif;mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>17.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>Dispute Resolution; Binding Arbitration. Please
+read the following section carefully because it requires you to arbitrate
+certain disputes and claims with Hearo and limits the manner in which you can
+seek relief from us, unless you opt out of arbitration by following the
+instructions set forth below. No class or representative actions or
+arbitrations are allowed under this arbitration provision. In addition,
+arbitration precludes you from suing in court or having a jury trial. <o:p></o:p></span></b></p>
+
+<p class=NOINDENTS0 style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><u><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>No
+Representative Actions</span></u></b><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>. You and Hearo
+agree that any dispute arising out of or related to these Terms, the Service,
+or our Site is personal to you and Hearo and that any dispute will be resolved
+solely through individual action, and will not be brought as a class arbitration,
+class action or any other type of representative proceeding.<o:p></o:p></span></b></p>
+
+<p class=NOINDENTS0 style='margin-left:18.0pt'><u><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif'>Arbitration of Disputes</span></u><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>. Except for
+small claims disputes in which you or Hearo seeks to bring an individual action
+in small claims court located in the county of your billing address or disputes
+in which you or Hearo seeks injunctive or other equitable relief for the
+alleged infringement or misappropriation of intellectual property, <b
+style='mso-bidi-font-weight:normal'>you and Hearo waive your rights to a jury
+trial and to have any other dispute arising out of or related to these Terms,
+the Service, or our Site, including claims related to privacy and data
+security, (collectively, “Disputes”) resolved in court.</b> Instead, for any
+Dispute that you have against Hearo you agree to first contact Hearo and
+attempt to resolve the claim informally by sending a written notice of your
+claim (“Notice”) to Hearo by email at<b style='mso-bidi-font-weight:normal'><i
+style='mso-bidi-font-style:normal'> legal@hearo.fm</i></b>. The Notice must (a)
+include your name, residence address, email address, and telephone number; (b)
+describe the nature and basis of the Dispute; and (c) set forth the specific
+relief sought. Our notice to you will be similar in form to that described
+above. If you and Hearo cannot reach an agreement to resolve the Dispute within
+thirty (30) days after such Notice is received, then either party may submit
+the Dispute to binding arbitration administered by JAMS or, under the limited
+circumstances set forth above, in court. All Disputes submitted to JAMS will be
+resolved through confidential, binding arbitration before one arbitrator. Arbitration
+proceedings will be held in New Castle County, Delaware unless you are a
+consumer, in which case you may elect to hold the arbitration in your county of
+residence. For purposes of this Section 17, a “consumer” means a person using
+the Site for personal, family or household purposes. You and Hearo agree that
+Disputes will be held in accordance with the JAMS Streamlined Arbitration Rules
+and Procedures (“JAMS Rules”). The most recent version of the JAMS Rules is available
+on the JAMS website and are hereby incorporated by reference. You either
+acknowledge and agree that you have read and understand the JAMS Rules or waive
+your opportunity to read the JAMS Rules and waive any claim that the JAMS Rules
+are unfair or should not apply for any reason. <o:p></o:p></span></p>
+
+<p class=NOINDENTS0 style='margin-left:18.0pt'><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif'>You and Hearo agree
+that these Terms affect interstate commerce and that the enforceability of this
+Section 17 will be substantively and procedurally governed by the Federal
+Arbitration Act, 9 U.S.C. § 1, et seq. (the “FAA”), to the maximum extent
+permitted by applicable law. As limited by the FAA, these Terms and the JAMS
+Rules, the arbitrator will have exclusive authority to make all procedural and
+substantive decisions regarding any Dispute and to grant any remedy that would
+otherwise be available in court, including the power to determine the question
+of arbitrability. The arbitrator may conduct only an individual arbitration and
+may not consolidate more than one individual’s claims, preside over any type of
+class or representative proceeding or preside over any proceeding involving
+more than one individual. <o:p></o:p></span></p>
+
+<p class=NOINDENTS0 style='margin-left:18.0pt'><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif'>The arbitration will
+allow for the discovery or exchange of non-privileged information relevant to
+the Dispute.<span style='mso-spacerun:yes'>  </span>The arbitrator, Hearo, and
+you will maintain the confidentiality of any arbitration proceedings, judgments
+and awards, including information gathered, prepared and presented for purposes
+of the arbitration or related to the Dispute(s) therein. The arbitrator will
+have the authority to make appropriate rulings to safeguard confidentiality,
+unless the law provides to the contrary. The duty of confidentiality does not
+apply to the extent that disclosure is necessary to prepare for or conduct the
+arbitration hearing on the merits, in connection with a court application for a
+preliminary remedy or in connection with a judicial challenge to an arbitration
+award or its enforcement, or to the extent that disclosure is otherwise
+required by law or judicial decision.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=NOINDENTS0 style='margin-left:18.0pt'><span lang=EN-US
+style='font-size:10.0pt;font-family:"Arial",sans-serif'>You and Hearo agree
+that for any arbitration you initiate, you will pay the filing fee (up to a
+maximum of $250 if you are a consumer), and Hearo will pay the remaining JAMS
+fees and costs. For any arbitration initiated by Hearo, Hearo will pay all JAMS
+fees and costs. You and Hearo agree that the state or federal courts of the
+State of Delaware and the United States sitting in New Castle County, Delaware have
+exclusive jurisdiction over any appeals and the enforcement of an arbitration
+award. <o:p></o:p></span></p>
+
+<p class=NOINDENTS0 style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Any
+Dispute must be filed within one year after the relevant claim arose; otherwise,
+the Dispute is permanently barred, which means that you and Hearo will not have
+the right to assert the claim. <o:p></o:p></span></b></p>
+
+<p class=NOINDENTS0 style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>You
+have the right to opt out of binding arbitration within 30 days of the date you
+first accepted the terms of this Section <a name="_Hlk19495188">17</a> by emailing
+us at <i style='mso-bidi-font-style:normal'><a href="mailto:legal@hearo.fm">legal@hearo.fm</a>.
+</i></span></b><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>In
+order to be effective, the opt-out notice must include your full name and
+address and clearly indicate your intent to opt out of binding arbitration.<o:p></o:p></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;page-break-after:auto;mso-list:none'><span lang=EN-US style='font-size:
+10.0pt;font-family:"Arial",sans-serif'><span style='mso-tab-count:1'>      </span>If
+any portion of this Section 17 is found to be unenforceable or unlawful for any
+reason, (a) the unenforceable or unlawful provision shall be severed from these
+Terms; (b) severance of the unenforceable or unlawful provision shall have no
+impact whatsoever on the remainder of this Section 17 or the parties’ ability
+to compel arbitration of any remaining claims on an individual basis pursuant
+to this Section 17; and (c) to the extent that any claims must therefore
+proceed on a class, collective, consolidated, or representative basis, such claims
+must be litigated in a civil court of competent jurisdiction and not in arbitration,
+and the parties agree that litigation of those claims shall be stayed pending
+the outcome of any individual claims in arbitration. Further, if any part of
+this Section 17 is found to prohibit an individual claim seeking public
+injunctive relief, that provision will have no effect to the extent such relief
+is allowed to be sought out of arbitration, and the remainder of this Section 17
+will be enforceable.<o:p></o:p></span></p>
+
+<p class=OurOutline1 style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;page-break-after:auto;mso-list:l14 level1 lfo13'><![if !supportLists]><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>18.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Miscellaneous.<span
+style='mso-spacerun:yes'>  </span></span></b><span lang=EN-US style='font-size:
+10.0pt;font-family:"Arial",sans-serif'>In the event that any portion of this
+Agreement is held to be invalid or unenforceable, then such portion shall be
+construed in accordance with the applicable law as nearly as possible to
+reflect the original intentions of the parties, and the remainder of this
+Agreement shall remain in full force and effect.<span
+style='mso-spacerun:yes'>  </span>The paragraph headings herein are provided
+only for reference and shall have no effect on the construction or
+interpretation of this Agreement. <span style='mso-spacerun:yes'> </span>Hearo
+shall have a right of set-off for monies owed against Artist’s Digital Wallet. Artist
+expressly absolves and releases the Hearo Parties from any claim of harm
+resulting from a cause beyond their control, including, but not limited to, failure
+of electronic or mechanical equipment or communication lines, telephone or
+other interconnect problems, computer viruses, unauthorized access, theft,
+operator errors, severe weather, earthquakes, or natural disasters, strikes or
+other labor problems, wars, terrorist activities or governmental restrictions.<span
+style='mso-spacerun:yes'>  </span>Artist may not assign this Agreement.<span
+style='mso-spacerun:yes'>  </span>No waiver shall be effective unless in
+writing.<span style='mso-spacerun:yes'>  </span>Neither the course of conduct
+between parties nor trade practice shall act to modify any provision of this
+Agreement.<span style='mso-spacerun:yes'>  </span>This Agreement and any other
+agreements between the parties entered into through this Site shall be governed
+by and construed in accordance with the laws of the State of Delaware.<span
+style='mso-spacerun:yes'>  </span>Except for proceedings commenced by Hearo to
+protect its intellectual property or confidential information which may be
+brought in any court of competent jurisdiction, the parties mutually agree that
+any and all disputes arising hereunder shall be resolved exclusively by state
+or federal courts located in New Castle County, Delaware.<span
+style='mso-spacerun:yes'>  </span>This Agreement contains the entire agreement
+of the parties concerning the Site or the Services and the Content, and
+supersedes all existing agreements and all other oral, written or other
+communication between the parties concerning its subject matter.<span
+style='mso-spacerun:yes'>  </span>Artist shall comply with all laws, rules and
+regulations which are now or hereinafter promulgated by any government
+authority or agency which govern or apply to the operation and use of the Site,
+the Services and/or the Content.<span style='mso-spacerun:yes'>  </span>Without
+limiting the generality of the foregoing, Artist expressly agrees to comply
+with such restrictions and not to export or re-export any of the Content to
+countries or persons prohibited under the export control laws of the United
+States.<span style='mso-spacerun:yes'>  </span>Artist is prohibited from any
+use of the Site that would constitute an illegal offense, give rise to
+liability or otherwise violate any applicable local, state, national or international
+law or regulation.<span style='mso-spacerun:yes'>  </span>All rights not expressly
+granted herein are reserved by Hearo.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</div>
+
+<br><br><br><br><br><br><br><br><br>
+{% endwith %}
+{% endblock %}
+

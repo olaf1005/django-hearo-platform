@@ -1,0 +1,30 @@
+<button data-modal="modal-{{id}}-{{ song.id }}" action="share" class="md-trigger bttn--color-transblack bttn--size-small bttn--special-share" elem-id="{{ song.id }}"></button>
+<div class="md-modal md-effect-1" id="modal-{{id}}-{{ song.id }}">
+  <div class="md-content">
+    <h3>Share <span class="highlight">{{ song.title }}</span> by <span class="highlight">{{ profile.name }}</span></h3>
+    <div>
+      <p>You can embed <span class="highlight">{{ song.title }}</span> by using the following embed code in your blog or social media site:</p>
+      <p>
+      <code style="font-size: 14px; color: #666;" id="share" onclick="this.focus();this.select()" readonly="readonly">&lt;iframe width="245" height="330" scrolling="no" frameborder="no" src="https://{{ BASE_URL }}{{ song.get_absolute_url }}?embed=1"&gt;&lt;/iframe&gt;</code>
+      </p>
+      <!-- <p>To get this:</p> -->
+      <!-- <p> -->
+      <!-- <iframe width="245" height="330" scrolling="no" frameborder="no" src="{{ song.get_absolute_url }}?embed=1"></iframe> -->
+      <!-- </p> -->
+      <p>Or you can share the song with someone directly using the link:</p>
+      <p><a href="https://{{ BASE_URL }}{{ song.get_absolute_url }}">https://{{ BASE_URL }}{{ song.get_absolute_url }}</a></p>
+
+      <div class="share-container" style="left: 100px; top: 400px;">
+	<a onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')" target="_blank" href="http://twitter.com/share?via={{ TWITTER_HANDLE }}&amp;text=Check%20out%20this%20song%20on%20{{ BASE_URL }}%20-%20{{song.title|urlencode}}&amp;lang=pt&amp;url=https://{{ BASE_URL }}{{ song.get_absolute_url }}" class="social-share twitter">tweet song</a>
+	<a onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://{{ BASE_URL }}{{ song.get_absolute_url }}?embed=1" class="social-share facebook">share song</a>
+      </div>
+
+      <hr>
+      <p>
+      <button id="OK" class="bttn--size-small blue md-close">
+        <span class="button-text">close</span>
+      </button>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+from accounts.models import *
+from worldmap.views import *
+
+for p in Profile.objects.filter(location_set = True):
+  l = p.location
+  if l.secondary != None:
+
+
+for l in Location.objects.all():
+  sec = get_secondary(l.most_exact)
+  if sec:
+    print sec
+    l.secondary = sec
+    l.save()
+

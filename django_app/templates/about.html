@@ -1,0 +1,442 @@
+{% extends base %}
+{% block title %}About – {{ BASE_URL }}{% endblock %}
+{% block content %}
+
+	<div id="contentbackdrop"></div>
+<div id="cloudlogo">
+
+	<div id="mission">
+		<p>
+			Our mission is to help artists succeed and make the world's music accessible to all.
+		</p>
+	</div>
+
+		<div class="invite">
+			<h3><span class='feedback_success feedback' id="band_invites_sent" style="display: none; ">invite(s) sent</span>
+			<span class='feedback_error feedback' id="band_invites_error" style="display: none; ">error inviting</span></h3>
+			<input type="text" id="band_invites" name="invite" autocomplete="off" role="textbox" fillertext="emails" maxlength="200">
+			<div class="next-btn" id="submit_band_invite">invite</div>
+			<div id="invite-help">
+			  <span class="arrow"></span>
+			  <p>Invite all your musician friends, bandmates, and independent music fans you know!</p>
+			  <span>You can separate multiple email addresses with a comma.</span>
+			</div>
+		  </div>
+
+</div>
+<div class="grayblock">
+	<div class="inner-content">
+		<h1>product</h1>
+		<div id="description">
+			<p>
+				{{ BASE_URL }} is a global music marketplace and local community that enables artists to showcase and sell their music directly to fans on their own social music store. We let fans discover and stream music for free from anywhere in the world, collect what they like in their library, and buy their favorite music to show support for the artists they love all in one place.
+			</p>
+		</div>
+		<h1>vision</h1>
+		<div id="story">
+			<p>
+    We are all musicians who started a local online community to connect with
+    each other to collaborate and share music. We wanted to make it easier to
+    find musicians to create music together and to share that music with the
+    world in a way that is fair for artists. Ultimately we want to create a
+    global platform for the unfeterred creation, distribution, and discovery
+    of music for artists of all walks of life all around the world. The
+    result is our continued work on {{ BASE_URL }}.
+			</p>
+			<h2><i>Being a musician is hard. We're here to make it easier.</i></h2>
+		</div>
+		<div class="video-wrapper">
+			<iframe id="hearo-video" width="400" height="255" src="//www.youtube.com/embed/rUkz9YE_8xo" frameborder="0" allowfullscreen=""></iframe>
+		</div>
+	</div>
+</div>
+<div class="whiteblock" id="testimonials">
+	<div class="inner-content">
+		<h1>testimonials & press</h1>
+		<h3>
+			"Thank you for creating such an awesome music hub!"
+		</h3>
+		<h2>- Seven Channel Music Group</h2>
+		<h3>
+			"Kudos; it's visually much more appealing than ReverbNation and has elements of Bandcamp and Soundcloud that  I really like."
+		</h3>
+		<h2>- Ronan Delisle, {{ BASE_URL }} artist</h2>
+		<h3>
+			{{ BASE_URL }} is a fun, snazzy looking and easy to use service that could be a great tool for recruiting band members, local fans and all types of music-oriented individuals in between.
+		</h3>
+		<h2>- Jason Epstein from soundctrl.com</h2>
+
+		<div class="pressBox">
+
+			<a class="press" href="http://www.philly.com/philly/business/homepage/20150828_TUNE_UP_PROFITS.html" target="_blank"><strong>Philadelphia Inquirer:</strong>TUNE UP PROFITS</a><br><br>
+
+			<a class="press" href="https://technical.ly/philly/2015/08/21/hearo-fm-andrew-brian-antar-music-streaming/" target="_blank"><strong>Technical.ly Philly:</strong> Philadelphia's own Soundcloud Competitor</a><br><br>
+
+			<a class="press" href="http://www.phillyvoice.com/five-friday-andrew-antar/" target="_blank"><strong>Philly Voice:</strong> Interview with hearo.fm Founder Andrew Antar</a><br><br>
+
+			<a class="press" href="http://tech.co/hearo-fm-digital-alternative-2015-07" target="_blank"><strong>Tech Cocktail:</strong> Hearo.fm Digital Music Alternative - The Future of Digital Music Lies With the Artists</a><br><br>
+
+			<a class="press" href="http://www.producthunt.com/tech/hearo" target="_blank"><strong>Product Hunt:</strong> Hearo is like a free version of Spotify which also enables artists to sell music directly to their fans.</a><br><br>
+
+			<a class="press" href="http://www.rackspacestartups.com.php54-2.dfw1-2.websitetestlink.com/hearo-fm-a-new-music-sharing-model-for-artists-and-fans/" target="_blank"><strong>Robert Scoble:</strong> Hearo.FM: A New Music Sharing Model for Artists and Fans</a><br><br>
+
+			<a class="press" href="http://www.crowdfundinsider.com/2014/07/45182-hearo-fm-tunes-seedinvest-crowdfunding-campaign-tech-platform-indie-music/" target="_blank"><strong>Insider:</strong> Hearo.fm Tunes into SeedInvest for Crowdfunding Campaign: Tech Platform for Indie Music</a><br><br>
+
+			<a class="press" href="http://rockonphilly.com/2014/03/hearo-fm-brings-a-little-philly-to-austin-for-sxsw/" target="_blank"><strong>Rock on Philly:</strong> hearo.fm brings a little Philly to Austin for SXSW!</a><br><br>
+
+			<a class="press" href="http://monkeypuzzlepress.com/blog/hearo-fm-an-innovative-and-daring-music-social-network/" target="_blank"><strong>Monkey Puzzle Press:</strong> HEARO.FM: AN INNOVATIVE AND DARING MUSIC SOCIAL NETWORK</a><br><br>
+
+			<a class="press" href="http://www.hypebot.com/hypebot/2014/08/crowdfunding-music-biz-alt-fest-neverland-ranch-hard-rock-hotel-hearofm-rob-zombie.html" target="_blank"><strong>Hypebot:</strong> Music Biz Crowdfunding: Alt-Fest, Neverland Ranch, Hard Rock Hotel, Hearo.fm</a><br><br>
+
+			<a class="press" href="http://www.indie-music.com/ee/index.php/blog/comments/hearo.fm_social_music_marketplace_launches_musicians_beta" target="_blank"><strong>Indie-Music.com:</strong> hearo.fm Social Music Marketplace Launches Musicians' Beta</a><br><br>
+
+			<a class="press" href="http://www.browndailyherald.com/2012/02/29/program-fosters-student-entrepreneurship/" target="_blank"><strong>Brown Daily Herald:</strong> Program Fosters Student Entrepreneurship</a><br><br>
+
+			<a class="press" href="http://www.musicthinktank.com/mtt-open/an-artist-friendly-way-to-share-and-sell-your-music.html" target="_blank"><strong>Music Think Tank:</strong> An Artist Friendly Way To Share And Sell Your Music</a><br><br>
+
+			<a class="press" href="http://queentickets.worldcafelive.com/event/750847-world-cafe-live-queen-wilmington/" target="_blank"><strong>World Cafe Live at the Queen:</strong> Hearo.fm presents the Unsung Hearos Open Mic</a><br><br>
+
+		</div>
+
+	</div>
+</div>
+<div class="grayblock">
+	<div class="inner-content">
+		<div id="sxsw">
+			<h1>SXSW</h1>
+				<img id="river" href="http://2014.do512.com/hearoriverboatshowcasesx2014" src="/public/images/about/SXSW14poster.jpg" margin="auto" width="400"/>
+		</div>
+	</div>
+</div>
+<div class="whiteblock">
+	<div class="inner-content">
+		<div id="people">
+			<h1>team</h1>
+			<ul>
+				<li>
+					<div class="profile" id="andrew"></div>
+					<h2>Andrew Antar</h2>
+					<p>
+						Andrew co-founded {{ BASE_URL }} while at Brown University. He is a violinist, artist, designer, and entrepreneur. Andrew works primarily on UI/UX design, frontend development, and product management.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="brian"></div>
+					<h2>Brian Antar</h2>
+					<p>
+						Brian co-founded {{ BASE_URL }} while at the University of Pennsylvania. He is a violinist, writer, and entrepreneur. Brian manages legal affairs, accounting, team management, quality assurance, and contributes to hearo's UI/UX.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="daniel"></div>
+					<h2>Daniel Nordberg</h2>
+                                        <p>Daniel is a Finnish full-stack engineer specializing in Python and residing in Nairobi, Kenya. He single-handedly built an SMS-based Uber for the Third World.</p>
+				</li>
+
+<!-- 				<li>
+					<div class="profile" id="ryan"></div>
+					<h2>Ryan McVerry</h2>
+					<p>Ryan is {{ BASE_URL }}'s server architect and systems engineer. He manages our complex server stack and scales up our system to handle all our rich content. He graduated from Brown University and also works for the New York Times.
+					</p>
+				</li> -->
+				<!--<li>
+					<div class="profile" id="charlie"></div>
+					<h2>Charlie Harrison</h2>
+					<p> Charlie is a talented software engineer. He works on everything from the frontend to the backend on hearo. He is also pursuing a Computer Science degree at Brown University.
+					</p>
+				</li>-->
+				<li>
+					<div class="profile" id="james"></div>
+					<h2>James Pic</h2>
+					<p>James is an experienced backend engineer and major contributor to open source projects. He is ranked Top 20 of all time on Stack Overflow as a Django expert.  He is responsible for hearo's scaling and security.
+					</p>
+				</li>
+				<!--<li>
+					<div class="profile" id="adrian"></div>
+					<h2>Adrian Tavares</h2>
+					<p>Adrian is a frontend engineer and designer. He is based in Austin, TX and makes major contributions to our frontend and join process. Adrian is incredibly talented with bridging clean design with responsive javascript.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="boy"></div>
+					<h2>Andre <i>"Boy Wonder"</i> Coles</h2>
+					<p>Andre is our head of marketing. He has over 10 years on experience in the music industry and is a talented guitarist and songwriter.  He manages our marketing team and the plethora of events we sponsor and organize including showcases, open mics, festivals, and shows.
+					</p>
+				</li>-->
+				<li>
+					<div class="profile" id="ben"></div>
+					<h2>Ben Brueland</h2>
+					<p>Ben is in charge of marketing for hearo in the Midwest. He is a band manager, promoter, and agent with over 15 years of music industry experience.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="mattr"></div>
+					<h2>Matt Rothstein</h2>
+					<p>Matt is our Social Media Marketing Director. He is in charge of managing our Twitter, Facebook, and Blog. In addition to writing great musical content, he manages our outreach efforts to music blogs and artists on social media channels</p>
+				</li>
+			</ul>
+			<h1>investors & advisors</h1>
+			<ul>
+				<li>
+					<div class="profile" id="andy"></div>
+					<h2>Andy Hertzfeld</h2>
+					<p>Andy was the co-creator of the Macintosh on the original Mac team with Steve Jobs in the 80's. He was responsible for programming the first MacOS with windows and menus. Recently, Andy was the key designer of the Circles UI in Google+.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="neil"></div>
+					<h2>Aniello Callari</h2>
+					<p>Aniello Callari is a former advertising executive, founder of Brooklyn Media. He has done work for major Fortune 500 companies and resides in Austin, TX.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="doc"></div>
+					<h2>Doc Parghi</h2>
+					<p>Doc is the Managing Director at SRI Capital and on the investment advisory committee at Ben Franklin Technology Partners. He previously was on the founding team of App Labs.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="jeff"></div>
+					<h2>Jeff Rabhan</h2>
+					<p>Jeff is the Chair of the Clive Davis Institute of Recorded Music at NYU. He was a famous artist manager at "The Firm" and has generated over $1 billion in music sales for clients such as Kelly Clarkson, Kelly Rowland, and Jermaine Dupri.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="joseph"></div>
+					<h2>Joseph McGrath</h2>
+					<p>Joe is the former CEO of Xerox and Unisys and current CEO of NetGen Consulting. He has over 30 years of experience in executive business roles, managing over 30,000 people. He is an incredible business strategist and advises us on fundraising and the best way to tell our story.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="hal"></div>
+					<h2>Hal Real</h2>
+					<p>Hal is the founder and CEO of World Cafe Live, which is a major independent venue and organization with locations in Philadelphia and Wilmington.  He also founded the non-profit, Live Connections. World Cafe Live co-produces a nationally syndicated radio show "World Cafe," which originates from WXPN, through NPR.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="jon"></div>
+					<h2>Jonathan Finegold</h2>
+					<p>Jonathan is the owner of "Fine Gold Music," which is a top music licensing firm in NYC. He recently did the music placement sync licensing for Apple's latest iPhone 5C ad.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="sean"></div>
+					<h2>Sean Leonard</h2>
+					<p>A seasoned digital music executive, Sean was a founding member of the first company to successfully sell digital music on the Internet, <a href="http://emusic.com/">eMusic.com</a>. He was responsible for label and artist partnerships as well as driving key aspects of their M&A strategy, which saw the company float on the NASDAQ and raise over $120MM in funding.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="melissa"></div>
+					<h2>Melissa Tothero</h2>
+					<p>Melissa is our hearo mother in Austin. She has helped us on all fronts from finding the right investors to finding the right screenprinters. She really believes in hearo's mission.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="leslie"></div>
+					<h2>Leslie Maazel</h2>
+					<p>Leslie is our CFO. He is the only analyst at a $20 billion family office, Quadrant Capital Advisors in NYC. He underwrites deals, draws up term sheets, builds models, and makes all of the projections and financial statements for {{ BASE_URL }}, in addition to assisting with fundraising.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="elie"></div>
+					<h2>Elie Antar</h2>
+					<p>Elie was the founder and CEO of Valu-Plus, which was a retail chain, wholesale, and real estate company, in Pennsylvania, Delaware, and New Jersey. He sits on hearo's board.
+					</p>
+				</li>
+				<li>
+					<div class="profile" id="nate"></div>
+					<h2>Nathan Antar</h2>
+					<p>Nathan is our hearo evangelist. In addition to investing, he helps in many capacities from booking bands to holding various marketing and business development roles.
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="grayblock" id="partners">
+	<div class="inner-content">
+		<h1>partners</h1>
+		<a class="partner" id="musicbiz" href="http://musicbiz.org/" target="_blank"></a>
+		<a class="partner" id="worldcafe" href="http://www.worldcafelive.com/" target="_blank"></a>
+		<a class="partner" id="phillyrising" href="http://philly.worldcafelive.com/" target="_blank"></a>
+		<a class="partner" id="pledgemusic" href="http://www.pledgemusic.com/" target="_blank"></a>
+		<a class="partner" id="localmusicvibe" href="http://localmusicvibe.com/" target="_blank"></a>
+	</div>
+</div>
+<div class="whiteblock" id="faq">
+	<div class="inner-content">
+		<p>
+			<h1>FAQ, Troubleshooting & Tutorial</h1>
+			<h2>General:</h2>
+			<span id="difference" class="question"> How is {{ BASE_URL }} different from other music services?</span>
+			<div class="answer">
+				<ul>
+					<li><b>Soundcloud</b> is a great audio-sharing tool, but it does not have a music distribution mechanism with payments to artists or pages layouts where bands can share their photos, videos, and shows like {{ BASE_URL }} does. </li>
+					<li><b>Bandcamp</b> is a great distribution tool for independent artists, but {{ BASE_URL }} improves on this by providing more robust social and discovery tools for artists and an API-based seamless payment system.</li>
+					<li><b>ReverbNation</b> is a great advertising tool for artists, but {{ BASE_URL }} provides a much cleaner UI and music listening experience for fans.</li>
+					<li><b>iTunes</b> is a great distribution service for major label artists and listening platform for fans, but it lacks in social networking tools and discovery of independent artists that {{ BASE_URL }} provides.</li>
+					<li><b>Spotify</b> (and Rdio) are great discovery streaming services for fans, but royalties are only $0.007 per play making it unfair for artists, while hearo incorporates direct to fan distribution opportunities where fans can pay artists directly.</li>
+					<li><b>Last.fm</b> is great social networking tool for music fans but artists do not curate or control their pages and there is limited streaming and no distribution opportunities.</li>
+					<li><b>Pandora</b> is a great radio discovery tool, but it lacks artist pages with on demand streaming and pays artists less than Spotify.</li>
+					<li><b>Facebook</b> (and Twitter) are a great social networks that many artists utilize, but they were not created for music and thus lack discovery streaming and music distribution features. Hearo is the social network made for music.
+					</li>
+				</ul>
+			</div>
+			<span id="create" class="question">How do I create an account?</span>
+			<div class="answer">Yay! Click the red "sign up" button on the navigation bar.  Then fill out your name, email, password, check the <a href="https://{{ BASE_URL }}/terms/" target="_blank">Terms of Use</a> and <a href="https://{{ BASE_URL }}/privacy-policy/" target="_blank">Privacy Policy</a> box, click "Sign Up" and you're in! We're excited to have you in our community.</div>
+			<span id="accountsettings" class="question">How do I edit my account settings?</span>
+			<div class="answer">Everything you need to customize your profile happens in the Dashboard.  You can find the Dashboard on the top navigation bar next to your name.  It looks like a gear.  Click that!  Another way to access your Dashboard is to hover your mouse over your name, and select "Dashboard" in the drop-down menu.</div>
+			<span id="share" class="question">Can I share my page with my friends?</span>
+			<div class="answer">Definitely! Your page is on the world stage.  It is publicly viewable and your fans can listen to all of your music.  Just copy & paste the URL.  Be sure to share it!</div>
+			<span id="message" class="question">How do I message someone directly on hearo?</span>
+			<div class="answer">We built a messaging system called "FanMail."  Now you can personally thank a fan for supporting your music.  To message someone, click on the envelope on the navigation bar, or the envelope beneath the profile picture.  You can also see exactly who downloaded your music on the "Payment" page in your Dashboard.  You can message your most loyal fans directly from there!</div>
+			<span id="glitch" class="question">I encountered a glitch on the website, what do I do?</span>
+			<div class="answer">Oops.  Sometimes unknown "bugs" or "glitches" occur during the browsing experience.  These happen for many reasons and are often not anticipated.  We're here to fix them, so contact us directly at feedback@{{ BASE_URL }} with a full report on what happened and all the steps leading up to the occurrence. Tell us the browser you are using and exactly when and where it occured. That will best help us identify the issue and fix it.</div>
+			<span id="feature" class="question">I thought of a way to make hearo better. Can I send you a feature request, and will you listen?</span>
+			<div class="answer">We're glad you asked.  Since we are here to support artists and music lovers around the world, we want to make sure your needs are met to create the ultimate music experience on the web.  That means we take requests very seriously.  Hearo was built from day one for this purpose.  So send us your thoughts and requests and we will listen!</div>
+			<h2>Uploading & Selling Music:</h2>
+			<span id="upload" class="question">How do I upload my music?</span>
+			<div class="answer">In your Dashboard, click the "Music" tab.  Here, you will first need to input your address (which is kept private and secure) in order to sign our non-exclusive <a href="https://{{ BASE_URL }}/artist-agreement/" target="_blank">Artist Agreement</a> to make sure that you are the creator.  To upload, either drag and drop your music from your computer, or select "Choose Files" to search your computer.  That's it!  Once it processes and uploads, the song will appear. Then you can edit the title, price, and streaming or downloading preferences.  Now go check it out on your profile!
+			</div>
+			<span id="batchupload" class="question">Can I batch upload my music?</span>
+			<div class="answer">Sure! Drag and drop a few songs or multiple albums and all your work will upload in order.</div>
+			<span id="rights" class="question">Does hearo own my music?</span>
+			<div class="answer">Absolutely not! You own the rights to your music.  When you sign our <a href="https://{{ BASE_URL }}/artist-agreement/" target="_blank">Artist Agreement</a>, you grant hearo a non-exclusive, royalty-free license to host your music on the platform.  We also have a 10% commission on all music sales, meaning you keep 90%, which is an industry first! To review all the details, please visit the <a href="https://{{ BASE_URL }}/artist-agreement/" target="_blank">Artist Agreement</a>.  Hearo is here for you.
+			</div>
+			<span id="uploadfee" class="question">Are you going to charge me to upload?</span>
+			<div class="answer">Unlike our competitors, we will never charge you to upload or store music.  Hearo is free to use.  We all make money when fans buy your music.  90% goes to the artist and 10% goes to hearo after credit card fees.  It's that simple.</div>
+			<span id="uploadlimit" class="question">Do you have an upload limit?</span>
+			<div class="answer">Nope. We want you to upload all of your music no matter how long it is or how much you have.</div>
+			<span id="sell" class="question">How do I sell music on hearo?</span>
+			<div class="answer">Easy.  When you upload your music, just click the price field where your song is displayed.  Enter any price right there and your song is instantly for sale! You can always change the price by clicking the same field.  Hearo allows you to set multiple prices for all of your songs, even if they are in the same album.  Say you upload a ten track album.  You can offer two songs for free as a promotion, the next three as Name-Your-Price (NYP), and the rest at whatever price you want.</div>
+			<span id="stream" class="question">I want to upload my music to hearo, but I don't want to distribute it.  Can I just put up my music for listening?</span>
+			<div class="answer">You most definitely can.  We offer a "stream only" function so your music won't be available for download.  You can set that preference once you upload your music.</div>
+			<span id="covers" class="question">Can I upload covers or mixtapes?</span>
+			<div class="answer">You must be the original creator of the music.  Please refer to the <a href="https://{{ BASE_URL}}/artist-agreement/" target="_blank">Artist Agreement</a> for further details.</div>
+			<span id="songorder" class="question">How do I change the order of my songs?</span>
+			<div class="answer">In your Dashboard, under the "Music" tab, find the songs or albums you want to rearrange.  To the left of each song there is a dot-matrix graphic.  Click and hold that and then you can drag and drop your arrangement to your satisfaction.</div>
+			<span id="renamealbum" class="question">How do I rename my album?</span>
+			<div class="answer">In your Dashboard, under the "Music" tab, find the album you want to rename.  Next to the title, click the button "Rename" and when you're done, click "Save."</div>
+			<span id="deletemusic" class="question">How do I delete my songs or albums?</span>
+			<div class="answer">In your Dashboard, under the "Music" tab, you'll find an "X" in the right-hand corner of your songs and albums.  Click the "X" and the tracks will delete.</div>
+			<span id="filetype" class="question">What file types are accepted? Why not MP3s?</span>
+			<div class="answer">We accept only lossless (non-compressed) master audio files.  These include: WAV, FLAC, and AIFF formats.  Why?  For two reasons.  We must insure that you are the owner and creator of the music you upload.  Only with the highest quality files directly from the recording studio and/or music prduction software, we can convert your songs into all types of download formats for your fans.  These include: MP3 320, MP3 V0, MP3 V2, and FLAC. It's all about providing multiple, quality choices for you and your fans.</div>
+			<span id="uploadissues" class="question">Why is my music not uploading?</span>
+			<div class="answer">This could be happening for several reasons.  Let's investigate:
+				<ol>
+					<li>You aren't uploading a lossless music file (WAV, FLAC, and AIFF)!  Sometimes WAVs can be tricky.  Double check that they are lossless.  Please refer to the question above.</li>
+					<li>You aren't using the latest browser.  For now, hearo works best on the latest versions of Chrome, Safari, and Firefox.  We will be supporting Internet Explorer in the very near future and will send out a notification when we do.</li>
+					<li>Wireless connections aren't always stable.  Be sure to plug in your computer to a wired Internet connection.  Lossless files are often very large and can take a while to upload.</li>
+					<li>Try clearing your browser cache.  In Chrome, click "Chrome" on the navigation bar and then click on "Clear Browsing Data."  Select "Empty the cache."  If you want, you can clear all of your browsing data and cookies, but this isn't necessary for troubleshooting here.  When you're ready, click "Clear Browsing Data" and then refresh your browser.</li>
+					<li>An anti-virus software may be interfering with the upload. Disable your Internet anti-virus software and try again.</li>
+					<li>Sometimes there are issues with the encoding on the file and it won't upload to our system, even though you have a lossless file.  To fix this issue, re-export the file from your favorite music production software into a different format, like a FLAC.  Then, try again.</li>
+					<li>Still no luck? Send us an email at feedback@{{ BASE_URL }} with a full report on what you have tried and we'll do our best to assist you!</li>
+				</ol>
+			</div>
+			<span id="convert" class="question">How do I convert my music into lossless?</span>
+			<div class="answer">Here are direct support links to some of the major music production software companies on the market (some of these instructions may vary per version):
+				<ol>
+					<li><a href="http://support.apple.com/kb/ht1550" target="_blank">iTunes</a></li>
+					<li><a href="http://www.image-line.com/support/FLHelp/html/fformats_save_wavmidmp3.htm"target="_blank">FL Studio</a></li>
+					<li><a href="http://www.avid.com/static/resources/us/documents/ProToolsReferenceGuide.pdf" target="_blank">Pro Tools</a></li>
+					<li><a href="http://support.apple.com/kb/PH13014" target="_blank">Logic Pro X</a></li>
+					<li><a href="https://www.ableton.com/en/articles/getting-started-6-exporting-audio/" target="_blank">Ableton Live</a></li>
+				</ol>
+			</div>
+			<span id="collect" class="question">I've sold music.  How do I collect my money?</span>
+			<div class="answer">Visit the Dashboard and click on the "Payment" tab.  Here, you can monitor how much money you are making.  When you are ready to cash out, enter your bank account and routing number.  Your money is secured by Silicon Valley Bank (http://www.svb.com/).  Click "Cash Out."  An ACH transfer is initiated and you will receive your money in your bank account in 2-5 business days.</div>
+			<span id="international" class="question">I am an international artist and not currently based in the United States.  Can I still upload and sell my music on hearo?</span>
+			<div class="answer">Yes you can.  You must input your address and country.  At this time, however, we do not support international payments.  While you can accumulate a balance on hearo, you cannot cash out.  We will launch international payments in the future and will announce its launch. In the meantime, we will hold your balance in escrow. You can always create a US bank account to cash out to.  Please keep in mind, we cannot allow uploads or sales from sanctioned countries under U.S. law.  Visit this link for more details: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/Programs.aspx
+			</div>
+			<h2>Streaming & Downloading Music:</h2>
+			<span id="listen" class="question">How do I listen to music?</span>
+			<div class="answer">Whenever you see a "play" button, click that and the song or album will load into the player at the bottom of the screen.  You can then change your volume preferences or scan through the song.</div>
+			<span id="playlist" class="question">I'm listening to a song and when I click "play" to listen to another song on an artist's page, nothing happens. What do I do?</span>
+			<div class="answer">We want you to experience a seamless listening experience and never interrupt your music.  As you browse hearo and discover music, click "play" and it will automatically queue up in the "playlist" on the left-hand side of the player.  You will notice that the number field will increase as you queue up more songs.  The next song in the playlist will play after the current song is finished.  If you want to skip to other songs in your playlist, either click the large skip buttons on the player, or just click "playlist" and you can quick play any song in there by clicking the small "play" button next to the listed song.</div>
+			<span id="buy" class="question">How do I download and/or buy music?</span>
+			<div class="answer">So you fell in love with an artist and want to support his or her music.  If you are listening to the song or album, click the green price button on the player and it'll add it directly to the "downloads" queue on the right-hand side of the player.  Every green price button you click on the site will add the song or album to "downloads" on the player.  When you are ready to checkout, click "downloads" and see all the songs in your cart.  If your credit card is already added, it will be saved to your cart. Click "purchase & download" or "download" if all the songs in your cart are free.  That's it!  Thanks for supporting indie artists!</div>
+			<span id="creditcard" class="question">How do I add my credit or debit card?</span>
+			<div class="answer">Visit the Dashboard and click on the "Downloads" tab.  Select "Edit your credit cards" and then you can add your card.  All payments are secured and processed by <a href="https://stripe.com/" target="_blank">Stripe</a>.</div>
+			<span id="supportedcards" class="question">What cards are supported?</span>
+			<div class="answer">We support Visa, MasterCard, American Express, Diners Club, and JCB.</div>
+			<span id="creditcardfees" class="question">Are there credit/debit card fees?</span>
+			<div class="answer">Yes.  Fees always come off the top first.  Stripe (our integrated payment processor) charges 2.9% plus 30 cents per charge.</div>
+			<span id="nonexclusive" class="question">Can I sell and showcase my music elsewhere on the web?</span>
+			<div class="answer">Yes!  Feel free to share your music around the web. The {{ BASE_URL }} <a href="https://{{ BASE_URL }}/artist-agreement/" target="_blank">Artist Agreement</a> is a non-exclusive license.</div>
+			<h2>Privacy:</h2>
+			<span id="privacy" class="question">Where can I change my privacy settings?</span>
+			<div class="answer">
+				In your Dashboard, click on the "Privacy" tab.  Here's what you can control:
+				<ol>
+					<li>Change your name.</li>
+					<li>Set your email notifications.</li>
+					<li>Change your password.</li>
+					<li>Change how your page shows up on hearo.  It's best to keep everything on "public" so your page gets maximum exposure, but if you want some privacy, you can control where your page shows up to everyone else.  Select either "public" or "private" for each option.</li>
+					<li>Delete your account.  We're sorry to see you go!  If you must, click the big red button, "Deactivate your account." Just be aware that this action is irreversible.  We hope you send us your feedback on why you chose to do this so we can make the hearo experience better.</li>
+					<li>As the site grows, we will build more privacy controls for you.</li>
+				</ol>
+			</div>
+		</p>
+		<h1>legal docs</h1>
+		<div id="legal">
+			<a class="legaldoc" href="https://{{ BASE_URL }}/terms/" target="_blank">Terms of Use</a>
+			<a class="legaldoc" href="https://{{ BASE_URL }}/privacy-policy/" target="_blank">Privacy Policy</a>
+			<a class="legaldoc" href="https://{{ BASE_URL }}/artist-agreement/" target="_blank">Artist Agreement</a>
+		</div>
+	</div>
+</div>
+<div class="grayblock" id="contactinvite">
+	<div class="inner-content">
+		<h1> Contact</h1>
+		<h3>For feedback, questions, comments, support, suggestions, ideas, and press contact <a href="mailto:feedback@{{ BASE_URL }}" target="_blank"><b>feedback@{{ BASE_URL }}</b></a></h3>
+		<br>
+		<h3><i><b>Handmade in </b>Philadelphia, Nairobi, Paris, Austin, Providence, & New York.</i></h3>
+		<div id="social">
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			<a href="https://twitter.com/{{TWITTER_HANDLE}}" class="twitter-follow-button" data-show-count="false" data-lang="en"></a>	<br><br>
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			<div class="fb-like" data-href="https://www.facebook.com/{{ FACEBOOK_HANDLE }}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true">
+			</div>
+		</div>
+		<div class="invite">
+			<h3><span class='feedback_success feedback' id="band_invites_sent" style="display: none; ">invite(s) sent</span>
+			<span class='feedback_error feedback' id="band_invites_error" style="display: none; ">error inviting</span></h3>
+			<input type="text" id="band_invites" name="invite" autocomplete="off" role="textbox" fillertext="emails" maxlength="200">
+			<div class="next-btn" id="submit_band_invite">invite</div>
+			<div id="invite-help">
+			  <span class="arrow"></span>
+			  <p>Invite all your musician friends, bandmates, and independent music fans you know!</p>
+			  <span>You can separate multiple email addresses with a comma.</span>
+			</div>
+		  </div>
+	</div>
+</div>
+<div id="logobottom">
+</div>
+<script type="text/javascript">
+	$(document).ready(function($) {
+		hearo.utils.invite.init();
+		if(window.location.hash) {
+			var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+			if($('#'+hash).length){
+				$('#'+hash).closest("span").next(".answer").toggle('slow');
+			}
+		}
+	});
+	$(".question" ).click(function() {
+		var id = $(this).attr('id');
+		$(this).closest("span").next(".answer").toggle("slow");
+		History.pushState({
+			type: "faq"
+		}, null, '/about/#'+id);
+	});
+</script>
+{% endblock %}

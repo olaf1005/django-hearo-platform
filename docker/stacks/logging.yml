@@ -1,0 +1,49 @@
+version: '3.6'
+
+networks:
+    cluster:
+
+services:
+    sematext-agent:
+        image: $IMAGE_SEMATEXT_AGENT
+        networks:
+            - cluster
+        environment:
+          - INFRA_TOKEN=3dafff81-920e-4f6e-8145-d71fece1b400
+          - CONTAINER_TOKEN=cc25901e-f352-413e-9ee6-161d5b6366f4
+          - NODE_NAME="`hostname`"
+          - REGION=US
+        # cap_add:
+        #   - SYS_ADMIN
+        restart: always
+        volumes:
+            - '/:/hostfs:ro'
+            - '/etc/passwd:/etc/passwd:ro'
+            - '/etc/group:/etc/group:ro'
+            - '/var/run/:/var/run/'
+            - '/sys/kernel/debug:/sys/kernel/debug'
+            - '/sys:/host/sys:ro'
+
+    st-logagent:
+        tty: true # color log output
+        image: $IMAGE_SEMATEXT_LOGAGENT
+        networks:
+            - cluster
+        environment:
+            - LOGS_TOKEN=7b23f9b3-c32b-4db1-999d-65665f54f3c6
+            - REGION=US
+        volumes:
+            - '/var/run/docker.sock:/var/run/docker.sock'
+            - '/:/rootfs:ro'
+        deploy:
+            mode: global
+            restart_policy:
+                condition: any
+                window: 120s
+        logging:
+            # limit logs retained on host to 25MB
+            driver: "json-file"
+            options:
+                max-size: "500k"
+                max-file: "50"
+

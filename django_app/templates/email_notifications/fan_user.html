@@ -1,0 +1,22 @@
+{% extends "email_notifications/base_email.html" %}
+{% load elements %}
+
+{% block subject %}
+You have a new fan!
+{% endblock %}
+
+{% block html_body %}
+
+  <p>
+    Hi {{profile.short_name}},
+    <br><br>
+    <a href="https://{{ BASE_URL }}/profile/{{item.faner.keyword}}">{{item.faner.name}}</a>
+    just became your fan!
+    <br><br>
+    <center>{% musiclisting item.faner profile %}</center>
+    <br><br>
+    <a href="https://{{ BASE_URL }}/profile/{{from_profile.keyword}}">Click here</a> to see their profile.
+
+
+  </p>
+{% endblock %}

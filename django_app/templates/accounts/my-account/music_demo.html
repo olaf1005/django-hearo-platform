@@ -1,0 +1,23 @@
+{% extends 'accounts/my-account/index.html' %}
+
+{% block myAccountInnerPage %}
+{% with user.person.view as view %}
+{% load elements %}
+
+<div class="content" id="user_settings_container">
+    <div class="myAccount_textareas">
+    <div class="myAccount_subheader"><span>Upload Demo</span></div><br>
+    <br>
+	<input id='files' type='file' name='files[]' />
+	<progress max="100" value="0" style="display:none;"></progress>
+	<ul id="uploads">
+		{% for song in songs %}
+		<li id="{{song.title}}">
+			{% songlisting song view %}
+		</li>
+		{% endfor %}
+	</ul>
+    </div>
+</div>
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "mail/base.html" %}
+
+{% block FanMailSection %}
+
+<div style="float:left; width:80%; border:0px solid black; border-top-width: 1px; margin-top:20px;">
+{% for message in message_list %}
+<a href='/mail/view?messageid={{message.id}}'><div style="background-color:#f2f2f2; border: 1px solid black; border-top-width:0px; padding-left:20px">
+{% if not message.read %}<b>{% endif %}{{message.subject}}{if not message.read %}</b>{% endif %} sent to {{message.name}}
+</div></a>
+{% empty %}
+<div style="background-color:#f2f2f2; border: 1px solid black; border-top-width:0px; padding-left:20px">No messages.</div>
+{% endfor %}
+</div>
+
+{% endblock %}

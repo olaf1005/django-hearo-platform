@@ -1,0 +1,11 @@
+{% extends "email_notifications/base_email.html" %}
+
+{% block subject %}
+You've been invited to {{ prof.name }}!".format(prof.name)
+{% endblock %}
+
+{% block html_body %}
+<p>
+{{ message }}
+</p>
+{% endblock %}

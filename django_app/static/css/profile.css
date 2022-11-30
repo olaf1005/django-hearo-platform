@@ -1,0 +1,1564 @@
+
+/*
+  Generic layout elements
+*/
+
+.box {
+    width: 250px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 0 auto 0 auto;
+    border: solid 1px #d1d1d1;
+    font-family: "StyreneA-Regular", "StyreneA-Regular", "StyreneA-Regular Unicode", Veranda, sans-serif;
+}
+
+
+.scrollbox {
+    width:100%;
+    overflow: hidden;
+    height: 250px;
+    float: left;
+}
+
+.scrollbox:hover {
+    overflow-y: auto;
+}
+
+.subSection {
+    margin-bottom: 1em;
+}
+
+/* I just started this file in an effort to start splitting the CSS up into relevant files */
+/* Todo Slider */
+
+#progress_bar{
+    float:right;
+}
+
+
+#profile #leftCol {
+    float: left;
+    width: 250px;
+
+}
+
+#profile #rightCol {
+    float: right;
+    width: 250px;
+
+}
+
+#profile #centerCol {
+    margin-left: 270px;
+    margin-right: 270px;
+}
+
+#profile #leftCol h1 {
+    margin: 0 0 20px 0;
+    padding-bottom: 6px;
+    font-family: 'Permanent Marker', cursive, arial, sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    text-shadow: 0px 1px 1px #FFF;
+}
+
+
+#banner::before{
+    content:'';
+    position:absolute;
+    -moz-box-shadow:inset 0px 0px 10px  #5E5E5E;
+    -webkit-box-shadow:inset 0px 0px 10px  #5E5E5E;
+    box-shadow:inset 0px 0px 10px #5E5E5E;
+}
+
+#banner h1 {
+    margin: 0 0 20px 0;
+    padding-bottom: 6px;
+    font-family: 'Permanent Marker', cursive, arial, sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    float: left;
+
+}
+
+
+
+.slider{
+    position: relative;
+    display : inline-block;
+    height: 25px;
+    box-shadow: inset 0 0 10px #C6C6C6;
+    border-radius: 100px;
+    margin: 0px auto;
+    text-align: center;
+}
+#privacy_options .slider{
+    height:26px;
+}
+
+.slider .option, .slider .option_selected{
+    position:relative;
+    padding: 6px 8px 8px 8px;
+    display:inline-block;
+    z-index:100;
+    cursor:pointer;
+    font-size:14px;
+    font-family: "StyreneA-Regular", Helvetica, Arial, sans-serif;
+}
+#privacy_options .option, #privacy_options .option_selected{
+    font-size:16px;
+}
+#privacy_options .privacy_label span{
+    font-family: 'StyreneA-Regular', sans-serif;
+}
+#privacy_options td{
+    width:200px;
+}
+#privacy_options tr{height:50px;}
+#privacy_options #earl{
+    height:100%;
+}
+.slider .option:hover{
+    color:#2D2D2D;
+}
+.slider .option_selected{
+    color:#139EE4;
+}
+
+.slider #earl{
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:24px;
+    border-radius:30px;
+    background:#FFF;
+    box-shadow:inset 0 0 10px #C6C6C6;
+    border:1px solid #cacaca;
+    z-index:99;
+}
+
+
+#profilePic img{
+    width:250px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.4);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.4);
+    cursor:pointer;
+}
+
+/*before the banner was added this was 55px */
+.stakeout{
+    height:0px;
+}
+
+.empty_media{
+    width: 100%;
+    text-align:center;
+    color:  #6E6E6E;
+    line-height:1.4;
+    font-size:14px;
+    position: relative;
+}
+
+#empty_reviews, #empty_fan_feed {
+    margin-top:97px;
+}
+
+.empty_media
+#events .empty_media{
+    width:251px;
+    margin-top:40px;
+}
+
+.empty_media a, .empty_media span{
+    color: #509de4;
+    text-decoration: none;
+    font-weight:bold;
+    font-size:16px;
+    cursor: pointer;
+}
+
+.empty_media a:hover, .empty_media span:hover{
+    color: #7bbbf7;
+}
+
+.empty_media .continue_arrow{
+    width: 10px;
+    height: 13px;
+    background: url('/public/images/continue_arrow.png') no-repeat;
+    display: inline-block;
+    position:relative;
+    top:1px;
+    left:5px;
+}
+
+.empty_media a:hover .continue_arrow{
+    background-position: 0px -13px;
+}
+
+#fandLibrary .empty_media {
+    top: 111px;
+    line-height: 1.6;
+    top: 100px;
+}
+
+#fandLibrary .sl-name {
+  width: 480px;
+}
+
+#fandLibrary .sl-name span {
+  position: relative;
+  top: 5px;
+}
+
+#review_scrollbox{
+    height:205px;
+}
+
+.compose_review{
+    margin:10px;
+    font-size:14px;
+    outline:none;
+    width:215px;
+    padding:6px;
+    border:none;
+    border-radius:3px;
+    background:rgba(255,255,255,0.8);
+    box-shadow:inset 0 0 10px #d6d6d6;
+    border:1px solid #cacaca;
+}
+
+#post_review{
+    background:url('/public/images/post_review_button.png');
+    width:83px;
+
+}
+
+#post_review:hover{
+    background-position: 0px -50px;
+}
+
+#post_review:active{
+    background-position: 0px -100px;
+}
+
+.continue_button{
+    width:29px;
+    height:29px;
+    background:url('/public/images/continue_button.png');
+    cursor:pointer;
+    display:inline-block;
+}
+
+/* Fan buttons */
+
+.small_fan_button{
+    color:#FFF;
+    padding:3px;
+    border-radius:3px;
+    display:inline-block;
+    white-space:nowrap;
+    background: #d11c1c;
+    box-shadow: inset 0px 0px 5px #b21616;
+    cursor:pointer;
+    width:40px;
+    text-align:center;
+    font-size:12px;
+}
+
+.small_fan_button:hover{
+    background: #e72929;
+    box-shadow: inset 0px 0px 5px #c91d1d;
+}
+
+.small_fand_button:hover{
+    background: #e72929;
+    box-shadow: inset 0px 0px 5px #c91d1d;
+}
+
+.small_fand_button{
+    color:#FFF;
+    padding:3px;
+    border-radius:3px;
+    display:inline-block;
+    white-space:nowrap;
+    box-shadow:inset 0 0 10px #9f9f9f;
+    background:rgba(0,0,0,0.15);
+    cursor:pointer;
+    width:40px;
+    text-align:center;
+    font-size:12px;
+}
+
+#current_song_buttons .small_fand_button{
+    box-shadow:inset 0 0 10px #000;
+    margin-left: 6px;
+}
+
+#current_song_buttons .small_fan_button{
+    margin-left:6px;
+}
+
+#current_song_buttons .small_fand_button:hover{
+    box-shadow:inset 0 0 10px #c91d1d;
+}
+
+div#profile div#leftCol .small_fan_button,
+div#profile div#leftCol .small_fand_button{
+    font-size: 30px;
+    width: 245px;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+.moduleTab, .categoriesTab{
+    position: relative;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "StyreneA-Regular", Helvetica, Arial, sans-serif;
+    color: #FFF;
+    cursor: pointer;
+    padding: 8px 0px;
+    background: black;
+}
+
+.moduleTab.selected{
+    cursor:default;
+}
+
+.moduleTab.unselected, .categoriesTab{
+    background-position:0px -66px;
+}
+
+.moduleTab.unselected:hover{
+    background-position:0px -33px;
+}
+
+.categoriesTab{
+    cursor: default;
+    width: 480px;
+}
+
+.categoriesTab:last-child {
+    border-left: 1px solid rgba(0,0,0,0.3);
+    width: 479px;
+    border-top-right-radius: 3px;
+}
+
+.categoriesTab:first-child {
+    border-top-left-radius: 3px;
+}
+
+.onair_indicator{
+    width:130px;
+    height:35px;
+    background:url('/public/images/onair_indicator.png') no-repeat;
+    position:relative;
+    bottom:8px;
+    left:26px;
+    display:none;
+}
+
+.radio_play_button{
+    width: 49px;
+    height: 49px;
+    background:url('/public/images/onair_play.png') no-repeat;
+    display:inline-block;
+    top:9px;
+    z-index:10;
+}
+
+.radio_play_button.active{
+    cursor:pointer;
+}
+
+.radio_play_button.active:hover{
+    background-position:0px -49px;
+}
+
+.radio_play_button.active:active{
+    background-position:0px -98px;
+}
+
+.radio_play_button.inactive{
+    background-position:0px -147px;
+}
+
+.radio_explanation{
+    height:76px;
+    width: 159px;
+    border: none;
+    position: absolute;
+    top: 0px;
+    padding-left: 67px;
+    color: #6E6E6E;
+    display: table;
+    font-size:14px;
+
+}
+
+.radio_explanation span{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+}
+
+
+
+.user_listing .usertab_cell {
+    padding-left: 10px;
+}
+
+.user_listing .fanmail_cell .fanmail_button_all {
+    top: 10px;
+}
+
+.user_listing .fanbutton_cell div {
+    position: relative;
+    top: 4px;
+}
+
+.user {
+    padding-left: 5px;
+}
+
+.album_browser{
+  display: none;
+  width: 100%;
+}
+
+.album_tile {
+    margin-left:0px;
+    margin-right:0px;
+}
+
+#profile .media .album_tile {
+    margin-left: 13px;
+    margin-right: -6px;
+    width: 120px;
+    height: 120px;
+    border-radius: 0px;
+    margin-top: 21px;
+}
+
+#profile .media .album_tile img {
+    width:120px;
+    height:120px;
+    border-radius:0px;
+}
+
+#albumtracks_image {
+}
+
+div.back_to {
+  background: url('/public/images/bg_profile_fandlib_tab_tertiary.png') repeat-x;
+}
+
+div.back_to > div {
+  padding: 6px;
+  cursor: pointer;
+  color: #0c4169;
+  font-size: 14px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+div.back_to > div:hover {
+  background: url('/public/images/bg_profile_fandlib_tab_tertiary_hover.png') repeat-x;
+}
+
+div.album_header {
+  height: 80px;
+  padding: 10px;
+  background: rgba(132, 207, 240, 0.24);
+  position: relative;
+}
+
+
+div.album_header .buttons {
+  position: absolute;
+  top: 56px;
+  right: 6px;
+}
+
+div.album_header > div {
+  display: inline-block;
+}
+
+div.album_header img {
+  width: 80px;
+  height: 80px;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+}
+
+div.album_header > div.title {
+  height: 40px;
+  display: inline-block;
+  font-size: 30px;
+  position: absolute;
+  left: 100px;
+  bottom: 50px;
+  width: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+div.album_header > div.small_fan_button,
+div.album_header > div.small_fand_button {
+  width: 66px;
+  right: 7px;
+}
+
+div.album_header > div.song_reviews_button {
+  right: 90px;
+}
+
+div.album_header div.song_download_button {
+  font-size: 18px;
+}
+
+div.album_header > a.downloadAlbum {
+  right: 162px;
+}
+
+.song_listing:nth-last-child(even), .album_listing:nth-child(even),
+.status_update:nth-child(even), .user_listing:nth-child(even),
+.songRow:nth-child(even), .myAccount_songRow:nth-child(even),
+.jam_listing:nth-child(even){
+    background:rgba(132, 207, 240, 0.16);
+}
+.song_listing:nth-last-child(odd), .album_listing:nth-child(odd),
+.status_update:nth-child(odd), .user_listing:nth-child(odd),
+.songRow:nth-child(odd), .myAccount_songRow:nth-child(odd){
+    background:rgba(0,0,0,0);
+    color: black;
+}
+
+.jam_listing:nth-child(odd){
+    background:rgba(255, 255, 255, 0.6);
+}
+
+.song_listing td, .album_listing td, .downloadedSongs td{
+    vertical-align:middle;
+}
+
+.song_listing_text, .album_listing_text{
+    padding:5px;
+    position:relative;
+    top:-12px;
+    color:#656565;
+}
+
+.song_listing .song_title{
+    padding-left:10px;
+}
+
+.song_listing td a div {
+  margin: 0px 7px;
+}
+
+.album_listing .album_title{
+    width: 150px;
+    padding-left:10px;
+}
+
+.album_title .title{
+    position: relative;
+    bottom: 14px;
+    margin-left: 10px;
+}
+
+.album_listing .album_cover{
+    max-width: 50px;
+    max-height: 50px;
+    position: relative;
+    top: 5px;
+    margin-left: 10px;
+}
+
+.downloadedSongs .song_title{
+    width: 380px;
+}
+
+#fandSongsTable .song_listing .song_title, #fandAlbumTracks .song_listing .song_title{
+    width: 390px;
+    margin-left:10px;
+}
+
+#fandAlbumsTable .album_listing .album_title{
+    width: 390px;
+    margin-left:10px;
+    position:relative;
+    bottom:5px;
+}
+
+.song_download_button{
+    color:#FFF;
+    padding:3px;
+    border-radius:3px;
+    display:inline-block;
+    white-space:nowrap;
+    background: #67b837;
+    box-shadow: inset 0px 0px 5px #3d8713;
+    cursor:pointer;
+    font-size:12px;
+    width:45px;
+    position:relative;
+    text-align: right;
+}
+
+.album_browser .album_header .song_download_button {
+    width:59px;
+}
+
+.song_download_button:before{
+    content: url('/public/images/song_download_icon.png');
+    padding-left:2px;
+    position:absolute;
+    left:3px;
+    top:4px;
+}
+
+.song_download_button:hover{
+    background: #73c641;
+    box-shadow: inset 0px 0px 10px #469c16;
+}
+
+#songs a{
+    text-decoration:none;
+}
+
+#profile #photos {
+    width: 408px;
+    padding: 6px;
+}
+
+#profile #photos .photo {
+    float: left;
+    margin: 5px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+    padding: 6px;
+}
+
+#profile #videos {
+    width: 408px;
+    padding: 6px;
+}
+
+#profile #videos .video {
+    float: left;
+    margin: 5px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+    padding: 6px;
+}
+
+#songs .duration .total .sum {
+    color: #888;
+    font-size: .8em;
+    vertical-align: top;
+}
+
+.fand_album_tile{
+    max-width:150px;
+    max-height:150px;
+}
+.fand_album_tile_container{
+    width:150px;
+    height:185px;
+    margin: 10px 0px 0px 10px;
+    cursor:pointer;
+    display:inline-block;
+    position:relative;
+}
+
+.fand_album_tile_container:hover{
+    opacity:0.9;
+}
+
+.fand_album_tile_info{
+    width:160px;
+    position:absolute;
+    left:-5px;
+    bottom:0px;
+    text-align:center;
+    font-size:12px;
+    line-height:1.3;
+}
+
+#fandAlbumsTable{
+   width:100%;
+}
+
+#fandAlbumHeader{
+    display:none;
+    width:100%;
+    height:100px;
+    border-bottom:1px solid #dddddd;
+    position: relative;
+}
+
+.fandlib_mini_album_cover{
+    max-width:90px;
+    max-height:90px;
+}
+
+.fandlib_mini_album_cover_container{
+    width:90px;
+    height:90px;
+    position:absolute;
+    left:5px;
+    top:5px;
+}
+
+.album_info_fanbutton{
+    position: relative;
+    bottom: 9px;
+    left: 5px;
+}
+
+.fandlib_goback{
+    position:absolute;
+    right:10px;
+    top:16px;
+    font-size:12px;
+    text-decoration:none;
+    color:#3ba8da;
+}
+.fandlib_goback:hover{
+    color: #61bbe4;
+}
+
+.fandlib_album_header_info{
+    width:480px;
+    height:90px;
+    position:relative;
+    top:8px;
+    left:110px;
+}
+
+.fandlib_album_header_info .fandlib_album_header_title{
+    display: inline-block;
+    position:relative;
+    top:5px;
+    font-size:20px;
+}
+
+.fandlib_album_header_info .usertab_small{
+    position:relative;
+    left:20px;
+    top:12px;
+}
+
+tr.status_update{
+    border-top: 10px solid rgba(0,0,0,0.0);
+}
+.status_update td{
+    height:40px;
+    vertical-align:top;
+}
+
+#myalbumscontent .album_art{
+    display : block;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.photoExpand {
+    cursor: pointer;
+}
+
+.photoDialog {
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+
+.photoDialog img {
+    margin: 0 auto 0 auto;
+}
+
+#photoExpansion {
+    display: none;
+    overflow: hidden;
+}
+
+#photoExpansion .photoContainer {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#photoExpansion .ui-widget-content {
+    border: none;
+    vertical-align: middle;
+}
+
+#photoExpansion img {
+    margin: 10px auto 10px auto;
+    vertical-align: middle;
+}
+
+.alert .ui-dialog-titlebar {
+    display: none;
+}
+
+.downToJamSign{
+    width:250px;
+    height:52px;
+    background:url('/public/images/downtojamsprite.png') no-repeat;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+.downToJamSign:hover{
+    background-position: 0px -53px;
+}
+
+.statusUpdatePost{
+    width:58px;
+    height:40px;
+    background:url('/public/images/postStatusUpdateSprite.png') no-repeat;
+    cursor:pointer;
+    border:none;
+    float:right;
+}
+.statusUpdatePost:hover{
+    background-position:0px -40px;
+}
+.voiceUpdatePost{
+    width:31px;
+    height:40px;
+    background:url('/public/images/postVoiceUpdateSprite.png') no-repeat;
+    cursor:pointer;
+    border:none;
+    float:right;
+}
+.voiceUpdatePost:hover{
+    background-position:0px -40px;
+}
+
+/*
+  Fandlib
+*/
+
+#fandSongsTable .song_title .title, #fandAlbumTracks .song_title .title,{
+    font-size:14px;
+    margin:0px 0px 21px 10px;
+}
+
+#fandAlbumsTable .usertab_small{
+    position:relative;
+    bottom:4px;
+}
+
+/*
+  Tutorial on profile page
+  So far all this is is that thing that says "Getting Started: Upload a profile photo!"
+*/
+
+#profile #profilePic {
+    width: 250px;
+}
+
+#uploadAProfilePic {
+    width:250px;
+    height:250px;
+    background:url('/public/images/default-music-listing.svg');
+    border-radius:10px;
+    position:relative;
+}
+
+.tutorialDescription{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    width: 220px;
+    color: white;
+    padding: 15px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#uploadAProfilePic a:hover .continue_button{
+    background-position:0px -29px;
+}
+
+#uploadAProfilePic a:active .continue_button{
+    background-position:0px -58px;
+}
+
+.tutorialDescription:hover{
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.tutorialDescription:active{
+    background: rgba(0, 0, 0, 0.8);
+    color:#8b8b8b;
+}
+
+#uploadAProfilePic a span{
+    color:#bbbbbb; /* lol bbbbbbbbbb */
+}
+
+#uploadAProfilePic a:active span{
+    color:#494949;
+}
+
+#uploadAProfilePic a{
+    color:#a4d7f0;
+}
+
+#uploadAProfilePic .continue_button{
+    position:absolute;
+    top:14px;
+    right:12px;
+}
+
+/*
+  Box styles for certain modules on the profile page
+*/
+
+
+/* #profile #musicalIdentity, #profile #fans, #profile #members, #profile #events {
+    width: 250px;
+    font-size: .9em;
+
+} */
+
+#profile #radio{
+    margin-bottom:18px;
+    height:100px;
+}
+
+
+#profile #fans h4 .fanCount,
+#profile #bandMembers h4 .memberCount,
+#profile #members h4 .memberCount,
+#profile #reviews h4 .reviewCount {
+    margin: 0.2em 1em 0 0;
+    font-size: 0.9em;
+    float: right;
+    font-family: "StyreneA-Regular", "StyreneA-Regular", "StyreneA-Regular Unicode", Veranda, sans-serif;
+    font-weight: bold;
+}
+
+#profile #fans .scrollbox {
+    margin-top:11px;
+    padding-left:13px;
+    height:87%;
+    width:235px;
+}
+#bandMembers .viewport a{
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+#musicalIdentity h4, #uploadedData h4, #feeds h4, #events h4, #fans h4, #reviews h4 {
+    font-size: 16px;
+    font-weight: 600;
+    /*      font-family: "StyreneA-Regular", Helvetica, Arial, sans-serif; */
+}
+
+.musical_id_text {
+    display:inline-block;
+    max-width:100%;
+}
+
+#musical_id_scroll {
+    max-height:347px;
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+#musical_id_scroll:hover {
+    overflow-y:scroll;
+}
+
+
+#musical_id_inner_box {
+    min-height: 150px;
+}
+
+#musical_id_inner_inner_box {
+    min-height:80%;
+    padding-right:5px;
+    padding-top:11px;
+    padding-bottom:11px;
+    padding-left:11px;
+    word-wrap:break-word;
+}
+
+#profile #rightCol #down {
+    width:230px;
+    height:20px;
+    background: url("/public/images/down_to_jam.png") no-repeat;
+    font-size: 18px;
+    font-weight: 600;
+    text-align:center;
+    padding:10px;
+    margin-bottom:20px;
+    cursor:pointer;
+}
+
+#profile #musicalIdentity {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    line-height:1.3;
+}
+
+#info-modules .label {
+    font-weight: 600;
+}
+
+#profile #musicalIdentity .label {
+    color: #ca1b1b;
+    margin-right: .5em;
+}
+
+#profile #musicalIdentity p {
+    font-size: 12px;
+}
+
+.musical_identity_item{
+    color:#A80000;
+    font-family:'StyreneA-Regular';
+    font-size: 15px;
+
+}
+/* 
+#profile #fans {
+    margin-top: 20px;
+    height:300px;
+    width:250px;
+}
+
+#profile #fans .empty_media {
+    width: 251px;
+    margin-top: 111px;
+    position: relative;
+    left: -15px;
+}
+#profile #members {
+    margin-top: 20px;
+    height:200px;
+    width:250px;
+    margin-bottom:20px;
+} */
+#profile #reviews { margin-top: 0px; }
+/*#profile #fans .fan:hover { border: 1px solid #32ccfe; }*/
+
+#profile #events .event .cal , #callist .cal, #search_Event .event .cal{
+    position: relative;
+    float: left;
+    width: 45px;
+    height: 46px;
+    padding: 0px;
+    margin-right: 8px;
+    text-align: center;
+    background: url('/public/images/calendar.png') no-repeat;
+    z-index: 1
+}
+
+
+#profile #events .event .cal h1 , #callist .cal h1, #search_Event .event .cal h1{
+    margin: 0px;
+    font-size: 22px;
+    padding-top: 2px;
+    font-family: 'StyreneA-Regular', sans-serif;
+}
+
+#profile #events .event .cal h2 , #callist .cal h2, #search_Event .event .cal h2{
+    color: #FFF;
+    margin: 0;
+    padding: 3px 0;
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'StyreneA-Regular', sans-serif;
+}
+
+#profile #events .event h5 , #callist h5, #search_Event .event h5{
+    color: #666;
+    margin-left:6px;
+    font-size:14px;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+.event_info{
+    padding-top: 3px;
+    height: 41px;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid #DEDEDE;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: inline-block;
+    width:180px;
+    margin-left:-10px;
+    position: relative;
+}
+#profile #events .event h3 , #callist h3, #search_Event .event h3{
+    margin-top: 0px;
+    margin-left: 7px;
+    margin-bottom: -1px;
+    font-size:15px;
+    height:22px;
+}
+
+#add_show_profile{
+    background-image: url(/public/images/player/plus_sign.png);
+    width: 10px;
+    height: 10px;
+    margin-left: 7px;
+    margin-top: 2px;
+
+}
+
+.event_info:hover{
+    background:rgba(0, 0, 0, 0.02);
+    box-shadow:inset 0 0 10px #dadada;
+}
+
+#profile #events h4 , #callist .scrollbox h4, #search_Event .scrollbox h4{
+    border-bottom: solid 1px #CCC;
+    border-top: none;
+    margin-left: -10px;
+    width: 260px;
+}
+
+#add_artists.inset_box, #artists.inset_box{
+    padding: 0px;
+
+}
+
+#profile #events h4 {
+    position:relative;
+    left:10px;
+    width:251px;
+}
+
+#callist .event, #search_Event .event{
+    margin-top: 7px;
+    margin-left:7px;
+    cursor:pointer;
+}
+
+#profile .bio, #profile .instruments {
+    line-height: 1.3;
+    margin: 0 2px;
+}
+
+#profile #uploadedData h4 { width: 100%; }
+
+#uploadedData h4 a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: .9em;
+    font-weight: normal;
+}
+
+
+
+#uploadedData .header { padding: 0 1em; }
+
+#uploadedData table {
+    font-size: .8em;
+    width: 420px;
+}
+
+#uploadedData .media {
+    height: 250px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#uploaded-data-tabs {
+    height:34px;
+    border: 1px solid #185c8e;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.media > div {
+    position: relative;
+    height: 250px;
+}
+
+.media .empty_media{
+    top:90px;
+}
+
+.media #myphotoscontent .empty_media, .media #myvideoscontent .empty_media{
+    top:84px;
+}
+#songs .number, #albums .number {
+    color: #1e97c9;
+    margin-right: .1em;
+}
+
+.song_reviews_button{
+    color:#FFF;
+    padding:3px;
+    border-radius:3px;
+    display:inline-block;
+    white-space:nowrap;
+    background: #f4b41c;
+    box-shadow: inset 0px 0px 5px #ec8212;
+    cursor:pointer;
+    font-size:12px;
+}
+
+.song_reviews_button:hover{
+    background: #fec130;
+    box-shadow: inset 0px 0px 5px #fa8c18;
+}
+
+
+#profile .update input.statusform {
+    border:none;
+    background:transparent;
+    color:#000;
+    position:relative;
+    float:left;
+    height:30px;
+    width:622px;
+    margin:4px auto auto 6px;
+    padding-left:5px;
+    font-size:13px;
+    font-family: "StyreneA-Regular", "StyreneA-Regular", "StyreneA-Regular Unicode", Veranda, sans-serif;
+    outline: none;
+}
+
+#profile .update input.grey{
+    color:#CCC;
+}
+
+#profile .update input.grey:hover{
+    color:#b4b4b4;
+}
+
+#profile .update .button {
+    border: none;
+    background: url('/public/images/post_button.png') no-repeat top left;
+    position: relative;
+    float: right;
+    width: 85px;
+    height: 40px;
+    margin: 0;
+    cursor: pointer;
+}
+
+#profile .update img {
+    position: relative;
+    float: right;
+    cursor: pointer;
+    height: 40px;
+}
+.update_body{
+    display: inline-block;
+    max-width: 450px;
+    margin-left: 10px;
+    word-wrap: break-word;
+    margin-top:4px;
+    font-size:14px;
+}
+
+.update_date{
+    color:#666;
+    font-size:10px;
+    position:relative;
+    top:4px;
+}
+
+#myUpdates, #fanUpdates, #myReviews{
+    margin-left:0px;
+}
+
+.delete_button{
+    width:13px;
+    height:13px;
+    background-image: url("/public/images/ui/delete.button.png");
+    background-size: 13px;
+    cursor:pointer;
+}
+
+.delete_button:hover{
+}
+
+.delete_button:active{
+}
+
+#play_station_button{
+    border-radius:100px;
+    width:45px;
+    height:45px;
+    background-color:#2590CC;
+    box-shadow: inset 0px 0px 14px #45B2EF;
+    border:1px solid #2a77a2;
+    background-image:url('/public/images/radio_play_icon.png');
+    cursor: pointer;
+}
+
+#play_station_button:hover{
+    background-color:#2c9bd9;
+    box-shadow: inset 0px 0px 14px #5dc5ff;
+    border:1px solid #2e7fac;
+    background-position:0px -45px;
+}
+
+#play_station_button:active{
+    background-color:#1b7eb5;
+    box-shadow: inset 0px 0px 14px #4bb9f7;
+    border:1px solid #256c93;
+    background-position:0px -90px;
+}
+
+#fanlibbox  {
+    width: 692px;
+    height: 340px;
+    overflow: hidden;
+    margin-top:10px;
+}
+
+#fanlibbox .scrollbox{
+    height:290px;
+}
+
+#fandlibTabs{
+    padding:0px 136px;
+    height:27px;
+    background:url('/public/images/bg_profile_fandlib_tab_unselected.png') repeat-x;
+    text-align:center;
+}
+
+.onaircontainer{
+    width:250px;
+    height:41px;
+    margin:1px 0px 20px 0px;
+    text-align:center;
+}
+
+.onairbox{
+    width:142px;
+    height:40px;
+    background:url('/public/images/onAirSprite.png');
+    margin-left:55px;
+    cursor:pointer;
+}
+.onairbox:hover{
+    background-position:0px -40px;
+}
+
+#uploadedData #mysongs, #uploadedData #myalbums, #uploadedData #myphotos, #uploadedData #myvideos {
+    width: 25%;
+}
+
+#uploadedData{
+    width:420px;
+}
+
+#profile .feeds #myfeed, #uploadedData #mysongs, #fanlibbox #fanlib  {
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    border-top-left-radius: 3px;
+}
+
+#profile .feeds #fanfeed, #uploadedData #myvideos, #fanlibbox #fanlib {
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-right-radius: 3px;
+}
+#profile .item {
+    position: relative;
+    float: left;
+    width: 672px;
+    margin: 8px 10px 16px 10px;
+}
+
+#profile .item h5, #profile .item p, #fanlibbox .item h5, #fanlibbox .item p {
+    float: left;
+    width: 330px;
+}
+
+#profile .item h5, #fanlibbox .item h5 {
+    color: #999;
+    font-size: 9px;
+    line-height: 12px;
+}
+
+#profile .item p, #fanlibbox .item p {
+    font-size: 14px;
+}
+
+#set_location_prompt:hover {
+    text-shadow:0 0 0.2em #F87;
+
+}
+
+#set_location_prompt {
+    position: relative;
+    top:12px;
+}
+
+a.edit_info_link {
+    display: inline-block;
+    padding: 5px;
+    background: #299FD6;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 0 11px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    color: white;
+    font-family: 'StyreneA-Regular', sans-serif;
+    border-bottom: 1px solid white;
+    z-index: 1;
+    font-size: 13px;
+    opacity: .7;
+    position: relative;
+    margin-left: 0px;
+    top: -7px;
+}
+
+a.edit_info_link:hover{
+    opacity:1;
+}
+
+.remove_tab_msg{
+    text-align: center;
+    font-size:12px;
+    position:absolute;
+    bottom:0px;
+    width:420px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.remove_tab_msg a{
+    color:rgba(0,0,0,0.6);
+    display: block;
+    padding: 10px 50px 10px 50px;
+    background: rgba(0,0,0,0.04);
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.remove_tab_msg:hover{
+    opacity:.8;
+}
+
+#myAccount_edit{
+    position:relative;
+    left:8px;
+}
+
+
+#empty_shows {
+    width:248px;
+}
+
+.feeds_usertab_td {
+    min-width:100px;
+    padding-left:10px;
+}
+
+#musical_id_empty{
+    top:75px;
+}
+
+
+.album_tile {
+  position: relative;
+}
+
+#fanlibbox .album_tile .song-play-button {
+    position: relative;
+    left: 52px;
+    top: -82px;
+}
+.media .album_tile .song-play-button {
+    position:relative;
+    top: -80px;
+    left: 47px;
+}
+
+.album_tile .album_tile_title {
+    width:100%;
+    text-align:center;
+    font-family:"StyreneA-Regular";
+    position:relative;
+    top:-25px;
+}
+.album_tile .song-play-button, .album_tile .small_fan_button, .album_tile .small_fand_button, .album_tile .album_tile_title {
+    display:none;
+}
+
+.album_tile:hover .song-play-button, .album_tile:hover .small_fan_button, .album_tile:hover .small_fand_button, .album_tile:hover .album_tile_title {
+    display:block;
+}
+
+
+
+.media .album_tile_fan {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+}
+
+
+#fanlibbox .album_tile_fan {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+}
+
+.album_tile_fan .small_fan_button, .album_tile_fan .small_fand_button {
+    position:absolute;
+}
+
+.albumtracksplay{
+    position: relative;
+    bottom: 14px;
+    left: 44px;
+}
+
+.media #songs .song_reviews_button {
+    right:1px;
+}
+
+#updates-stream-content a {
+    color: #0d8aca;
+    font-weight: normal !important;
+}
+
+#updates-stream-content a:hover {
+    text-decoration: underline;
+}

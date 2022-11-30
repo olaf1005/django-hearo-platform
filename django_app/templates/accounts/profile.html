@@ -1,0 +1,34 @@
+{% extends base %}
+{% load elements mathfilters %}
+
+{% block title %}{{profile.name}} - Tune.fm{% endblock %}
+
+{% block content %}
+<div pk="{{ profile.id }}" id="profile">
+    {% include "accounts/profile/banner.html" %}
+    {% include "accounts/profile/name-bar.html" %}
+    <div id="primary-content">
+        <div id="second-col">
+            <div keyword="{{ profile.keyword }}" id="main-profile-content">
+                {% include "accounts/profile/nav.html" %}
+                {% if section == "library" %}
+                {% include "accounts/profile/section/library.html" %}
+                {% elif section == "music" %}
+                {% include "accounts/profile/section/music.html" %}
+                {% elif section == "gallery" %}
+                {% include "accounts/profile/section/gallery.html" %}
+                {% elif section == "fans" %}
+                {% include "accounts/profile/section/fans.html" %}
+                {% elif section == "about" %}
+                {% include "accounts/profile/section/about.html" %}
+                {% elif section == "activity" %}
+                {% include "accounts/profile/section/activity.html" %}
+                {% elif section == "reviews" %}
+                {% include "accounts/profile/section/review.html" %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">//<![CDATA[window.initUpdate();//]]></script>
+{% endblock %}

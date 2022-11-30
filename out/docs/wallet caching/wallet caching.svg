@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="650px" preserveAspectRatio="none" style="width:331px;height:650px;background:#00000000;" version="1.1" viewBox="0 0 331 650" width="331px" zoomAndPan="magnify"><defs/><g><ellipse cx="192.9375" cy="16" fill="#000000" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"/><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="116" x="134.9375" y="67"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="96" x="144.9375" y="88.6016">Request balance</text><polygon fill="#F8F8F8" points="192.9375,142,204.9375,154,192.9375,166,180.9375,154,192.9375,142" style="stroke:#383838;stroke-width:1.5;"/><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="141" x="71.4375" y="220"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="121" x="81.4375" y="241.6016">Check wallet balance</text><polygon fill="#F8F8F8" points="141.9375,308,153.9375,320,141.9375,332,129.9375,320,141.9375,308" style="stroke:#383838;stroke-width:1.5;"/><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="107" x="190.4375" y="549"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="87" x="200.4375" y="570.6016">Return balance</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="164" x="161.9375" y="386"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="144" x="171.9375" y="407.6016">Make request to network</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="103" x="192.4375" y="474"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="83" x="202.4375" y="495.6016">Cache request</text><ellipse cx="243.9375" cy="634" rx="10" ry="10" style="stroke:#000000;stroke-width:1.0;fill:none;"/><ellipse cx="244.4375" cy="634.5" fill="#000000" rx="6" ry="6" style="stroke:none;stroke-width:1.0;"/><!--MD5=[a99772f186a3731d686ff32b3a2e2b65]
+link start to Request balance--><path d="M192.9375,26.18 C192.9375,35.27 192.9375,49.53 192.9375,61.49 " fill="none" id="start-to-Request balance" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="192.9375,66.79,196.9375,57.79,192.9375,61.79,188.9375,57.79,192.9375,66.79" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[1d14b6aab908653ae3db46a4b989d43d]
+link Request balance to #5--><path d="M192.9375,101.12 C192.9375,111.92 192.9375,126.08 192.9375,136.88 " fill="none" id="Request balance-to-#5" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="192.9375,141.89,196.9375,132.89,192.9375,136.89,188.9375,132.89,192.9375,141.89" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="95" x="78.3438" y="133.2514">Wallet is managed</text><!--MD5=[08842936291e7b65b84628b8346d66a6]
+link #5 to Check wallet balance--><path d="M188.5875,161.91 C181.1675,173.69 165.8075,198.09 154.7275,215.68 " fill="none" id="#5-to-Check wallet balance" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="152.0175,219.99,160.2061,214.5176,154.688,215.7629,153.4427,210.2448,152.0175,219.99" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="18" x="173.9375" y="197.6348">yes</text><!--MD5=[1773584da10b14590dc0ae2ba4f66a36]
+link Check wallet balance to #10--><path d="M141.9375,254 C141.9375,268 141.9375,288.26 141.9375,302.43 " fill="none" id="Check wallet balance-to-#10" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="141.9375,307.72,145.9375,298.72,141.9375,302.72,137.9375,298.72,141.9375,307.72" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="6" y="300.2352">Wallet balance cached</text><!--MD5=[7c1ca273705438266661fb088ef385d7]
+link #10 to Return balance--><path d="M141.6575,331.72 C141.3575,362.02 144.0275,449.88 181.9375,508 C191.3375,522.41 205.1975,535.62 217.4375,545.69 " fill="none" id="#10-to-Return balance" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="221.5075,548.98,217.0097,540.2182,217.6143,545.8426,211.9899,546.4473,221.5075,548.98" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="18" x="158.9375" y="451.6348">yes</text><!--MD5=[c33435d330104266bdbe4f9356995240]
+link #10 to Make request to network--><path d="M148.3175,326.07 C162.2575,337.13 196.0375,363.96 219.4675,382.57 " fill="none" id="#10-to-Make request to network" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="223.4175,385.71,218.8651,376.9764,219.5048,382.597,213.8842,383.2367,223.4175,385.71" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="14" x="196.9375" y="363.6348">no</text><!--MD5=[7cee9b17eae5e4a5654312bfc26db5dc]
+link Make request to network to Cache request--><path d="M237.9275,420.18 C236.1575,433.87 235.9675,453.61 237.3475,468.61 " fill="none" id="Make request to network-to-Cache request" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="237.9375,473.9,240.9369,464.519,237.3947,468.9295,232.9842,465.3874,237.9375,473.9" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[7cee9b17eae5e4a5654312bfc26db5dc]
+link Make request to network to Cache request--><path d="M249.9475,420.18 C251.7175,433.87 251.9075,453.61 250.5275,468.61 " fill="none" id="Make request to network-to-Cache request-1" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="249.9375,473.9,254.8908,465.3874,250.4803,468.9295,246.9381,464.519,249.9375,473.9" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[6755dcdc5007096cbe5889c460274e55]
+link Cache request to Return balance--><path d="M237.5775,508.2 C236.2575,518.69 236.0875,532.46 237.0575,543.82 " fill="none" id="Cache request-to-Return balance" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="237.5875,548.84,240.6135,539.4675,237.0589,543.868,232.6584,540.3133,237.5875,548.84" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[6755dcdc5007096cbe5889c460274e55]
+link Cache request to Return balance--><path d="M250.2975,508.2 C251.6175,518.69 251.7875,532.46 250.8175,543.82 " fill="none" id="Cache request-to-Return balance-1" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="250.2875,548.84,255.2166,540.3133,250.8161,543.868,247.2615,539.4675,250.2875,548.84" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[698261eacac9804c1ac9f587c0c30bd9]
+link #5 to Make request to network--><path d="M197.0375,161.93 C203.6875,173.52 216.6875,197.74 222.9375,220 C238.7675,276.39 242.6875,345.83 243.6475,380.36 " fill="none" id="#5-to-Make request to network" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="243.7775,385.6,247.5708,376.5109,243.6632,380.6013,239.5729,376.6938,243.7775,385.6" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="14" x="236.9375" y="285.6348">no</text><!--MD5=[1040b50069d7cb0c93a3f13267709dde]
+link Return balance to end--><path d="M243.9375,583.31 C243.9375,594.24 243.9375,608.47 243.9375,618.9 " fill="none" id="Return balance-to-end" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="243.9375,623.97,247.9375,614.97,243.9375,618.97,239.9375,614.97,243.9375,623.97" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[d82d5b273317255d86482ea572d078fe]
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title Wallet caching
+
+(*) - -> "Request balance"
+
+if "Wallet is managed" then
+    - -> [yes] "Check wallet balance"
+    if "Wallet balance cached" then
+        - -> [yes] "Return balance"
+    else
+        - -> [no] "Make request to network"
+        - -> "Cache request"
+        - -> "Return balance"
+    endif
+else
+    - -> [no] "Make request to network"
+    - -> "Cache request"
+endif
+
+- -> "Return balance"
+- ->(*)
+
+@enduml
+
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+
+(*) - -> "Request balance"
+
+if "Wallet is managed" then
+    - -> [yes] "Check wallet balance"
+    if "Wallet balance cached" then
+        - -> [yes] "Return balance"
+    else
+        - -> [no] "Make request to network"
+        - -> "Cache request"
+        - -> "Return balance"
+    endif
+else
+    - -> [no] "Make request to network"
+    - -> "Cache request"
+endif
+
+- -> "Return balance"
+- ->(*)
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 15:40:07 EAT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

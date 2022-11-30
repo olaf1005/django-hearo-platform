@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1206px" preserveAspectRatio="none" style="width:1057px;height:1206px;background:#00000000;" version="1.1" viewBox="0 0 1057 1206" width="1057px" zoomAndPan="magnify"><defs/><g><rect fill="#CCCCCC" height="1187.8418" style="stroke:#383838;stroke-width:1.0;" width="181.5" x="1" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="68" x="57.75" y="18.5684">Web Apps</text><rect fill="#C7C7C7" height="1187.8418" style="stroke:#383838;stroke-width:1.0;" width="476.5" x="476" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="107" x="660.75" y="18.5684">Smart Contracts</text><rect fill="#ADADAD" height="1187.8418" style="stroke:#383838;stroke-width:1.0;" width="97" x="954.5" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="49" x="978.5" y="18.5684">Hedera</text><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="22" x2="22" y1="104.7988" y2="1199.8418"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="157.5" x2="157.5" y1="104.7988" y2="1199.8418"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="509" x2="509" y1="104.7988" y2="1199.8418"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="907.5" x2="907.5" y1="104.7988" y2="1199.8418"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1002.5" x2="1002.5" y1="104.7988" y2="1199.8418"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="5" y="101.8457">App</text><ellipse cx="22" cy="35.3105" fill="#F8F8F8" rx="8" ry="8" style="stroke:#383838;stroke-width:2.0;"/><path d="M22,43.3105 L22,70.3105 M9,51.3105 L35,51.3105 M22,70.3105 L9,85.3105 M22,70.3105 L35,85.3105 " fill="none" style="stroke:#383838;stroke-width:2.0;"/><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="41" x="137.5" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="144.5" y="93.8457">HTS</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="58" x="480" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="487" y="93.8457">Parent</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="81" x="867.5" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="874.5" y="93.8457">Children..</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="89" x="958.5" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="965.5" y="93.8457">Hashgraph</text><line style="stroke:#383838;stroke-width:1.0;" x1="156" x2="146" y1="136.1094" y2="132.1094"/><line style="stroke:#383838;stroke-width:1.0;" x1="156" x2="146" y1="136.1094" y2="140.1094"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="157" y1="136.1094" y2="136.1094"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="29" y="131.3672">approve</text><path d="M163,149.1094 L163,174.1094 L216,174.1094 L216,159.1094 L206,149.1094 L163,149.1094 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M206,149.1094 L206,159.1094 L216,159.1094 L206,149.1094 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="169" y="166.6777">POST</text><path d="M163,184.4199 L163,209.4199 L639,209.4199 L639,194.4199 L629,184.4199 L163,184.4199 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M629,184.4199 L629,194.4199 L639,194.4199 L629,184.4199 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="455" x="169" y="201.9883">A hedera account approves a solidity address to spend JAM on its behalf</text><path d="M163,219.7305 L163,305.7305 L552,305.7305 L552,229.7305 L542,219.7305 L163,219.7305 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M542,219.7305 L542,229.7305 L552,229.7305 L542,219.7305 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="174.5" cy="232.541" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="180" y="237.2988">json (Dict) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="344" x="185" y="252.6094">* spenderSolidityAddress (String) (? Required/Optional)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="352" x="185" y="267.9199">* useraccNum (String) (? Required/Optional) "0.0.21166"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="201" x="185" y="283.2305">* userpvtKey (String) "302e......",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="165" x="185" y="298.541">* valueInJamDecimals (Int)</text><line style="stroke:#383838;stroke-width:1.0;" x1="507" x2="497" y1="332.5938" y2="328.5938"/><line style="stroke:#383838;stroke-width:1.0;" x1="507" x2="497" y1="332.5938" y2="336.5938"/><line style="stroke:#383838;stroke-width:1.0;" x1="158" x2="508" y1="332.5938" y2="332.5938"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="165" y="327.8516">approve</text><polygon fill="#383838" points="896,357.9043,906,361.9043,896,365.9043" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="509" x2="902" y1="361.9043" y2="361.9043"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="375" x="516" y="357.1621">approve(address tokenOwner, address spender, uint _value)</text><polygon fill="#383838" points="520,387.2148,510,391.2148,520,395.2148" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="514" x2="907" y1="391.2148" y2="391.2148"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="526" y="386.4727">return success</text><polygon fill="#383838" points="169,416.5254,159,420.5254,169,424.5254" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="163" x2="508" y1="420.5254" y2="420.5254"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="175" y="415.7832">return success</text><polygon fill="#383838" points="33,445.8359,23,449.8359,33,453.8359" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="157" y1="449.8359" y2="449.8359"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="39" y="445.0938">return success</text><line style="stroke:#383838;stroke-width:1.0;" x1="156" x2="146" y1="479.1465" y2="475.1465"/><line style="stroke:#383838;stroke-width:1.0;" x1="156" x2="146" y1="479.1465" y2="483.1465"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="157" y1="479.1465" y2="479.1465"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="63" x="29" y="474.4043">balanceOf</text><path d="M163,492.1465 L163,517.1465 L216,517.1465 L216,502.1465 L206,492.1465 L163,492.1465 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M206,492.1465 L206,502.1465 L216,502.1465 L206,492.1465 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="169" y="509.7148">POST</text><path d="M163,527.457 L163,552.457 L442,552.457 L442,537.457 L432,527.457 L163,527.457 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M432,527.457 L432,537.457 L442,537.457 L432,527.457 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="258" x="169" y="545.0254">Check balance JAM Tokens of an address</text><path d="M163,562.7676 L163,633.7676 L509,633.7676 L509,572.7676 L499,562.7676 L163,562.7676 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M499,562.7676 L499,572.7676 L509,572.7676 L499,562.7676 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="174.5" cy="575.5781" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="180" y="580.3359">json (Dict) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="283" x="185" y="595.6465">* myaccNum (String) (? Required) "0.0.21166"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="265" x="185" y="610.957">* mypvtKey (String) (? Required) "302e......"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="309" x="185" y="626.2676">* tokenOwnerSolidityAddress (String) (? Required)</text><line style="stroke:#383838;stroke-width:1.0;" x1="507" x2="497" y1="660.3203" y2="656.3203"/><line style="stroke:#383838;stroke-width:1.0;" x1="507" x2="497" y1="660.3203" y2="664.3203"/><line style="stroke:#383838;stroke-width:1.0;" x1="158" x2="508" y1="660.3203" y2="660.3203"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="63" x="165" y="655.5781">balanceOf</text><line style="stroke:#383838;stroke-width:1.0;" x1="906" x2="896" y1="689.6309" y2="685.6309"/><line style="stroke:#383838;stroke-width:1.0;" x1="906" x2="896" y1="689.6309" y2="693.6309"/><line style="stroke:#383838;stroke-width:1.0;" x1="509" x2="907" y1="689.6309" y2="689.6309"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="63" x="516" y="684.8887">balanceOf</text><polygon fill="#383838" points="520,714.9414,510,718.9414,520,722.9414" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="514" x2="907" y1="718.9414" y2="718.9414"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="236" x="526" y="714.1992">return string balance in Jam Decimals</text><polygon fill="#383838" points="169,744.252,159,748.252,169,752.252" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="163" x2="508" y1="748.252" y2="748.252"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="236" x="175" y="743.5098">return string balance in Jam Decimals</text><polygon fill="#383838" points="33,773.5625,23,777.5625,33,781.5625" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="157" y1="777.5625" y2="777.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="772.8203">return "</text><line style="stroke:#383838;stroke-width:1.0;" x1="156" x2="146" y1="806.873" y2="802.873"/><line style="stroke:#383838;stroke-width:1.0;" x1="156" x2="146" y1="806.873" y2="810.873"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="157" y1="806.873" y2="806.873"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112" x="29" y="802.1309">bulkTransferFrom</text><path d="M163,819.873 L163,844.873 L216,844.873 L216,829.873 L206,819.873 L163,819.873 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M206,819.873 L206,829.873 L216,829.873 L206,819.873 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="169" y="837.4414">POST</text><path d="M163,855.1836 L163,895.1836 L474,895.1836 L474,865.1836 L464,855.1836 L163,855.1836 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M464,855.1836 L464,865.1836 L474,865.1836 L464,855.1836 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="290" x="169" y="872.752">Client account transfers from many addresses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="213" x="169" y="888.0625">to other addresses on their behalf</text><path d="M163,905.8047 L163,1022.8047 L602,1022.8047 L602,915.8047 L592,905.8047 L163,905.8047 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M592,905.8047 L592,915.8047 L602,915.8047 L592,905.8047 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="174.5" cy="918.6152" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="180" y="923.373">json (Dict) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="321" x="185" y="938.6836">* payload (Array of dictionary mappings) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="201" y="953.9941">[{</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="370" x="217" y="969.3047">"tokenOwnerSolidityAddress": from_user_solidity_address,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="290" x="217" y="984.6152">"toSolidityAddress": to_user_solidity_address,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="255" x="217" y="999.9258">"valueInJamDecimals": transaction_value</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="201" y="1015.2363">}, ..]</text><line style="stroke:#383838;stroke-width:1.0;" x1="507" x2="497" y1="1049.2891" y2="1045.2891"/><line style="stroke:#383838;stroke-width:1.0;" x1="507" x2="497" y1="1049.2891" y2="1053.2891"/><line style="stroke:#383838;stroke-width:1.0;" x1="158" x2="508" y1="1049.2891" y2="1049.2891"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112" x="165" y="1044.5469">bulkTransferFrom</text><line style="stroke:#383838;stroke-width:1.0;" x1="906" x2="896" y1="1078.5996" y2="1074.5996"/><line style="stroke:#383838;stroke-width:1.0;" x1="906" x2="896" y1="1078.5996" y2="1082.5996"/><line style="stroke:#383838;stroke-width:1.0;" x1="509" x2="907" y1="1078.5996" y2="1078.5996"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="80" x="516" y="1073.8574">bulkTransfer</text><polygon fill="#383838" points="520,1103.9102,510,1107.9102,520,1111.9102" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="514" x2="907" y1="1107.9102" y2="1107.9102"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="297" x="526" y="1103.168">return string result of transactions on the child</text><polygon fill="#383838" points="169,1148.5313,159,1152.5313,169,1156.5313" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="163" x2="508" y1="1152.5313" y2="1152.5313"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="323" x="175" y="1132.4785">return string result of all transactions in the format</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="276" x="179" y="1147.7891">000110 where 0 indicates failure, 1 success</text><polygon fill="#383838" points="33,1177.8418,23,1181.8418,33,1185.8418" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="157" y1="1181.8418" y2="1181.8418"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="1177.0996">return "</text><!--MD5=[18c20eef9be502d8dabc347eab755268]
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title HTS API
+
+Actor "App" as app
+participant "HTS" as hts
+participant "Parent" as parent
+participant "Children.." as child
+participant "Hashgraph" as hashgraph
+
+box "Web Apps" #LightBlue
+	participant app
+	participant hts
+end box
+
+box "Smart Contracts" #LightGreen
+	participant parent
+	participant child
+end box
+
+box "Hedera" #Orange
+	participant hashgraph
+end box
+
+app->>hts : approve
+Note right of hts
+    POST
+end Note
+Note right of hts
+    A hedera account approves a solidity address to spend JAM on its behalf
+end Note
+' Note right of hts #Pink
+'     * json (Dict) (Required)
+'         * spenderSolidityAddress (String) (? Required/Optional)
+'         * useraccNum (String) (? Required/Optional) "0.0.21166"
+'         * userpvtKey (String) "302e......",
+'         * valueInJamDecimals (Int)
+' end Note
+Note right of hts
+    * json (Dict) (Required)
+        * spenderSolidityAddress (String) (? Required/Optional)
+        * useraccNum (String) (? Required/Optional) "0.0.21166"
+        * userpvtKey (String) "302e......",
+        * valueInJamDecimals (Int)
+end Note
+
+hts->>parent : approve
+parent- ->child: approve(address tokenOwner, address spender, uint _value)
+child- ->parent: return success
+parent- ->hts : return success
+hts- ->app : return success
+
+app->>hts : balanceOf
+Note right of hts
+    POST
+end Note
+Note right of hts
+    Check balance JAM Tokens of an address
+end Note
+' Note right of hts #Pink
+'     * json (Dict) (Required)
+'         * myaccNum (String) (? Required) "0.0.21166"
+'         * mypvtKey (String) (? Required) "302e......"
+'         * tokenOwnerSolidityAddress (String) (? Required)
+' end Note
+Note right of hts
+    * json (Dict) (Required)
+        * myaccNum (String) (? Required) "0.0.21166"
+        * mypvtKey (String) (? Required) "302e......"
+        * tokenOwnerSolidityAddress (String) (? Required)
+end Note
+
+hts->>parent : balanceOf
+parent->>child : balanceOf
+child- ->parent : return string balance in Jam Decimals
+parent- ->hts : return string balance in Jam Decimals
+hts- ->app : return "
+
+app->>hts : bulkTransferFrom
+Note right of hts
+    POST
+end Note
+Note right of hts
+    Client account transfers from many addresses
+    to other addresses on their behalf
+end Note
+' Note right of hts #Pink
+'     Swagger documentation needs to be updated
+' end Note
+Note right of hts
+    * json (Dict) (Required)
+        * payload (Array of dictionary mappings) (Required)
+            [{
+                "tokenOwnerSolidityAddress": from_user_solidity_address,
+                "toSolidityAddress": to_user_solidity_address,
+                "valueInJamDecimals": transaction_value
+            }, ..]
+end Note
+
+hts->>parent : bulkTransferFrom
+parent->>child: bulkTransfer
+child- ->parent : return string result of transactions on the child
+parent- ->hts : return string result of all transactions in the format \n 000110 where 0 indicates failure, 1 success
+hts- ->app : return "
+
+
+
+@enduml
+
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+
+Actor "App" as app
+participant "HTS" as hts
+participant "Parent" as parent
+participant "Children.." as child
+participant "Hashgraph" as hashgraph
+
+box "Web Apps" #LightBlue
+	participant app
+	participant hts
+end box
+
+box "Smart Contracts" #LightGreen
+	participant parent
+	participant child
+end box
+
+box "Hedera" #Orange
+	participant hashgraph
+end box
+
+app->>hts : approve
+Note right of hts
+    POST
+end Note
+Note right of hts
+    A hedera account approves a solidity address to spend JAM on its behalf
+end Note
+Note right of hts
+    * json (Dict) (Required)
+        * spenderSolidityAddress (String) (? Required/Optional)
+        * useraccNum (String) (? Required/Optional) "0.0.21166"
+        * userpvtKey (String) "302e......",
+        * valueInJamDecimals (Int)
+end Note
+
+hts->>parent : approve
+parent- ->child: approve(address tokenOwner, address spender, uint _value)
+child- ->parent: return success
+parent- ->hts : return success
+hts- ->app : return success
+
+app->>hts : balanceOf
+Note right of hts
+    POST
+end Note
+Note right of hts
+    Check balance JAM Tokens of an address
+end Note
+Note right of hts
+    * json (Dict) (Required)
+        * myaccNum (String) (? Required) "0.0.21166"
+        * mypvtKey (String) (? Required) "302e......"
+        * tokenOwnerSolidityAddress (String) (? Required)
+end Note
+
+hts->>parent : balanceOf
+parent->>child : balanceOf
+child- ->parent : return string balance in Jam Decimals
+parent- ->hts : return string balance in Jam Decimals
+hts- ->app : return "
+
+app->>hts : bulkTransferFrom
+Note right of hts
+    POST
+end Note
+Note right of hts
+    Client account transfers from many addresses
+    to other addresses on their behalf
+end Note
+Note right of hts
+    * json (Dict) (Required)
+        * payload (Array of dictionary mappings) (Required)
+            [{
+                "tokenOwnerSolidityAddress": from_user_solidity_address,
+                "toSolidityAddress": to_user_solidity_address,
+                "valueInJamDecimals": transaction_value
+            }, ..]
+end Note
+
+hts->>parent : bulkTransferFrom
+parent->>child: bulkTransfer
+child- ->parent : return string result of transactions on the child
+parent- ->hts : return string result of all transactions in the format \n 000110 where 0 indicates failure, 1 success
+hts- ->app : return "
+
+
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 15:40:07 EAT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

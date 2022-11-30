@@ -1,0 +1,10 @@
+{% load elements %}
+<div class="video listing" id="video_{{video.id}}">
+  <a href="http://youtube.com/watch?v={{ video.embed_id }}">
+    <header>
+      {{ video.title }}
+    </header>
+  </a>
+  <button class="small blue" onclick="createVideoLightbox('{{video.embed_id}}')">Play</button>
+  <button class="small red" onclick="deleteVideo('{{video.id}}')" >Delete</button>
+</div>

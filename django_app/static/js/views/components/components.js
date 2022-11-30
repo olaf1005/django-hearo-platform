@@ -1,0 +1,1 @@
+hearo.components = {};

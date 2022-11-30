@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% comment %} {% load compress %} {% endcomment %}
+{% load static %}
+{% load elements %}
+{% load mathfilters %}
+{% load static from staticfiles %}
+{% with user.person.view as view %}
+
+    <title>{% block title %}Discover new music on tune.fm{% endblock %}</title>
+
+    <base target='_blank'/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    {% comment %} {% compress css %} {% endcomment %}
+    <link type="text/css" rel="stylesheet" href="{% static "css/compile.css" %}" />
+    {% comment %} {% endcompress %} {% endcomment %}
+
+    <!-- jQuery local/CDN -->
+    {% if SERVER %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>    <!--<script type="text/javascript" src="/public/lib/less.min.js"></script>-->
+    {% else %}
+    <script type="text/javascript" src="/public/lib/jquery/jquery-1.8.0.min.js"></script>
+    {% endif %}
+
+    {% if SERVER %}
+    <!-- google analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174110339-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-174110339-1');
+
+        $(document).ready(function() {
+            {% if user.is_authenticated %}
+            LOGGED_IN = true;
+            gtag('set', {'user_id': {{ user.id }} }); // Set the user ID using signed-in user_id.
+            setupPing();
+            {% else %}
+            LOGGED_IN = false;
+            {% endif %}
+        });
+    </script>
+    {% else %}
+    <script>
+        window.gtag = function () {
+            try{
+                console.log.apply(console, arguments);
+            } catch(err){}
+        }
+    </script>
+    {% endif %}
+</head>
+
+<body {% if browser %}class="{{ browser }}"{% endif %} style="padding-left: 10px;">
+{% block content %}{% endblock %}
+</body>
+</html>
+
+{% endwith %}

@@ -1,0 +1,45 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% block title %}{% trans "Confirm import" %}{% endblock %}
+{% block content_title %}
+<span class="navbar-brand">{% trans "Confirm import" %}</span>
+{% endblock %}
+
+{% block breadcrumbs %}
+<ul class="breadcrumb">
+    <li>
+        <a href="../../../../"> {% trans "Home" %} </a>
+    </li>
+    <li>
+        <a href="../../../"> {% trans "Newsletter" %} </a>
+    </li>
+    <li>
+        <a href="../../"> {% trans "Subscriptions" %} </a>
+    </li>
+    <li>
+        <a href="../">
+            {% trans "Import addresses" %}
+        </a>
+    </li>
+    <li>
+        {% trans "Confirm import" %}
+    </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+    <ul>
+        {% for email, name in subscribers.items %}
+        <li>{% if name %}{{ name }} &lt;{{ email }}&gt;{% else %}{{ email }}{% endif %}</li>
+        {% endfor %}
+    </ul>
+    <form enctype="multipart/form-data" method="post">
+        <table>
+            {{ form.as_table }}
+        </table>
+        {% csrf_token %}
+        <input type="submit" name="submit" class="btn btn-primary default" value="{% trans 'Confirm' %}" />
+    </form>
+</div>
+{% endblock %}

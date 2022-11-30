@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="14px" viewBox="0 0 15 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="playlist-round" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M1,4 L11,4 C11.55,4 12,4.45 12,5 C12,5.55 11.55,6 11,6 L1,6 C0.45,6 0,5.55 0,5 C0,4.45 0.45,4 1,4 Z M1,0 L11,0 C11.55,0 12,0.45 12,1 C12,1.55 11.55,2 11,2 L1,2 C0.45,2 0,1.55 0,1 C0,0.45 0.45,0 1,0 Z M1,8 L7,8 C7.55,8 8,8.45 8,9 C8,9.55 7.55,10 7,10 L1,10 C0.45,10 0,9.55 0,9 C0,8.45 0.45,8 1,8 Z M10,8.88 L10,13.11 C10,13.5 10.42,13.74 10.76,13.54 L14.29,11.42 C14.61,11.23 14.61,10.76 14.29,10.56 L10.76,8.44 C10.42,8.25 10,8.49 10,8.88 L10,8.88 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

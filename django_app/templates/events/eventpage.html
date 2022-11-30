@@ -1,0 +1,90 @@
+{% extends base %}
+{% block content %}
+<style type="text/css">
+    ul#navigation li.events a { color: #139ee4; }
+    ul#navigation li.events a:hover { color: #96dcff; }
+</style>
+<script type="text/javascript">
+
+$(document).ready( function() {
+    {% if user.is_authenticated %}
+        setupEvents(true);
+    {% else %}
+        setupEvents(false);
+    {% endif %}
+});
+</script>
+<style type='text/css'>
+	#calendar {
+		width: 500px;
+		margin: 0 auto;
+		}
+    #event{
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+        box-shadow: inset 0px 1px 1px rgba(0,0,0,0.2);
+    }
+    #edit{
+        padding:3px;
+        background:rgba(0,0,0,0.1);
+        border-radius: 3px;
+        box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
+        margin-left:10px;
+    }
+    #edit:hover{
+        background:rgba(0,0,0,0.07);
+        box-shadow: inset 0 0 2px rgba(0,0,0,0.14);
+    }
+    #edit a{
+        text-decoration:none;
+    }
+</style>
+<div id="showsPage">
+<div id="topContainerShort">
+    {% if user.is_authenticated %}
+    <h2>Find local shows from the artists and venues you fan!</h2>
+    {% else %}
+    <h2>Find local shows!</h2>
+    {% endif %}
+
+        <div class="hearotip tooltipbottom" id="showspagetooltip">
+            <div class="tooltip_description" style="display:none" title="shows page">
+                This calendar will populate with shows of the artists you have fan’d.  So if your friend is playing a benefit concert next week, his event will automatically show up on your Shows calendar.  Also, the event list displays all of the upcoming shows and if you want to create your own event, just click “Add a Show” and your show will instantaneously appear on your fan’s calendar!           
+            </div>
+        </div>
+    <br>
+    <div id='event_filters' >
+        <div class="filter_module auto_update" id="events_filter_module"></div>
+        <div class="filter_module" id="location_filter">
+            {% if user.is_authenticated %}
+                <input class="standard small" id="Location" type="text" name="{{location}}" maxlength="100" >
+            {% else %}
+                <input class="standard small" id="Location" type="text" maxlength="100" >
+            {% endif %}
+        </div>
+        <div class="filter_module auto_update" style="width:94px;" > 
+            <button class="blue" id="filter-events" type="submit">Filter</button>
+        </div>
+        {% if user.is_authenticated %}
+          <div class="filter_module auto_update"> 
+              <button id="create_event" type="submit" class="green" onclick="startEditingEvent(-1)">Add a Show</button>
+          </div>
+        {% endif %}
+
+
+    </div>
+</div>
+
+<div id="calbox">
+    <div id='calendar' style="width:700px; height:600px;"></div>
+</div>
+<div id="callist" class="box">
+    <h4 id='event_num'>shows</h4>
+    <div class="scrollbox">
+
+    </div>
+</div>
+</div>
+
+{% endblock %}

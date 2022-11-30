@@ -1,0 +1,20 @@
+{% extends "email_notifications/base_email.html" %}
+
+{% block subject %}
+Verify your {{ BASE_URL }} account!
+{% endblock %}
+
+{% block html_body %}
+<p>
+Follow this link to verify your account:
+</p>
+<p>
+{{ BASE_URL }}/verify/?v={{id_}}_{{v_key}}
+</p>
+
+<p>
+If you have received this email in error,
+please ignore it.
+</p>
+
+{% endblock %}

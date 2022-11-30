@@ -1,0 +1,109 @@
+ul#acctype-sel{
+  text-align: center;
+}
+#acctype-sel li {
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+  background-color: #333333 !important;
+  margin-right: 0px;
+  width: 88px;
+  line-height: 48px;
+  font-family: 'StyreneA-Regular';
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0px;
+}
+#acctype-sel li a{
+  text-decoration: none;
+  color: grey;
+  display: block;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding-top: 27px;
+  background-repeat: no-repeat;
+  background-position: center -5px;
+  cursor: pointer;
+}
+#acctype-sel li a:hover {
+  text-decoration: none;
+  color: #979797;
+  background-color: whitesmoke;
+  border: 1px solid #979797;
+  -moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
+  box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
+}
+
+#acctype-sel li a.active {
+  text-decoration: none;
+  color: #979797;
+  background-color: whitesmoke;
+  border: 1px solid #979797;
+}
+
+#acctype-sel li a#artist{
+  background-image: url('/public/images/selector_images/artist.svg');
+  background-size: 35px 55px;
+}
+#acctype-sel li a#artist:hover{
+  background-color: whitesmoke;
+}
+
+#acctype-sel li a#fan{
+  background-image: url('/public/images/selector_images/fan.svg');
+  background-size: 40px 55px;
+}
+#acctype-sel li a#venue{
+  background-image: url('/public/images/selector_images/venue.svg');
+  background-size: 29px 55px;
+}
+#acctype-sel li a#band{
+  background-image: url('/public/images/selector_images/band.svg');
+  background-size: 14px 55px;
+}
+#acctype-sel li a#label{
+  background-image: url('/public/images/selector_images/label.svg');
+  background-size: 32px 55px;
+}
+.hr-spacer-1{
+  margin-bottom: 46px;
+}
+.hr-spacer-2{
+  margin: 28px;
+}
+.right-align {
+  text-align: right;
+}
+#account-type-container{
+    color: white;
+    padding: 4px 0px 18px 18px;
+    width: 96%;
+}
+
+/* extends buttons for use in modals */
+button.md-cancel {
+    float: left;
+    position: relative;
+    top: -36px;
+}
+button.md-confirm {
+    float: right;
+    top: -34px;
+    position: relative;
+}
+
+@media screen and (max-width: 32em) {
+  #acctype-sel li {
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+    background-color: #333333;
+    margin-right: 0px;
+    width: 60px;
+    line-height: 46px;
+    font-family: 'StyreneA-Regular';
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px;
+  }
+}

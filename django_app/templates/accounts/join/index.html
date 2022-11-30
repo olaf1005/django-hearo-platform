@@ -1,0 +1,113 @@
+{% extends base %}
+{% block content %}
+<style type="text/css">
+#page { width: auto }
+
+</style>
+{% load staticfiles %}
+<script src="{% static 'js/views/join.js' %}">
+</script>
+<div id="sunburst">
+  <ul id="register-progress">
+    <li>Signup</li>
+    <li>Share</li>
+    <li>Welcome</li>
+  </ul>
+  <div class="signup" id="onboarding">
+
+<div id="myacct-content">
+  <div class="content">
+    <div row class="1 cols" id="account-type-container">
+      <div cell>
+        <span>I am a(n)</span>
+      </div>
+      </div>
+
+    <div row>
+      <div cell>
+        <ul id="acctype-sel">
+          <li><a id="artist">Artist</a></li>
+          <li><a id="fan">Fan</a></li>
+          <li><a id="band">Band</a></li>
+          <li><a id="venue">Venue</a></li>
+          <li><a id="label">Label</a></li>
+        </ul>
+        <input type="hidden" id="account-type" />
+        <hr class="hr-spacer-2">
+      </div>
+    </div>
+  </div>
+  </div>
+
+    <div class="textfields">
+      <input type="text" name="name" placeholder="name" id="id_name" />
+      <input type="text" name="city" placeholder="location" autocomplete="off" id="id_city" />
+      <input type="text" placeholder="email" value="{{email|default_if_none:''}}" id="email" />
+      <input type="password" placeholder="password" id="password" />
+      <input type="text" name="genres" placeholder="genres" class="large" autocomplete="off" id="id_genres" />
+      <input type="text" name="instruments" placeholder="instruments" class="large" autocomplete="off" id="id_instruments" />
+    </div>
+
+    <div formusicians class="musician_question_text">
+      <div class="checkbox">
+	<input type="checkbox" id="id_dj" {%if view.person.musician.dj%}checked='yes'{% endif %}>
+	<label for="id_dj">DJ</label>
+      </div>
+
+      <div class="checkbox">
+	<input type="checkbox" id="id_teacher" {%if view.person.musician.teacher%}checked='yes'{% endif %}>
+	<label for="id_teacher">teacher</label>
+      </div>
+
+      <div class="checkbox">
+	<input type="checkbox" id="id_producer" {%if view.person.producer%}checked='yes'{% endif %}>
+	<label for="id_producer">producer</label>
+      </div>
+
+      <div class="checkbox">
+	<input type="checkbox" id='id_is_musician' {% if view.person.is_musician %} checked="checked" {% endif %}>
+	<label for="id_is_musician" class="musical_question_text">musician</label>
+      </div>
+
+      <div class="checkbox">
+	<input type="checkbox" id='id_write_music' {%if view.person.musician.write_music%}checked='yes'{% endif %}>
+	<label for="id_write_music" class="musical_question_text">songwriter</label>
+      </div>
+
+
+      <div class="checkbox">
+	<input type="checkbox" id="id_engineer" {%if view.person.engineer%}checked='yes'{% endif %}>
+	<label for="id_engineer">sound engineer</label>
+      </div>
+
+      <div class="checkbox">
+	<input type="checkbox" id='id_join_band' {%if view.person.musician.join_band%}checked='yes'{% endif %}>
+	<label for="id_join_band">looking for a band</label>
+      </div>
+    </div>
+    <label><i>Please remember your password and write it down somewhere safe.<br>
+      Your password is used to encrypt your private keys to your new JAM token wallet.</i></label><br><br>
+    <div id="accept-checkbox">
+      <input type="checkbox" id="accept" />
+      <label for="accept">I accept the <a class="ajax" href="{% url 'terms' %}" target="_blank">terms of use</a> and <a class="ajax" href="{% url 'privacy_policy' %}" target="_blank">privacy policy</a>
+      </label>
+    </div>
+    <input type="hidden" id="progress" {% if progress %} value="{{ progress }}"{% endif %} />
+    <input type="hidden" id="account-type" />
+    <button class="next-btn" id="initial-signup">
+      <div class="button-text">Sign up</div>
+      <div class="spinner">
+      </div>
+    </button>
+    <div class="error">
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  change_account_type('artist');
+  setTimeout(setup_suggestions, 3000);
+  setTimeout(update_inputs, 3000);
+});
+</script>
+{% endblock %}

@@ -1,0 +1,290 @@
+#mail_head{
+    font-size: 30px;
+    font-family: 'Permanent Marker', cursive;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding-top: 15px;
+    color: #ffffff;
+}
+
+
+#mail_head #compose_button {
+    position: relative;
+    bottom: 4px;
+    font-size: 22px;
+    font-family: 'StyreneA-Regular', sans-serif;
+    padding: 9px 15px;
+    vertical-align: middle;
+    margin-left: 15px;
+    height: auto;
+}
+
+#mail_head #compose_button:before {
+    content: url("/public/images/white_envelope.png"); /*"/public/images/header/envelope.svg"*/
+    padding-right: 6px;
+
+}
+
+#mail_subhead{
+    font-size:20px;
+    font-family:"StyreneA-Regular";
+    padding: 35px;
+    color: rgba(230, 218, 218, 0.5);
+}
+
+.compose_input{
+    margin:0px auto;
+    font-size:14px;
+    outline:none;
+    width:80%;
+    padding:6px;
+    border:none;
+    border-radius:3px;
+    background:rgba(255,255,255,0.8);
+    box-shadow:inset 0 0 10px #D6D6D6;
+    border:1px solid #CACACA;
+}
+
+input.compose_input{
+    width:200px;
+}
+
+.inboxContainer{
+    width:100%;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    padding: 0px !important;
+    display: table-row;
+    background: #111111 !important;
+}
+
+.inboxContainer table {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.inboxContainer #inbox, .inboxContainer #sentbox {
+    width: 960px;
+}
+
+.inboxContainer #sentbox {
+    border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+#fanmailCategories {
+    width: 100%;
+    height: 40px;
+    display: inline-flex;
+}
+
+#fanmailCategories .categoriesTab {
+    padding: 12px;
+    width: 480px;
+    float: none;
+}
+
+.unselected {
+    display: none !important;
+}
+
+.selected {
+    display: block !important;
+}
+
+.tabSelect {
+    background: #111111 !important;
+}
+
+.fanmail_message {
+    padding:30px;
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+.fanmail_message:first-child{
+    border-top: 0;
+}
+
+.fanmail_message .delete_button{
+    position:absolute;
+    bottom: 80px;
+    right: 20px;
+    z-index: 9999;
+}
+.fanmail_message .to{
+    position:relative;
+    top:17px;
+    font-family: 'StyreneA-Regular', sans-serif;
+    font-size:14px;
+    margin-right:10px;
+    color: #585858;
+    vertical-align: top;
+}
+
+.fanmail_message .message, .fanmail_message .sender {
+    position: relative;
+    display: inline-block;
+    margin-left: 26px;
+}
+
+.fanmail_message .sender {
+    top: 6px;
+    vertical-align: top;
+    color: #ffffff;
+}
+
+.fanmail_message .message {
+    top: 6px;
+}
+
+.fanmail_message .message div {
+    display: block;
+}
+
+.fanmail_message .timestamp {
+    font-size: 10px;
+    white-space: nowrap;
+    color: rgba(230, 218, 218, 0.5);
+    cursor: default;
+    float: right;
+    margin-top: 7px;
+}
+
+.fanmail_message .message .bulk {
+    background-color: #333333;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    padding: 10px;
+    position: relative;
+    max-width: 550px;
+    color: #ffffff;
+}
+
+.fanmail_message .message:hover .bulk {
+    background-color: #333333;
+}
+
+.fanmail_message span.subject {
+    font-weight: bold;
+}
+
+.fanmail_message div.body {
+    margin-top: 10px;
+}
+
+.fanmail_message span.body a{
+    text-decoration: underline;
+    color: #5BADD5;
+}
+
+.fanmail_message .unread_dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    position: absolute;
+    top: 38px;
+    box-shadow: inset 0px 0px 3px rgba(0,0,0,0.7);
+    background-color: rgb(46, 157, 255);
+}
+
+.compose_new_form {
+    width: 100%;
+    background: white;
+    height: 100px;
+}
+
+.inboxCompose {
+    height: 200px;
+}
+
+.inboxCompose #compose_me {
+    height: 200px;
+}
+
+.forLightbox {
+    display: none;
+    position: fixed;
+    top: 190px;
+    left: 80px;
+    z-index: 20000000006;
+}
+
+.forLightbox .usertab {
+    position: relative;
+    top: 152px;
+}
+
+.forLightbox .usertab .name {
+    background: rgba(220, 220, 220, 1);
+}
+
+.forLightbox .usertab:hover .name {
+    background: rgba(240, 240, 240, 1);
+}
+
+#compose_bubble {
+    position: absolute;
+    bottom: 22px;
+}
+
+#compose_bubble .tail {
+    width: 30px;
+    height: 20px;
+    background-image: url("/public/images/fanmail_tail_top.png");
+    background-position: 0px 0px;
+    position: relative;
+    bottom: 0px;
+    left: 240px;
+    z-index: 1000;
+}
+
+#compose_bubble .bulk {
+    width: 300px;
+    height: 260px;
+    background-color: #333333;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    position: relative;
+    color: #ffffff;
+    box-shadow: 0 0 6px #000000;
+}
+
+#compose_bubble .bulk input, #compose_to input {
+    margin: 10px 10px 0px 10px;
+    padding: 10px;
+    border: 1px solid #999999;
+    width: 258px;
+    background: transparent;
+}
+
+input#subject {
+    font-weight: bold;
+}
+
+#compose_to input {
+    margin: 0px;
+    z-index: 1000
+}
+
+#compose_bubble .bulk textarea {
+    margin: 10px 10px 0px 10px;
+    padding: 10px;
+    border: 1px solid #999999;
+    resize: none;
+    width: 258px;
+    font-size: 16px;
+    height: 70px;
+    background: transparent;
+}
+
+#compose_to {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+
+#send_button {
+    position: relative;
+    top: 13px;
+    right: 10px;
+    float: right;
+}

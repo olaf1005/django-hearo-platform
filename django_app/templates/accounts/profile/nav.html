@@ -1,0 +1,60 @@
+{% load elements mathfilters %}
+<ul class="blue light">
+    {% if profile.is_orgo or profile.organization.is_band or profile.person.is_musician %}
+    {% if section != "music" %}
+    <a href="{% if section != 'music' %}/profile/{{ profile.keyword }}/music/{% endif %}" refresh-scope="#main-profile-content[keyword='{{ profile.keyword }}']" artist-dating="true">
+        <li selected="false" opens="#music"><i class="material-icons-round" style="font-size: 16px;vertical-align: middle;">music_note</i> music</li>
+    </a>
+    {% else %}
+    <li selected="true" opens="#music"><i class="material-icons-round" style="font-size: 16px;vertical-align: middle;">music_note</i> music</li>
+    {% endif %}
+    {% endif %}
+
+    {% if section != "about" %}
+    <a href="/profile/{{ profile.keyword }}/about/" refresh-scope="#main-profile-content[keyword='{{ profile.keyword }}']" artist-dating="true">
+        <li selected="false" opens="#about"><i class="material-icons-round" style="font-size: 16px;vertical-align: middle;">person</i> about</li>
+    </a>
+    {% else %}
+    <li selected="true" opens="#about"><i class="material-icons-round" style="font-size: 16px;vertical-align: middle;">person</i> about</li>
+    {% endif %}
+
+    {% if section != "gallery" %}
+    <a href="/profile/{{ profile.keyword }}/gallery/" refresh-scope="#main-profile-content[keyword='{{ profile.keyword }}']" artist-dating="true">
+        <li selected="false" opens="#gallery"><i class="material-icons-round" style="font-size: 16px;vertical-align: middle;">photo_library</i> gallery</li>
+    </a>
+    {% else %}
+    <li selected="true" opens="#gallery"><i class="material-icons-round" style="font-size: 16px;vertical-align: middle;">photo_library</i> gallery</li>
+    {% endif %}
+
+    {% if section != "library" %}
+    <a href="/profile/{{ profile.keyword }}/library/" refresh-scope="#main-profile-content[keyword='{{ profile.keyword }}']" artist-dating="true">
+        <li selected="false" opens="#library"><i class="material-icons-round" style="font-size: 16px;vertical-align: middle;">library_music</i> library</li>
+    </a>
+    {% else %}
+    <li selected="true" opens="#library"><i class="material-icons-round" style="font-size: 16px;vertical-align: middle;">library_music</i> library</li>
+    {% endif %}
+
+    {% if section != "activity" %}
+    <a href="/profile/{{ profile.keyword }}/activity/" refresh-scope="#main-profile-content[keyword='{{ profile.keyword }}']" artist-dating="true">
+        <li selected="false" opens="#activity"><i class="material-icons-round" style="font-size: 16px;vertical-align: middle;">rss_feed</i> activity</li>
+    </a>
+    {% else %}
+    <li selected="true" opens="#activity"><i class="material-icons-round" style="font-size: 16px;vertical-align: middle;">rss_feed</i> activity</li>
+    {% endif %}
+
+    {% if section != "reviews" %}
+    <a href="/profile/{{ profile.keyword }}/reviews/">
+        <li selected="false" opens="#reviews"  class="trigger" id="reviews-trigger"><i class="material-icons-round" style="font-size: 16px;vertical-align: middle;">rate_review</i> reviews</li>
+    </a>
+    {% else %}
+    <li selected="true" opens="#reviews"><i class="material-icons-round" style="font-size: 16px;vertical-align: middle;">rate_review</i> reviews</li>
+    {% endif %}
+
+    {% if section != "fans" %}
+    <a href="/profile/{{ profile.keyword }}/fans/" refresh-scope="#main-profile-content[keyword='{{ profile.keyword }}']" artist-dating="true">
+        <li selected="false" opens="#fans"><i class="material-icons-round" style="font-size: 16px;vertical-align: middle;">group</i> fans({{ fans.count }})</li>
+    </a>
+    {% else %}
+    <li selected="true" opens="#fans"><i class="material-icons-round" style="font-size: 16px;vertical-align: middle;">group</i> fans({{ fans.count }})</li>
+    {% endif %}
+</ul>

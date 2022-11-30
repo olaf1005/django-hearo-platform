@@ -1,0 +1,135 @@
+{% extends 'accounts/my-account/index.html' %}
+
+{% block title %}My Account Profile - {{ BASE_URL }}{% endblock %}
+
+{% block myAccountInnerPage %}
+
+{% with user.person.view as view %}
+{% load elements %}
+
+{% include "accounts/my-account/_view_name_manage_membership.html" %}
+
+<!-- START MODAL -->
+<div class="md-modal md-effect-1" id="modal-1">
+  <div class="md-content">
+    <h3>Members</h3>
+    <!-- START MEMBERSHIP -->
+    <div id="edit_membership">
+      {% include "accounts/my-account/_membership.html" %}
+    </div>
+    <div style="text-align: center;" id="modal-1-close">
+      <hr>
+      <button id="cancel" class="bttn--size-large red md-close">
+	<span class="button-text">Close</span>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- END MODAL -->
+
+<input type="hidden" id="selected_view" value="profile">
+
+<div id="myacct-content">
+  <div class="content">
+    <div row class="1 cols" id="account-type-container">
+      <div cell>
+        <span>I am a(n)</span>
+      </div>
+      </div>
+
+    <div row>
+      <div cell>
+        <ul id="acctype-sel">
+          <li><a id="artist">Artist</a></li>
+          <li><a id="fan">Fan</a></li>
+          <li><a id="band">Band</a></li>
+          <li><a id="venue">Venue</a></li>
+          <li><a id="label">Label</a></li>
+        </ul>
+        <input type="hidden" id="account-type" />
+        <hr class="hr-spacer-2">
+      </div>
+    </div>
+    {% include "accounts/my-account/_profile_details.html" %}
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  var account_type = '{{ account_type }}';
+  var groupid = '{{ view.organization.id }}';
+  change_account_type(capitaliseFirstLetter(account_type));
+  modalEffectsInit();
+
+
+  $('#user_v1-query').typeahead({
+    minLength: 1,
+    order: "asc",
+    dynamic: true,
+    hint: true,
+    delay: 500,
+    backdrop: {
+      "background-color": "#fff"
+    },
+    template: '<span class="row">' +
+      '<span class="avatar">' +
+      '<img src="{'+'{img_path}' + '}">' +
+      "</span>" +
+      '<span class="username">{' + '{name}' + '} </span>' +
+      //'<span class="username">{' + '{name}' + '} ({' + '{keyword}' + '})</span>' +
+      '<span class="location">{' + '{location}' + '}</span>' +
+      "</span>",
+
+    source: {
+      user: {
+	display: ["name", "keyword"],
+	href: 'https://{{ BASE_URL }}/profile/{' + '{keyword}' + '}',
+	url: [{
+	  type: "GET",
+	  dataType: "json",
+	  url: "/search/get-invites/",
+	  data: {
+	    query: '{' +'{query}' + '}'
+	  },
+	  callback: {
+	    done: function (data) {
+	      console.info('Data received from autocomplete: ', data);
+
+	      for (var i = 0; i < data.data.people.length; i++) {
+		if (data.data.people[i].location === null) {
+		  data.data.people[i].location = capitaliseFirstLetter(data.data.people[i].account_type);
+		}
+	      }
+	      return data;
+	    }
+	  }
+	}, "data.people"]
+      }
+    },
+    callback: {
+      onClick: function (node, a, item, event) {
+	console.info("Item clicked:", item);
+	sendRequestAjax(item.id, groupid);
+        return false;
+      },
+      onSendRequest: function (node, query) {
+	console.log('request is sent, perhaps add a loading animation?')
+        return false;
+      },
+      onReceiveRequest: function (node, query) {
+	console.log('request is received, stop the loading animation?')
+        return false;
+      }
+    },
+    debug: true
+  });
+
+
+
+
+})
+</script>
+
+{% endwith %}
+
+{% endblock %}

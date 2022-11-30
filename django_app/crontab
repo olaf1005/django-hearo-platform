@@ -1,0 +1,28 @@
+# min hrs dayofmonth month dayofweek command
+# (0-59) (0-23) (1-31) (1-12 or Jan-Dec) (0-6 or Sun-Sat)
+# dow = 0-6 where 0 is Sunday, 6=Saturday
+
+# Update JAMUSDT pricing every hour
+0 * * * *  nice -n15 curl "https://www.bitrue.com/api/v1/ticker/price?symbol=JAMUSDT" >| /app/JAMUSDT.BITRUE.json
+
+# Update ranking of profiles, songs, and albums every hour
+0 * * * *    [ "$(pgrep -cf update_ranking)" -lt 2 ] && nice -n15 /app/manage.py update_ranking > /proc/1/fd/1 2>/proc/1/fd/2
+
+# Compile map stats at every minute 15 and 45
+15,45 * * * *   [ "$(pgrep -cf compile_map_stats)" -lt 2 ] && nice -n15 /app/manage.py compile_map_stats > /proc/1/fd/1 2>/proc/1/fd/2
+
+# Notifications
+* * * * *     [ "$(pgrep -cf deliver_notifications)" -lt 2 ] && nice -n15 /app/manage.py deliver_notifications > /proc/1/fd/1 2>/proc/1/fd/2
+
+# Weekly digest
+5 8 * * Sat   [ "$(pgrep -cf weekly_digest)" -lt 2 ] && nice -n15 /app/manage.py weekly_digest > /proc/1/fd/1 2>/proc/1/fd/2
+
+# Monthly digest
+1 12 1 * *    [ "$(pgrep -cf monthly_digest)" -lt 2 ] && nice -n15 /app/manage.py monthly_digest > /proc/1/fd/1 2>/proc/1/fd/2
+
+# Yearly digest
+# 1 12 1 1 *    [ "$(pgrep -cf yearly_digest)" -lt 2 ] && nice -n15 /app/manage.py yearly_digest > /proc/1/fd/1 2>/proc/1/fd/2
+
+# Newsletter (Every 5 minutes)
+*/5 * * * * [ "$(pgrep -cf submit_newsletter)" -lt 2 ] && nice -n15 /app/manage.py submit_newsletter > /proc/1/fd/1 2>/proc/1/fd/2
+

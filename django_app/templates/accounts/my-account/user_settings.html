@@ -1,0 +1,185 @@
+{% extends 'accounts/my-account/index.html' %}
+
+{% block title %}My Account Settings - Tune.fm{% endblock %}
+
+{% block myAccountInnerPage %}
+
+{% include "accounts/my-account/_view_name.html" %}
+
+{% with user.person.view as view %}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#privacy_options ul').each(function(){
+          $(this).earl({
+            padding: 8,
+            callbacks: {
+              select: function($this, val){
+                $('#error-info-message').show().find('span').hide();
+                $('#' + $this.attr('for') + '_' + val.toLowerCase() + '_explanation').show();
+              }
+            }
+          });
+        });
+    });
+    $('#error-info-message').hide();
+</script>
+<input type="hidden" id="selected_view" value="settings">
+
+{% if changes_via_url %}
+<div class="content notification">
+  {{ changes_via_url }}
+</div>
+{% endif %}
+
+<div class="content" id="user_settings_container">
+    {% with view.settings as s %}
+    <div class="email_notifications">
+        <h2 class="in-column">Email notifications:</h2>
+
+        <div row class="row 2 cols">
+            <div cell class="question">
+                <input type="checkbox" {% if s.receive_weekly_digest %} checked="checked" {% endif %} id="receive_weekly_digest">
+                <label for="receive_weekly_digest">Weekly digest</label>
+            </div>
+
+            <div cell class="question">
+                <input type="checkbox" {% if s.receive_monthly_digest %} checked="checked" {% endif %} id="receive_monthly_digest">
+                <label for="receive_monthly_digest">Monthly digest</label>
+            </div>
+        </div>
+
+        <div row class="row 1 cols">
+            <div cell class="question">
+                <input type="checkbox" {% if s.notify_fan_mail %} checked="checked" {% endif %} id="notify_fan_mail">
+                <label for="notify_fan_mail">When you get a Fanmail</label>
+            </div>
+        </div>
+
+        <div row class="row 1 cols">
+            <div cell class="question">
+                <input type="checkbox" {% if s.notify_review %} checked="checked" {% endif %} id="notify_review">
+                <label for="notify_review">When you get a review</label>
+            </div>
+        </div>
+
+        <!-- <div row class="row 1 cols">
+            <div cell class="question">
+                <input type="checkbox" {% if s.notify_tip %} checked="checked" {% endif %} id="notify_tip">
+                <label for="notify_tip">When someone tips you</label>
+            </div>
+        </div> -->
+
+        <!-- <div row class="row 1 cols">
+            <div cell class="question">
+                <input type="checkbox" {% if s.notify_downloads %} checked="checked" {% endif %} id="notify_downloads">
+                <label for="notify_downloads">When someone downloads your music</label>
+            </div>
+        </div> -->
+
+        <div row class="row 1 cols">
+            <div cell class="question">
+                <input type="checkbox" {% if s.notify_fan %} checked="checked" {% endif %} id="notify_fan">
+                <label for="notify_fan">
+                    When
+                    <input type="text" id="notify_fan_threshold" class="standard small" size="3" style="text-align: right;" value="{{ s.notify_fan_threshold }}">
+                    people fan you (or your music)
+                </label>
+            </div>
+        </div>
+
+        <div row class="row 1 cols">
+            <div cell class="question">
+                <input type="checkbox" {% if s.notify_play %} checked="checked" {% endif %} id="notify_play">
+                <label for="notify_play">
+                    When
+                    <input type="text" id="notify_play_threshold" class="standard small" size="3" style="text-align: right;" value="{{ s.notify_play_threshold }}">
+                    people play your songs/albums/radios
+                </label>
+            </div>
+        </div>
+
+        <!-- <div row class="row 1 cols">
+            <div cell class="question">
+                <input type="checkbox" {% if s.notify_events %} checked="checked" {% endif %} id="notify_events">
+                <label for="notify_events">When artists you fan post new shows in your area</label>
+            </div>
+        </div> -->
+    </div>
+    {% endwith %}
+
+    <div class="myAccount_textareas">
+    <h2 class="in-column">Edit your settings</h2>
+    <br>
+        <label for="id_em">Your name</label><br>
+        <input type="text" class="standard small" size="34"value="{{view.name}}" id="id_name">
+        <br><br>
+
+    {% with view.should_change_pass as should %}
+    <h2 class="in-column" style="margin-top: 10px; {% if not should %}display:none{% endif %}" id="reset_pass"><span style="color:red">Reset your password please!</span></h2>
+    <h2 class="in-column" style="margin-top: 10px; {% if should %}display:none{% endif %}" id='regular_pass'><span>Change your password</span></h2>
+    {% endwith %}
+
+        <label for="id_curpass">Current Password</label><br>
+        <input type="password" class="standard small" size="15" value="" id="id_curpass" style="width:200px"><br><br><br>
+        <label for="id_pass">Password</label><br>
+        <input type="password" class="standard small" size="15" value="" id="id_pass" style="width:200px"><br><br><br>
+        <label for="id_pass2">Password Again</label><br>
+        <input type="password" class="standard small" size="15" value="" id="id_pass2" style="width:200px"><br><br>
+
+<div class="content">
+        <button class="red" id="change-password">
+        <div class="button-text">Change password</div>
+        <div class="spinner">
+        </div>
+        </button>
+        </div>
+
+    <div style="display: none;" class="successMessage">Settings changed</div>
+    <div class="errorMessage" style="display: none;"></div>
+    </div>
+</div>
+<div class="content" id="privacy_container">
+	  <div row class="2 cols">
+  <div cell class="myAccount_textareas">
+    <div>
+    <h2 class="in-column">Edit your privacy</h2>
+    <table id="privacy_options">
+        {% for name, private in privacy_options %}
+        <tr>
+            <td class="privacy_label">
+                <span>{{name}}</span>
+            </td>
+            <td>
+                <ul for="{{name}}" value="{% if private %}Private{% else %}Public{% endif %}" id="{{name}}_opt">
+                    <li>Public</li>
+                    <li>Private</li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        {% endfor %}
+
+
+    </table>
+  </div>
+</div>
+  <div cell>
+<div id="error-info-message" style="display:none">
+  <span id="fanmail_public_explanation">Other users can send you fanmail</span>
+  <span id="fanmail_private_explanation">No one can send you fanmail</span>
+  <span id="downloads_public_explanation">Your name will appear to artists when you download their music. They will be able to fan you and send you fanmail.</span>
+  <span id="downloads_private_explanation">You will appear anonymous to artists when you download and buy their music.</span>
+  <span id="profile_public_explanation">Your profile, music, and events will show up in public search.</span>
+  <span id="profile_private_explanation">Your profile, music, and events won't show up in public search.</span>
+</div>
+</div>
+
+    </div>
+</div>
+<div class="content">
+  <button class="red" id="deactivate-account">Deactivate your account</button>
+</div>
+
+{% endwith %}
+{% endblock %}

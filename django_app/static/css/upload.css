@@ -1,0 +1,407 @@
+.upload_song_delete{
+	width:15px;
+	height:15px;
+	background: url('/public/images/closeButtonSprite.png') no-repeat;
+	cursor:pointer;
+	margin-left:auto;
+	margin-right:auto;
+}
+.upload_song_delete:hover{
+	background-position:0px -15px;
+}
+input[type="button"]{
+    cursor:pointer;
+}
+
+
+.myAccount_songRow , .songRow{
+	font-size:12px;
+	background:#FFF;
+	width:1000px;
+}
+.myAccount_songRow td, .songRow td {
+	padding:6px;
+}
+
+.myAccount_songRow input[type="text"], .songRow input[type="text"]{
+    background: rgba(0, 0, 0, .15);
+    padding: 5px;
+    border: 0px;
+    border-color: gray;
+    border-radius: 5px;
+} 
+
+#choose_button, #upload_all, #upload_as_album{
+    position:relative;
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom: 0px;
+    margin-left : 0px;
+}
+
+#songs_page #choose_button{
+    top:-2px;
+}
+
+#songs_page #file_input {
+    height: 39px;
+    top: 61px;
+}
+
+#upload_all {
+    width: 105px;
+    text-align: center;
+    top: 9px;
+}
+
+#upload_as_album{
+    left:0px;
+    top:19px;
+}
+
+#file_input {
+    cursor: pointer;
+    height: 69px;
+    opacity: 0;
+    position: absolute;
+    top: 32px;
+    width: 127px;
+    z-index: 2;
+}
+
+#photo_input {
+    position: relative;
+    z-index: 2;
+    height: 42px;
+    top: -28px;
+    width: 134px;
+    opacity: 0;
+    cursor: pointer;
+    left: -11px;
+}
+
+#save_button{
+    position : absolute; 
+    right:15px;
+    top:79px;
+}
+
+#uploading div{
+    display: inline-block;
+}
+
+#uploading img{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    -webkit-border-radius:3px;
+    moz-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.4);
+    moz-box-shadow: 0px 0px 5px rgba(0,0,0,.4);
+    webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.4);
+    cursor : pointer;
+
+}
+#uploading img:hover{
+    box-shadow: 5px 5px 5px rgba(0,0,0,.7);
+    moz-box-shadow: 5px 5px 5px rgba(0,0,0,.7);
+    webkit-box-shadow: 5px 5px 5px rgba(0,0,0,.7);
+}
+.myPhotos_deleteButton:hover{
+    background-position:0px -15px;
+    opacity: 1;
+}
+.myPhotos_deleteButton{
+    width:15px;
+    height:15px;
+    background: url('/public/images/closeButtonSprite.png') no-repeat;
+    cursor:pointer;
+    position:absolute;
+    margin-left: 179px;
+    margin-top: 7px;
+    opacity:.8;
+    z-index:5;  
+}
+
+#currently_uploading{
+    display: inline-block;
+    margin-left: 100px;
+}
+
+input[type='button'].upload {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px;
+    background: #299FD6;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 0 11px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+    font-family: 'StyreneA-Regular', sans-serif;
+    border-bottom: 1px solid white;
+    z-index: 1;
+    position:relative;
+    left: -5px;
+}
+
+.info-edit, #save_changes, #cancel_changes {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px;
+    background: #299FD6;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 0 11px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+    font-family: 'StyreneA-Regular', sans-serif;
+    border-bottom: 1px solid white;
+    z-index: 1;
+    position:relative;
+    left: -5px;
+
+}
+
+
+.upload_prog_bar {
+    display: inline-block;
+
+}
+#album_upload_div{
+    margin-left: 83px;
+    margin-right: auto;
+    width: 433px;
+    margin-top: 20px;
+    white-space: nowrap;
+}
+#album_upload_div .row{
+    margin-top:10px;
+}
+
+#album_upload_div #pricing_row {
+    height:52px;
+}
+#album_upload_div #title_input{
+    margin-left:7px;
+}
+#album_upload_div input[type="text"]{
+    height: 29px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 27px;
+}
+
+#album_upload_div #price_input {
+    width:78px;
+}
+#album_upload_div select{
+    margin-left:118px;
+    margin-right:10px;
+    margin-top:18px;
+    width:105px;
+}
+#album_upload_div span{
+    font-family: 'Permanent Marker', cursive;
+    font-size:30px;
+    margin-right:10px;
+    position: relative;
+    top: 5px;
+}
+
+#album_upload_div span#rec{
+    font-size: 15px;
+    position: absolute;
+    top: 199px;
+    left: 428px;
+}
+#album_upload_div .link-btn .blue{
+    margin-top: 22px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    margin-left: 54px;
+    width:157px;
+}
+#album_upload_div input[type="file"]{
+    position: relative;
+    opacity: 0;
+    height: 39px;
+    width: 170px;
+    top: -10px;
+    left: -190px;
+    cursor: pointer;
+}
+#album_upload_div #chosen_file{
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    left: -186px;
+    width: 240px;
+    font-family: 'StyreneA-Regular', sans-serif;
+    font-size: 20px;
+}
+
+#no_uploads, #no_songs{
+    font-size:16px;
+    text-align:center;
+    font-style:italic;
+
+}
+#inner_no_uploads{
+    padding:14px;
+}
+
+
+.songRow:nth-child(even), .myAccount_songRow:nth-child(even){
+    background:white;
+
+}
+.songRow:nth-child(odd), .myAccount_songRow:nth-child(odd){
+    background:rgba(224, 246, 255, .8);
+
+}
+
+#uploadedSongs, #songsToUpload {
+    background:white;
+}
+
+#photos_inset_box {
+    width: 100%;
+    position: relative;
+}
+
+#price_input_container {
+    position: absolute;
+    left: 310px;
+    top: 171px;
+    width: 100px;
+}
+/* PRICE OPTION DROPDOWN SELECTOR. ABSTRACTED FROM JAM.CSS/MYACCOUNT.CSS */
+
+#price_options_container {
+    position: absolute;
+    width: 181px;
+    left: 132px;
+    top: 180px;
+}
+#album_price_dropdown {
+    width: 181px;
+}
+#album_price_dropdown .filter_module {
+    position:absolute;
+    z-index: 2;
+    left:258px;
+    top:106px;
+}
+
+#album_price_dropdown .dropdown_button, #album_price_dropdown .dropdown_selection{
+    width:129px;
+}
+
+#album_upload_div .filter_module li {
+    width:134px;
+    z-index:10000000;
+    position:relative;
+}
+
+#album_upload_div .filter_module .dropdown_selection:after{
+    content:url('/public/images/jam_now/dropdown_arrow.png');
+    margin-left:10px;
+    position:absolute;
+    right:8px;
+    top:12px;
+}
+
+#album_price_dropdown .filter_module .dropdown_selection:hover:after{
+    content:url('/public/images/jam_now/dropdown_arrow.png');
+    margin-left:10px;
+    position:absolute;
+    right:8px;
+    top:12px;
+}
+
+#album_error {
+    color:red;
+    display:none;
+    position: relative;
+    left: 225px;
+    font-size: 17px;
+    top: 21px;
+    font-style: italic;
+    width: 200px;
+}
+
+#upload_songs_inset_box {
+    height: 166px;
+    left: -28px;
+    position: relative;
+    width: 192px;
+    top: -32px;
+}
+
+.music_model{
+    font-size:36px;
+    font-family: 'Permanent Marker', cursive;
+    position: relative;
+    left: 287px;
+    margin-bottom: 10px;
+}
+
+#music_model_legal_signed .music_model {
+    display:none;
+}
+
+.music_model_holder {
+    position: absolute;
+    margin-top: -3px;
+    left: 28px;
+    padding-left: 44px;
+    padding-bottom: 6px;
+    padding-top: 22px;
+}
+
+#music_model_legal_signed .music_model_holder {
+    left:113px;
+}
+
+#music_model_unsigned .music_model_list li:nth-child(even){
+    font-size:18px;
+    list-style: none;
+    font-family:"StyreneA-Regular";
+    margin-bottom:20px;
+}
+
+#music_model_legal_signed .music_model_list li:nth-child(even){
+    font-size:14px;
+    list-style: none;
+    font-family:"StyreneA-Regular";
+    margin-bottom:20px;
+}
+
+#music_model_legal_signed .music_model_list li:nth-child(odd){
+    font-size:17px;
+    list-style: square;
+    font-family:"StyreneA-Regular";
+    margin-bottom:10px;
+}
+
+#music_model_unsigned .music_model_list li:nth-child(odd){
+    font-size:22px;
+    list-style: square;
+    font-family:"StyreneA-Regular";
+    margin-bottom:10px;
+}
+
+#music_model_legal_signed {
+    position: relative;
+    left: 142px;
+    top: -265px;
+}
+
+#music_model_unsigned {
+    position: absolute;
+    min-width: 961px;
+}
+
+/* -------------------------------------------- */

@@ -1,0 +1,328 @@
+#calbox{
+    width:700px;
+    height:600px;
+    float: left;
+}
+
+#events_filter_module .filter_input{
+    width:300px;
+}
+#callist #event_num{
+    width:100%;
+}
+#callist .scrollbox{
+    height:95%;
+}
+#event_box #search_container{
+    position: relative;
+    height: 176px;
+    top: 15px;
+}
+
+#event_box #search_container h4{
+    font-size:1.4em;
+}
+#add_artists{
+    left:50px;
+}
+#event_box #add_artists .scrollbox{
+    height: 89px;
+    width: 220px;
+}
+#event_box #artists .scrollbox{
+    height: 111px;
+    width: 220px;
+}
+#event_box .scrollbox{
+    margin-left:10px;
+}
+.suggest{
+    z-index: 10000000000;
+}
+#artists{
+    right:50px;
+}
+#event_box .inset_box{
+    width:40%;
+    position:absolute;
+    top:10px;
+    min-height:64%;
+}
+
+#event_filters{
+    margin: 0px auto;
+    margin-top: 1px;
+    margin-right:112px;
+    width: 100%;
+    height: 90px;
+    text-align: center;
+}
+
+#event_box textarea {
+    position:relative;
+    top:5px;
+    width:342px;
+    height:16px;
+    padding:10px;
+    border:1px solid #CCC;
+    resize:none;
+    font-size:.9em;
+    font-family:"StyreneA-Regular";
+}
+
+#ui-datepicker-div {
+    z-index: 214748364800;
+}
+
+#event_box input[type=text], #event_box select{
+    width:350px;
+    position:relative;
+    top:5px;
+    padding:6px;
+    border:1px solid #CCC;
+    resize:none;
+    font-size:.9em;
+    font-family:"StyreneA-Regular";
+}
+
+#event_box #user_search {
+    width:200px;
+    height: 15px;
+}
+
+#event_box #id_city {
+    left: -2px;
+    width: 273px;
+    height:22px;
+}
+
+#event_box #check {
+    padding:8px;
+    border-radius:4px;
+    cursor: pointer;
+    position: relative;
+    left: 0px;
+    top:5px;
+}
+
+
+#event_box{
+    width:600px;
+    background: url("/public/images/45degree_fabric.png");
+    box-shadow: 0 0 7px rgba(0,0,0,0.6);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-bottom: 25px;
+    position: absolute;
+}
+
+#event_box .event_view_table .usertab{
+    top:8px;
+}
+
+#event_box .edit_event_inset_box {
+    position: relative;
+    margin-left: 100px;
+    width: 338px;
+    height: 179px;
+    padding-top: 9px;
+    top: 1px;
+    overflow:hidden;
+}
+#event_box .edit_event_inset_box:hover {
+    overflow:auto;
+}
+
+#event_box .edit_event_inset_box table tr td:first-child span{
+    width:80px;
+    text-align:right;
+}
+
+#event_box .edit_event_top_box {
+    position: relative;
+    margin-left: 100px;
+    width: 320px;
+    height: 179px;
+    padding-top: 9px;
+    top: 1px;
+}
+
+#event_box .event_view_table tr {
+    height:40px;
+}
+
+#event_box .event_view_table {
+    table-layout:fixed;
+    word-wrap:break-word;
+}
+
+#event_box .small_fan_button, #event_box .small_fand_button{
+    position: absolute;
+    margin-top: 69px;
+    margin-left: 515px;
+    font-size: 18px;
+    width: 61px;
+}
+
+#event_box .event_view_table #event_description{
+    width:260px;
+    word-wrap:break-word;
+    font-size:14px;
+}
+#event_box #header{
+    background: url('/public/images/h4.png') repeat-x;
+    text-align: center;
+    color: #F8F8F8;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "StyreneA-Regular", Helvetica, Arial, sans-serif ;
+    padding:4px 0;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    margin:0px;
+    top:-20px;
+}
+
+#event_box #event_title, #event_box #event_title_input{
+	font-family: 'Permanent Marker', cursive;
+	font-size:1.3em;
+	text-align: center;
+}
+#event_box .event_desc{
+	font-family: 'StyreneA-Regular', sans-serif;
+	font-size:1em;
+	float:right;
+    margin-right: 10px;
+}
+#event_box td{
+    vertical-align: middle;
+}
+#event_box span{
+    font-family: "StyreneA-Regular", Lucida, StyreneA-Regular-serif;
+    font-size:1em;
+}
+#event_fans{
+    overflow: hidden;
+    margin-top:1.2em;
+    height:220px;
+}
+#event_fans, #event_fans h4{
+    width:400px;
+}
+#event_fans #fan_num{
+    margin-bottom: 6px;
+}
+#event_fans .scrollbox{
+    padding-left: 15px;
+    height: 220px;
+}
+#event_fans .usertab_small{
+    height:40px;
+}
+#event_box #edit input{
+    margin-left:-10px;
+}
+
+#event_filters #location_filter {
+    width:40%;
+}
+
+#event_filters #location_filter input{
+    width:90%;
+}
+
+.editing_event_box td textarea, .editing_event_box input[type="text"]{
+    width:250px;
+    margin-top:12px;
+
+}
+.editing_event_box td span{
+    margin-top:20px;
+}
+
+#event_title_prompt{
+    font-family: 'Permanent Marker', cursive;
+    font-size:1.5px;
+}
+#event_box .city_clarify_opt{
+    width:250px;
+}
+.editing_event_box .error{
+    color:red;
+}
+
+#calendar .fc-header-title h2{
+    color:white;
+    font-family:"StyreneA-Regular";
+    top: 5px;
+}
+.fc-button-next, .fc-button-prev{
+    opacity:.5;
+}
+.fc-button{
+    transform: scale(.8,.8);
+    -ms-transform: scale(.8,.8); /* IE 9 */
+    -webkit-transform: scale(.8,.8); /* Safari and Chrome */
+    -o-transform: scale(.8,.8); /* Opera */
+    -moz-transform: scale(.8,.8); /* Firefox */
+}
+
+.fc-sun, .fc-mon, .fc-tue, .fc-wed, .fc-thu, .fc-fri, .fc-sat{
+    font-family: 'StyreneA-Regular', sans-serif;
+    color: #139EE4;
+}
+#event_button_row{
+    margin-top: 19px;
+    width: 544px;
+    margin-left: 26px;
+}
+#event_button_row .big-red{
+    font-size:18px;
+    float:left;
+    margin-left:23px;
+}
+#event_button_row .big-green{
+    font-size:18px;
+    position:relative;
+    float: right;
+    margin-right: 18px;
+}
+
+.day_box{
+    min-height:81px;
+}
+
+.no_shows_selected_profile {
+    top:36px;
+}
+
+.no_shows_selected {
+    top:214px;
+}
+
+
+.fc-first {
+    cursor:default;
+}
+
+#event_box #tix_pic {
+    position: absolute;
+    width: 34px;
+    height: 20px;
+    background: #67b837;
+    font-family: 'StyreneA-Regular', sans-serif;
+    color: #FFF;
+    padding: 3px 14px 1px 19px;
+    border-radius: 3px;
+    font-size: 19px;
+    left: 515px;
+    top: 102px;
+    box-shadow: inset 0px 0px 5px #3d8713;
+}
+
+#event_box #tix_pic:hover{
+    background: #73c641;
+    box-shadow: inset 0px 0px 10px #469c16;
+}

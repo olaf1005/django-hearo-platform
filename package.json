@@ -1,0 +1,27 @@
+{
+  "name": "hearo",
+  "version": "1.0.0",
+  "description": "the global music marketplace",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "cypress:djangotestserver": "cd django_app && DJANGO_SETTINGS_MODULE=settings.test H_HTS_API_URL=http://0.0.0.0:8090 PG_USER=hearo_production PG_HOST=localhost ./manage.py runserver 0.0.0.0:8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/hearo/hearo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/hearo/hearo/issues"
+  },
+  "homepage": "https://gitlab.com/hearo/hearo#readme",
+  "devDependencies": {
+    "cypress": "^4.5.0"
+  }
+}

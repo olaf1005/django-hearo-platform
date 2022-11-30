@@ -1,0 +1,119 @@
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+cloud Internet
+
+cloud Docker {
+    node loadbalancer [
+        Docker Swarm
+        (Load Balancer)
+    ]
+
+    Internet <-down-> loadbalancer : Https
+
+    node app [
+        App
+    ]
+
+    loadbalancer <-> app
+
+
+    node Media {
+        node downloads [
+            Download
+            Processor
+        ]
+        node images [
+            Image
+            Processor
+        ]
+        node uploads [
+            Upload
+            Processor
+        ]
+        node changes [
+            Change
+            Processor
+        ]
+    }
+
+    database postgres  [
+        Postgres DB
+    ]
+    database elasticsearch [
+        Elastic Search
+    ]
+    database rethinkdb [
+        Rethink DB
+        (Media DB)
+    ]
+    database redis [
+        Redis
+    ]
+    node hederaspringapi  [
+        Hedera Spring API
+    ]
+
+    app <.down.> hederaspringapi
+    app <.down.> postgres
+    app <.down.> elasticsearch
+    app .down.> rethinkdb
+    app <.down.> redis
+
+}
+
+component sentry [
+    Sentry
+    (Error Logging)
+]
+
+app .left.> sentry
+
+component sematext [
+    Sematext
+    (Container Logging)
+]
+
+Docker .left.> sematext
+
+actor dev [
+    Dev
+]
+
+component gitlab [
+    Gitlab
+    (CI/CD)
+]
+dev --* gitlab
+gitlab --* app
+
+storage cloudfiles [
+    Cloudfiles
+    (Media)
+]
+
+storage s3 [
+    S3
+    (Intermediary)
+]
+
+Media -down-> s3
+Media -down-> cloudfiles
+app ->> Media
+changes ->> app
+changes <<- rethinkdb
+uploads <-> rethinkdb
+images <-> rethinkdb
+downloads <-> rethinkdb
+
+component hashgraph [
+    Hashgraph
+]
+
+hederaspringapi <.down.> hashgraph
+
+@enduml

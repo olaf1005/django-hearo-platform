@@ -1,0 +1,52 @@
+@startuml withdrawal requests
+
+!includeurl https://gist.githubusercontent.com/dnordberg/86dd9e5fff0447b41beb220c7f5a6c9a/raw/5b43d8bd0f3c97d8aba7c45b420d0661ffc18f56/black-and-white.pu
+
+entity Users {
+    * id pk(int)
+}
+
+entity Listen {
+    * id pk(int)
+}
+
+entity Song {
+    * id pk(int)
+}
+
+entity Wallet {
+    * id pk(int)
+    * user_id
+    * hedera_public_key
+    token_balance
+
+}
+
+entity HTSTokenTransfer {
+    * id pk(int)
+    * from_user: Users
+    * listen: Listen
+    * for_song: Song
+    * from_hedera_account_id: Char(20)
+    * memo: Text
+    * value: Int
+    * facilitation_fee: Int
+    * attempted: Int
+    * datetime: datetime
+    * success: boolean(default: false)
+    * datetime_success: datetime
+    * datetime_last_attempted: datetime
+    * retry: boolean(default: true)
+    --
+    withdraw()
+}
+
+Users |o-- Wallet
+Users |o-- HTSTokenTransfer
+HTSTokenTransfer |o-- Wallet
+Listen }o-- HTSTokenTransfer
+Song }o-- HTSTokenTransfer
+
+
+@enduml
+

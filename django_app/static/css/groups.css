@@ -1,0 +1,147 @@
+.remove_admin_button{
+	color:#FFF;
+	padding:3px;
+	border-radius:3px;
+	display:inline-block;
+	white-space:nowrap;
+	background: #f4b41c;
+	box-shadow: inset 0px 0px 5px #ec8212;
+	cursor:pointer;
+}
+
+.delete_group_button {
+width: 15px;
+height: 15px;
+background-image: url("/public/images/ui/delete.button.png");
+cursor: pointer;
+}
+
+#welcomeLinks {
+    float: left;
+    position: relative;
+    height: 400px;
+}
+
+.group_description {
+	padding: 10px;
+	height:77px;
+	width:285px;
+	margin-right: 13px;
+	margin-top:16px;
+	position: relative;
+	left: -14px;
+	background: white;
+	border-radius: 8px;
+	box-shadow: inset 0 0 10px silver;
+	box-shadow: rgba(0, 0, 0, 0.398438) 0px 0px 5px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.398438) 0px 0px 5px;
+}
+
+.pending_group_description {
+	left: 0px;
+}
+
+.non_pending_group_description {
+	left:-1px;
+}
+
+
+.myGroups_deleteButton:hover{
+    background-position:0px -15px;
+    opacity: 1;
+}
+.myGroups_deleteButton{
+    width:15px;
+    height:15px;
+    background: url('/public/images/closeButtonSprite.png') no-repeat;
+    cursor:pointer;
+    position:absolute;
+    opacity:.8;
+    left: 294px;
+    top: -5px;
+    display: none;
+
+}
+.group_name_container {
+	float:left;
+	margin-left: 10px;
+	width: 200px;
+	height: 70px;
+}
+.linked_group_name {
+	width: 75px;
+	font-family: 'StyreneA-Regular', sans-serif;
+	color: #404040;
+	font-size: 20px;
+	overflow: hidden;
+	word-wrap: break-word;
+}
+.linked_group_name:hover {
+	color: black;
+	text-shadow: gray 0.1em 0.1em 0.2em
+}
+a.create_band {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 1.5em;
+}
+a.create_band:hover {
+	color:#5757D6;
+	text-shadow:0 0 0.2em #F87;
+
+}
+
+.join_group_button {
+	font-family: "StyreneA-Regular", arial, sans-serif;
+	background: #ED2024;
+	border-radius: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 7px;
+	padding-right: 7px;
+	color: rgba(255, 255, 255, 0.9);
+	display: inline-block;
+	white-space: nowrap;
+	text-shadow: 0px 3px 3px #B41316;
+	box-shadow: inset 0px 0px 10px #96090C;
+	cursor: pointer;
+	text-decoration: none;
+	position: relative;
+	left: 165px;
+	top: -71px;
+}
+
+.join_group_button:hover {
+    background:#d15353;
+}
+
+.join_group_button:active {
+	background: #AF090C;
+}
+
+.group_type_listing {
+	float:right;
+	position:relative;
+	top:-3px;
+}
+
+.group_type{
+	font-family:"StyreneA-Regular";
+	font-size:13px;
+	font-style:italic;
+}
+
+#my_groups_list{
+	position:relative;
+}
+
+
+#invite_warning .usertab {
+	top:0px;
+	left:-17px;
+}
+
+#groupsSavedSuccess {
+	border-radius: 40px;
+	top: -32px;
+	right: 21px;
+}

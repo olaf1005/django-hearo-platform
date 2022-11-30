@@ -1,0 +1,84 @@
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Montserrat|Pacifico|Permanent+Marker|Roboto+Mono|Srisakdi');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp');
+
+@font-face {
+    font-family: 'Halter';
+    src: url('/public/fonts/HALTER__.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'StyreneA-Regular';
+    src: url('/public/fonts/StyreneA/StyreneA-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'StyreneA-RegularItalic';
+    src: url('/public/fonts/StyreneA/StyreneA-RegularItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'StyreneA-Medium';
+    src: url('/public/fonts/StyreneA/StyreneA-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'StyreneA-MediumItalic';
+    src: url('/public/fonts/StyreneA/StyreneA-MediumItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'StyreneA-Thin';
+    src: url('/public/fonts/StyreneA/StyreneA-Thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'StyreneA-ThinItalic';
+    src: url('/public/fonts/StyreneA/StyreneA-ThinItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'StyreneA-Light';
+    src: url('/public/fonts/StyreneA/StyreneA-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'StyreneA-LightItalic';
+    src: url('/public/fonts/StyreneA/StyreneA-LightItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'StyreneA-Bold';
+    src: url('/public/fonts/StyreneA/StyreneA-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'StyreneA-BoldItalic';
+    src: url('/public/fonts/StyreneA/StyreneA-BoldItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'StyreneA-Black';
+    src: url('/public/fonts/StyreneA/StyreneA-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'StyreneA-BlackItalic';
+    src: url('/public/fonts/StyreneA/StyreneA-BlackItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}

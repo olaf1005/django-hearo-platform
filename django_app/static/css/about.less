@@ -1,0 +1,471 @@
+#page.about{
+  max-width: 100%;
+  #content{
+    margin-bottom: 40px;
+    max-width: 100%;
+    p{
+      line-height: 1.3em;
+    }
+    ol{
+      margin-left: 50px;
+      margin-top: 20px;
+      list-style: decimal;
+  }
+  #cloudlogo {
+      background: url('/public/images/about/hearologo.svg');
+      height: 1005px;
+      width: 100%;
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size: cover;
+      margin-top: -1000px;
+      opacity: .8;
+      z-index: 99999;
+  }
+
+  #contentbackdrop {
+      background-image:url('/public/images/about/backdrop.png');
+      height: 800px;
+      filter: blur(6px);
+      -webkit-filter: blur(6px);
+      -moz-filter: blur(6px);
+      -o-filter: blur(6px);
+  }
+  #mission {
+      font-size: 26px;
+      font-family: 'StyreneA-Regular', sans-serif;
+      text-align: center;
+      padding: 20px;
+      text-shadow: 1px 1px 2px #000000;
+      color: #fff;
+      padding-top: 135px;
+  }
+  #mission p {
+      margin-top: 475px;
+  }
+
+  .invite {
+  }
+
+  .whiteblock {
+      background-color: white;
+      padding: 40px;
+  }
+  .grayblock {
+      background-color: whitesmoke;
+      padding: 40px;
+      padding-bottom: 80px;
+  }
+  .inner-content{
+      max-width: 1000px;
+      margin: 0 auto;
+  }
+  h1 {
+      margin: 0;
+      padding: 0;
+      margin-top: 50px;
+      margin-bottom: 40px;
+      font-family: 'Permanent Marker', cursive;
+      color: gray;
+      font-size: 30px;
+      text-align: center;
+  }
+  h2 {
+      font-family: 'StyreneA-Regular', sans-serif;
+      font-size: 18px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+      padding-left: 100px;
+      padding-right: 100px;
+  }
+  h3 {
+      font-family: 'StyreneA-Regular', sans-serif;
+      font-size: 18px;
+      font-weight: 200;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+      padding-left: 100px;
+      padding-right: 100px;
+      margin-bottom: 10px;
+      color: darkgrey;
+  }
+  #testimonials h2 {
+      padding-left: 130px;
+      padding-bottom: 20px;
+      color: #167ac6;
+  }
+
+  .press {
+      margin: 20px;
+      text-decoration: underline;
+      font-size: 18px;
+      color: steelblue;
+      font-weight: bold;
+  }
+
+  .press strong {
+      font-family: StyreneA-Regular;
+      color: #000;
+  }
+
+  .pressBox {
+      margin: 100px;
+  }
+
+  #sxsw #gear {
+      margin-left: 40%;
+  }
+
+  #sxsw #river {
+      margin-left: 30%;
+  }
+
+  .legaldoc {
+      margin: 20px;
+      text-decoration: underline;
+      font-size: 18px;
+      color: steelblue;
+      font-weight: bold;
+  }
+
+  #legal {
+      margin: auto;
+      width: 500px;
+      text-decoration: underline;
+  }
+
+  #people{
+      p {
+          font-family: 'StyreneA-Regular', sans-serif;
+          font-weight: 200;
+          text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+          padding-left: 130px;
+          padding-right: 130px;
+          margin-bottom: 40px;
+          font-size: 1.25em;
+          margin-top: 10px;
+          line-height: 1.3em;
+          color: #3d3d3d;
+      }
+      h2 {
+          padding-left: 130px;
+          color: #0d8aca;
+      }
+      ul{
+          .clearfix();
+          li{
+              width: 50%;
+              float: left;
+              .profile {
+                  height: 60px;
+                  width: 60px;
+                  border-radius: 100px;
+                  background-size: 60px 60px;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  margin-left: 40px;
+                  margin-top: 20px;
+                  position: absolute;
+              }
+          }
+          > li:nth-child(2n+1){
+              clear: both;
+          }
+      }
+  }
+  #description, #story {
+      font-family: 'StyreneA-Regular', sans-serif;
+      font-size: 18px;
+      text-align: center;
+      font-weight: 200;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+      padding-left: 80px;
+      padding-right: 80px;
+      padding-bottom: 20px;
+      color: #333333;
+  }
+  #story h2 {
+      text-align: center;
+      padding-top: 120px;
+      color: black;
+  }
+  .question {
+      font-family: 'StyreneA-Regular', sans-serif;
+      font-size: 16px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+      padding-left: 100px;
+      padding-right: 100px;
+      padding-top: 5px;
+      display: block;
+      color: #0d8aca;
+  }
+  .question:hover {
+      cursor: pointer;
+  }
+  .answer {
+      display: none;
+      font-family: 'StyreneA-Regular', sans-serif;
+      font-size: 18px;
+      font-weight: 200;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+      padding-left: 120px;
+      padding-right: 120px;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      li{
+          margin-bottom: 10px;
+          list-style: disc;
+      }
+  }
+  #faq h2 {
+      padding-left: 70px;
+      padding-top: 20px;
+      color: black;
+  }
+  #andrew {
+      background-image: url('/public/images/about/andrew.jpg');
+  }
+  #brian {
+      background-image: url('/public/images/about/brian.jpg');
+  }
+  #ryan {
+      background-image: url('/public/images/about/ryan.jpg');
+  }
+  #charlie {
+      background-image: url('/public/images/about/charlie.jpg');
+  }
+  #artur {
+      background-image: url('/public/images/about/artur1.png');
+  }
+  #boy {
+      background-image: url('/public/images/about/boy.png');
+  }
+  #ben {
+      background-image: url('/public/images/about/ben.png');
+  }
+  #adrian {
+      background-image: url('/public/images/about/adrian.jpeg');
+  }
+  #james {
+      background-image: url('/public/images/about/james.png');
+  }
+  #jeff {
+      background-image: url('/public/images/about/jeff.jpg');
+  }
+  #hal {
+      background-image: url('/public/images/about/hal.jpg');
+  }
+  #jon {
+      background-image: url('/public/images/about/jon.jpg');
+  }
+  #sean {
+      background-image: url('/public/images/about/sean.png');
+  }
+  #andy {
+      background-image: url('/public/images/about/andy.jpg');
+  }
+  #neil {
+      background-image: url('/public/images/about/neil.png');
+  }
+  #doc {
+      background-image: url('/public/images/about/doc.jpg');
+  }
+  #nate {
+      background-image: url('/public/images/about/nate.jpg');
+  }
+  #leslie {
+      background-image: url('/public/images/about/leslie.jpg');
+  }
+  #melissa {
+      background-image: url('/public/images/about/melissatothero.jpg');
+  }
+  #mattr {
+      background-image: url('/public/images/about/mattr.jpg');
+  }
+  #joseph {
+      background-image: url('/public/images/about/joseph.jpg');
+  }
+  #elie {
+      background-image: url('/public/images/about/elie.png');
+  }
+  #daniel {
+      background-image: url('/public/images/about/daniel.jpg');
+  }
+  .partner {
+      height: 60px;
+      width: 60px;
+      background-size: 60px 60px;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 60px;
+      display: inline-block;
+  }
+  #musicbiz {
+      background-image: url('/public/images/about/musicbiz.jpg');
+  }
+  #worldcafe {
+      background-image: url('/public/images/about/wclphila.png');
+  }
+  #phillyrising {
+      background-image: url('/public/images/about/phillyrisinglogo.jpg');
+  }
+  #pledgemusic {
+      background-image: url('/public/images/about/PledgeMusic.png');
+  }
+  #localmusicvibe {
+      background-image: url('/public/images/about/localmusicvibe.png');
+  }
+  #rockonphilly {
+      background-image: url('/public/images/about/cropphilly.png');
+      width: 320px;
+      background-size: 320px 120px;
+  }
+  #social {
+      padding-top: 30px;
+      padding-left: 100px;
+      padding-right: 100px;
+      margin: auto;
+      #twitter-widget-0{
+          float: left;
+          padding-right: 10px;
+          padding-bottom: 5px;
+      }
+  }
+  #logobottom {
+      background-image: url('/public/images/about/hearologo.svg');
+      width: 100%;
+      height: 300px;
+      background-position: center;
+      background-size: cover;
+      opacity: .85;
+      padding-top: 200px;
+  }
+  @media (max-width: 100%) {
+      #people{
+          p{
+              padding-right: 10%;
+          }
+          ul{
+
+              li{
+                  width: 100%;
+                  float: none;
+
+              }
+          }
+      }
+  }
+  @media (max-width: 480px) {
+      .grayblock,.whiteblock{
+          padding: 20px 10px 20px 10px;
+      }
+      #cloudlogo{
+          margin-top: -20px;
+          height: auto;
+          padding-top: 40%;
+          #mission p{
+              margin-top: 0;
+          }
+      }
+      h1, #story h2, h3, #social{
+          text-align: center;
+          margin-left: 0;
+          margin-top: 20px;
+          margin-bottom: 20px;
+      }
+      #story h2{
+          padding-top: 30px;
+      }
+      #description,#story,h3{
+          padding-left: 15px;
+          padding-right: 15px;
+      }
+      #people{
+          ul li {
+              .profile{
+                  margin-left: 20px;
+              }
+              p{
+                  padding-left: 100px;
+              }
+          }
+      }
+      #testimonials h2{
+          padding-left: 30px;
+      }
+      #partners{
+          text-align: center;
+      }
+
+      #faq {
+          h2{
+              padding-left: 15px;
+          }
+          .question{
+              padding-left: 15px;
+              padding-right: 15px;
+          }
+          .answer{
+              padding-left: 15px;
+              padding-right: 15px;
+          }
+      }
+      #logobottom {
+          background-size: contain;
+      }
+      #social{
+          width: 90%;
+          padding: 0;
+          margin: 0 auto;
+          text-align: center;
+      }
+      #u_0_0 {
+          width: 100% !important;
+      }
+      .fb_iframe_widget, .fb_iframe_widget > span, .fb_iframe_widget > span > iframe {
+          width: 100% !important;
+      }
+      .pluginSkinLight > div > div{
+          width: 100% !important;
+      }
+      #u_0_9,._56zz,._56z-{
+          max-width: 100% !important;
+      }
+  }
+  }
+}
+
+@media (max-width: 640px){
+    #page.about{
+        #content #cloudlogo {
+            height: 370px !important;
+            margin-top: -370px !important;
+            background-position: top;
+            background: url('/public/images/about/hearologo.svg');
+            background-size: contain !important;
+            background-position: top !important;
+            background-repeat: no-repeat;
+            background-color: #000000;
+        }
+        #content #contentbackdrop {
+            background-image: url('/public/images/about/backdrop.png');
+            height: 300px !important;
+            position: relative;
+            top: 0;
+            overflow: hidden;
+        }
+        #content #sxsw #river{
+            margin-left: 0 !important;
+        }
+
+        #content #sxsw #gear{
+            margin-left: 25% !important;
+        }
+        #content .inner-content{
+            padding-top: 90px;
+        }
+        #content #mission {
+            padding-top: 15px !important;
+        }
+    }
+
+}
+

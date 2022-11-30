@@ -1,0 +1,549 @@
+@import "helpers.less";
+
+#header-bar {
+  background: #111111;
+  z-index: @header-z-index;
+  width: 100%;
+  height: 40px;
+  box-shadow: 0 0 6px #000000;
+  position: fixed;
+  text-align: center;
+  top:0px;
+}
+
+#header__content {
+  max-width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: left;
+  position:relative;
+  ul#navigation{
+      padding: 0;
+      float: right;
+      li a{
+        display: block;
+        color: #CCC;
+        font-family: "StyreneA-Regular",Helvetica,Arial,sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 12px 5px;
+        text-decoration: none;
+      }
+    }
+}
+
+#header__content svg {
+  float: left;
+  z-index: @header-z-index + 1;;
+}
+
+
+#login-form {
+  float: right;
+  display: inline-block;
+  text-align: right;
+  width: 402px;
+
+  input {
+    &#id_email {
+      width: 130px;
+    }
+
+    &#id_password {
+      width: 80px;
+    }
+  }
+
+  span#or {
+    display: inline-block;
+    .roboto400;
+    color: @white50;
+    font-size: 12px;
+  }
+
+  button {
+    .roboto600;
+    width: auto;
+    min-width: auto;
+    min-height: 24px;
+
+    &.disabled {
+        background-color:rgb(154, 14, 0);
+        pointer-events: none;
+        opacity: 0.25;
+    }
+  }
+  #join{
+    border-color: rgb(36, 108, 169);
+    background-color: rgb(67, 138, 255);
+    text-shadow: 0px 1px 0px #0C2E52;
+  }
+
+}
+
+#loginErrorMessage {
+  background: @black40;
+}
+
+.header__account {
+  float: right;
+  margin-left: 10px;
+}
+
+.header__account__picture {
+  float: right;
+
+  img {
+    .border-radii(0px, 3px, 3px, 0px);
+  }
+}
+
+.header__account__name {
+  float: right;
+  margin: 8px 0;
+  width: 160px;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px 5px 6px;
+  background: #222;
+  .border-radii(3px, 0px, 0px, 3px);
+  a {
+    color: #fff;
+  }
+}
+
+.header__account__dropdown {
+  border-radius: 0 0 3px 3px;
+  font-size: 14px;
+  .roboto600;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  z-index: 100;
+  overflow: hidden;
+
+  li {
+    padding: 9px 9px;
+    width: 180px;
+    background: rgba(30,30,30,0.90);
+    cursor: pointer;
+
+    a {
+      color: rgb(230,230,230);
+      width: 160px;
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+#header__about__dropdown{
+  color: #FFF;
+  background-color: #1d1d1d;
+  position: absolute;
+  top: 60px;
+  right: 56px;
+  padding: 15px;
+  &.unauth{
+    max-width: 300px;
+    right: 235px;
+  }
+  .border-radius(2px);
+  &:before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #1d1d1d;
+    margin-left: -24px;
+  }
+  p{
+    border-bottom: 1px solid #3D3D3D;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+    line-height: 15px;
+  }
+  a{
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0 0;
+    text-align: center;
+    padding: 7px;
+    line-height: 25px;
+  }
+}
+
+#id_password, #id_email, #search-bar{
+  background-color: @black80;
+  padding: 3px 8px;
+  margin-top: 9px;
+  border-radius: 3px;
+  font-size: 16px;
+  color: @white80;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+#logo-link {
+  display: block;
+  width: 120px;
+  height: 40px;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  float: left;
+  svg {
+    width: 120px;
+  }
+  &:hover + svg {
+    path {
+      fill: #FF3640;
+    }
+  }
+  &:active + svg {
+    path {
+      fill: #D61A23;
+    }
+  }
+}
+
+.header__action-button {
+  .dimen(40,40);
+  cursor: pointer;
+  float: left;
+  background-color: transparent;
+
+  &:hover {
+    background-color: rgba(255,255,255,0.08);
+  }
+
+  &:active {
+    background-color: rgba(0,0,0,0.8);
+  }
+}
+
+.header__account__icon {
+  .bgimg("header/user.svg");
+  display: none;
+  width: 40px;
+  height: 40px;
+  float: right;
+}
+
+.header__action-button--info {
+  .bgimg("header/info.svg");
+  float: right;
+}
+
+.header__action-button--blog {
+  .bgimg("header/blog.svg");
+  float: right;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  background-position: 8px 10px;
+}
+
+.header__action-button--headphones {
+  .bgimg("header/headphones.svg");
+}
+
+.header__action-button--gear {
+  .bgimg("header/gear.svg");
+}
+
+.header__action-button--envelope {
+  .bgimg("header/envelope.svg");
+}
+
+.header__action-button--filters {
+  margin-left: 23px;
+  border: 0;
+  .bgimg("list.svg");
+  background-color: #232323;
+  height: 26px;
+  vertical-align: middle;
+  margin-top: 8px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  width: 27px;
+  background-position: 3px 3px;
+  opacity: .9;
+}
+
+.header__action-button--envelope__count {
+  color: #FFF;
+  position: relative;
+  left: 25px;
+  top: 5px;
+  background: #e82627;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 2px;
+  border-radius: 30px;
+  border-bottom: 1px solid #781515;
+  font-size: 10px;
+}
+
+
+
+
+
+/* Search stuff */
+
+#main_menu__search {
+  display:inline-block;
+}
+
+#main_menu__search.active {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:black;
+  z-index:2;
+  .black-header-gradient;
+}
+
+#main_menu__search .close {
+  display:none;
+}
+
+.active #main_menu__search__trigger {
+  display:none;
+}
+
+#main_menu__search.active .close, #main_menu__search__trigger {
+  height:40px;
+  overflow:hidden;
+  display:inline-block;
+}
+
+#main_menu__search.active .close {
+  font-size:20px;
+  line-height:40px;
+  text-align:center;
+  width:40px;
+  float: right;
+  color:white;
+  font-weight:bold;
+}
+
+#main_menu__search__trigger {
+  width:0px;
+  padding-left:40px;
+  background-image:url('/public/images/search.svg');
+  background-size:20px 20px;
+  background-position: center center;
+  background-repeat:no-repeat;
+  float: left;
+}
+
+@media (min-width:@desktop) {
+  #main_menu__search__trigger {
+    display:none;
+  }
+}
+@media (max-width:@desktop) {
+  #main_menu__search input {
+    display:none;
+  }
+  #main_menu__search.active input {
+    display:inline-block;
+  }
+}
+
+#search-bar {
+  top: 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 400px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 8px;
+  background-image: url('/public/images/search-dark.svg');
+  background-position: 8px center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  padding-left: 35px;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+
+  &.short {
+    width: 255px;
+  }
+}
+
+@media (max-width:1024px) {
+  #header-bar, #open-filters {
+    position: fixed;
+    float:left;
+  }
+  #open-filters {
+    position:relative;
+    z-index:2;
+  }
+  #header__content {
+    margin:0;
+    position:relative;
+  }
+  #logo-link {
+    left:40px;
+  }
+  #main_menu__search input {
+    width:69%!important;
+  }
+  #header__content.unauth{
+    #search-bar.short{
+      width: 215px;
+    }
+  }
+}
+
+@media (min-width:640px){
+  .login_hover_trigger{
+    display: block !important;
+    &.header__account__icon{
+      display: none !important;
+    }
+  }
+}
+
+@media (max-width:640px){
+  #header-bar{
+    position: fixed;
+    .login_hover_trigger.header__account__icon{
+      display: block;
+      background-color: transparent;
+      border: 0;
+      &:hover{
+        background-color: rgba(255, 255, 255, 0.08);
+      }
+    }
+    #login-form{
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      width: 200px;
+      background: #202020;
+      padding: 10px;
+      .border-box;
+      input#id_email,input#id_password{
+        width: 100%;
+        padding: 10px;
+        border-radius: 0;
+        margin: 0 0 10px 0;
+        background: #FFF;
+        color: #4E4D4D !important;
+        .border-box;
+      }
+      #submit-login{
+        width: 100%;
+        padding: 20px;
+        line-height: 0;
+        display: block;
+        .border-box;
+        &.disabled {
+            pointer-events: none;
+            opacity: 0.7;
+        }
+      }
+      #join{
+        width: 100%;
+        margin-top: 10px;
+        border-color: rgb(36, 108, 169);
+        background-color: rgb(67, 138, 255);
+        text-shadow: 0px 1px 0px #0C2E52;
+        padding: 15px;
+        line-height: 0;
+      }
+      #or{
+        display: none;
+      }
+    }
+    #header__about__dropdown.unauth{
+      right: 10px;
+      &:before{
+        left: auto;
+        right: 33px;
+      }
+    }
+    #loginErrorMessage{
+      right: 10px;
+      left: 10px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width:548px) {
+  #header__content{
+    text-align: center;
+    #logo-link{
+      float: none;
+      position: absolute;
+      display: inline-block;
+      left: 50%;
+      margin-left: -60px;
+      svg{
+        float: none;
+      }
+    }
+    #open-filters{
+      float: left;
+      margin-left: 10px;
+    }
+    #accountInfo{
+      position: absolute;
+      right: 0;
+      z-index: 999999999;
+      top: 2px;
+      > *{
+        display: none;
+      }
+    }
+    #main_menu__search{display: block}
+    .header__account__icon{
+      display: block;
+    }
+  }
+}
+
+
+
+
+
+
+::-webkit-input-placeholder {
+  position: relative;
+  top: 1px;
+}
+
+#login-form {
+  @fg: @white40;
+  ::-webkit-input-placeholder {
+      color: @fg;
+  }
+  :-moz-placeholder {
+      color: @fg;
+  }
+  ::-moz-placeholder {
+      color: @fg;
+  }
+  :-ms-input-placeholder {
+      color: @fg;
+  }
+}

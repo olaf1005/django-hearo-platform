@@ -1,0 +1,35 @@
+{% extends "email_notifications/base_email.html" %}
+
+{% block subject %}
+You have been invited to {{ BASE_URL }}!
+{% endblock %}
+
+{% block html_body %}
+    <p>Hey,</p>
+
+    <p>You have just been invited to {{ BASE_URL }}!</p>
+
+    <p>
+      {{ BASE_URL }} is the new independent music marketplace for musicians,
+      bands, venues, and fans. It's the ultimate way for artists to connect
+      directly with fans to market and sell their music. Artists can create
+      beautiful profiles showcasing their songs, albums, photos, videos, and
+      shows. Musicians can network with other musicians in their area and
+      fans can discover all the latest new independent music and see all the
+      live shows in their area by the bands they fan. Join the music
+      revolution!
+    </p>
+
+    <p>
+      You can join here:
+      <br>
+      <a href="{{join_url}}">{{join_url}}</a>
+    </p>
+
+    <p>
+      Best,
+      <br>
+      {{user.person.view.short_name}}
+    </p>
+
+{% endblock %}

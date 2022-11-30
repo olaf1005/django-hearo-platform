@@ -1,0 +1,47 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% load formadmin_filters %}
+
+{% block content_title %}
+<span class="navbar-brand">{% trans "Import addresses" %}</span>
+{{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+<ul class="breadcrumb">
+    <li>
+        <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+    </li>
+    <li>
+        <a href="../../">{% trans "Newsletter" %}</a>
+    </li>
+    <li>
+        <a href="../">{% trans "Subscriptions" %}</a>
+    </li>
+    <li>
+        {% trans "Import addresses" %}
+    </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+    <div class="alert alert-warning">Fields in <strong>bold</strong> are required.</div>
+    <form enctype="multipart/form-data" method="post">
+        {{ form|as_django_admin }}
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md- form-group ">
+                <div class="control-label col-md-3">
+                </div>
+                <div class="controls col-md-9">
+                    <div class="checkbox">
+                        <input name="submit" type="submit" class="btn btn-primary default" value="{% trans 'Upload' %}" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

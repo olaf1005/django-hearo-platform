@@ -1,0 +1,180 @@
+{% extends 'accounts/my-account/index.html' %}
+
+{% block title %}My Account Visuals - Tune.fm{% endblock %}
+
+{% block myAccountInnerPage %}
+
+{% with user.person.view as view %}
+
+{% load elements %}
+
+{% include "accounts/my-account/_view_name.html" %}
+
+<h2>Design your banner!</h2>
+
+<div class="content">
+  <div row class="2 cols" id="banner_settings">
+    <div cell id="banner_config">
+      <div row class="2 cols">
+        <div cell id="banner_display">
+          <label class="section">Display:</label>
+          <input type="checkbox" id='id_name_bool' {% if view.banner.display_title %} checked="yes"{% endif %}>
+          <label for="id_name_bool">Name</label>
+          {% if view.is_orgo and view.organization.is_band %}
+          <input type="checkbox" id='id_genre_bool' {% if view.banner.display_genre %} checked="yes"{% endif %}>
+          <label for="id_genre_bool">Genre</label>
+          {% elif view.is_person and view.person.is_musician %}
+          <input type="checkbox" id='id_instrument_bool' {% if view.banner.display_instrument %} checked="yes"{% endif %}>
+          <label for="id_instrument_bool">Instrument</label>
+          {% endif %}
+          <input type="checkbox" id='id_location_bool' {% if view.banner.display_location %} checked="yes"{% endif %}>
+          <label for="id_location_bool">Location</label>
+          <input type="checkbox" id='id_bar_bool' {% if view.banner.display_bar %} checked="yes"{% endif %}>
+          <label for="id_bar_bool"> Shade Bar</label>
+        </div>
+        <div cell id="banner_typeface">
+          <label class="section" id="name_font" for="id_font_selector">Name Font:</label>
+          <input type="radio" id="font_marker" class="font" name="id_font_selector" value="marker" {%if view.banner.font == 'marker'%}checked='yes'{% endif %}/>
+          <label for="font_marker" style="font-family:'Permanent Marker', cursive;">Marker</label>
+          <input type="radio" id="font_mono" class="font" name="id_font_selector" value="mono" {%if view.banner.font == 'mono'%}checked='yes'{% endif %}/>
+          <label for="font_mono" style="font-family:'StyreneA-Regular', sans-serif">sans-serif</label>
+          <input type="radio" id="font_condensed" class="font" name="id_font_selector" value="condensed" {%if view.banner.font == 'condensed'%}checked='yes'{% endif %}/>
+          <label for="font_condensed" style="font-size:15px;font-family:'Amatic SC', Impact, 'Arial Narrow Bold', sans-serif">Condensed</label>
+          <input type="radio" id="font_script" class="font" name="id_font_selector" value="script" {%if view.banner.font == 'script'%}checked='yes'{% endif %}/>
+          <label for="font_script" style="font-family:'Srisakdi', cursive">Script</label>
+        </div>
+      </div>
+      <div row class="1 cols" id="banner_upload_button">
+        <div cell>
+          <button class="button blue" style="
+          width: 150px;
+          height: 40px;
+          /* padding: 15px; */
+          /* padding-top: 7px; */
+          float: left;
+          top: -20px;
+          margin: 10px;
+          ">
+            Choose A File
+            <input id="id_banner_pic" class="hidden" value="banner_photo" name="file" type="file" onChange="uploadBannerImage()" />
+          </button>
+          <span> or drag and drop it here to upload.</span>
+        </div>
+      </div>
+    </div>
+    <div cell id="banner_options">
+      <div id="banner_choices" style="padding:5px">
+        <div class="banner_choice_cell" style="top:1px">
+          <input type="radio" class="banner_choice_radio" name="banner_chooser" id="default_sky" value="sky" {% if view.banner.texture_chosen == 'sky' %}checked="checked" {% endif %}/>
+          <label for="default_sky" class="default_sky">
+            <div class="choice banner_default banner_preview" style="background: radial-gradient(#042E5E 30%,#000000 70%);">
+              <div class="contents_preview">
+                <div class="bar{% if view.banner.display_bar %} white{% endif %}">
+                  <div class="username {{ view.banner.font }}" {% if not view.banner.display_title %}style="display: none"{% endif %}>{{ user.first_name }} {{ user.last_name }}</div>
+                  <div class="userinstrument" {% if not view.banner.display_instrument %}style="display: none"{% endif %}>{{ view.person.musician.get_instrument }}</div>
+                  <div class="userlocation" {% if not view.banner.display_location %}style="display: none"{% endif %}>{{ view.location.most_exact }}</div>
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div class="banner_choice_cell">
+          <input type="radio" class="banner_choice_radio" name="banner_chooser" id="upload_chosen" value="uploaded" {% if not view.banner.texture %}disabled="disabled"{% endif %}
+          {% if view.banner.texture_chosen == 'upload' %} checked="checked"{% endif %}/>
+          <label for="upload_chosen" id="bupload_label">
+            <div class="choice" id="custom_banner" style="background: {{ view.banner.preview_tile }} ">{{ view.banner.has_uploaded_banner }}
+              <div class="contents_preview">
+                <div class="bar{% if view.banner.display_bar %} white{% endif %}">
+                  <div class="username {{ view.banner.font }}" {% if not view.banner.display_title %}style="display: none"{% endif %}>{{ user.first_name }} {{ user.last_name }}</div>
+                  <div class="userinstrument" {% if not view.banner.display_instrument %}style="display: none"{% endif %}>{{ view.person.musician.get_instrument }}</div>
+                  <div class="userlocation" {% if not view.banner.display_location %}style="display: none"{% endif %}>{{ view.location.most_exact }}</div>
+                </div>
+              </div>
+              <div class="drop_hint">
+                <span>Drop file to upload!</span>
+                <div class="medium spinner"></div>
+              </div>
+              {% if not view.banner.texture %}
+              <div class="empty_media" id="empty_banner_pic">No custom banner uploaded</div>
+              {% endif %}
+            </div>
+          </label>
+        </div>
+      </div>
+      <div id="upload_hint">
+        Banner will be tiled if it's less than 960 x 160 pixels.
+        <button class="small blue" id="banner_crop" onclick="createBannerLightbox()">Crop Banner</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Upload some photos!</h2>
+
+<div class="content">
+  <div row id="profile_photos" class="1 cols">
+    <div row class="1 cols" id="photo_upload_input">
+      <div cell>
+<button class="button blue" style="
+        height: 16px;
+        padding: 11px;
+        margin-top: -17px;
+        margin-right: 10px;
+        float: left;
+        width: 135px;
+        ">
+          Choose Files
+          <input id="photo_input" name="file" type="file" multiple="">
+        </button>
+        <span>or drag and drop them here to upload. 10 files or fewer at a time, 10mb maximum per picture.</span>
+      </div>
+    </div>
+    <div row id="all_photos" class="1 cols">
+      <div class="photo_container drop_hint">
+        <span>Drop file to upload!</span>
+        <div class="medium spinner"></div>
+      </div>
+      {% for photo in photos reversed %}
+      <div class="photo_container {% if photo.id == view.primary_photo.id %}primaryPic {% endif %}" id="#photo_{{photo.id}}" style="background-image: url('/{{photo.square_file}}')">
+        <button class="delete"></button>
+        {% if photo.id == view.primary_photo.id %}
+        <div id="profile_ribbon"></div>
+        {% endif %}
+      </div>
+      {% empty %}
+      <div class="empty_media">You haven't uploaded any photos yet!</div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<h2>Videos</h2>
+
+<div class="content">
+  <div row id="profile_photos" class="1 cols">
+    <div row class="1 cols" id="photo_upload_input">
+      <div cell>
+        <input type="text" id="youtube_url" class="standard" placeholder="Youtube URL"/>
+        <button class="blue" id="choose_button" onclick="addVideo()">Add Video</button>
+      </div>
+    </div>
+    <div row id="videos">
+      {% for video in videos reversed %}
+      {% videolisting video %}
+      {% empty %}
+      <div class="empty_media">You haven't added any videos yet!</div>
+      {% endfor %}
+    </div>
+
+    <div id="player_holder" style="display: none">
+      <div id="ytplayer">
+        <p> you will need flash 8 or better to view this content </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endwith %}
+
+{% endblock %}

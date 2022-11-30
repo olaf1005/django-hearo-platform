@@ -1,0 +1,32 @@
+{% load elements %}
+{% if song.online and not song.processing and song.visible%}
+<tr class="song listing{% if admin %} admin{% endif %}" id="song_{{ song.id }}" songid="{{ song.id }}">
+  {% if admin %}
+  <td class="drag_grip">
+
+  </td>
+  {% endif %}
+  <td class="play_button" width="20">
+    <a class="ajax playSong" songid="{{ song.id }}">
+      <div class="song_play_button" songid="{{ song.id }}"></div>
+    </a>
+  </td>
+  <td class="song_title" width="300">
+    {% if profile %}
+      {% usertab profile %}
+    {% endif %}
+    <span class="title" {% if profile %}style="position: relative; top:5px"{% endif %}>{{ song.title }}</span>
+  </td>
+
+  <td width="50">
+    {% if song.download_type != "none" %}
+      {% downloadbutton song %}
+    {% endif %}
+  </td>
+  
+  <td class="buttons">
+  {% reviewbutton song %}
+  {% fanbutton song view %}
+  </td>
+</tr>
+{% endif %}

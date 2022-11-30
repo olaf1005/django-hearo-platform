@@ -1,0 +1,183 @@
+@import "helpers.less";
+
+#content.home {
+  margin: 0;
+
+  #sunburst {
+    width: 100%;
+    height: 550px;
+    .bgimg('/splash/splash_bg.png');
+    background-position: top;
+    box-shadow: 0px 5px 20px rgba(100,120,150,0.3);
+    -webkit-box-shadow: 0px 5px 20px rgba(100,120,150,0.3);
+    -moz-box-shadow: 0px 5px 20px rgba(100,120,150,0.3);
+    z-index: 100;
+
+    -moz-transition:height 0.2s ease-out;
+    -webkit-transition:height 0.2s ease-out;
+    -o-transition:height 0.2s ease-out;
+    transition:height 0.2s ease-out;
+
+    &.open-video {
+      height: 1020px;
+
+      #hearo-video-col {
+        width: 100%;
+        margin: 30px 0;
+        margin-top: 30px!important;
+
+        #video-thumb {
+          display: none;
+        }
+      }
+      #registration-form-col {
+        margin: 0 240px;
+      }
+    }
+
+    img.musician-beta-ribbon {
+        position: fixed;
+        top:40px;
+    }
+
+    #onboarding {
+      margin: 0px auto;
+      width: 960px;
+      display: block;
+
+      > div {
+        margin-top: 70px;
+      }
+
+      #hearo-video-col {
+        iframe {
+          margin: 40px 0px;
+        }
+      }
+
+      #hearo-video {
+        margin-top: 40px;
+        text-align: left;
+      }
+    }
+
+    #registration-form-col {
+      h1 {
+        .roboto400;
+        text-align: center;
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 18px;
+        margin: 20px 0;
+        .roboto400;
+        line-height: 1.4;
+        text-align: center;
+      }
+
+      margin-top: 30px;
+      text-align: center;
+
+      input[type="text"],
+      input[type="password"] {
+        border: none;
+        .border-radius();
+        padding: 10px;
+        .box-shadow(0 0 1px @black60);
+        font-size: 26px;
+        width: 320px;
+        margin: 7px 0;
+        .roboto400;
+
+        &#first-name {
+          width: 150px;
+          position: relative;
+          left: 2px;
+          .border-radii(4px, 0, 0, 4px);
+        }
+        &#last-name {
+          width: 150px;
+          position: relative;
+          right: 2px;
+          .border-radii(0, 4px, 4px, 0);
+        }
+      }
+
+      #accept-checkbox {
+        margin: 10px 0;
+
+        input[type="checkbox"] {
+          margin-left: -114px;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+      }
+
+      button,.next-btn {
+        display: block;
+        margin: 20px auto;
+        width: 340px;
+        height: 55px;
+        line-height: 35px;
+        .box-shadow(inset 0 0 1px @black70);
+        padding: 10px;
+        .border-radius();
+        background: white;
+        font-size: 26px;
+        .roboto400;
+        color: white;
+        .blue-mid-gradient;
+        border: none;
+        .border-box();
+
+
+        &.spinning {
+          .button-text {
+            display: none;
+          }
+        }
+
+        &:hover {
+          .blue-light-gradient;
+        }
+        &:active {
+          .blue-dark-gradient;
+        }
+      }
+
+      .error {
+        .roboto400;
+        font-size: 16px;
+      }
+      
+    }
+  }
+
+  #featured-musicians {
+    padding: 20px;
+    width: 100%;
+    height: 600px;
+    .box-shadow(inset 0px 4px 9px @black10);
+    .bgimg(@fabric-lighter);
+    z-index: 99;
+    text-align: center;
+
+    #featured-lists {
+      margin-top: 40px;
+
+      div.box {
+        text-align: left;
+        width: 310px;
+        display: inline-block;
+        margin: 0px 10px;
+
+        div.music.listing .song-play-button {
+          left: 105px;
+        }
+      }
+    }
+  }
+}

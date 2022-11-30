@@ -1,0 +1,53 @@
+{% load elements %}
+
+{% if user.is_authenticated %}
+
+    {% for profile in profiles %}
+       <tr class="jam_listing">
+           <td class="user">
+               {% dir_usertab profile %}
+               {% if profile.get_instruments %}
+                   <div class="instrument_module">
+                       <img src='/public/images/instrument_module_icon.png' class="instrument_module_icon" />
+                       {{ profile.get_instruments }}
+                   </div>
+               {% endif %}
+           </td>
+           <td class="fanmail">
+            {% if not profile.fanmail_private%}
+                {% mail profile "12px" "-1px" %}
+            {% endif %}           
+           </td>
+           <td class="fanbutton">
+               {% fanbutton profile user.person.view %}
+           </td>
+       </tr>
+    {% endfor %}
+
+{% else %}
+    {% for profile in profiles %}
+       <tr class="jam_listing">
+           <td class="user">
+               {% dir_usertab profile %}
+               {% if profile.get_instruments %}
+                   <div class="instrument_module">
+                       <img src='/public/images/instrument_module_icon.png' class="instrument_module_icon" />
+                       {{ profile.get_instruments }}
+                   </div>
+               {% endif %}
+           </td>
+           <td class="fanmail">
+              <div class="fanmail_button_all">
+                <div class="tooltip_description" style="display:none">Log in or join to send fanmail!</div>
+              </div>
+
+           </td>
+           <td class="fanbutton">
+              <div class="small_fan_button">FAN
+                <div class="tooltip_description" style="display:none">Log in or join to fan {{profile.name}}!</div>
+              </div>
+           </td>
+       </tr>
+    {% endfor %}
+
+{% endif %}

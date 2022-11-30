@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="758px" preserveAspectRatio="none" style="width:607px;height:758px;background:#00000000;" version="1.1" viewBox="0 0 607 758" width="607px" zoomAndPan="magnify"><defs/><g><ellipse cx="304" cy="16" fill="#000000" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"/><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="113" x="247.5" y="66"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="93" x="257.5" y="87.6016">Support request</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="103" x="252.5" y="140"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="83" x="262.5" y="161.6016">Ticket created</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="88" x="260" y="214"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="270" y="235.6016">Manual KYC</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="275" x="166.5" y="288"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="255" x="176.5" y="309.6016">Wallet recovery using 2 out of x private keys</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="182" x="213" y="362"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="162" x="223" y="383.6016">Create temporary password</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="478" x="65" y="436"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="458" x="75" y="457.6016">Create new keys and wallet and transfer original hedera secrets to the new one</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="594" x="7" y="510"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="574" x="17" y="531.6016">Sent user email with new password, requesting the user update their password next time they login</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="458" x="75" y="584"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="438" x="85" y="605.6016">Old password is used to unlock, new password is used to encrypt the wallet</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="439" x="84.5" y="658"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="419" x="94.5" y="679.6016">We also encrypt the new wallet using 2 out of x permutations of our keys</text><ellipse cx="304" cy="742" rx="10" ry="10" style="stroke:#000000;stroke-width:1.0;fill:none;"/><ellipse cx="304.5" cy="742.5" fill="#000000" rx="6" ry="6" style="stroke:none;stroke-width:1.0;"/><!--MD5=[987d05c317cf22890711b630a71caba4]
+link start to Support request--><path d="M304,26.04 C304,34.93 304,48.84 304,60.57 " fill="none" id="start-to-Support request" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="304,65.78,308,56.78,304,60.78,300,56.78,304,65.78" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[aaacf44f2e51a4615ef3bc1a94ca64a7]
+link Support request to Ticket created--><path d="M304,100.34 C304,110.46 304,123.58 304,134.54 " fill="none" id="Support request-to-Ticket created" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="304,139.73,308,130.73,304,134.73,300,130.73,304,139.73" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[8599a77d717dedb0ad7ceb6d90edd549]
+link Ticket created to Manual KYC--><path d="M304,174.34 C304,184.46 304,197.58 304,208.54 " fill="none" id="Ticket created-to-Manual KYC" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="304,213.73,308,204.73,304,208.73,300,204.73,304,213.73" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[72efba44b26750c8d637fbb70ca3a975]
+link Manual KYC to Wallet recovery using 2 out of x private keys--><path d="M304,248.34 C304,258.46 304,271.58 304,282.54 " fill="none" id="Manual KYC-to-Wallet recovery using 2 out of x private keys" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="304,287.73,308,278.73,304,282.73,300,278.73,304,287.73" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[4de5d1f3785417c6b37744fbcbe5ba1b]
+link Wallet recovery using 2 out of x private keys to Create temporary password--><path d="M304,322.34 C304,332.46 304,345.58 304,356.54 " fill="none" id="Wallet recovery using 2 out of x private keys-to-Create temporary password" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="304,361.73,308,352.73,304,356.73,300,352.73,304,361.73" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[6f85e8622c3eb7e21208c02496ff62f5]
+link Create temporary password to Create new keys and wallet and transfer original hedera secrets to the new one--><path d="M304,396.34 C304,406.46 304,419.58 304,430.54 " fill="none" id="Create temporary password-to-Create new keys and wallet and transfer original hedera secrets to the new one" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="304,435.73,308,426.73,304,430.73,300,426.73,304,435.73" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[3c4111201cfb15c81b7990feb4102e25]
+link Create new keys and wallet and transfer original hedera secrets to the new one to Sent user email with new password, requesting the user update their password next time they login--><path d="M304,470.34 C304,480.46 304,493.58 304,504.54 " fill="none" id="Create new keys and wallet and transfer original hedera secrets to the new one-to-Sent user email with new password, requesting the user update their password next time they login" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="304,509.73,308,500.73,304,504.73,300,500.73,304,509.73" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[038ae7c9913c7a720ed580bf908c7fab]
+link Sent user email with new password, requesting the user update their password next time they login to Old password is used to unlock, new password is used to encrypt the wallet--><path d="M304,544.34 C304,554.46 304,567.58 304,578.54 " fill="none" id="Sent user email with new password, requesting the user update their password next time they login-to-Old password is used to unlock, new password is used to encrypt the wallet" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="304,583.73,308,574.73,304,578.73,300,574.73,304,583.73" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[2491149700e0dd4e674f9d9644a6d7e3]
+link Old password is used to unlock, new password is used to encrypt the wallet to We also encrypt the new wallet using 2 out of x permutations of our keys--><path d="M304,618.34 C304,628.46 304,641.58 304,652.54 " fill="none" id="Old password is used to unlock, new password is used to encrypt the wallet-to-We also encrypt the new wallet using 2 out of x permutations of our keys" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="304,657.73,308,648.73,304,652.73,300,648.73,304,657.73" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[9fff832575b49b7fac84c543e87d0ec8]
+link We also encrypt the new wallet using 2 out of x permutations of our keys to end--><path d="M304,692.07 C304,702.6 304,716.25 304,726.46 " fill="none" id="We also encrypt the new wallet using 2 out of x permutations of our keys-to-end" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="304,731.74,308,722.74,304,726.74,300,722.74,304,731.74" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[c1b88e5e2c59bfb251b2487555696ddc]
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title Wallet recovery
+
+(*) - -> "Support request"
+- -> "Ticket created"
+- -> "Manual KYC"
+- -> "Wallet recovery using 2 out of x private keys"
+- -> "Create temporary password"
+- -> "Create new keys and wallet and transfer original hedera secrets to the new one"
+- -> "Sent user email with new password, requesting the user update their password next time they login"
+- -> "Old password is used to unlock, new password is used to encrypt the wallet"
+- -> "We also encrypt the new wallet using 2 out of x permutations of our keys"
+- -> (*)
+
+@enduml
+
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+
+(*) - -> "Support request"
+- -> "Ticket created"
+- -> "Manual KYC"
+- -> "Wallet recovery using 2 out of x private keys"
+- -> "Create temporary password"
+- -> "Create new keys and wallet and transfer original hedera secrets to the new one"
+- -> "Sent user email with new password, requesting the user update their password next time they login"
+- -> "Old password is used to unlock, new password is used to encrypt the wallet"
+- -> "We also encrypt the new wallet using 2 out of x permutations of our keys"
+- -> (*)
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 15:40:07 EAT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

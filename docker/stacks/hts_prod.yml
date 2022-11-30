@@ -1,0 +1,35 @@
+version: '3.6'
+
+volumes:
+    redisdata:
+
+networks:
+    cluster:
+
+secrets:
+    .env:
+        file: ../../hts/.env.prod
+
+services:
+    hts:
+        tty: true # color log output
+        image: $IMAGE_HTS
+        volumes:
+            - ../../hts:/app:cached
+        networks:
+            - cluster
+        secrets:
+            - .env
+        ports:
+            - '8090:8080'
+        environment:
+            - GIT_RELEASE=$P_GIT_RELEASE
+            - DEBUG=0
+        command: mvn spring-boot:run
+        # command: /bin/sh -c "while true; do sleep 100; done"
+        logging:
+            # limit logs retained on host to 25MB
+            driver: "json-file"
+            options:
+                max-size: "500k"
+                max-file: "50"

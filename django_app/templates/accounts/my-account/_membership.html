@@ -1,0 +1,87 @@
+{% load elements %}
+{% load i18n %}
+
+<input type="hidden" id="selected_view" value="group">
+<div id="invite">
+  <h4>Invite</h4>
+
+  <form id="form-user_v1" name="form-user_v1">
+    <div class="typeahead-container">
+      <div class="typeahead-field">
+
+        <span class="typeahead-query">
+          <input id="user_v1-query" name="user_v1[query]" type="search" placeholder="Search" autocomplete="off">
+        </span>
+        <span class="typeahead-button">
+          <button type="submit">
+            <i class="typeahead-search-icon"></i>
+          </button>
+        </span>
+
+      </div>
+    </div>
+  </form>
+
+</div>
+
+<div id="pending">
+  <h4>Pending</h4>
+  <ul>
+    {% for member in view.organization.pending.all %}
+    {% if member.profile != profile %}
+    <li id="pending_{{member.profile.id}}">
+    {% usertab member.profile %}
+    <button class="delete" group-type="member" profile-id="{{member.profile.id}}" group-id="{{view.organization.id}}"></button>
+    </li>
+    {% else %}
+    <li id="pending_{{member.profile.id}}">
+    {% usertab member.profile %}
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+<div id="members">
+  <h4>Members</h4>
+  <ul id="members">
+    {% for member in members %}
+    {% if member.profile != profile %}
+    <li id="members_{{member.profile.id}}">
+    <button title="Make admin" class="arrow-down make-admin" profile-id="{{member.profile.id}}" group-id="{{view.organization.id}}"></button>
+    {% usertab member.profile %}
+    <button class="delete" group-type="member" profile-id="{{member.profile.id}}" group-id="{{view.organization.id}}"></button>
+    {% percentage_membership_split member.profile view.organization.id %}
+    </li>
+    {% else %}
+    <li id="members_{{member.profile.id}}">
+    {% usertab member.profile %}
+    {% percentage_membership_split member.profile view.organization.id %}
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+<div id="admins">
+  <h4>Admins</h4>
+  <ul id="admins">
+    {% for member in admins %}
+    {% if member.profile != profile %}
+    <li id="admins_{{member.profile.id}}">
+    <button title="Make member" class="arrow-up make-member" profile-id="{{member.profile.id}}" group-id="{{view.organization.id}}"></button>
+    {% usertab member.profile %}
+    <button class="delete" group-type="admin" profile-id="{{member.profile.id}}" group-id="{{view.organization.id}}"></button>
+    {% percentage_membership_split member.profile view.organization.id %}
+    </li>
+    {% else %}
+    <li id="admins_{{member.profile.id}}">
+    {% usertab member.profile %}
+    {% percentage_membership_split member.profile view.organization.id %}
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+

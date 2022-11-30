@@ -1,0 +1,151 @@
+image: docker:git
+
+services:
+    - docker:dind
+
+stages:
+    - cache
+    - build
+    # - test
+    - release
+    - deploy
+
+variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+    DJANGO_APP_CONTAINER_TEST_IMAGE: registry.gitlab.com/hearo/hearo/django_app:test
+    DJANGO_APP_CONTAINER_DEV_IMAGE: registry.gitlab.com/hearo/hearo/django_app:dev
+    DJANGO_APP_CONTAINER_RELEASE_IMAGE: registry.gitlab.com/hearo/hearo/django_app:latest
+    HTS_CONTAINER_TEST_IMAGE: registry.gitlab.com/hearo/hearo/hts:test
+    HTS_CONTAINER_RELEASE_IMAGE: registry.gitlab.com/hearo/hearo/hts:latest
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/pip-cache"
+    PG_DB_NAME: hearo_test
+    PG_USER: postgres
+    PG_PASS: postgres
+    PG_HOST: postgres
+    PG_PORT: "5432"
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+    DOCKER_DRIVER: overlay
+    DEPLOY_SSH_KEY: ./creds/prod_creds
+    P_GITLAB_DEPLOY_USER: gitlab-ci-token
+    P_GITLAB_DEPLOY_TOKEN: $CI_BUILD_TOKEN
+
+cache:
+    paths:
+        - "$CI_PROJECT_DIR/pip-cache"
+    key: "$CI_PROJECT_ID"
+
+build_django_app:
+    stage: build
+    script:
+        - cd django_app
+        - docker login -u $P_GITLAB_DEPLOY_USER -p $P_GITLAB_DEPLOY_TOKEN registry.gitlab.com
+        - docker build -t $DJANGO_APP_CONTAINER_TEST_IMAGE .
+        - docker push $DJANGO_APP_CONTAINER_TEST_IMAGE
+    only:
+        changes:
+            - django_app/Dockerfile
+            - django_app/requirements.txt
+        refs:
+            - staging
+
+build_django_app_dev:
+    stage: build
+    script:
+        - cd django_app
+        - docker login -u $P_GITLAB_DEPLOY_USER -p $P_GITLAB_DEPLOY_TOKEN registry.gitlab.com
+        - docker build -t $DJANGO_APP_CONTAINER_TEST_IMAGE Dockerfile.dev
+        - docker push $DJANGO_APP_CONTAINER_TEST_IMAGE
+    only:
+        changes:
+            - django_app/Dockerfile.dev
+            - django_app/requirements_dev.txt
+        refs:
+            - staging
+
+build_hts:
+    stage: build
+    script:
+        - cd hts
+        - docker login -u $P_GITLAB_DEPLOY_USER -p $P_GITLAB_DEPLOY_TOKEN registry.gitlab.com
+        - docker build -t $HTS_CONTAINER_TEST_IMAGE .
+        - docker push $HTS_CONTAINER_TEST_IMAGE
+    only:
+        changes:
+            - hts/Dockerfile
+            - hts/pom.xml
+        refs:
+            - staging
+
+# test:
+#     image: $DJANGO_APP_CONTAINER_TEST_IMAGE
+#     stage: test
+#     services:
+#         - postgres:latest
+#     variables:
+#         POSTGRES_DB: $PG_DB_NAME
+#     script:
+#         - cd django_app
+#         - python manage.py test
+#     only:
+#         changes:
+#             - django_app/Dockerfile
+#         refs:
+#             - staging
+
+release_django_app:
+    stage: release
+    script:
+        - docker login -u $P_GITLAB_DEPLOY_USER -p $P_GITLAB_DEPLOY_TOKEN registry.gitlab.com
+        - docker pull $DJANGO_APP_CONTAINER_TEST_IMAGE
+        - docker tag $DJANGO_APP_CONTAINER_TEST_IMAGE $DJANGO_APP_CONTAINER_RELEASE_IMAGE
+        - docker push $DJANGO_APP_CONTAINER_RELEASE_IMAGE
+    only:
+        changes:
+            - django_app/Dockerfile
+            - django_app/requirements.txt
+        refs:
+            - staging
+
+release_hts:
+    stage: release
+    script:
+        - docker login -u $P_GITLAB_DEPLOY_USER -p $P_GITLAB_DEPLOY_TOKEN registry.gitlab.com
+        - docker pull $HTS_CONTAINER_TEST_IMAGE
+        - docker tag $HTS_CONTAINER_TEST_IMAGE $HTS_CONTAINER_RELEASE_IMAGE
+        - docker push $HTS_CONTAINER_RELEASE_IMAGE
+    only:
+        changes:
+            - hts/Dockerfile
+            - hts/pom.xml
+        refs:
+            - staging
+
+# Deploy step doesn't work I believe due to an issue with docker containers
+# which are being used to deploy using the production credentials
+# have their own IP which is not in known hosts, anyway, we can deploy
+# manually and thats actually probably better since its a more controlled
+# process
+deploy_prod:
+    stage: deploy
+    before_script:
+        - apk update && apk add openssh-client bash ncurses
+        - mkdir -p ./creds/
+        - echo "${SSH_PRIVATE_KEY_BASE64}" | base64 -d  > ./creds/prod_creds
+    script:
+        - ./deploy.sh production
+    only:
+        refs:
+            - production
+
+deploy_staging:
+    stage: deploy
+    before_script:
+        - apk update && apk add openssh-client bash ncurses
+        - mkdir -p ./creds/
+        - echo "${SSH_PRIVATE_KEY_BASE64}" | base64 -d  > ./creds/prod_creds
+    script:
+        - ./deploy.sh staging
+    only:
+        refs:
+            - staging

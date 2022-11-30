@@ -1,0 +1,34 @@
+{% extends "email_notifications/base_email.html" %}
+{% load thumbnail i18n %}
+{% load context_helpers %}
+
+{% block subject %}<h2>{{ message.title }}</h2>{% endblock %}
+
+{% block title %}{{ newsletter.title }}: {{ message.title }}{% endblock %}
+
+{% block html_body %}
+{% update_context_with_settings_export %}
+{% for article in message.articles.all %}
+    <h3>{{ article.title }}</h3>
+
+    {% thumbnail article.image "600x400" as image %}
+        <img src="{% if DEBUG %}http{% else %}https{% endif %}://{{ BASE_URL|default:site.domain }}/{{ image.url }}" width="{{ image.width }}" height="{{ image.height }}">
+    {% endthumbnail %}
+
+    <div>{{ article.text|safe }}</div>
+
+    {% if article.url %}
+        <div><a href="{{ article.url }}">{% trans "Read more" %}</a></div>
+    {% endif %}
+    <hr/>
+{% endfor %}
+{% endblock %}
+
+{% block footer %}
+{% if submission.publish %}
+<a href="{% if DEBUG %}http{% else %}https{% endif %}://{{ BASE_URL|default:site.domain }}{{ submission.get_absolute_url }}">{% trans "Read message online" %}</a>
+<br/>
+<br/>
+{% endif %}
+<a href="{% if DEBUG %}http{% else %}https{% endif %}://{{ BASE_URL|default:site.domain }}{% url "newsletter_unsubscribe_request" newsletter.slug %}"><font color="black">Unsubscribe</font></a> from {{ newsletter.title}}
+{% endblock %}

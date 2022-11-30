@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+
+html, body {
+    font-family: 'StyreneA-Regular', sans-serif;
+    font-size: 12px;
+}
+
+a {
+    color: #333;
+}
+
+.successMessage {
+    background: #52c02c;
+    color: #FFF;
+    -webkit-border-radius: 40px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius: 40px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-radius: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size:18px;
+    display: none;
+    padding: 4px 20px 8px 10px;
+    box-shadow: inset 0 0 11px #378c19, 0 1px 1px #FFF;
+    position:absolute;
+    top:79px;
+    right: 77px;
+    padding-right:20px;
+    z-index:0;
+}
+
+.successMessage:before{
+    content:url('/public/images/success_icon.png');
+    margin-right:7px;
+    position:relative;
+    top:4px;
+}
+
+.errorMessage {
+    background: #cc0000;
+    color: #FFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 6px;
+    padding-bottom:7px;
+    margin: 1em 0;
+    font-size: .9em;
+    box-shadow: inset 0 0 11px #871919, 0 1px 1px #FFF;
+    float:right;
+    position: absolute;
+    top: 79px;
+    right: 67px;
+    z-index:0;
+    margin:0;
+    width:200px;
+}
+
+.errorMessage:before{
+    content:url('/public/images/error_icon.png');
+    margin-right:7px;
+    position:relative;
+    top:4px;
+}
+
+table.songInfoForm {
+    width: 50em;
+}
+
+table.songInfoForm td {
+    padding: .2em;
+}
+
+.songInfoForm label {
+    font-size: .9em;
+}
+
+.songInfoForm input#songTitle {
+    width: 20em;
+    border: 1px #666 solid;
+    padding: 2px;
+    font-size: 1.1em;
+}

@@ -1,0 +1,6 @@
+{% load elements %}
+
+<a onclick="javascript: fanmail.show_mail_lightbox({ name: '{{ profile.name }}', img_path: '{{ profile.get_mini_thumb }}', url: '/profile/{{ profile.keyword }}', keyword: '{{ profile.keyword }}' });" style="display: inline-block; position: relative; right:{{right}}; top:{{top}};">
+  <div class="fanmail_button_all">
+  </div>
+</a>

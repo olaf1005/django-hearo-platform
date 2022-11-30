@@ -1,0 +1,35 @@
+@startuml Account registration / login / private key unlocking
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+(*) --> "User logs in / registers"
+
+if "User already has wallet" then
+    --> [yes] Check balance
+    if "User balance is above threshold?"  then
+        --> [yes] Check allowance
+        if "User allowance is above threshold" then
+            --> [yes] Allow user to listen
+        else
+            --> [no] Unlock encrypted private keys using password
+            --> Increase allowance
+            --> Update balance and allowance
+        endif
+    else
+        --> [no] Prompt user to purchase JAM
+        --> Grant allowance to Hearo trading account
+        --> Update balance and allowance
+    endif
+else
+    --> [no] Create account with Hedera Spring API
+    --> Grant starter JAM
+    --> Grant allowance to Hearo trading account
+    --> Update balance and allowance
+endif
+
+-->(*)
+
+@enduml

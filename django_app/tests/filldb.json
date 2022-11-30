@@ -1,0 +1,58 @@
+
+
+{"songs" : 
+    {
+        "1" : 
+            {
+                "songid" : "1",
+                "puburl" : "url.com/1",
+                "privid" : "key1.id",
+                "key" : "key1",
+                "streamurl": "stream.com/1",
+                "artist": "band1",
+                "year": 2001,
+                "songname" : "song1", 
+                "albumname": "album1", 
+                "length" : 101
+            },
+        "2" : 
+            {
+                "songid" : "2",
+                "puburl" : "url.com/2",
+                "privid" : "key2.id",
+                "key" : "key2",
+                "streamurl": "stream.com/2",
+                "artist": "band2",
+                "year": 2002,
+                "songname" : "song2", 
+                "albumname": "album2", 
+                "length" : 102
+            },
+        "5" : 
+            {
+                "songid" : "5",
+                "puburl" : "url.com/5",
+                "privid" : "key5.id",
+                "key" : "key5",
+                "streamurl": "stream.com/5",
+                "artist": "band5",
+                "year": 2005,
+                "songname" : "song5", 
+                "albumname": "album5", 
+                "length" : 105
+            },
+        "100" : 
+            {
+                "songid" : "100",
+                "puburl" : "url.com/100",
+                "privid" : "key100.id",
+                "key" : "key100",
+                "streamurl": "stream.com/100",
+                "artist": "band100",
+                "year": 2100,
+                "songname" : "song100", 
+                "albumname": "album100", 
+                "length" : 10100
+            }
+    }
+}

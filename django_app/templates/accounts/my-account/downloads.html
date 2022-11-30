@@ -1,0 +1,72 @@
+{% extends 'accounts/my-account/index.html' %}
+
+{% block title %}My Account Downloads - Tune.fm{% endblock %}
+
+{% block myAccountInnerPage %}
+
+{% include "accounts/my-account/_profile_name.html" %}
+
+{% load elements %}
+
+<input type="hidden" id="selected_view" value="downloads">
+
+<div class="content" id="downloads_page">
+
+<a href='/payment/card_info' class="link-btn blue" id="editCards"><img src="/public/images/creditcard.png" style="margin-right:5px;"/> Edit your credit cards.</a>
+
+<!-- <div class="download_selection_container content"> -->
+<!--   <div class="myAccount_subheader"><span>Your Default Download Format:</span></div> -->
+<!--   <div class="filter_module" id="default_download_dropdown"></div> -->
+<!-- </div> -->
+
+<br>
+<br>
+<h2>Your Default Download Format:</h2>
+
+<div id="download-type">
+<div class="dropdown-widget-container">
+  <ul class="dropdown-widget" id="music-download-format">
+    {% for download_format, download_format_label in DOWNLOAD_FORMATS %}
+    <li val="{{ download_format }}" class="dropdown-widget__option{% if user.profile.default_download_format == download_format %} dropdown-widget__option--selected{% endif %}">{{ download_format_label}}</li>
+    {% endfor %}
+  </ul>
+</div>
+</div>
+
+<br><br>
+
+<div id="download_list_inset_box">
+  <h2>Your Download History</h2>
+
+  <ul id="downloadHistory">
+    {% for download in downloads reversed %}
+    <li class="downloadedSongs">
+
+    <div class="downloadedDate">{{ download.pretty_date }}</div>
+
+    <div>Total Price: {{ download.pretty_price }}</div>
+
+    {% if download.last4 %}
+    <div> Card Used:
+      {{ download.cardType}} ending in {{ download.last4 }}
+    </div>
+    {% endif %}
+    <br>
+    <table class="downloadSongDetails">
+      <tr class="myAccount_tableHeader">
+	<th colspan="5" style="border-top-left-radius:5px; border-top-right-radius:5px; width:100%">Purchased</th>
+      </tr>
+      {% for media_download in download.downloads.all %}
+      {% downloadlisting media_download.media user.profile %}
+      {% endfor %}
+    </table>
+
+    </li>
+    {% empty %}
+    <div class="empty_media"> You haven't downloaded any songs! </div>
+    {% endfor %}
+  </ul>
+</div>
+</div>
+
+{% endblock %}

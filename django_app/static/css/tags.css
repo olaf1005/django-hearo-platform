@@ -1,0 +1,397 @@
+/* #Reset & Basics
+================================================= */
+body {
+  font-family: 'StyreneA-Regular', sans-serif;
+  background-color: #191919;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+input, textarea {
+  font-family: 'StyreneA-Regular', sans-serif;
+}
+
+html, body, div, textarea, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+}
+
+a{
+    text-decoration:none;
+}
+
+html{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+hr, hr.dim {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+hr.dim {
+    border-top-color: #313131;
+}
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+a, .clickable{
+    cursor: pointer;
+}
+
+
+ul { list-style: none; }
+
+.basic_inset {
+    color: #ffffff;
+    background: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0px 1px 0px rgba(255,255,255,0.7);
+    -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,0.7);
+    -moz-box-shadow: 0px 1px 0px rgba(255,255,255,0.7);
+}
+
+.basic_border {
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.basic_white_border {
+    border: 1px solid #FFF;
+}
+
+.basic_blue_border {
+    border: 1px solid #108bca;
+}
+
+.noselect, label {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.buttonRow {
+    text-align: center;
+    margin: 2em 0 1em 0;
+}
+
+
+.box .boxFooterLinks { font-size: .7em; text-align: right; margin-top: 1em; }
+.box .boxFooterLinks a { color: #777; margin-left: .5em; }
+
+h5 {
+    margin: .1em;
+}
+
+iframe { border: none; }
+
+a img { border: none; }
+
+form.spaced td { padding: .5em; }
+
+.faded {
+  color: #999;
+}
+
+.center {
+  text-align: center;
+}
+
+.duration {
+  color: #888;
+}
+
+input.text {
+    color: #333;
+    width: 20em;
+    border: 1px #AAA solid;
+    padding: .2em;
+    font-size: 1.1em;
+}
+
+.optional { color: #666;    font-size: .9em; }
+
+
+
+.mediumHeading{
+    font-family: 'Permanent Marker', cursive, Arial, sans-serif;
+    font-size:36px;
+
+}
+
+#save_changes, #cancel_changes {
+    margin:0px 4px;
+}
+
+#ajax_darkness #loader{
+    position:absolute;
+}
+#ajax_darkness{
+    background:rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0px;
+    z-index:1002;
+}
+
+.trans_text input[type=text],.trans_text input[type=file], .trans_text textarea
+{
+    background: rgba(255, 255, 255, 0.55);
+}
+
+
+.module3{
+    box-shadow:inset 0 0 10px #c0c0c0;
+    background:rgba(0, 0, 0, 0.03);
+    border-radius:5px;
+    width:27%;
+    margin:0% 3%;
+    min-height:140px;
+    text-align:center;
+}
+
+.usertab, .albumTab, .radioTab {
+    position: relative;
+    top: 5px;
+    cursor:pointer;
+    display:inline-block;
+    white-space:nowrap;
+    font-size:14px;
+    margin: 5px 0px;
+    padding: 0px!important;
+    height: 28px;
+}
+
+
+.usertab .name, .albumTab .name, .radioTab .name {
+    color: #999999;
+    text-decoration: none;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    padding:4px 5px 5px 35px!important;
+    margin: 5px 0px;
+    height:17px;
+    background:rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
+
+.usertab:hover .name, .albumTab:hover .name, .radioTab:hover .name{
+    color:rgba(0,0,0,1);
+    background:rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.usertab .picture, .albumTab .albumTabPhoto, .radioTab .profilePicture{
+    position:absolute;
+    left:0px;
+    top:-6px;
+    width:26px;
+    height:26px;
+    padding: 0px!important;
+    margin: 0px!important;
+    display: inline-block;
+    white-space: nowrap;
+/*    box-shadow: inset;
+*/
+}
+
+.usertab .picture, .radioTab .profilePicture{
+    border-top-left-radius:3px;
+    -webkit-top-left-border-radius:3px;
+    -moz-top-left-border-radius:3px;
+    border-bottom-left-radius:3px;
+    -webkit-bottom-left-border-radius:3px;
+    -moz-bottom-left-border-radius:3px;
+}
+
+.albumTab .albumTabPhoto{
+    border-top-right-radius:3px;
+    -webkit-top-right-border-radius:3px;
+    -moz-top-right-border-radius:3px;
+    border-bottom-right-radius:3px;
+    -webkit-bottom-right-border-radius:3px;
+    -moz-bottom-right-border-radius:3px;
+}
+
+#musical_id_inner_box .usertab .picture{
+    top:-4px;
+
+}
+
+
+/*
+  Usertab
+  DEPRECATED. WILL BE REMOVED SOON
+*/
+
+.usertab_small{
+    cursor:pointer;
+    display:inline-block;
+    font-size:14px;
+}
+
+.usertab_small .name{
+    color:#000;
+    text-decoration: none;
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding:5px;
+    height:17px;
+    padding-left:7px;
+    position:relative;
+    top:-9px;
+    left:-4px;
+    box-shadow:inset 0 0 10px #c0c0c0;
+    background:rgba(0,0,0,0.03);
+    white-space:nowrap;
+}
+
+.usertab_small:hover .name{
+    color:#434343;
+}
+
+.usertab_small img{
+    width:26px;
+    height:26px;
+    position:relative;
+    left:-7px;
+    top:8px;
+
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+#musicalIdentity .usertab{
+    top:0px;
+}
+.radioTab {
+    cursor:pointer;
+    height: 28px;
+    font-size: 14px;
+    display: inline-block;
+    position:relative;
+    left: 18px;
+}
+
+
+
+.radioTab .radioIcon {
+    position: relative;
+    top: 4px;
+    left: 2px;
+}
+
+#musicPlayer .radioTab{
+    color:white;
+    left:0px;
+    margin-left:10px;
+    float:left;
+}
+
+.radioTab .profilePicture{
+    top: 3px;
+}
+
+div.button {
+    height: 50px;
+    color: transparent;
+    cursor: pointer;
+}
+
+div.button:hover{
+    background-position:0px -50px;
+}
+
+div.button:active{
+    background-position:0px -100px;
+}
+
+#ajax_darkness #button_row{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: -19px;
+    width: 163px;
+}
+#ajax_darkness .link-btn .blue{
+    margin-right: 21px;
+    width: 35px;
+    text-align: center;
+}
+
+#ajax_darkness .big-red {
+    width:35px;
+    text-align: center;
+}
+#ajax_darkness .warning_text{
+    font-family: 'StyreneA-Regular', sans-serif;
+    font-size:18px;
+    text-align:center;
+}
+
+
+#ajax_darkness #invite_warning{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom:20px;
+    margin-top:20px;
+    width:500px;
+}
+
+#ajax_darkness #event_box h4 {
+    position:relative;
+}
+#invite_warning .usertab_small{
+    position: absolute;
+    margin-left:10px;
+    margin-top:-5px;
+}
+
+
+#ajax_darkness #event_box{
+    padding: 19px 0px 47px 0px;
+    border: 3px solid;
+    border-color: #3C3C3C;
+    min-width:366px;
+    z-index: 1002;
+}
+
+#ajax_darkness #event_box .warning_text{
+    line-height:22px;
+    padding: 0px 20px 20px 20px;
+
+}
+
+input [type="checkbox"] {
+    cursor:pointer;
+}
+

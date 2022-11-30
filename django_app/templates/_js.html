@@ -1,0 +1,133 @@
+{% comment %} {% load compress %} {% endcomment %}
+{% load static %}
+{% comment %} {% compress js %} {% endcomment %}
+{% comment %} <!-- previously used for events --> <script type="text/javascript" src="{% static 'lib/jquery/jquery-ui-timepicker-addon.js' %}"></script> {% endcomment %}
+<script type="text/javascript" src="{% static 'lib/jquery/jquery.tinyscrollbar.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/jquery/FancyBox2/lib/jquery.mousewheel-3.0.6.pack.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/jquery/jquery-jvectormap-2.0.5.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/jquery/FancyBox2/source/jquery.fancybox.pack.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/jquery/Jcrop/js/jquery.Jcrop.min.js' %}"></script>
+{% comment %} <script type="text/javascript" src="{% static 'lib/jquery/jquery.tabSlideOut.v1.3.js' %}"></script> {% endcomment %}
+<script type="text/javascript" src="{% static 'lib/jquery/jquery-jvectormap-world-mill-en.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/jquery/jquery.rotate.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/jquery/jquery.knob.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/jquery.typeahead.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'lib/jquery/jquery.filedrop.js' %}"></script>
+
+{% comment %}
+<!-- fullcalendar -->
+<script type="text/javascript" src="{% static 'lib/fullcalendar/fullcalendar.js' %}"></script>
+{% endcomment %}
+
+<!-- history -->
+<script type="text/javascript" src="{% static 'lib/history/history.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/history/history.html4.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/history/history.adapter.jquery.js' %}"></script>
+
+<!-- Masonry -->
+<script type="text/javascript" src="{% static 'lib/imagesLoaded.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/masonry.min.js' %}"></script>
+
+<!-- player -->
+<script type="text/javascript">
+// If you don't call that then the next script will raise "undefined is not
+// a function", not sure why yet.
+jQuery(); $();
+</script>
+
+<script type="text/javascript" src="{% static 'lib/jquery/jquery.jplayer.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/soundmanager/soundmanager2.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/swfobject/swfobject.js' %}"></script>
+
+<!-- underscore -->
+<script type="text/javascript" src="{% static 'lib/mustache.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/underscore.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/backbone.js' %}"></script>
+<script type="text/javascript" src="{% static 'lib/endless-scroll.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/extend.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/_global.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/etc.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/vars.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/ajaxify.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/album_sort.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/banner_crop.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dj.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/banner_upload.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/buttons.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dashboard.downloads.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dashboard.pages.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dashboard.legal.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dashboard.music.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dashboard.payment.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dashboard.privacy.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dashboard.profile.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dashboard.wallet.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dashboard.videos.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dashboard.visuals.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/elements.savebutton.js' %}"></script>
+{# <script type="text/javascript" src="{% static 'js/events.js' %}"></script> #}
+<script type="text/javascript" src="{% static 'js/fan_feeds.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/fanmail.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/fanning.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/feeds.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/group.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/iframe.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jamNow.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery_plugins.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery_counter.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/lightbox.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/my_account.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/our_uploader.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/payment.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/photos.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/profile.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/registrationForm.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/reviews.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/stripe_card_form.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/uploader.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/utils.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/onready.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/utils/pretty_append.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/utils/scroll.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/utils/location.js' %}"></script>
+{% comment %} <script type="text/javascript" src="{% static 'js/utils/addthis.js' %}"></script> {% endcomment %}
+<script type="text/javascript" src="{% static 'js/utils/invite.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/youtube_lightbox.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/mixins/API-call.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/models/hearo/model.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/models/hearo/collection.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/toggle.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/models/player/song.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/models/player/profile.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/models/player/album.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/models/player/queued-song.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/models/player/song-download.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/models/player/profile-tip.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/models/player/album-download.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/models/player/playlist-queue.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/models/player/music-upload-download-queue.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/hearo/view.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/header.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/components/components.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/components/dropdown.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/root.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/player/player.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/splash.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/player/queued-song-listing.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/player/song-download-listing.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/player/profile-tip-listing.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/player/album-download-listing.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/player/playlist.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/player/download-queue.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/one/map.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/one/filters.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/one/noun_counts.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/one/listings.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/one/search.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/views/reviews.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/controllers/one.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/classie.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/modalEffects.js' %}"></script>
+{% comment %} {% endcompress %} {% endcomment %}

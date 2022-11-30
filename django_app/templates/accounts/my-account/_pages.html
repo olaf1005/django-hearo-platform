@@ -1,0 +1,68 @@
+{% load account_tags %}
+{% for group in groups %}
+{% if forloop.last %}
+<li id="page_{{ group.id }}" style="border-bottom: 0px !important;">
+{% else %}
+<li id="page_{{ group.id }}">
+{% endif %}
+{% if group.profile == profile %}
+<div class="ribbon-box">
+  <div class="ribbon"><span>Primary</span></div>
+{% endif %}
+<div class="profile_buttons">
+  {% if group|org_user_is_admin_or_profile_owner:user.profile %}
+  <button class="green manage_members md-trigger" data-modal="modal-2" group-id="{{group.id}}">
+    <span class="button-text">Manage members</span>
+  </button>
+  {% endif %}
+  {% if group|org_user_is_admin_or_profile_owner:user.profile and group.profile != user.profile %}
+  <button class="green switch_to_profile" profile-keyword="{{group.profile.keyword}}" profile-id="{{group.profile.id}}">
+    <span class="button-text">Switch to profile</span>
+  </button>
+  {% endif %}
+  <!-- <button class="green view_page" profile-keyword="{{group.profile.keyword}}"> -->
+  <!--   <span class="button-text">View page</span> -->
+  <!-- </button> -->
+  {% if group.profile != user.profile %}
+  <button class="red leave_page" page-id="{{group.id}}" profile-id="{{user.profile.id}}">
+    <span class="button-text">Leave page</span>
+  </button>
+  {% endif %}
+</div>
+
+
+<div class="profile_img">
+  {% if group.profile.primary_photo %}
+  <img border="0" src="/{{group.profile.primary_photo.square_file}}" alt="{{group.profile.short_name}}'s photo" />
+  {% else %}
+  <img border="0" src="/public/images/default-music-listing.svg" alt="{{group.profile.short_name}}'s photo" />
+  {% endif %}
+</div>
+
+<div class="profile_name">
+  <a href="/profile/{{group.profile.keyword}}">{{group.profile.name}}</a>
+</div>
+<div class="profile_description">
+  {% if group.profile.biography %}
+  {{group.profile.biography}}
+  {% else %}
+  This page has no bio.
+  {% endif %}
+</div>
+
+<div class="profile_type">
+  {{ group.profile.get_account_type|capfirst }}
+  {% if group|org_user_is_admin_or_profile_owner:user.profile %}
+  Admin
+  {% else %}
+  Member
+  {% endif %}
+</div>
+
+{% if group.profile == user.profile %}
+</div>
+{% endif %}
+
+</li>
+{% endfor %}
+

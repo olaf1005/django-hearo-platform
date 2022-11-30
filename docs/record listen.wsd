@@ -1,0 +1,66 @@
+@startuml record listens
+
+!includeurl https://gist.githubusercontent.com/dnordberg/86dd9e5fff0447b41beb220c7f5a6c9a/raw/5b43d8bd0f3c97d8aba7c45b420d0661ffc18f56/black-and-white.pu
+
+' title Bulk transfer
+: User listens to a song;
+if (Song is not users own song) then (yes)
+
+    if (Song is free) then (yes)
+        : Record listen but don't create a token transfer;
+    elseif (Song is first stream free) then (yes)
+        if (First stream of song) then (yes)
+            : Record listen but don't create a token transfer;
+        else (no)
+            if (Free listen seconds has been exceeded) then (yes)
+                : Create token transfer for listen;
+                partition "Create token transfer for listen" {
+                    partition "Calculate value and facilitation fee" {
+                        :Value = Seconds to pay / 60 * JAM Per min * token multiplier
+                        Faciliation fee = value * faciliation fee percentage
+                        New value = value - faciliation fee;
+                    }
+                    : Check song profile membership;
+                    : Split revenue between membership;
+                }
+                if (Failed to create token transfer for listen) then (yes)
+                    : Send email to user to inform them
+                    that they can create a wallet to receive transfer;
+                else (no)
+                    : Issue payment for transaction faciliation;
+                endif
+            else (no)
+                : Record listen but don't create a token transfer;
+                stop
+            endif
+        endif
+    elseif (Song is paid) then (yes)
+        if (Free listen seconds has been exceeded) then (yes)
+            : Create token transfer for listen;
+            partition "Create token transfer for listen" {
+                partition "Calculate value and facilitation fee" {
+                    :Value = Seconds to pay / 60 * JAM Per min * token multiplier
+                    Faciliation fee = value * faciliation fee percentage
+                    New value = value - faciliation fee;
+                }
+                : Check song profile membership;
+                : Split revenue between membership;
+            }
+            if (Failed to create token transfer for listen) then (yes)
+                : Send email to user to inform them
+                that they can create a wallet to receive transfer;
+            else (no)
+                : Issue payment for transaction faciliation;
+            endif
+        else (no)
+            : Record listen but don't create a token transfer;
+            stop
+        endif
+    endif
+
+    stop
+else (no)
+    stop
+endif
+
+@enduml

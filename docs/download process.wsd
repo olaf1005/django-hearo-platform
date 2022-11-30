@@ -1,0 +1,29 @@
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title Download process
+
+participant client
+participant server
+participant cloudfiles
+client->>server: Download request
+loop Healthcheck
+        server->>down_run: Build download file
+        server-->>client: Ping for file status
+end
+down_run-->> down_run: build
+Note right of down_run
+    Background daemon
+    that waits for to
+    build downloads
+    and upload the
+    compiled download
+    to Cloudfiles
+end Note
+down_run->>cloudfiles: Upload file to Cloudfiles
+
+@enduml

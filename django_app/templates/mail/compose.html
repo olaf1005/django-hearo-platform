@@ -1,0 +1,32 @@
+{% extends base %}
+
+{% block head %}
+<script type="text/javascript">
+var profiles = [ ];
+{% for a in accounts%}
+profiles.push('{{a.name}}');
+{% endfor %}
+
+$(function(){ 
+	$('#sendTo').autocomplete({source:profiles});
+});
+</script>
+{% endblock %}
+
+{% block content %}
+
+<h1>Send Fan Mail</h1>
+<p><form method="post" action="/mail/compose/"></p>
+{% csrf_token %}
+<p>To: <!--<select title="Enter an artist or band name..." style="width:400px;" tabindex="4" id="sendTo" name="sendTo">
+{% for account in accounts %}
+<option value="{{account.id}}">{{account.name}}</option>
+{% endfor %}
+</select>-->
+<input type="text" size="75" id="sendTo" name="sendTo"></p>
+<p>Subject: <input type="text" size="75" name="subject"></p>
+<p><textarea cols=75 rows=15 name="message"></textarea></p>
+<p><input type="submit" value="Send message"></p>
+</form>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% load i18n %}
+{% load context_helpers %}
+{% update_context_with_settings_export %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>{% block title %}News{% endblock %}</title>
+<style>
+    input {
+        border-spacing: 0; display: inline-block; font: inherit; margin: 0; overflow: visible; text-transform: none; -webkit-appearance: button; cursor: pointer; font-size: 16px; min-height: 42px; color: white; padding: 5px; border-radius: 40px; -webkit-font-smoothing: antialiased; text-shadow: 0px 1px 0px #50a531; background: #7cca5a; border: 1px solid #50a531;
+    }
+    h1 {
+        font-size: 18px;
+        margin-top: -10px;
+    }
+
+</style>
+</head>
+<body style="margin: 0; padding: 20px 0; background: #ececec">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" background="white">
+    <tr>
+      <td style="padding: 10px 0 30px 0;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border: 1px solid #cccccc; border-collapse: collapse;">
+          <tr>
+            <td align="center" bgcolor="#252525" style="padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;">
+              <a href="{% if DEBUG %}http{% else %}https{% endif %}://{{ BASE_URL }}" target="_blank">
+                <img src="{% if DEBUG %}http{% else %}https{% endif %}://{{ BASE_URL }}/public/images/email/v2/logo.png" />
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td style="color: #153643; font-family: Arial, sans-serif; font-size: 24px;">
+                    <b>{% block subject %}{% endblock %}</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
+                    {% block body %}
+                    {% endblock %}
+                    <p>
+                      Best,
+                      <br>
+                      <a href="{% if DEBUG %}http{% else %}https{% endif %}://{{ BASE_URL }}/profile/TheHearoTeam?ref=em1">The Hearo Team</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

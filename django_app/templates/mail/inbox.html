@@ -1,0 +1,59 @@
+{% extends base %}
+
+{% block content %}
+{% load elements %}
+
+<form type="hidden" id="page_name" value="fanmail">
+  <div id="mail_head">
+    Fanmail <button id="compose_button" onclick="javascript:fanmail.show_mail_lightbox()" class="link-btn blue">Compose</button>
+  </div>
+
+  <div>
+    <div id="fanmailCategories">
+      <div class="categoriesTab tabSelect" id="inboxTab" onclick="javascript:fanmail.inbox_tab()">
+	    Inbox
+      </div>
+      <div class="categoriesTab" id="sentTab" onclick="javascript:fanmail.sent_mail_tab()">
+	    Sent Mail
+      </div>
+    </div>
+
+    <div class="inboxContainer">
+      <div id="inbox">
+        {% for message in inbox %}
+        {% fanmail_message message %}
+        {% empty %}
+        <div id="mail_subhead" style="padding-left:130px">No messages</div>
+        {% endfor %}
+      </div>
+      <div id="sentbox" class="unselected">
+      {% for message in sentbox %}
+      {% to_fanmail_message message %}
+      {% empty %}
+      <div id="mail_subhead" style="padding-left:149px">No sent messages</div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</form>
+
+<script type="text/javascript">
+csrfTOKEN = '{{ csrf_token }}';
+fanmail.setup_messages();
+
+function deleteMessage(id){
+  $.ajax({
+    type: 'POST',
+    url: '/mail/delete/?id=' + id,
+    data: {'csrfmiddlewaretoken': csrfTOKEN},
+    success: function(data){
+      //console.log(data);
+      $('#message' + id).fadeOut(200);
+      setTimeout(function(){
+	$('#message' + id).remove();
+      }, 1000);
+    },
+  });
+}
+</script>
+{% endblock %}

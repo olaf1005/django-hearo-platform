@@ -1,0 +1,197 @@
+version: '3.6'
+
+volumes:
+    app:
+
+networks:
+    cluster:
+
+services:
+    django_app: &django_app_default
+        tty: true # color log output
+        image: $IMAGE_DJANGO_APP
+        networks:
+            - cluster
+        volumes:
+            - ../../django_app:/app
+            - ../../../media:/media:delegated
+            - ../../../mixingbowl:/mixingbowl:delegated
+            # - /mnt/volume_nyc3_01/world_entertainment_music/:/world_entertainment_music/
+        ports:
+            - '8000:8000' # django
+            - '8001:8001' # django debug
+        depends_on:
+            - pgmaster
+        environment:
+            - GIT_RELEASE=$P_GIT_RELEASE
+            - DEBUG=0
+            - TARTAR_CONFIG=prod.config
+            - RETHINKDB_HOST=rethinkdb
+            - RETHINKDB_DB_NAME=prod
+            - TARTAR_DEBUG_LEVEL=INFO
+            - TARTAR_LOGGER=stream
+            - EMAIL_HOST=$EMAIL_HOST
+            - EMAIL_HOST_USER=$EMAIL_HOST_USER
+            - EMAIL_HOST_PASSWORD=$EMAIL_HOST_PASSWORD
+            - MEMCACHED_HOST=memcached:11211
+            - ELASTICSEARCH_HOST=elasticsearch:9200
+            - SENDGRID_EMAIL_VALIDATION_API_KEY=$SENDGRID_EMAIL_VALIDATION_API_KEY
+            - QUICKEMAILVERIFICATION_API_KEY=$QUICKEMAILVERIFICATION_API_KEY
+            - PG_DB_NAME=$PG_DB_NAME
+            - PG_HOST=$PG_DB_HOST
+            - PG_USER=$PG_DB_USER
+            - PG_PASS=$PG_PASS
+            - PG_PORT=$PG_DB_PORT
+            - SECRET_KEY=$SECRET_KEY
+            - SENTRY_DSN=https://9976aee739954bb59bd88967b804bbc0:9b74713a6519481faf22c0c9bbdcf8be@app.getsentry.com/18183
+            - DJANGO_SETTINGS_MODULE=settings.prod
+            - REQUIRE_VERIFICATION_FOR_LOGIN=1
+            - NOTIFICATIONS_EMAIL=notifications@tune.fm
+            - DEV_RETHINKDB_SETUP=0
+            - GOOGLE_MAPS_GEOCODING_API_KEY=$GOOGLE_MAPS_GEOCODING_API_KEY
+            - YOUTUBE_DATA_API_KEY=$YOUTUBE_DATA_API_KEY
+            - S3_BUCKET=hearo_uploadedsongs
+            - S3_SECRET_KEY=$S3_SECRET_KEY
+            - S3_ACCESS_KEY=$S3_ACCESS_KEY
+            - H_HTS_API_URL=http://hts:8080
+            - CLOUDFILES_USERNAME=$CLOUDFILES_USERNAME
+            - CLOUDFILES_PASSWORD=$CLOUDFILES_PASSWORD
+            - CLOUDFILES_REGION=$CLOUDFILES_REGION
+        # command: /bin/sh -c "python manage.py collectstatic --noinput && gunicorn wsgi:application gunicorn --workers=1 --worker-class=gevent --timeout=500 --graceful-timeout=10 --log-level=INFO -b :8000 --reload"
+        command: /bin/sh -c "python manage.py collectstatic --noinput && gunicorn wsgi:application gunicorn --workers=10 --timeout=700 --graceful-timeout=150 --limit-request-line 8190 --log-level=INFO -b :8000 --reload"
+        deploy:
+            mode: global
+            # placement:
+            #     constraints: [node.labels.instance_type == follower]
+            restart_policy:
+                condition: on-failure
+                delay: 3s
+                max_attempts: 3
+                window: 120s
+        logging:
+            # limit logs retained on host to 25MB
+            driver: "json-file"
+            options:
+                max-size: "500k"
+                max-file: "50"
+
+    # tartar_img_run:
+    #     <<: *django_app_default
+    #     command: /bin/sh -c "python img_run.py"
+    #     ports: []
+    #     deploy:
+    #         mode: replicated
+    #         replicas: 1
+    #         # placement:
+    #         #     constraints: [node.labels.instance_type == follower]
+    #         restart_policy:
+    #             condition: on-failure
+    #             delay: 3s
+    #             max_attempts: 3
+    #             window: 120s
+
+    # tartar_down_run:
+    #     <<: *django_app_default
+    #     command: /bin/sh -c "python down_run.py"
+    #     ports: []
+    #     deploy:
+    #         mode: replicated
+    #         replicas: 1
+    #         # placement:
+    #         #     constraints: [node.labels.instance_type == follower]
+    #         restart_policy:
+    #             condition: on-failure
+    #             delay: 3s
+    #             max_attempts: 3
+    #             window: 120s
+
+    tartar_one_run:
+        <<: *django_app_default
+        command: /bin/sh -c "python one_run.py"
+        ports: []
+        deploy:
+            mode: replicated
+            replicas: 1
+            # placement:
+            #     constraints: [node.labels.instance_type == follower]
+            restart_policy:
+                condition: on-failure
+                delay: 3s
+                max_attempts: 3
+                window: 120s
+
+    tartar_daemon:
+        <<: *django_app_default
+        command: /bin/sh -c "python tartar_daemon.py"
+        ports: []
+        deploy:
+            mode: replicated
+            replicas: 1
+            # placement:
+            #     constraints: [node.labels.instance_type == follower]
+            restart_policy:
+                condition: on-failure
+                delay: 3s
+                max_attempts: 3
+                window: 120s
+
+    # We can't have any blank env passed since that breaks crontab + env
+    django_app_cron:
+        <<: *django_app_default
+        command: /bin/bash -c "{ env; cat crontab; } | crontab && cron -f"
+        ports: []
+        deploy:
+            mode: replicated
+            replicas: 1
+            # placement:
+            #     constraints: [node.labels.instance_type == follower]
+            restart_policy:
+                condition: on-failure
+                delay: 3s
+                max_attempts: 3
+                window: 120s
+
+    # # Sync leader with follower 1
+    # django_app_unison_1:
+    #     <<: *django_app_default
+    #     command: unison -auto -batch -times -ignorearchives ssh://centos-g-2vcpu-8gb-nyc1-02:22//root/hearo/media/ /root/hearo/edia/
+    #     ports: []
+    #     deploy:
+    #         mode: global
+    #         # placement:
+    #         #     constraints: [node.hostname == centos-g-2vcpu-8gb-nyc1-03]
+    #         restart_policy:
+    #             condition: on-failure
+    #             delay: 3s
+    #             max_attempts: 3
+    #             window: 120s
+
+    # # Sync follower 1 with follower 2
+    # django_app_unison_2:
+    #     <<: *django_app_default
+    #     command: unison -auto -batch -times -ignorearchives ssh://centos-g-2vcpu-8gb-nyc1-01:22//root/hearo/media/ /root/hearo/edia/
+    #     ports: []
+    #     deploy:
+    #         mode: global
+    #         # placement:
+    #         #     constraints: [node.hostname == centos-g-2vcpu-8gb-nyc1-02]
+    #         restart_policy:
+    #             condition: on-failure
+    #             delay: 3s
+    #             max_attempts: 3
+    #             window: 120s
+
+    # # Sync follower 2 with leader
+    # django_app_unison_3:
+    #     <<: *django_app_default
+    #     command: unison -auto -batch -times -ignorearchives ssh://centos-g-2vcpu-8gb-nyc1-03:22//root/hearo/media/ /root/hearo/edia/
+    #     ports: []
+    #     deploy:
+    #         mode: global
+    #         # placement:
+    #         #     constraints: [node.hostname == centos-g-2vcpu-8gb-nyc1-01]
+    #         restart_policy:
+    #             condition: on-failure
+    #             delay: 3s
+    #             max_attempts: 3
+    #             window: 120s

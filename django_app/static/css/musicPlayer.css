@@ -1,0 +1,519 @@
+@CHARSET "UTF-8";
+
+#music-player {
+    z-index: 10000000;
+}
+
+
+#music-player .ui-slider-handle{
+    background:white;
+    height: 12px;
+    width: 12px;
+    border-radius:6px;
+    margin-left: -6px;
+    top: 0px;
+}
+
+#music-player #currently-playing .usertab{
+    top: 3px;
+}
+#music-player #currently-playing .usertab .name{
+    box-shadow: inset 0 0 10px #4E2424;
+    color: white;
+    border: none;
+}
+
+#music-player #currently-playing {
+    vertical-align: top;
+    width: 100%;
+    font-size: 14px;
+    display: block;
+    float: left;
+    text-align: left;
+    overflow:hidden;
+    white-space: nowrap;
+    font-family: 'StyreneA-Regular', sans-serif;
+}
+
+
+#music-player #currently-playing .title{
+    width: 100px;
+    font-size: 14px;
+    margin-left: 20px;
+    position: relative;
+    top: 2px;
+}
+
+.playerAlbumCover {
+    height:32px;
+    width:32px;
+    box-shadow:0 0 6px;
+    float: right;
+}
+
+#downloadQueue .playerAlbumCover {
+    margin-right: 79px;
+    margin-top: -34px;
+}
+
+#playQueue .playerAlbumCover {
+    margin-right: 32px;
+    margin-top: -47px;
+}
+
+#music-player #downloadInfo{
+	float:right;
+	white-space:nowrap;
+    margin-right:16px;
+    text-align:center;
+}
+#music-player #toggleMute{
+    float: left;
+    display: block;
+    width: 30px;
+    height: 40px;
+    margin: 2px 6px 0px 8px;
+    background: url('/public/images/player/volume.png') no-repeat;
+	cursor:pointer;
+}
+
+#music-player #toggleMute.VolumeZero{
+    background-position:0px 0px;
+}
+
+#music-player #toggleMute.VolumeZero:hover{
+    background-position:0px -40px;
+}
+
+#music-player #toggleMute.VolumeOne{
+    background-position:-39px 0px;
+}
+
+#music-player #toggleMute.VolumeOne:hover{
+    background-position:-39px -40px;
+}
+
+#music-player #toggleMute.VolumeTwo{
+    background-position:-78px 0px;
+}
+
+#music-player #toggleMute.VolumeTwo:hover{
+    background-position:-78px -40px;
+}
+
+#music-player #toggleMute.VolumeThree{
+    background-position:-117px 0px;
+}
+
+#music-player #toggleMute.VolumeThree:hover{
+    background-position:-117px -40px;
+}
+
+#music-player #songTimeMeter {
+    text-align: center;
+    vertical-align: middle;
+    display: block;
+    float: right;
+}
+
+#music-player #songTimeMeter .bar {
+    width: 300px;
+    height: 12px;
+    display: block;
+    background: #571616;
+    margin: 15px 20px 15px 20px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: left;
+    cursor: pointer;
+}
+
+#music-player #songTimeMeter .elapsedBar {
+    background: url('/public/images/player/songTimeMeterBarBg.png') repeat-x;
+    height: 12px;
+    display: block;
+    width: 0;
+    z-index: -5;
+    float: left;
+    /*border: 1px #333 solid;*/
+    border-top-left-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomleft: 3px;
+}
+
+#music-player .elapsed, #music-player .remaining {
+    float: right;
+    margin-top: 13px;
+    font-size: 13px;
+}
+
+#music-player #playQueueButton, #openDownloadQueue{
+    float: left;
+    margin: 0;
+	white-space:nowrap;
+    height: 18px;
+	padding:5px;
+    background: #f5504a;
+    box-shadow: inset 0px 0px 100px #340200;
+	border-radius:5px;
+    cursor: pointer;
+	position:relative;
+	top:6px;
+    font-size:16px;
+}
+
+#music-player #playQueueButton{
+    margin-right:10px;
+}
+
+#music-player #playQueueButton:after, #music-player #openDownloadQueue:after{
+	content:url('/public/images/player/queue_icon.png');
+	padding-left:6px;
+	padding-right:2px;
+}
+
+.music-player_deleteSong{
+	width:15px;
+	height:15px;
+	background: url('/public/images/closeButtonSprite.png') no-repeat;
+	position:absolute;
+	top:5px;
+	right:5px;
+	cursor:pointer;
+}
+.music-player_deleteSong:hover{
+	background-position:0px -15px;
+}
+
+
+
+.alternativeSkipButton{
+    float:right;
+    width: 35px;
+    padding: 4px;
+    border-radius:4px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 8px;
+    background: rgba(255, 0, 0, 0);
+    box-shadow: inset 0px 0px 20px #4E2424;
+}
+
+#music-player .radioTab{
+    top: 0px;
+}
+
+#playQueue .radioTab{
+    top: -3px;
+}
+
+#music-player .radioTab .name, #music-player .albumTab .name{
+    color:white;
+    box-shadow: inset 0 0 10px #4E2424
+}
+
+#music-player .albumTab{
+    float:left;
+    top: 9px;
+}
+
+#music-player .albumTab .name{
+    padding: 4px 35px 5px 5px!important;
+    border: none;
+}
+
+#music-player .albumTab .name:hover{
+    border:none;
+}
+
+#music-player .albumTab .albumTabPhoto{
+    left: auto;
+    right:0px;
+}
+
+#music-player #playQueueButton:hover, #music-player #openDownloadQueue:hover{
+	background:#6a0b0a;
+}
+
+
+ #music-player #playback-controls .togglePlayback.ajax{ /*.ajax seems unnecessary but only way to make it work as far as i could tell*/
+    margin: 0px 10px;
+    background-position: -60px 0px;
+    display: block;
+}
+
+#music-player #playback-controls .togglePlayback:hover{
+    background-position: -60px -40px;
+}
+
+#music-player #playback-controls .togglePlayback.playing{
+    background-position: -90px 0px;
+}
+
+#music-player #playback-controls .togglePlayback.playing:hover{
+    background-position: -90px -40px;
+}
+
+
+#music-player #playback-controls .prevSong {
+    background-position: 0px 0px;
+}
+
+#music-player #playback-controls .prevSong:hover {
+    background-position: 0px -40px;
+}
+
+#music-player #playback-controls .nextSong {
+    background-position: -30px 0px;
+}
+
+#music-player #playback-controls .nextSong:hover {
+    background-position: -30px -40px;
+}
+
+.playSong, .downloadSong {
+    cursor:pointer;
+}
+
+.playerSmallHeader{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background: url('/public/images/player/small_header_bg.png') repeat-x;
+    padding-top:5px;
+    height:22px;
+    font-family:"StyreneA-Regular";
+    text-align:center;
+    cursor:pointer;
+    font-size:16px;
+    width:395px;
+    color:#FFF;
+}
+
+.instantPlayButton{
+    width:29px;
+    height:29px;
+    background:url('/public/images/player/instant_play.png');
+    cursor:pointer;
+    display:inline-block;
+    margin-left: 7px;
+    position: relative;
+    top: 5px;
+}
+
+.instantPlayButton:hover{
+    background-position:0px -29px;
+}
+
+.instantPlayButton:active{
+    background-position:0px -58px;
+}
+
+#downloadQueueContainer {
+    position: fixed;
+    bottom: 30px;
+    width: 395px;
+    right: 16px;
+    text-align: center;
+    display: none;
+    bottom:35px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3), inset 0 0 10px rgba(0,0,0,0.15);
+    overflow:hidden;
+    z-index:1000;
+}
+
+#playQueueContainer {
+    position: fixed;
+    bottom:35px;
+    width: 395px;
+    left: 16px;
+    text-align: center;
+    display: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3), inset 0 0 10px rgba(0,0,0,0.15);
+    overflow:hidden;
+    z-index:1000;
+}
+
+#playQueueContainer .usertab, #downloadQueueContainer .usertab{
+    margin: 5px;
+    position: relative;
+    top: -4px;
+    left: 13px;
+}
+
+#playQueueContainer .delete_button, #downloadQueueContainer .delete_button{
+    display: inline-block;
+    float: right;
+    margin: 4px;
+    position: relative;
+    top: 8px;
+    right: 7px;
+    z-index:1;
+    background-size: 13px;
+    height: 13px;
+    width: 13px;
+
+}
+
+#downloadQueueContainer .download_checkbox{
+    position: relative;
+    top: -23px;
+    margin-left: 5px;
+}
+
+#playQueueContainer #playQueue, #downloadQueueContainer #downloadQueue {
+    width: 100%;
+    text-align: left;
+    margin: 0 auto 5px auto;
+    max-height: 200px;
+    overflow:hidden;
+}
+#playQueueContainer #playQueue:hover, #downloadQueueContainer #downloadQueue:hover {
+    overflow-y: scroll;
+}
+#playQueueContainer #playQueue{
+    background: #FFF url('/public/images/player/empty_playlist.png') no-repeat  center center;
+}
+#downloadQueueContainer #downloadQueue{
+    background: #FFF url('/public/images/player/empty_downloads.png') no-repeat center center;
+}
+
+
+#playQueueContainer #playQueue.occupied, #downloadQueueContainer #downloadQueue.occupied {
+    background: #f0f0f0;
+}
+
+#playQueue .item, #downloadQueue .item {
+    box-shadow:inset 0 0 5px rgba(0,0,0,0.15);
+    width:395px !important;
+    display:table-cell;
+    vertical-align:middle;
+    font-size: .8em;
+    overflow: hidden;
+    border-bottom: 1px #DDD solid;
+    padding: .2em .1em;
+    background: #FFF;
+    height:40px;
+}
+
+#playQueue .item .artist, #downloadQueue .item .artist {
+    font-style: italic;
+    margin-left: 2em;
+    display: block;
+    color: #444;
+}
+
+#downloadQueue .usertab{
+    top: 7px;
+    margin-left:10px;
+}
+
+#playQueue .item .title, #downloadQueue .item .title {
+    width: 130px;
+    display:inline-block;
+    overflow: hidden;
+    word-wrap: none;
+    font-size:14px;
+    position: relative;
+    margin-left:18px;
+}
+
+#playQueue .item .title{
+    top:-3px;
+}
+
+#downloadQueue .item .title {
+    top:7px;
+}
+
+#playQueue .item .closeButton, #downloadQueue .item .closeButton {
+    float: right;
+    border: 1px #DDD solid;
+    margin: .2em;
+    z-index: 100;
+}
+
+#playQueue .item .pos {
+    color: #AAA;
+    font-size: .9em;
+    margin: .1em .2em .1em .1em;
+}
+
+#downloadQueue .item .price {
+    text-transform: uppercase;
+    float: right;
+    padding: 5px;
+    font-size: 14px; /* DONT USE EM WHAT DOES IT EVEN MEAN */
+    color: #444;
+    position:relative;
+    top:9px;
+    right:7px;
+}
+
+#downloadQueue input.price-field{
+    float:right;
+    width: 36px;
+    position:relative;
+    top: 9px;
+    right:7px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background: rgba(0, 0, 0, .15);
+    font-size: 14px;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+
+#current_song_buttons .song_download_button{
+    margin-right: 6px;
+}
+
+#downloadQueue #confirmYes{
+    margin-right:16px;
+}
+
+.playerSpacer{
+    height: 22px;
+    float: left;
+    background: red;
+    margin-top: 8px;
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 7px #340200;
+}
+
+
+#spacer1.playerSpacer{
+    margin-right:-3px;
+    margin-left:6px;
+}
+
+#spacer2.playerSpacer{
+    margin-left:-2px;
+    margin-right:5px;
+}
+#downloadQueue{
+    overflow:hidden;
+    min-height:150px;
+}
+
+#downloadQueue .item .download-checkbox, #playQueue .item .download-checkbox {
+    float:left;
+    top-margin:6px;
+}
+
+#downloadBlock {
+    height:95px;
+    width:100%;
+}
+
+#freeDownload {
+    float:right;
+}
+
+

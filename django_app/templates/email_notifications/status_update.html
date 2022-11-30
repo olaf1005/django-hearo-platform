@@ -1,0 +1,33 @@
+{% extends "email_notifications/base_email.html" %}
+
+{% block subject %}
+{{ BASE_URL|title }} update
+{% endblock %}
+
+{% block html_body %}
+
+  <p>
+    Hi {{profile.short_name}},
+    {% if item.profile_commenter %}
+    <br><br>
+    <a href="https://{{ BASE_URL }}{{ from_profile.get_absolute_url }}">{{ item.profile_commenter.name }}</a> has added a comment to your profile.
+    <br><br>
+    {% if item.content_object %}
+    <a href="https://{{ BASE_URL }}{{ item.content_object.get_absolute_url }}">{{item.status}}</a>
+    {% else %}
+    {{item.status}}
+    {% endif %}
+
+    {% else %}
+    <br><br>
+    <a href="https://{{ BASE_URL }}{{ from_profile.get_absolute_url }}">{{ from_profile.name }}</a> has updated their profile.
+    <br><br>
+    {% if item.content_object %}
+    <a href="https://{{ BASE_URL }}{{ item.content_object.get_absolute_url }}">{{item.status}}</a>
+    {% else %}
+    {{item.status}}
+    {% endif %}
+    {% endif %}
+  </p>
+
+{% endblock %}

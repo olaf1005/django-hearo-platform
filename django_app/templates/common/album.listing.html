@@ -1,0 +1,28 @@
+{% load elements %}
+<div class="album listing">
+  <!--/.separator
+-->
+  <div class="album-content-header">
+    <div class="album-info">
+      <div class="title">{{ title }}</div>
+      <div class="subtitle">released {{ release_year }}{% if not expandable %}<br />{{ track_count }}{% endif %}</div>
+    </div>
+    <div class="album-art">
+      <div class="artwork-frame">
+	<img src="/{{ cover }}" width="170px" alt="{{title}} {{byline}}" class="artwork-full" />
+      </div>
+      {% if play_button_id != None %}
+      <button action="play" play-id="{{ play_button_id }}" play-type="album" class="play-button play-button--large">
+	<div class="spinner">
+	</div>
+      </button>
+      {% endif %}
+    </div>
+    <div class="buttons">{% fanbutton album view %}{% reviewbutton album %}{% downloadbutton album %}</div>
+  </div>
+  {% if expanded %}
+  <div class="album-content-tracks">
+    {% for song in songs %}{% songlisting song view %}{% endfor %}
+  </div>
+  {% endif %}
+</div>

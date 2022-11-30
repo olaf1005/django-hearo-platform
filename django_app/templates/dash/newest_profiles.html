@@ -1,0 +1,21 @@
+<style type="text/css">
+body {
+  font-family: Arial;
+}
+
+td {
+  border-bottom: 1px solid black;
+}
+
+
+</style>
+<h1>50 newest profiles</h1>
+<table cellpadding="10" cellspacing="0">{% for profile in profiles %}<tr>
+    <td>{{ forloop.counter }}</td>
+    <td>
+      <a href="/profile/{{profile.keyword}}">{{ profile.keyword }}</a>
+    </td>
+    <td>
+      <b>{{ profile.user.date_joined }}{{ profile.organization.band.formed_date }}</b>
+    </td>
+</tr>{% endfor %}</table>

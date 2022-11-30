@@ -1,0 +1,49 @@
+[
+    {
+        "pk": 1,
+        "model": "accounts.downloadcharge",
+        "fields": {
+            "profile": 1,
+            "total_price": "10",
+            "suspicious": false,
+            "charge_id": "ch_3QTM6dgqQOZMda",
+            "stripe_fee_per_song": null,
+            "last4": "4242",
+            "cardType": "Visa",
+            "packageid": null,
+            "date": "2014-02-03T03:24:27.383",
+            "card_used": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "accounts.mediadownload",
+        "fields": {
+            "media": 1,
+            "charge": 1,
+            "suspicious": false,
+            "receipt": null,
+            "price": "10"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "player.queueddownload",
+        "fields": {
+            "profile": 1,
+            "timestamp": "2014-02-03T03:23:34.965",
+            "album": null,
+            "song": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "payment_processing.creditcard",
+        "fields": {
+            "last4": "4242",
+            "cardType": "Visa",
+            "stripe_id": "cus_3QTIoplaigqJEI",
+            "user": 1
+        }
+    }
+]

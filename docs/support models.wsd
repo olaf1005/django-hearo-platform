@@ -1,0 +1,94 @@
+@startuml hedera integration
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+set namespaceSeparator ::
+
+package Account {
+
+    class User {
+    }
+
+    Class WalletRecovery {
+        + id: pk
+        --
+        + wallet: Wallet
+        + date_added: date
+        + encrypted_key: varchar
+        + recovery_key_hashes: ArrayField
+        --
+        + get_encrypted_key_object()
+    }
+
+    Class Wallet {
+        + id: pk
+        --
+        + user: User
+        + openpgp_key: Text
+        + hedera_account_id: varchar
+        + hedera_private_key: Text
+        + hedera_public_key: Text
+        + solidity_address: Text
+        + token_balance: int
+        + token_balance_last_update: datetime
+        + allowance: int
+        + allowance_last_update: datetime
+        + contract_id: int
+        + date_added: datetime
+        + received_starter_tokens: bool
+        --
+        - get_openpgp_key_object()
+        - unlock_openpgp_key_object(password)
+        - get_encrypted_hedera_private_key_object()
+        - unlock_hedera_key(password)
+    }
+
+    WalletRecovery -> Wallet
+}
+
+
+package Support {
+    Class PasswordResetRequest {
+        + id: pk
+        --
+        + date_added: datetime
+        + date: date
+        + user: User
+        + kyc_image: Image
+        + kyc_image_2: Image
+        + kyc_date: Image
+        + kyc_date_2: Image
+        + status: Enum
+        + reason: Text
+        + added_by: User
+        - partial_key: Text
+        + assigned_to: User
+    }
+
+    PasswordResetRequest -> User
+
+    class User {
+
+    }
+
+    User -> Wallet
+
+    class PasswordResetRequestAuthorizer {
+        + id: pk
+        --
+        + password_reset_request: PasswordResetRequest
+        + date: datetime
+        + authorizer: User
+        + added_by: User
+        - password: temp
+        + pgp_file: temp
+    }
+
+    PasswordResetRequestAuthorizer -> PasswordResetRequest
+    PasswordResetRequestAuthorizer -> User
+}
+
+@enduml

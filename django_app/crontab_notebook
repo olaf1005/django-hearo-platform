@@ -1,0 +1,5 @@
+# min       hrs     dayofmonth      month       dayofweek       command
+# dow = 0-6 where 0 is Sunday, 6=Saturday
+
+# run benis code at midnight
+# 0         */12      *               *           *               nice -n15 jupyter nbconvert --execute --to notebook /app/ipython_notebooks/notebook.ipynb --output /app/ipython_notebooks/notebook-output.ipynb > /proc/1/fd/1 2>/proc/1/fd/2

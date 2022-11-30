@@ -1,0 +1,239 @@
+@import "helpers.less";
+
+#content.dashboard {
+
+  a {
+    color: #ffffff;
+  }
+
+  h1 {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 26px;
+    color: #ffffff;
+    text-shadow: @white-undershadow;
+  }
+
+  h2 {
+      margin-left: 20px;
+      margin-top: 20px;
+
+      font-size: 24px;
+      color: #ffffff;
+      text-shadow: @white-undershadow;
+      font-weight: 400;
+      margin-bottom: 10px;
+      &.in-column {
+          margin-left: 0px;
+      }
+  }
+
+
+  #myacct-header {
+    height: 60px;
+    position: relative;
+
+    div {
+
+      &.heading {
+        position: relative;
+        width: 300px;
+        height: 60px;
+        text-align: center;
+
+        > div { display: inline-block; }
+
+        > div#dashboard_error {
+           padding-top: 10px;
+           margin: auto 100%;
+           position: relative;
+           color: white;
+           background: darkred;
+           padding: 20px;
+           z-index: 10000;
+           border-radius: 10px;
+           width: 100%;
+           margin-top: 10px;
+           display: none;
+        }
+
+        .heading {
+          position: absolute;
+          left: 30px;
+          top: 0px;
+          text-align: left;
+          height: 30px;
+          font-family: 'Permanent Marker', cursive;
+          font-size: 30px;
+          .inset-text;
+          margin: 15px 0px 13px 0px;
+          color: #ffffff;
+        }
+
+        #autosaver {
+          position: absolute;
+          right: 30px;
+          top: -2px;
+          height: 30px;
+          margin: 15px 0px 13px 0px;
+          text-align: center;
+
+          div.spinner {
+            margin: 0px auto;
+          }
+        }
+      }
+    }
+
+    div#tabs {
+      position: absolute;
+      top: -2px;
+      bottom: -1px;
+      right: -1px;
+      width: auto;
+      overflow: hidden;
+      text-align: left;
+      white-space: nowrap;
+
+      ul {
+        position: relative;
+        left: 4px;
+      }
+
+      li {
+        display: inline-block;
+        margin-left: -4px;
+
+        a {
+          display: block;
+          font-family: 'StyreneA-Regular', sans-serif;
+          color: #ffffff;
+
+          &.selected {
+            color: @outer-blue;
+            border-bottom: 4px solid @outer-blue;
+
+            &:hover {
+              .box-shadow(none);
+              color: @inner-blue;
+            }
+          }
+
+          &:hover {
+            color: rgba(255, 255, 255, 0.55);
+          }
+
+          &:active {
+            background: rgba(0, 0, 0, 0.1);
+            color: black;
+          }
+
+          padding: 22px 11px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  #myacct-content {
+    color: #ffffff;
+
+    > div.content {
+      padding: 10px;
+      margin-top: 20px;
+
+      &:last-child {
+        margin-bottom: 100px;
+      }
+
+      &.notification {
+        .bgimg(@fabric-dark);
+        color: white;
+      }
+    }
+  }
+
+  label {
+    &.greyline {
+      font-family: 'StyreneA-Regular', sans-serif;
+      font-size: 14px;
+    //   color: rgba(0,0,0,0.7);
+      display: block;
+      margin: 10px 0px 5px 8px;
+    }
+  }
+
+  div.button.blue {
+    // Firefox and your Gecko stuff
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    padding: 9px;
+    position: relative;
+    cursor: pointer;
+    .roboto600;
+
+    &.small {
+      height: 22px;
+      padding: 6px;
+    }
+
+    input {
+      left: -110px;
+    cursor: pointer!important;
+    }
+  }
+
+  input[type=file].hidden {
+    position: relative;
+    // left: 0px;
+    // top: -23px;
+    opacity: 0;
+    cursor: pointer;
+    // height: 75px;
+    // width: 300px;
+    transform: scale(4);
+  }
+
+  a {
+    .roboto600;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  span.light {
+    color: #ffffff;
+  }
+}
+
+@media (max-width:960px) {
+  #content.dashboard {
+    #myacct-header {
+    height: 120px;
+      div#tabs {
+      position: relative;
+      top: 1px;
+      bottom: -1px;
+        li a {
+          font-size: 12px;
+        }
+      }
+    }
+    #myacct-content > div.content{
+//       margin-top: 62px;
+//       padding-top: 30px;
+    }
+  }
+
+  #group_boxes .inset_box{
+    margin-bottom: 40px;
+  }
+  .myacct-content-group {
+    padding-top: 50px;
+  }
+  .myacct-content-payments {
+    padding-top: 50px;
+  }
+}

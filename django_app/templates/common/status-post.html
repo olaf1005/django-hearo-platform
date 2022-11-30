@@ -1,0 +1,7 @@
+<div class="update">
+    <div class="body">{{ update.status }}</div>
+    <div class="date">{{update.update_date|date:"D, M d, f a"}}</div>
+    {% if update.profile == view or update.profile_commenter == view %}
+    <button record-id="{{update.id}}" class="delete"></button>
+    {% endif %}
+</div>

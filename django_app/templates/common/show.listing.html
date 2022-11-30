@@ -1,0 +1,31 @@
+{% load elements %}
+<div class="event listing">
+  <div class="separator"></div>
+
+  <a href="{{ venuelink }}/show/{{ event.id }}/{{ month }}{{ day }}/{{ artists_no_space|join:"+" }}">
+    <div class="info">
+      <div class="title">
+        {% if event.title %}
+          {{ event.title }}
+        {% else %}
+          
+          {% for artist in artists %}{{ artist.name }}{% if not forloop.last %}, {% endif %}{% endfor %}
+        {% endif %}
+      </div>
+      <div class="subtitle">
+      @ {{ event.venue.getProfile.name }}
+      </div>
+    </div>
+
+  <div class="artwork-frame">
+    <img class="featured-artist-image" src="/{{ featured.primary_photo.square_file }}" width="100" />
+     {% calendar_page month day %}
+     {% time_display time %}
+  </div>
+  </a>
+
+  <div class="listing-buttons">
+    {% fanbutton event view %}
+    {% tixbutton event %}
+  </div>
+</div>

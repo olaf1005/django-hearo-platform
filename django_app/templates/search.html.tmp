@@ -1,0 +1,49 @@
+{% extends base %}
+
+{% block content %}
+
+{% if error %}
+<div> {{ error }} </div>
+{% else %}
+
+{% if profiles %}
+ {% for results_type,results in profiles.items %}
+  {% if results_type and results %}
+   <p>
+<!--   <h3> {{ results_type }}... </h3> -->
+   <ul> 
+    {% for result in results %}
+    <li><a href="/profile/{{ result.keyword }}/"> <img src="../{{ result.primary_photo.square_file }}" alt="{{ result.short_name }}" height="40" width="40" />  {{ result }} </a></li>
+    {% endfor %}
+   </ul>
+   </p>
+  {% endif %}
+ {% endfor %}
+{% endif %}
+ 
+{% if media %}
+
+ {% for _,songs in media.songs %}
+   <p>
+   <ul>
+    {% for song in songs %}
+    <li> <a id="playsong"/> {{ song.title }} </a> </li>
+    {% endfor %}
+   </ul>
+   </p>
+ {% endfor %}
+
+ {% for _,albums in media.albums %}
+   <p>
+   <ul>
+    {% for album in albums %}
+    <li> <a id="playalbum"/> {{ album.title }} </a> </li>
+    {% endfor %}
+   </ul>
+   </p>
+ {% endfor %}
+
+{% endif %}
+
+{% endif %}
+{% endblock content %}

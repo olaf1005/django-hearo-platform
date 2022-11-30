@@ -1,0 +1,9 @@
+{% load elements mathfilters %}
+<div style="height: 100%" id="fans" class="scrollbar">
+    {% if profile.is_orgo and not profile.is_venue %}{% endif %}
+    <div style="height: 100%;" id="fans-list">
+        <div id="scrollbar-screen-fans">
+            <div id="fans-list-content">{% for user in fans %}  {% userlistingShort user %}{% endfor %}</div>
+        </div>
+    </div>
+</div>

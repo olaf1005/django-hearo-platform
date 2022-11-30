@@ -1,0 +1,9 @@
+{% for feed in feeds %}
+<div class="update">
+    <div class="body">{{ feed.user_body }}</div>
+    <div class="date">{{feed.created_at|date:"D, M d, f a"}}</div>
+    {% if feed.from_profile == view or feed.item.profile_commenter == view %}
+    <button record-id="{{feed.item.id}}" class="delete"></button>
+    {% endif %}
+</div>
+{% endfor %}

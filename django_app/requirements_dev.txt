@@ -1,0 +1,12 @@
+-r requirements.txt
+ipdb
+ipdbplugin
+django-nose
+django-extensions
+pygraphviz
+Werkzeug
+pylint-django
+Whoosh
+honcho
+rpdb
+pudb

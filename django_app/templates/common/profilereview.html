@@ -1,0 +1,12 @@
+{% load elements %}
+
+<tr class="status_update" id="update_{{review.id}}">
+    <td class="feeds_usertab_td">
+      {% usertab review.reviewer %}
+    </td>
+    <td style="width:100%">
+        <div class="update_body">{{review.review}}
+            <div class="update_date">{{review.review_date|date:"D, M d, f a"}}</div>
+        </div>
+    </td>
+</tr>

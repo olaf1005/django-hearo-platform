@@ -1,0 +1,6 @@
+{% comment %} <!-- Disabled for tune.fm --> 
+{% if type == "song" and element.download_type != "none" and element.download_type != "" and element.online %}
+<button action="download" price="{{ element.get_pretty_price }}" elem-id="{{ element.id }}" elem-type="song" class="bttn--size-small bttn--color-green bttn--special-download"></button>
+{% elif type == "album" %}
+<button action="download" price="{{ element.get_pretty_price }}" elem-id="{{ element.id }}" elem-type="album" class="bttn--size-small bttn--color-green bttn--special-download"></button>
+{% endif %} {% endcomment %}

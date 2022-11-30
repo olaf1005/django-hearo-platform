@@ -1,0 +1,80 @@
+/* Macros */
+
+.roboto400 { font-family: 'StyreneA-Regular', sans-serif; font-weight: 400;}
+.roboto600 { font-family: 'StyreneA-Regular', sans-serif; font-weight: 600; }
+.roboto700 { font-family: 'StyreneA-Regular', sans-serif; font-weight: 700;}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.border-box {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.dark-inset {
+  // border: 1px solid rgba(0,0,0,0.1);
+  // background: rgba(0,0,0,0.03);
+  // .border-radius();
+  // .box-shadow(0px 1px 1px rgba(255,255,255,0.7));
+}
+
+.white-standard {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: white;
+  .border-radius();
+}
+
+.inset-text {
+  color: #3D3D3D;
+  text-shadow: 0px 1px 1px rgba(255,255,255,0.7);
+}
+
+.vmiddle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.white-to-trans-vertical {
+  position: absolute;
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+}
+
+.ellipsis-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+}
+
+.background-border-left {
+  // .bgimg("pixels/185.png");
+  background-repeat: repeat-y;
+  background-position: left;
+}
+
+.background-border-right {
+  // .bgimg("pixels/185.png");
+  background-repeat: repeat-y;
+  background-position: right;
+}
+
+.no-cursor {
+  pointer-events: none;
+  -webkit-pointer-events: none;
+  -moz-pointer-events: none;
+}

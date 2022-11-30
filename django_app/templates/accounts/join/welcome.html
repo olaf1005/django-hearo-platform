@@ -1,0 +1,43 @@
+{% extends base %}
+{% block content %}
+<style type="text/css">
+#page { width: auto }
+
+</style>
+{% load staticfiles %}
+<script src="{% static 'js/views/join.js' %}">
+</script>
+<script type="text/javascript">
+//<![CDATA[
+$(function(){ hearo.listings  = new hearo.views.Listings(); })
+
+//]]>
+</script>
+<div id="video-and-registration">
+  <div id="sunburst">
+    <ul id="register-progress">
+      <li>Signup</li>
+      <li>Social</li>
+      <li>Welcome</li>
+    </ul>
+    <div id="onboarding">
+      <div class="join-screen" style="color: #fff;">
+	<h2>Welcome to tune.fm!</h2>
+  <p>We're excited to have you and hope you find some music you love :)</p>
+  <!-- <div class="jam-token"></div> -->
+  <img src="/public/landing/images/hearo-token.svg" class="token"><br><br>
+  <h3>Congrats! You earned 100 FREE JAM Tokens!</h3>
+  <p>Check out your wallet below!<br>As you listen to music, every second streamed will pay artists JAM tokens.</p>
+	<!-- <h3>Go on, Fan an artist</h3>
+	<div id="directory">
+	  <div class="directory__placeholder-text" id="directory-list-loading-indicator"> Loading...</div>
+	  <div data-limit="12" id="directory-list">
+	  </div>
+	</div> -->
+	<input type="hidden" id="progress" {% if progress %} value="{{ progress }}"{% endif %} />
+	<a href="/" class="next-btn">Finish</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

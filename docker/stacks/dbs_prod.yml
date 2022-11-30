@@ -1,0 +1,144 @@
+version: '3.4'
+
+volumes:
+    rethinkdbdata1:
+    # rethinkdbdata-replica:
+    esdata1:
+    eslogs:
+    # esdata2:
+    # redisdata:
+
+networks:
+    cluster:
+
+services:
+    # redis:
+    #     tty: true # color log output
+    #     image: $IMAGE_REDIS
+    #     volumes:
+    #         - redisdata:/data
+    #     networks:
+    #         cluster:
+    #             aliases:
+    #                 - redis
+    #     deploy:
+    #         mode: replicated
+    #         replicas: 1
+    #         restart_policy:
+    #             condition: on-failure
+    #             delay: 3s
+    #             max_attempts: 3
+    #             window: 120s
+    #     logging:
+    #         # limit logs retained on host to 25MB
+    #         driver: "json-file"
+    #         options:
+    #             max-size: "500k"
+    #             max-file: "50"
+
+    rethinkdb:
+        tty: true
+        image: $IMAGE_RETHINKDB
+        volumes:
+            - 'rethinkdbdata1:/data'
+            - ../../django_app/upgrade_rethinkdb:/upgrade_rethinkdb:delegated
+        networks:
+            - cluster
+        ports:
+            - '8080:8080'
+            - '28015:28015'
+            - '29015:29015'
+        deploy:
+            mode: replicated
+            replicas: 1
+            restart_policy:
+                condition: on-failure
+                delay: 3s
+                max_attempts: 3
+                window: 120s
+            # placement:
+            #     constraints: [node.labels.db_role == leader]
+        logging:
+            driver: json-file
+            options:
+                max-size: 500k
+                max-file: '50'
+
+    # rethinkdbreplica1:
+    #     tty: true
+    #     image: $IMAGE_RETHINKDB
+    #     volumes:
+    #         - 'rethinkdbdata2:/data'
+    #     networks:
+    #         - cluster
+    #     command: rethinkdb --join rethinkdb
+    #     ports:
+    #         - '8080:8080'
+    #         - '28015:28015'
+    #         - '29015:29015'
+    #     deploy:
+    #         mode: replicated
+    #         # can have any number of replicas here
+    #         replicas: 1
+    #         restart_policy:
+    #             condition: on-failure
+    #             delay: 3s
+    #             max_attempts: 3
+    #             window: 120s
+    #         placement:
+    #             constraints: [node.labels.db_role == follower]
+    #     logging:
+    #         driver: json-file
+    #         options:
+    #             max-size: 500k
+    #             max-file: '50'
+
+    # for a multi-node cluster
+    # https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#docker-cli-run-dev-mode
+    elasticsearch:
+        tty: true # color log output
+        image: $IMAGE_ELASTICSEARCH
+        networks:
+            - cluster
+        environment:
+            - discovery.type=single-node
+        volumes:
+            - esdata1:/usr/share/elasticsearch/data
+            - eslogs:/usr/share/elasticsearch/logs
+        deploy:
+            mode: replicated
+            # any number of replicas here
+            replicas: 1
+            restart_policy:
+                condition: on-failure
+                delay: 3s
+                max_attempts: 3
+                window: 120s
+            # placement:
+            #     constraints: [node.labels.db_role == leader]
+        logging:
+            driver: json-file
+            options:
+                max-size: 500k
+                max-file: '50'
+
+    memcached:
+        tty: true
+        image: $IMAGE_MEMCACHED
+        ports:
+            - '11211:11211'
+        networks:
+            - cluster
+        deploy:
+            mode: replicated
+            replicas: 1
+            restart_policy:
+                condition: on-failure
+                delay: 3s
+                max_attempts: 3
+                window: 120s
+        logging:
+            driver: json-file
+            options:
+                max-size: 500k
+                max-file: '50'

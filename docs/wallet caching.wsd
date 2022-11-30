@@ -1,0 +1,29 @@
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title Wallet caching
+
+(*) --> "Request balance"
+
+if "Wallet is managed" then
+    --> [yes] "Check wallet balance"
+    if "Wallet balance cached" then
+        --> [yes] "Return balance"
+    else
+        --> [no] "Make request to network"
+        --> "Cache request"
+        --> "Return balance"
+    endif
+else
+    --> [no] "Make request to network"
+    --> "Cache request"
+endif
+
+--> "Return balance"
+-->(*)
+
+@enduml

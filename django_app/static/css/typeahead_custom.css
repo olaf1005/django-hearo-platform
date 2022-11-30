@@ -1,0 +1,75 @@
+
+.typeahead-container span.avatar img {
+    height: 28px;
+    margin: -10px;
+    margin-right: 10px;
+}
+
+.typeahead-container span.row span {
+    margin: 0px;
+    padding: 0px;
+    /*font-family: arial;*/
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.typeahead-result .row {
+    display: table-row;
+}
+
+.typeahead-result .row  > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.typeahead-result .username {
+    padding: 0 10px;
+}
+
+.typeahead-result .location {
+    font-size: 12px;
+    /* color: grey; */
+    color: white;
+    text-indent: 5px;
+}
+.typeahead-result .location:before {
+    content: '(';
+}
+
+.typeahead-result .location:after {
+    content: ')';
+}
+
+.typeahead-result .avatar img {
+    height: 26px;
+    width: 26px;
+}
+
+.typeahead-result .project-logo {
+    display: inline-block;
+    height: 100px;
+}
+
+.typeahead-result .project-logo img {
+    height: 100%;
+}
+
+.typeahead-result .project-information {
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px 0 0 20px;
+}
+
+.typeahead-result .project-information > span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.typeahead-result > ul > li > a small {
+    padding-left: 0px;
+    color: #999;
+}
+
+.typeahead-result .project-information li {
+    font-size: 12px;
+}

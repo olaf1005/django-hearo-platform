@@ -1,0 +1,59 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_urls static admin_modify %}
+{% block after_related_objects %}
+{% endblock %}
+
+{% block content %}
+
+
+{% if original.status == "password reset" %}
+<div class="alert alert-success" role="alert">
+<strong>Key was successfully unlocked, a temporary password set, and an email sent to
+the user informing them.</strong>
+</div>
+{% endif %}
+
+
+<div class="alert alert-info" role="alert">
+<ul>
+<li>
+To start the password recovery process you need to input at least one KYC image
+and the keys that will be used to decrypt the users keys so a new password can be
+generated.
+</li>
+
+<li>
+Once the threshold for authorization users has been reached, a new password
+will be generated and sent to the user by email.
+</li>
+
+<li>
+The request will then be locked.
+</li>
+
+<li>
+When inputing authorizers, if you haven't changed your recovery keys you can
+simply select your user and input your password. If you have changed
+your recovery keys, you will need to input the file you downloaded after
+changing them.
+</li>
+
+<li>
+The user will then be asked to reset their password on their next login.
+</li>
+</div>
+
+{% if original.status != "password reset" %}
+    {% if original.passwordresetrequestauthorizer_set.count < settings.NUM_AUTHORIZERS_REQUIRED_FOR_PASSWORD_RESET %}
+    <div class="alert alert-danger" role="alert">
+    <strong>Note:</strong> You need to have at least {{ settings.NUM_AUTHORIZERS_REQUIRED_FOR_PASSWORD_RESET }} authorizers to unlock the user key
+    and generate a new password
+    </div>
+    {% endif %}
+{% endif %}
+
+{{block.super}}
+
+{% endblock %}
+
+

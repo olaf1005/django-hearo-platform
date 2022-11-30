@@ -1,0 +1,177 @@
+{% extends 'accounts/my-account/index.html' %}
+
+{% block title %}My Account Pages - Tune.fm{% endblock %}
+
+static/js/dashboard.pages.js
+
+{% block myAccountInnerPage %}
+
+{% include "accounts/my-account/_profile_name.html" %}
+
+<div id="myacct-content">
+
+  <h2>Pending Pages (confirmation needed)</h1>
+  <div class="content">
+    <div id="pending-pages" class="my-pages">
+      {% if pending_groups %}
+      <ul>
+	{% for group in pending_groups %}
+	{% if forloop.last %}
+	<li style="border-bottom: 0px !important;">
+	{% else %}
+	<li>
+	{% endif %}
+	<div class="profile_buttons">
+	  <button class="green join_group" page-id="{{ group.id }}">
+	    <span class="button-text">Accept</span>
+	  </button>
+	  <button class="green view_page" profile-keyword="{{user.profile.keyword}}">
+	    <span class="button-text">View page</span>
+	  </button>
+	  <button class="red leave_page" page-id="{{ group.id }}" profile-id="{{user.profile.id}}">
+	    <span class="button-text">Remove</span>
+	  </button>
+	</div>
+
+
+	<div class="profile_img">
+	  {% if group.profile.primary_photo %}
+	  <img border="0" src="/{{group.profile.primary_photo.square_file}}" alt="{{group.profile.short_name}}'s photo" />
+	  {% else %}
+	  <img border="0" src="/public/images/default-music-listing.svg" alt="{{group.profile.short_name}}'s photo" />
+	  {% endif %}
+	</div>
+
+	<div class="profile_name">
+	  <a href="/profile/{{group.profile.keyword}}">{{group.profile.name}}</a>
+	</div>
+
+        <div class="profile_description">
+          {% if group.profile.biography %}
+          {{group.profile.biography}}
+          {% else %}
+          This page has no bio.
+          {% endif %}
+        </div>
+
+        <div class="profile_type">
+          {{ group.profile.get_account_type|capfirst }}
+        </div>
+
+
+        </li>
+	{% endfor %}
+      </ul>
+      <div class="empty_media" style="display: none;">No pending pages to join</div>
+      {% else %}
+      <div class="empty_media">No pending pages to join</div>
+      {% endif %}
+    </div>
+  </div>
+
+  <table style="width: 100%;">
+    <tr>
+      <td>
+	<h2>My Pages</h1>
+      </td>
+      <td style="text-align: right;">
+	<button data-modal="modal-1" class="md-trigger green" id="create-a-page"><span class="button-text">Create a page</span></button>
+      </td>
+    </tr>
+  </table>
+  <!-- MODAL -->
+  <div class="md-modal md-effect-1" id="modal-1">
+    <div class="md-content" id="create-a-page">
+      <h3>Create a page</h3>
+    <div>
+	<div id="select-acc-type">
+	  <ul id="acctype-sel">
+	    <li><a id="artist">Artist</a></li>
+	    <li><a id="fan">Fan</a></li>
+	    <li><a id="band">Band</a></li>
+	    <li><a id="venue">Venue</a></li>
+        <li><a id="label">Label</a></li>
+	  </ul>
+	  <input type="hidden" id="account-type" />
+	  <hr class="hr-spacer">
+	</div>
+	{% with None=view short_profile=1 %}
+	<div row class="1 cols">
+	  <div cell class="short" style="width: 100%; padding-bottom: 10px;">
+	    <div id="id_name-container">
+	      <label class="greyline short" for="id_name">Name</label>
+	      <input class="standard short" style="width: 95% !important;" type="text" placeholder="Name of the page, artist, band, venue, or fan" id="id_name">
+        <div class="input-error-message">Name is required</div>
+	    </div>
+	  </div>
+	</div>
+	{% include "accounts/my-account/_profile_details.html" %}
+	{% endwith %}
+
+	<div id="select-acc-actions">
+	  <hr class="hr-spacer-1">
+	  <button id="modal-create-page" class="bttn--size-large blue md-confirm">
+	    <div class="button-text">Create page</div>
+        <div class="spinner spinner--medium">
+        </div>
+	  </button>
+	  <button id="modal-cancel" class="bttn--size-large red md-close md-cancel">
+	    <span class="button-text">Cancel</span>
+	  </button>
+	</div>
+    </div>
+    </div>
+  </div>
+  <!-- END MODAL -->
+  <div class="content">
+    <div id="live-pages" class="my-pages">
+      <ul>
+	{% if groups %}
+	{% include "accounts/my-account/_pages.html" %}
+	<div class="empty_media" style="display: none;">You haven't joined any pages!</div>
+	{% else %}
+	<div class="empty_media">You haven't joined any pages!</div>
+	{% endif %}
+      </div>
+    </div>
+  </ul>
+</div>
+
+<div class="md-modal md-effect-1" id="modal-2">
+  <div class="md-content">
+    <h3>Members</h3>
+    <!-- START MEMBERSHIP -->
+    <div id="edit_membership">
+    </div>
+    <div style="text-align: center;" id="modal-2-close">
+      <hr>
+      <button id="cancel" class="bttn--size-large red md-close">
+	<span class="button-text">Close</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+
+  // change account type
+  $('#acctype-sel li a').click(function(){
+    $('#acctype-sel li a').removeClass('active');
+    var type = $(this).attr('id');
+    $(this).addClass('active');
+    console.info('click=', type);
+    change_account_type(type);
+    setTimeout(setup_suggestions, 3000);
+    setTimeout(update_inputs, 3000);
+  })
+
+  // set initial account type for new group
+  change_account_type('artist');
+
+});
+</script>
+{% endblock %}
+
+
+

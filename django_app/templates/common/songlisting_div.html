@@ -1,0 +1,112 @@
+{% load elements %}
+{% with song.processing as processing %}
+
+{% if admin %}
+
+<div class="song listing admin{% if processing %} processing{% endif %}" id="song-{{ song.id }}" songid="{{ song.id }}" tracknum="{{ song.track_num }}">
+
+  <div class="sl-grip"></div>
+
+  <div class="sl-play-button">
+    <button action="play" class="play-button play-button--small{% if processing %}--disabled{% endif %}" play-id="{{ song.id }}" play-type="song">
+      <div class="spinner"></div>
+    </button>
+  </div>
+
+  <div class="sl-name{% if processing %} long {% endif %}">
+
+    {% if not processing %}
+
+      <div id="sl-name-{{ song.id }}">{{ song.title }}</div>
+      <button class="inline-subtle" defaultval="Rename">Rename</button>
+
+    {% else %}
+
+      <span>{{ song.title }}
+        {% if processing %}
+        {% if song.state_info %}
+          <span class="processing-error">
+            Error: {{ song.state_info }}
+          </span>
+          {% else %}
+          <span class="processing">
+            Processing and converting. Just a few minutes...
+          </span>
+          {% endif %}
+        {% endif %}
+      </span>
+
+    {% endif %}
+
+  </div>
+
+
+  {% if not processing %}
+  <div class="sl-dltype">
+    <ul class="earl" value="{% if song.download_type == "none" %}paid only{% else %}1st stream{% endif %}">
+      <li>paid only</li>
+      <li>1st stream</li>
+    </ul>
+  </div>
+  <div class="pricing">
+    <div class="price-controls" {% if song.download_type == "none" %}class="cloaked" style="opacity: 0"{% endif %}>
+      <span class="light" {% if song.download_type == "name_price" %}style="display: none;"{% endif %}>pays up to</span>
+      <label class="inline-edit left-half" for="price{{ song.id }}" {% if song.download_type == "name_price" %}style="display: none;"{% endif %}>Ɉ</label>
+      <input type="text" songid="{{ song.id }}" id="price{{ song.id }}" maxlength="4" class="inline-edit right-half" value="{{ song.price }}" {% if song.download_type == "name_price" %}style="display: none;"{% endif %}/>
+      <!-- <label class="inline-edit right-half small-text" for="price{{ song.id }}" id="suggested" {% if not song.download_type == "name_price" %}style="display: none;"{% endif %}>budget</label> -->
+    </div>
+    <div class="nyp-opt"{% if song.download_type == "none" %}class="cloaked" style="opacity: 0"{% endif %}>
+      <input type="checkbox" class="small nyp" {% if song.download_type == "name_price" %}checked="yes"{% endif %}id="nyp{{ song.id }}" songid="{{ song.id }}"/>
+      <label for="nyp{{ song.id }}">FREE</label>
+    </div>
+  </div>
+
+  <div class="sl-delete">
+    <button class="delete"></button>
+  </div>
+  {% else %}
+  <div class="pricing">
+  </div>
+  <div class="sl-delete">
+    <button class="delete"></button>
+  </div>
+  {% endif %}
+
+</div>
+
+{% else %}
+
+{% if song.visible and song.online and not song.processing %}
+
+<div class="song listing{% if admin %} admin{% endif %}" id="song-{{ song.id }}" songid="{{ song.id }}" tracknum="{{ song.track_num }}" itemprop="tracks" itemscope itemtype="http://schema.org/MusicRecording">
+  {% if admin %}
+  <div class="sl-grip"></div>
+  {% endif %}
+  <div class="sl-play-button">
+    <button action="play" class="play-button play-button--small{% if processing %} disabled{% endif %}" play-id="{{ song.id }}" play-type="song">
+      <div class="spinner"></div>
+    </button>
+  </div>
+
+  <div class="sl-name{% if processing %} long {% endif %}">
+    <div id="sl-name-{{ song.id }}" itemprop="name" title="{{song.title}}">{{ song.title }}</div>
+  </div>
+
+  <div class="sl-buttons">
+    {% if song.plays.count %}
+    <span class="song-plays">{{ song.plays.count }} streams</span>
+    {% endif %}
+    <span>{%  if song.length %}{{ song.length|format_seconds_to_mmss }}{% endif %}</span>
+    {% fanbutton song view %}
+    {% reviewbutton song %}
+    {% if song.download_type != 'none' %}
+      {% downloadbutton song %}
+    {% endif %}
+    {% sharebutton song %}
+  </div></span>
+
+</div>
+
+{% endif %}
+{% endif %}
+{% endwith %}

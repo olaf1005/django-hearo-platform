@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="290px" preserveAspectRatio="none" style="width:847px;height:290px;background:#00000000;" version="1.1" viewBox="0 0 847 290" width="847px" zoomAndPan="magnify"><defs/><g><!--MD5=[1b0f1d4bc34feaedb5789fed429cabc9]
+cluster Account--><polygon points="16,88.27,79,88.27,86,110.7583,552,110.7583,552,283.27,16,283.27,16,88.27" style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="16" x2="86" y1="110.7583" y2="110.7583"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="57" x="20" y="103.8052">Account</text><!--MD5=[f25eed0824fb1f8848d815c6af46f39c]
+cluster Media--><polygon points="576,90.77,625,90.77,632,113.2583,830,113.2583,830,280.77,576,280.77,576,90.77" style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="576" x2="632" y1="113.2583" y2="113.2583"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43" x="580" y="106.3052">Media</text><!--MD5=[9f070bf9f108c27faa2eb76515c78fb3]
+class Wallet--><rect codeLine="10" height="143.7734" id="Wallet" style="stroke:#383838;stroke-width:1.5;fill:none;" width="200" x="269" y="123.27"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="34" x="352" y="139.8716">Wallet</text><line style="stroke:#383838;stroke-width:1.5;" x1="270" x2="468" y1="147.4028" y2="147.4028"/><ellipse cx="280" cy="158.4028" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="29" x="289" y="162.0376">id: pk</text><line style="stroke:#383838;stroke-width:1.0;" x1="270" x2="468" y1="168.3579" y2="168.3579"/><ellipse cx="280" cy="179.3579" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="55" x="289" y="182.9927">user: User</text><ellipse cx="280" cy="192.313" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="119" x="289" y="195.9477">openpgp_key: varchar</text><ellipse cx="280" cy="205.268" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="149" x="289" y="208.9028">hedera_account_id: varchar</text><ellipse cx="280" cy="218.2231" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="151" x="289" y="221.8579">hedera_private_key: varchar</text><ellipse cx="280" cy="231.1782" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="147" x="289" y="234.813">hedera_public_key: varchar</text><ellipse cx="280" cy="244.1333" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="97" x="289" y="247.768">token_balance: int</text><ellipse cx="280" cy="257.0884" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="174" x="289" y="260.7231">token_balance_last_update: date</text><!--MD5=[3fd616f346a44cd59a91eb10b19e157c]
+class User--><rect height="40.1328" id="User" style="stroke:#383838;stroke-width:1.5;fill:none;" width="32" x="504" y="175.27"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="26" x="507" y="191.8716">User</text><line style="stroke:#383838;stroke-width:1.5;" x1="505" x2="535" y1="199.4028" y2="199.4028"/><line style="stroke:#383838;stroke-width:1.5;" x1="505" x2="535" y1="207.4028" y2="207.4028"/><!--MD5=[f3b404240c1dc9d617c021dc65e9e964]
+class WalletRecovery--><rect codeLine="24" height="125.8633" id="WalletRecovery" style="stroke:#383838;stroke-width:1.5;fill:none;" width="202" x="32" y="132.27"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="86" x="90" y="148.8716">WalletRecovery</text><line style="stroke:#383838;stroke-width:1.5;" x1="33" x2="233" y1="156.4028" y2="156.4028"/><ellipse cx="43" cy="167.4028" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="29" x="52" y="171.0376">id: pk</text><line style="stroke:#383838;stroke-width:1.0;" x1="33" x2="233" y1="177.3579" y2="177.3579"/><ellipse cx="43" cy="188.3579" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="67" x="52" y="191.9927">wallet: Wallet</text><ellipse cx="43" cy="201.313" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="91" x="52" y="204.9477">date_added: date</text><ellipse cx="43" cy="214.268" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="125" x="52" y="217.9028">encrypted_key: varchar</text><ellipse cx="43" cy="227.2231" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="176" x="52" y="230.8579">recovery_key_hashes: ArrayField</text><line style="stroke:#383838;stroke-width:1.0;" x1="33" x2="233" y1="237.1782" y2="237.1782"/><ellipse cx="43" cy="248.1782" fill="#A6A6A6" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="148" x="52" y="251.813">get_encrypted_key_object()</text><!--MD5=[2919ff914df33678f2cf4339b91594c1]
+class Listen--><rect codeLine="39" height="138.8184" id="Listen" style="stroke:#383838;stroke-width:1.5;fill:none;" width="153" x="592.5" y="125.77"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="33" x="652.5" y="142.3716">Listen</text><line style="stroke:#383838;stroke-width:1.5;" x1="593.5" x2="744.5" y1="149.9028" y2="149.9028"/><ellipse cx="603.5" cy="160.9028" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="29" x="612.5" y="164.5376">id: pk</text><line style="stroke:#383838;stroke-width:1.0;" x1="593.5" x2="744.5" y1="170.8579" y2="170.8579"/><ellipse cx="603.5" cy="181.8579" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="612.5" y="185.4927">song: Song</text><ellipse cx="603.5" cy="194.813" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="55" x="612.5" y="198.4477">user: User</text><ellipse cx="603.5" cy="207.768" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="65" x="612.5" y="211.4028">seconds: int</text><ellipse cx="603.5" cy="220.7231" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="612.5" y="224.3579">datetime: datetime</text><ellipse cx="603.5" cy="233.6782" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="127" x="612.5" y="237.313">payment_date: datetime</text><line style="stroke:#383838;stroke-width:1.0;" x1="593.5" x2="744.5" y1="243.6333" y2="243.6333"/><ellipse cx="603.5" cy="254.6333" fill="#A6A6A6" rx="3" ry="3" style="stroke:#545454;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="127" x="612.5" y="258.268">make_payment(privkey)</text><!--MD5=[562c4b801d528848837ef3b38203ac7d]
+class Song--><rect height="40.1328" id="Song" style="stroke:#383838;stroke-width:1.5;fill:none;" width="33" x="780.5" y="175.27"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="27" x="783.5" y="191.8716">Song</text><line style="stroke:#383838;stroke-width:1.5;" x1="781.5" x2="812.5" y1="199.4028" y2="199.4028"/><line style="stroke:#383838;stroke-width:1.5;" x1="781.5" x2="812.5" y1="207.4028" y2="207.4028"/><!--MD5=[bec73f7b66d88852d2d17cbfa914c9e4]
+link Wallet to User--><path codeLine="22" d="M469.27,195.27 C479.06,195.27 488.85,195.27 498.63,195.27 " fill="none" id="Wallet-to-User" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="503.75,195.27,494.75,191.27,498.75,195.27,494.75,199.27,503.75,195.27" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[8c57a8c75750476ced5b401c62d052ff]
+link WalletRecovery to User--><path codeLine="35" d="M173.64,132.18 C197.43,101.27 230.46,67.13 269.5,50.27 C351.1,15.02 392.42,6 469.5,50.27 C510.64,73.9 518.99,134.76 520.25,169.66 " fill="none" id="WalletRecovery-to-User" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="520.4,175.03,524.1413,165.9194,520.2572,170.032,516.1446,166.1479,520.4,175.03" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[1781292a6da05387b1a3f720bf96724b]
+link Listen to Song--><path codeLine="50" d="M746,195.27 C755.73,195.27 765.45,195.27 775.18,195.27 " fill="none" id="Listen-to-Song" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="780.27,195.27,771.27,191.27,775.27,195.27,771.27,199.27,780.27,195.27" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[b7de5942c74928869028783f74502185]
+link Listen to User--><path codeLine="51" d="M592.37,195.27 C575.35,195.27 558.32,195.27 541.29,195.27 " fill="none" id="Listen-to-User" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="536.01,195.27,545.01,199.27,541.01,195.27,545.01,191.27,536.01,195.27" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[ac89f696c03f448fe3bdc81b6c7aa686]
+@startuml hedera integration
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+set namespaceSeparator ::
+
+package Account {
+    Class Wallet {
+        + id: pk
+        - -
+        + user: User
+        + openpgp_key: varchar
+        + hedera_account_id: varchar
+        + hedera_private_key: varchar
+        + hedera_public_key: varchar
+        + token_balance: int
+        + token_balance_last_update: date
+    }
+
+    Wallet -> User
+
+    Class WalletRecovery {
+        + id: pk
+        - -
+        + wallet: Wallet
+        + date_added: date
+        + encrypted_key: varchar
+        + recovery_key_hashes: ArrayField
+        - -
+        + get_encrypted_key_object()
+    }
+
+    WalletRecovery -> User
+}
+
+package Media {
+    class Listen {
+        + id: pk
+        - -
+        + song: Song
+        + user: User
+        + seconds: int
+        + datetime: datetime
+        + payment_date: datetime
+        - -
+        + make_payment(privkey)
+    }
+    Listen -> Song
+    Listen -> User
+}
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 15:40:07 EAT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

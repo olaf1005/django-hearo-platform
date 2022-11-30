@@ -1,0 +1,34 @@
+<div class="music listing {% if instrument_genre_string != None %}taller{% endif %}"
+  {{# location }}lat="{{ lat }}" lng="{{ lng }}" location="{{ most_exact }}" country="{{ country }}"{{/ location }}
+  >
+  <div class="artwork-frame">
+    <img class="artwork-full" src="/{{ image }}" />
+    {{# play_button_id }}
+      <button action="play" class="play-button play-button--large" play-id="{{ play_button_id }}" play-type="{{ play_button_type }}">
+        <div class="spinner"></div>
+      </button>
+    {{/ play_button_id }}
+  </div>
+  <a href="{{ profileurl }}">
+    <div class="music-listing__metadata">
+      <div class="title">
+        {{ title }}
+      </div>
+      <div class="subtitle">
+        {{ subtitle }}
+      </div>
+    </div>
+  </a>
+
+  {% if entity != view %}
+    <div class="listing-buttons">
+      {% fanbutton entity view %}
+      {% reviewbutton entity %}
+      {% if entity_type != "artist" %}
+        {% downloadbutton entity %}
+      {% endif %}
+    </div>
+  {% else %}
+    <div class="thatsyou">(that's you!)</div>
+  {% endif %}
+</div>

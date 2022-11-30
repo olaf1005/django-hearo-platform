@@ -1,0 +1,103 @@
+/*
+ * grid.css
+ *
+ * Classes for div-oriented tabular (or semi-tabular) layouts
+ *
+ * cols syntax:
+ * <div row class="4 cols">
+ *   <div cell>
+ *     Some content...
+ *   </div>
+ *   <div cell>
+ *     Some content...
+ *   </div>
+ *   <div cell>
+ *     Some content...
+ *   </div>
+ *   <div cell>
+ *     Some content...
+ *   </div>
+ * </div>
+ *
+ * The "cell" and "row" in the divs is optional techinically,
+ * but do it for readability and searchability
+ */
+
+div.cols {
+  width: 100%;
+  display: inline-block;
+}
+
+div.cols > div {
+  display: inline-block;
+}
+
+/*
+ * In order to have class names containing numbers,
+ * you need to escape the first digit with "\3". So div.\32 is a <div class="2">
+ * No idea why this works the way it does. Made this to prove it:
+ * http://jsfiddle.net/PXvmf/
+ * Other sources:
+ * http://forums.mozillazine.org/viewtopic.php?p=1528895
+ * http://www.w3.org/TR/CSS21/grammar.html
+ */
+
+div.cols.\31 > div{
+  display: inline-block;
+  width: 100%;
+  float: left;
+}
+
+div.cols.\32 > div{
+  display: inline-block;
+  width: 50%;
+  float: left;
+}
+
+div.cols.\33 > div{
+  display: inline-block;
+  width: 33.3333%;
+  float: left;
+}
+
+div.cols.\34 > div{
+  display: inline-block;
+  width: 25%;
+  float: left;
+}
+
+div.cols.\35 > div{
+  display: inline-block;
+  width: 20%;
+  float: left;
+}
+
+div.cols.\36 > div{
+  display: inline-block;
+  width: 16.6666%;
+  float: left;
+}
+
+
+div.cols.\37 > div{
+  display: inline-block;
+  width: 14.2857%;
+  float: left;
+}
+
+div.cols.\38 > div{
+  display: inline-block;
+  width: 12.5%;
+  float: left;
+}
+
+
+/* div.dark-inset {
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.03);
+  border-radius: 3px;
+} */
+
+div.dark-inset > div{
+  padding: 10px;
+}

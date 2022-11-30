@@ -1,0 +1,21 @@
+<style type="text/css">
+body {
+  font-family: Arial;
+}
+
+td {
+  border-bottom: 1px solid black;
+}
+
+
+</style>
+<h1>Songs played by profiles</h1>
+<table cellpadding="10" cellspacing="0">{% for pair in pairs %}<tr>
+    <td>{{ forloop.counter }}</td>
+    <td>
+      <a href="/profile/{{pair.0}}">{{ pair.0 }}</a>
+    </td>
+    <td>
+      <b>{{ pair.1 }}</b>
+    </td>
+</tr>{% endfor %}</table>

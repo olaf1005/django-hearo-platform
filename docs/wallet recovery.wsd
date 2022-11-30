@@ -1,0 +1,21 @@
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title Wallet recovery
+
+(*) --> "Support request"
+--> "Ticket created"
+--> "Manual KYC"
+--> "Wallet recovery using 2 out of x private keys"
+--> "Create temporary password"
+--> "Create new keys and wallet and transfer original hedera secrets to the new one"
+--> "Sent user email with new password, requesting the user update their password next time they login"
+--> "Old password is used to unlock, new password is used to encrypt the wallet"
+--> "We also encrypt the new wallet using 2 out of x permutations of our keys"
+--> (*)
+
+@enduml

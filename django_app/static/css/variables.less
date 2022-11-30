@@ -1,0 +1,205 @@
+/* Variables */
+
+@header-light-gray: #E6E7E8;
+
+@inner-blue:  rgb(90, 191, 242);
+@outer-blue:  rgb(18, 160, 232);
+@border-blue: rgb(13, 138, 202);
+
+@inner-blue-hover:  rgb(80, 198, 247);
+@outer-blue-hover:  rgb(35, 185, 249);
+@border-blue-hover: rgb(19, 146, 207);
+
+@inner-blue-active:  rgb(89, 175, 218);
+@outer-blue-active:  rgb(17, 137, 201);
+@border-blue-active: rgb(9, 112, 185);
+
+@grey-border-primary: rgb(185, 185, 185);
+@grey-border-secondary: rgb(211, 211, 211);
+
+/* Accent green used in create-a buttons */
+@inner-green: rgb(124, 202, 90);
+@outer-green: rgb(95, 185, 58);
+@border-green: rgb(80, 165, 49);
+
+@inner-green-hover: rgb(134, 212, 100);
+@outer-green-hover: rgb(116, 204, 77);
+@border-green-hover: rgb(87, 175, 52);
+
+@inner-green-active: rgb(107, 193, 73);
+@outer-green-active: rgb(76, 177, 41);
+@border-green-active: rgb(40, 123, 14);
+
+
+/* Accent red used in other buttons */
+@inner-red: rgb(255, 57, 66);
+@outer-red: rgb(154, 0, 4);
+@border-red: rgb(154, 14, 0);
+
+@inner-red-hover: lighten(@inner-red, 6%);
+@outer-red-hover: lighten(@outer-red, 6%);
+@border-red-hover: lighten(@border-red, 6%);
+
+@inner-red-active: darken(@inner-red, 6%);
+@outer-red-active: darken(@outer-red, 6%);
+@border-red-active: darken(@border-red, 6%);
+
+
+/* Accent orange used in review button */
+@inner-orange: rgb(255, 181, 45);
+@outer-orange: rgb(212, 142, 0);
+@border-orange: rgb(198, 130, 0);
+
+@inner-orange-hover: rgb(255, 188, 44);
+@outer-orange-hover: rgb(219, 148, 1);
+@border-orange-hover: rgb(216, 146, 1);
+
+@inner-orange-active: rgb(239, 173, 33);
+@outer-orange-active: rgb(201, 132, 0);
+@border-orange-active: rgb(204, 133, 0);
+
+
+/* Accent transluscent black used in review button */
+@inner-transblack: rgba(0, 0, 0, 0.3);
+@outer-transblack: rgba(0, 0, 0, 0.34);
+@border-transblack: rgba(0, 0, 0, 0.40);
+
+@inner-transblack-hover: rgba(0, 0, 0, 0.25);
+@outer-transblack-hover: rgba(0, 0, 0, 0.28);
+@border-transblack-hover: rgba(0, 0, 0, 0.35);
+
+@inner-transblack-active: rgba(0, 0, 0, 0.3);
+@outer-transblack-active: rgba(0, 0, 0, 0.4);
+@border-transblack-active: rgba(0, 0, 0, 0.5);
+
+/* Gettin' drunk with some gradients
+.blue-light-gradient { .gradient(bottom, #40a2dd 25%, #329edb 63%); }
+.blue-mid-gradient { .gradient(bottom, #2d7bb6 25%, #3783bf 63%); }
+.blue-dark-gradient { .gradient(bottom, #2b5d8f 25%, #35689d 63%); }
+*/
+
+.blue-light-gradient {background-color: #329edb}
+.blue-mid-gradient {background-color: #3783bf}
+.blue-dark-gradient {background-color: #35689d}
+
+
+/* Red gradient for player */
+@red-gradient-a: rgb(193,22,0);
+@red-gradient-b: rgb(206,21,4);
+
+.red-player-gradient {
+  .gradient(bottom, @red-gradient-a 25%, @red-gradient-b 63%);
+}
+.red-player-gradient-hover {
+  .gradient(bottom, lighten(@red-gradient-a, 6%) 25%, lighten(@red-gradient-b, 2%) 63%);
+}
+.red-player-gradient-active {
+  .gradient(bottom, darken(@red-gradient-a, 3%) 25%, darken(@red-gradient-b, 2%) 63%);
+}
+
+// A bit darker
+.red-tracker-gradient {
+  .gradient(bottom, darken(@red-gradient-a, 9%) 25%, darken(@red-gradient-b, 9%) 63%);
+}
+.red-tracker-gradient-elapsed {
+  .gradient(bottom, darken(@red-gradient-a, 12%) 25%, darken(@red-gradient-b, 12%) 63%);
+}
+
+/* Black gradient for header */
+@black-gradient-a: #1A1A1A;
+@black-gradient-b: #1D1D1D;
+@subheader-value-diff: 6%;
+
+.black-header-gradient {
+  .gradient(bottom, @black-gradient-a 25%, @black-gradient-b 63%);
+}
+
+.black-subheader-gradient {
+  .gradient(bottom, lighten(@black-gradient-a, @subheader-value-diff) 25%, lighten(@black-gradient-b, @subheader-value-diff) 63%);
+}
+
+.header-bottom-shadow {
+  .box-shadow(0px 0px 5px rgba(0,0,0,0.7));
+}
+
+/* Sober now */
+.parallax-blue-gradient { .radial-gradient(#c4e5f1, #b1d8f0); }
+
+/* Standard inset transluscent black */
+@inner-inset:  rgba(0,0,0,0.03);
+@border-inset: rgba(0,0,0,0.1);
+
+@inner-inset-darker:  rgba(0,0,0,0.1);
+@border-inset-darker: rgba(0,0,0,0.14);
+@border-inset-darkest: rgba(0,0,0,0.2);
+
+@white-undershadow: 0px 1px 1px rgba(255,255,255,0.7);
+@white-undershadow-subtle: 0px 1px 1px rgba(255,255,255,0.3);
+
+/* Borders */
+
+@thin10percent: 1px solid rgba(0,0,0,0.1);
+
+/* Fabric background */
+
+@fabric: "45degree_fabric.png";
+@fabric-light: "45degree_fabric_light.png";
+@fabric-lighter: "45degree_fabric_lighter.png";
+@fabric-dark: "45degree_fabric_dark.png";
+@fabric-blue: "45degree_fabric_blue.png";
+@fabric-blue-dark: "45degree_fabric_dark_blue.png";
+
+/* rgba shortcuts */
+
+@black10: rgba(0,0,0,0.1);
+@black20: rgba(0,0,0,0.2);
+@black30: rgba(0,0,0,0.3);
+@black40: rgba(0,0,0,0.4);
+@black50: rgba(0,0,0,0.5);
+@black60: rgba(0,0,0,0.6);
+@black70: rgba(0,0,0,0.7);
+@black80: rgba(0,0,0,0.8);
+@black90: rgba(0,0,0,0.9);
+@black:   rgba(0,0,0,1);
+
+@white10: rgba(255,255,255,0.1);
+@white20: rgba(255,255,255,0.2);
+@white30: rgba(255,255,255,0.3);
+@white40: rgba(255,255,255,0.4);
+@white50: rgba(255,255,255,0.5);
+@white60: rgba(255,255,255,0.6);
+@white70: rgba(255,255,255,0.7);
+@white80: rgba(255,255,255,0.8);
+@white90: rgba(255,255,255,0.9);
+@white:   rgba(255,255,255,1);
+
+@gray10:  rgb(10, 10, 10);
+@gray20:  rgb(20, 20, 20);
+@gray30:  rgb(30, 30, 30);
+@gray40:  rgb(40, 40, 40);
+@gray50:  rgb(50, 50, 50);
+@gray60:  rgb(60, 60, 60);
+@gray70:  rgb(70, 70, 70);
+@gray80:  rgb(80, 80, 80);
+@gray90:  rgb(90, 90, 90);
+@gray100: rgb(100, 100, 100);
+@gray110: rgb(110, 110, 110);
+@gray120: rgb(120, 120, 120);
+@gray130: rgb(130, 130, 130);
+@gray140: rgb(140, 140, 140);
+@gray150: rgb(150, 150, 150);
+@gray160: rgb(160, 160, 160);
+@gray170: rgb(170, 170, 170);
+@gray180: rgb(180, 180, 180);
+@gray190: rgb(190, 190, 190);
+@gray200: rgb(200, 200, 200);
+@gray210: rgb(210, 210, 210);
+@gray220: rgb(220, 220, 220);
+@gray230: rgb(230, 230, 230);
+@gray240: rgb(240, 240, 240);
+@gray250: rgb(250, 250, 250);
+
+@red40: rgba(182, 8, 8, 0.64);
+
+
+@header-z-index: 2000000005;

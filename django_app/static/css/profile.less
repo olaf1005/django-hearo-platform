@@ -1,0 +1,861 @@
+@import "helpers.less";
+#content.profile {
+    color: #ffffff;
+
+    .song-plays {
+        color: #666666;
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    .visuals-container {
+        height: 100%;
+        padding: 80px;
+        overflow: scroll;
+        background-color: @black80;
+        box-shadow: 1px 0px 0px black;
+        -moz-transition: height 0.4s cubic-bezier(0.285, 0, 0.01, 1.005);
+        -webkit-transition: height 0.4s cubic-bezier(0.285, 0, 0.01, 1.005);
+        -o-transition: height 0.4s cubic-bezier(0.285, 0, 0.01, 1.005);
+        transition: height 0.4s cubic-bezier(0.285, 0, 0.01, 1.005);
+        font-size: 0;
+        z-index: 800;
+        .visual-elements {
+            overflow-y: scroll;
+            overflow-x: hidden;
+
+            .visual-element {
+                .dimen(160, 160);
+                display: inline-block;
+                border: none;
+                .border-box;
+                overflow: hidden;
+                cursor: pointer;
+                position: relative;
+
+                &:hover {
+                    img {
+                        opacity: 0.9;
+                    }
+
+                    .youtube-play-button {
+                        background-position: 0px -26px;
+                    }
+                }
+
+                &:active {
+                    background: black;
+
+                    .youtube-play-button {
+                        background-position: 0px -26px;
+                    }
+                }
+
+                .youtube-play-button {
+                    position: absolute;
+                    top: 75px;
+                    right: 55px;
+                    background-size: 14px;
+                    background-repeat: no-repeat;
+                    height: 13px;
+                }
+
+                img {
+                    position: absolute;
+                    right: 0;
+                    .no-select;
+                }
+            }
+
+            &.open {
+                height: auto;
+            }
+        }
+        .visuals-msg {
+            font-size: 14px;
+            .roboto600;
+            color: @white90;
+            height: 83px;
+            line-height: 83px;
+            text-align: center;
+            width: 250px;
+        }
+    }
+    #banner {
+        max-width: 959px;
+        width: 100%;
+        height: 160px;
+        position: relative;
+        top: 0;
+
+        #banner-bar {
+            width: 961px;
+            height: 60px;
+            position: absolute;
+            left: -1px;
+            bottom: -1px;
+
+            &.dark {
+                background: linear-gradient(rgba(0, 0, 0, 0) 10%, #000000 90%);
+            }
+        }
+    }
+
+    .name-bar {
+        height: 160px;
+        padding: 40px;
+        padding-top: 80px;
+        background: rgba(0, 0, 0, 0.85);
+        color: white;
+        text-shadow: 0px 2px 2px @black30;
+
+        #main-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 200px;
+            overflow: hidden;
+            position: absolute;
+            left: 42%;
+            top: 80px;
+            box-shadow: 0 0 8px #000000;
+
+            img {
+                position: absolute;
+
+                &:not(.noclick) {
+                    cursor: pointer;
+                    &:hover {
+                    }
+                }
+            }
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            margin-top: 15px;
+
+            &#banner-location {
+                font-family: "StyreneA-Bold";
+                font-size: 14px;
+                text-transform: uppercase;
+                font-style: bold;
+            }
+
+            &#banner-genre-instrument {
+                font-family: "StyreneA-LightItalic";
+                font-size: 18px;
+                text-transform: lowercase;
+                font-style: italic;
+            }
+
+            &#banner-profile-name {
+                font-size: 40px;
+                &[font="marker"] {
+                    font-family: "Permanent Marker", cursive;
+                }
+                &[font="sansserif"] {
+                    font-family: "StyreneA-Regular" !important;
+                }
+                &[font="condensed"] {
+                    font-family: "Amatic SC", Impact, "Arial Narrow Bold",
+                        sans-serif;
+                }
+                &[font="script"] {
+                    font-family: "Srisakdi" !important;
+                }
+            }
+        }
+        #profile-buttons {
+            text-align: center;
+            width: 800px;
+            margin: auto;
+
+            button {
+                margin: 13px 1px;
+            }
+        }
+    }
+
+    #bgWrapper {
+        background-color: #222222;
+    }
+
+    #primary-content {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        height: 1000px;
+        position: relative;
+        border: none !important;
+        padding-bottom: 100px;
+
+        #first-col,
+        #second-col,
+        #third-col {
+            width: 960px;
+            display: inline-block;
+            position: absolute;
+            top: 40;
+            height: 100%;
+            overflow-x: hidden;
+            .border-box;
+            .background-border-left;
+
+            > div {
+                /* position: absolute; */
+                z-index: 0;
+            }
+            .scrollbar {
+                width: 90%;
+                margin: auto;
+            }
+        }
+
+        > div {
+            display: inline-block;
+        }
+
+        #picture-and-buttons {
+            width: 100%;
+            height: 100%;
+            overflow-y: hidden;
+            overflow-x: hidden;
+
+            #scrollbar-screen-info-modules {
+                width: 100%;
+                height: 1000px;
+                overflow: scroll;
+                position: relative;
+
+                #info-modules {
+                    width: 100%;
+                    height: 1000px;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+
+                    h1 {
+                        width: 251px;
+                    }
+
+                    > div {
+                        width: 100%;
+                        // position: relative;
+                        // top: 30px;
+                        // left: 30px;
+                        // margin: 30px;
+
+                        > #info {
+                        }
+
+                        div {
+                            padding: 15px 15px;
+
+                            span.label {
+                                margin-right: 5px;
+                            }
+
+                            a {
+                                color: @border-blue;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            #badges {
+                                padding: 0 0;
+                                margin-top: 5px;
+                                a {
+                                    color: #ffffff;
+                                    underline: none;
+                                }
+                                a:hover {
+                                    underline: none;
+                                }
+                            }
+
+                            &.badge {
+                                .roboto600;
+                                padding: 6px;
+                                margin: 3px 3px 3px 0;
+                                display: inline-block;
+                                white-space: nowrap;
+                                .border-radius();
+                                //.gradient(bottom, #f0f0f0 25%, #f9f9f9 63%);
+                                .box-shadow(inset 0px 0px 7px #e7e7e7);
+                                .no-select;
+                                color: #3d3d3d;
+                                .border-box;
+                                border: 1px solid #ffffff;
+                                border-left-width: 5px;
+
+                                &:hover {
+                                    cursor: pointer;
+                                    color: @border-blue;
+                                    border-left-color: @border-blue;
+                                }
+                            }
+                        }
+                    }
+
+                    .empty {
+                        width: 190px;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+
+        #main-profile-content {
+            top: 0;
+            z-index: 39;
+            width: 100%;
+            height: 1000px;
+
+            ul {
+                border: none;
+            }
+
+            i.material-icons-round {
+                font-size: 16px;
+                vertical-align: middle;
+            }
+
+            #fand-content-tabs.empty {
+                opacity: 0;
+            }
+
+            #scrollbar-screen-fand-content {
+                overflow: hidden;
+                padding-left: 3%;
+                font-size: 0; // Dumbass hack so the browser doesn't add margins I didn't ask for
+                // http://stackoverflow.com/a/8262649/827559
+
+                > div {
+                    width: 100%;
+                    height: 100%;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                }
+
+                .music.listing {
+                    display: block;
+                    width: 46%;
+                    margin-right: 2%;
+                    border: none;
+                    float: left;
+                    a .artwork-frame {
+                        width: 100%;
+                    }
+
+                    .title,
+                    .subtitle {
+                        width: 195px;
+                    }
+                }
+            }
+
+            #scrollbar-screen-releases,
+            #scrollbar-screen-shows {
+                font-size: 0;
+                height: 100%;
+
+                #releases,
+                #shows {
+                    width: 460px;
+                    height: 100%;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                }
+
+                #releases {
+                    > .song.listing {
+                        width: 100%;
+                        font-size: 16px;
+                    }
+
+                    .album.listing {
+                        width: 100%;
+                        margin-bottom: 20px;
+                        border-right: none;
+
+                        .album-content-header {
+                            .clearfix();
+                            width: 100%;
+                            .album-art {
+                                float: right;
+                            }
+                            .album-info {
+                                margin-left: -140px;
+                                padding-left: 150px;
+                                float: right;
+                                background: none;
+                                width: 100%;
+
+                                .title {
+                                    margin-top: 10px;
+                                    font-size: 20px;
+                                }
+                                .title,
+                                .subtitle {
+                                    position: static;
+                                    width: auto;
+                                }
+                            }
+                        }
+                    }
+
+                    h3.blue {
+                        padding: 10px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        #events {
+            width: 250px;
+            display: inline-block;
+            color: #333;
+
+            #scrollbar-screen-events {
+                // border-left: 1px solid @grey-border-primary;
+            }
+
+            h1.blue {
+                .border-radii(0px, 4px, 0px, 0px);
+            }
+        }
+
+        #secondary-content {
+            width: 101%;
+            position: absolute;
+            z-index: 40;
+            // padding-top: 40px;
+
+            #new-update-box {
+                height: 125px;
+                width: 80%;
+                margin: auto;
+
+                textarea#compose-status {
+                    margin: 1%;
+                    width: 100%;
+                    .border-box;
+                }
+
+                button#post-status {
+                    margin-top: 5px;
+                    float: right;
+                }
+            }
+
+            // https://grid.layoutit.com/
+              .activity-grid-container {
+                display: grid;
+                grid-template-columns: 80% 20%;
+                grid-template-rows: 1fr;
+                gap: 1px 1px;
+               grid-template-areas: "activity-input activity-action"
+              }
+
+              .activity-action {
+                  margin-left: 20px;
+                  grid-area: activity-action;
+                }
+
+              .activity-input {
+                  grid-area: activity-input;
+                }
+
+                .activity-body {
+                    line-height: 1.4em;
+                    word-wrap: normal;
+                }
+                .activity-date {
+                    line-height: 1.4em;
+                }
+
+            #scrollbar-screen-updates {
+                overflow: scroll;
+                #updates-stream-content {
+                    width: 100%;
+                    height: 1000px;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+
+                    .update {
+                        padding: 10px 0px;
+                        width: 100%;
+                        font-size: 16px;
+                        position: relative;
+
+                        &:nth-child(even) {
+                        }
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+
+                        // button {
+                        //   display: none;
+                        // }
+
+                        a {
+                            font-weight: bold;
+                        }
+
+                        a:hover {
+                            color: #0d8aca;
+                        }
+
+                        &:hover {
+                            button {
+                                display: block;
+                            }
+                        }
+
+                        blockquote {
+                            color: grey;
+                            padding-left: 20px;
+                            font-size: 16px;
+                        }
+
+                        .body {
+                            font-size: 16px;
+                            width: 100%;
+                            line-height: 1.5;
+                        }
+
+                        .date {
+                            margin-top: 5px;
+                            font-size: 12px;
+                            color: grey;
+                        }
+
+                        button.delete {
+                            position: relative;
+                            top: 14px;
+                            right: 2.5%;
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+
+        #fans-list {
+            width: 101%;
+            bottom: 0;
+            right: 0;
+
+            h1 {
+                border-top: none;
+                height: 33px;
+            }
+
+            #scrollbar-screen-fans {
+                overflow: scroll;
+                height: 100%;
+
+                #fans-list-content {
+                    height: 100%;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                    > a:nth-child(even) .user.listing.short {
+                    }
+                }
+            }
+        }
+    }
+
+    #profile-main-fan-button button {
+        width: 100%;
+        font-size: 26px;
+        height: 38px;
+        margin-top: 20px;
+    }
+
+    div.hidden:hover {
+        opacity: 0.8 !important;
+    }
+
+    .empty {
+        font-size: 14px;
+        .roboto400;
+        color: @black50;
+        width: 460px;
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        .msg {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            margin-top: 100px;
+            color: white;
+
+            p {
+                line-height: 20px;
+
+                a {
+                    color: @outer-blue;
+                    .roboto600;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.share-container {
+    z-index: 9999999;
+    text-align: center;
+    position: relative;
+    top: 70px;
+    /* left: 800px; */
+    margin-left: 36px;
+    float: right;
+    .social-share {
+        display: block;
+        /* width: 78%; */
+        height: 0px;
+        border-radius: 100px;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 960px) {
+    #content.profile #primary-content {
+        #first-col {
+            max-width: 26%;
+        }
+        #second-col {
+            left: 26%; //width of first col
+            max-width: 49%;
+        }
+        #third-col {
+            max-width: 26%;
+        }
+    }
+}
+
+@media (max-width: 895px) {
+    ul.blue {
+        padding-top: 30px;
+    }
+
+    .blue li &[opens="#music"],
+    &[opens="#library"],
+    &[opens="#activity"],
+    &[opens="#reviews"],
+    &[opens="#about"],
+    &[opens="#fans"],
+    &[opens="#music"],
+    &[opens="#gallery"] {
+        width: 8% !important;
+        font-size: 8px;
+        height: 30px !important;
+        margin-top: -30px;
+
+        i {
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .visuals-container {
+        padding: 22px !important;
+
+        .visual-elements {
+           
+
+            .visual-element {
+                .dimen(80, 80)!important;
+                 margin: 12px;
+                 height: 80px !important;
+                 height: 80px !important;
+                 img {
+                     height: 80px !important;
+                 }
+            }
+        }
+    }
+
+    ul.blue {
+        font-size: 12px;
+    }
+
+    #content.profile {
+        #top-gallery.visuals-container {
+            display: none;
+        }
+        .name-bar {
+            height: 160px;
+            padding-top: 50px;
+            #profile-buttons {
+                width: 100%;
+            }
+            #main-picture {
+                left: 40%;
+                top: 40px;
+                height: 100px;
+                width: 100px;
+                img {
+                    width: 100px;
+                }
+                &:hover {
+                    background-size: 100px;
+                }
+            }
+        }
+        #banner {
+            height: 90px;
+            margin-top: 40px;
+            #banner-bar {
+                display: block;
+                padding-left: 100px;
+                text-align: left;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                .border-box;
+
+                #profile-buttons {
+                    left: -145px;
+                    top: 40px;
+                    float: left;
+                    position: relative;
+                }
+                h1#banner-profile-name {
+                    width: 100%;
+                    margin-left: -10px;
+                    margin-top: 20px;
+                    font-size: 26px;
+                }
+                h2#banner-genre-instrument {
+                    display: none;
+                }
+                h2#banner-location {
+                    display: none;
+                }
+            }
+        }
+        #primary-content {
+            height: auto !important;
+            #first-col,
+            #second-col,
+            #third-col {
+                max-width: 100%;
+                float: none;
+                position: static;
+                width: 100%;
+                display: block;
+                height: auto !important;
+            }
+            #first-col {
+                overflow: visible;
+                #picture-and-buttons {
+                    position: static;
+                    width: auto;
+                    height: auto !important;
+                    #scrollbar-screen-info-modules,
+                    #scrollbar-screen-info-modules #info-modules {
+                        // height: auto !important;
+                        // position: static;
+                        overflow: scroll;
+                        > div {
+                            width: auto;
+                        }
+                    }
+                }
+            }
+            #second-col {
+                > div {
+                    height: auto !important;
+                    position: static;
+                    opacity: 1;
+                }
+                #main-profile-content {
+                    #scrollbar-screen-fand-content {
+                        .overflow-y-height(480);
+                    }
+                    #music {
+                        div.album.listing,
+                        div.song.listing {
+                            > div.sl-buttons {
+                                width: 50%;
+                                font-size: 12px;
+                                .bttn--special-review {
+                                    display: none;
+                                }
+                                .song-plays {
+                                    display: none;
+                                }
+                            }
+                            .sl-name {
+                                width: 50%;
+                                div {
+                                    width: 100%;
+                                    max-width: 200px;
+                                }
+                            }
+                        }
+                    }
+                    #scrollbar-screen-fand-content,
+                    #scrollbar-screen-releases,
+                    #scrollbar-screen-releases #releases,
+                    #scrollbar-screen-fand-content > div {
+                        height: auto !important;
+                        width: auto;
+                    }
+                }
+                #updates-stream-container,
+                #reviews {
+                    .overflow-y-height(380);
+                }
+                .drag-handle {
+                    display: none;
+                }
+            }
+            #third-col {
+                #fans-list {
+                    height: auto !important;
+                    position: static;
+                    #scrollbar-screen-fans {
+                        height: auto !important;
+                        .overflow-y-height(380);
+                    }
+                }
+            }
+        }
+        .empty .msg {
+            padding: 40px 10px 10px;
+            .border-box;
+            position: static;
+        }
+    }
+}
+
+@media (max-width: 403px) {
+    #content.profile #banner #banner-bar {
+        h1 {
+            font-size: 20px;
+        }
+        #profile-buttons {
+            left: -12px;
+            top: -33px;
+        }
+    }
+}

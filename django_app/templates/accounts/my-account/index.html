@@ -1,0 +1,49 @@
+{% extends base %}
+
+{% block content %}
+
+<div id="myacct-header">
+  <div row class="2 cols">
+
+    <div cell class="heading">
+      <div class="heading">
+        Dashboard
+      </div>
+
+      <div id="autosaver">
+        <button class="blue" id="save">
+          <span class="button-text">Save</span>
+          <div class="spinner spinner--small"></div>
+        </button>
+      </div>
+      <div id="dashboard_error">
+          <span></span>
+      </div>
+
+    </div>
+
+    <div cell id="tabs">
+      <ul>
+        <li><a {% if contentclass == "dashboard profile" %}class="selected" {% endif %} href="/my-account/profile/">Profile</a></li>
+        <li><a {% if contentclass == "dashboard music" %}class="selected" {% endif %} href="/my-account/music/">Music</a></li>
+        <li><a {% if contentclass == "dashboard wallet" %}class="selected" {% endif %} href="/my-account/wallet/">Wallet</a></li>
+        <li><a {% if contentclass == "dashboard visuals" %}class="selected" {% endif %} href="/my-account/visuals/">Visuals</a></li>
+        <li><a {% if contentclass == "dashboard pages" %}class="selected" {% endif %} href="/my-account/pages/">Pages</a></li>
+        {% comment %} <!-- Disabled for tune.fm --> 
+        <li><a {% if contentclass == "dashboard downloads" %}class="selected" {% endif %} href="/my-account/downloads/">Downloads</a></li>
+        {% if user.person.is_musician %}
+        <li><a {% if contentclass == "dashboard payment" %}class="selected" {% endif %} href="/my-account/payment/">Payment</a></li>
+        {% endif %} {% endcomment %}
+        <li><a {% if contentclass == "dashboard privacy" %}class="selected" {% endif %} href="/my-account/privacy/">Privacy</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div id="myacct-content">
+  {% block myAccountInnerPage %}
+  {% endblock myAccountInnerPage%}
+</div>
+
+{% endblock %}

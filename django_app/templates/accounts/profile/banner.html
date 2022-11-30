@@ -1,0 +1,10 @@
+<div style="background: {% if profile.banner.texture_chosen == 'upload' %}url(/{{ profile.banner.texture_cropped }}){% else %}radial-gradient(#042E5E 30%,#000000 70%);{% endif %}" id="banner">
+    <div class="{% if profile.banner.display_bar %}dark{% endif %}" id="banner-bar">
+        {% with name="Check out this artist on tune.fm - "|add:profile.name %}
+        <div class="share-container">
+            <a onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')" target="_blank" href="http://twitter.com/share?via=hearofm&amp;text={{ name|urlencode  }}&amp;lang=pt&amp;url={{absloute_url}}" class="social-share twitter">tweet</a>
+            <a onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ absloute_url  }}" class="social-share facebook">share</a>
+        </div>
+        {% endwith %}
+    </div>
+</div>

@@ -1,0 +1,30 @@
+{% load elements %}
+
+<div albumtracks="{{ album.id }}" class="album_browser">
+  <div class="back_to" onclick="$('[revealalbum]').show(); $('[albumtracks]').hide();">
+    <div>« back to albums</div>
+  </div>
+  <div class="album_header">
+    <a class="fancybox" id="albumtracks_image" rel="album{{ album.id }}" href="{{ cover }}">
+      <img src="{{ cover }}" class="cover" />
+    </a>
+    <div class="title">
+      {{ album.title }}
+    </div>
+    <a class="ajax playAlbum {{album.id}} albumtracksplay" albumid="{{album.id}}">
+      <div class="song_play_button"></div>
+    </a>
+    <div class="buttons">
+      {% fanbutton album view %}
+      {% reviewbutton album %}
+      {% downloadbutton album %}
+    </div>
+  </div>
+  <table cellspacing="0" width="100%">
+      <tbody id="{{ album.title }}_tracks" class="fandlib_table">
+        {% for song in songs %}
+          {% songlisting song view %}
+        {% endfor %}
+      </tbody>
+  </table>
+</div>

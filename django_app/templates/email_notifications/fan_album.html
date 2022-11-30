@@ -1,0 +1,20 @@
+{% extends "email_notifications/base_email.html" %}
+
+{% block subject %}
+Your album {{ item.faned_album.title }} just got a new fan!
+{% endblock %}
+
+{% block html_body %}
+
+  <p>
+    Hi {{profile.short_name}},
+    <br><br>
+    Your album
+    <a href="https://{{ BASE_URL }}/album/{{item.faned_album.id}}">{{item.faned_album.title}}</a>
+    has just been fanned by
+    <a href="https://{{ BASE_URL }}/profile/{{from_profile.keyword}}">{{from_profile.name}}</a>
+    <br><br>
+    <a href="https://{{ BASE_URL }}/profile/{{from_profile.keyword}}">Click here</a> to see their profile.
+  </p>
+
+{% endblock %}

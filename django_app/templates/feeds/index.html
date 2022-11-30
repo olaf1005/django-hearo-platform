@@ -1,0 +1,103 @@
+{% extends base %}
+
+{% block content %}
+{% with user.person.view as view %}
+<style type="text/css">
+    ul#navigation li.feeds a { color: #139ee4; }
+    ul#navigation li.feeds a:hover { color: #96dcff; }
+</style>
+
+<script type="text/javascript">
+    csrfTOKEN = '{{ csrf_token }}';
+    $(document).ready(function(){
+        setupFeeds();
+    });
+</script>
+<div id="feedsPage" class='infinite_scrolling feeds'>
+{% if user.is_authenticated %}
+<div id="filters-container">
+
+<div id="header">
+  Discover trending artists and music!
+</div>
+<div id="subheader">
+  Try filtering in various ways to find new stuff.
+</div>
+    <!--
+    <div class="hearotip tooltipbottom" id="musicpagetooltip">
+        <div class="tooltip_description" style="display:none" title="music page">
+            Discover the best music in your area and around the country!  The more fans you have, the higher you rank.  It’s that simple.  Play around with the filters, you might find some interesting music!           
+        </div>
+    </div>
+    -->
+<br>
+    <div id="feeds_filters">
+        <div class="filter_module" id="rank_filter_module">
+        </div>
+        <div class="filter_module" id="time_filter_module">
+       <!-- <select class="auto_update" name="time" id="id_time">
+            <option value="all" selected="selected">all</option>
+            <option value="today">today</option>
+            <option value="week">week</option>
+            <option value="month">month</option>
+            <option value="year">year</option>
+        </select> -->
+        </div>
+        <div class="filter_module" id="price_filter_module">
+        <!--
+        <select class="auto_update" name="price" id="id_price">
+            <option value="all" selected="selected">all</option>
+            <option value="free">free</option>
+            <option value="NYP">NYP</option>
+            <option value="paid">paid</option>
+            <option value="none">no download</option>
+        </select>
+        -->
+        </div>
+    
+        <div class="filter_module">
+            <input class="standard" id="Location" type="text" name="location" placeholder="Location" maxlength="200">
+        </div>
+        <div class="filter_module">
+            <input class="standard" id="Genres" type="text" name="genre" placeholder="Genres" maxlength="100">
+        </div>
+        
+        <div class="filter_module auto_update" style="width:94px;" > 
+            <button class="blue" type="submit" id="filter">Filter</button>
+        </div>
+        
+    </div>
+</div>
+
+{% else %}
+<div id="filters-container">
+
+<div class="myAccount_subheader trans_text">
+<br>
+<span style="font-size:22px">Log in or <a href="/register" class="splash_join_button" style="height:25px; padding:5px;">register</a> an account to fan, download, and sort popular music! </span></div>
+<br>
+</div>
+{% endif %}
+    <div id="artists_box" class="box">
+        <h4>Top Artists</h4>
+        <div class="loader"><div class="medium spinner"></div></div>
+        <div id="artists" class="music_content"></div>
+        <div class="empty">No artists found</div>
+    </div>
+
+    <div id="albums_box" class="box">
+        <h4>Top Albums</h4>
+        <div class="loader"><div class="medium spinner"></div></div>
+        <div id="albums" class="music_content"></div>
+        <div class="empty">No albums found</div>
+    </div>
+
+    <div id="songs_box" class="box">
+        <h4>Top Songs</h4>
+        <div class="loader"><div class="medium spinner"></div></div>
+        <div id="songs" class="music_content"></div>
+        <div class="empty">No songs found</div>
+    </div>
+</div>
+{% endwith %}
+{% endblock %}

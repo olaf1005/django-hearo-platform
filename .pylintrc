@@ -1,0 +1,30 @@
+[MESSAGES CONTROL]
+
+# Enable the message, report, category or checker with the given id(s). You can
+# either give multiple identifier separated by comma (,) or put this option
+# multiple time.
+#enable=
+
+# Disable the message, report, category or checker with the given id(s). You
+# can either give multiple identifier separated by comma (,) or put this option
+# multiple time (only on the command line, not in the configuration file where
+# it should appear only once).
+disable= missing-module-docstring,
+    missing-class-docstring,
+    missing-function-docstring,
+    too-many-instance-attributes,
+    missing-docstring,
+    too-many-locals,
+    line-too-long,
+    invalid-name,
+    too-few-public-methods,
+    too-many-public-methods,
+    too-many-locals,
+    too-many-branches,
+    broad-except,
+    too-many-statements,
+    expression-not-assigned,
+    redefined-outer-name,
+    bare-except,
+    too-many-nested-blocks,
+    no-else-return

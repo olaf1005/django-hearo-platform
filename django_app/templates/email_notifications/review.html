@@ -1,0 +1,21 @@
+{% extends "email_notifications/base_email.html" %}
+
+{% block subject %}
+Someone just reviewed you!
+{% endblock %}
+
+{% block html_body %}
+
+  <p>
+    Hi {{profile.short_name}},
+    <br><br>
+    You have been reviewed by
+    <a href="https://{{ BASE_URL }}/profile/{{item.reviewer.keyword}}">{{item.reviewer.name}}</a>:
+    <br><br>
+    "{{item.review}}"
+
+    <br><br>
+    <a href="https://{{ BASE_URL }}/reviews/{{item.id}}">Click here</a> to read the review.
+  </p>
+
+{% endblock %}

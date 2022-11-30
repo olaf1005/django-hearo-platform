@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="488px" preserveAspectRatio="none" style="width:722px;height:488px;background:#00000000;" version="1.1" viewBox="0 0 722 488" width="722px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="46.6211" style="stroke:#000000;stroke-width:2.0;" width="343.5" x="155.5" y="112.1094"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="30" x2="30" y1="36.4883" y2="481.457"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="193.5" x2="193.5" y1="36.4883" y2="481.457"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="246.5" x2="246.5" y1="36.4883" y2="481.457"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="311.5" x2="311.5" y1="36.4883" y2="481.457"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="453" x2="453" y1="36.4883" y2="481.457"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="559" x2="559" y1="36.4883" y2="481.457"/><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="51" x="5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="12" y="25.5352">client</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="56" x="165.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="172.5" y="25.5352">server</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="30" x="231.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="16" x="238.5" y="25.5352">s3</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="80" x="271.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="278.5" y="25.5352">cloudfiles</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="71" x="418" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="425" y="25.5352">one_run</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="115" x="502" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="509" y="25.5352">tartar_daemon</text><line style="stroke:#383838;stroke-width:1.0;" x1="244.5" x2="234.5" y1="67.7988" y2="63.7988"/><line style="stroke:#383838;stroke-width:1.0;" x1="244.5" x2="234.5" y1="67.7988" y2="71.7988"/><line style="stroke:#383838;stroke-width:1.0;" x1="30.5" x2="245.5" y1="67.7988" y2="67.7988"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="80" x="37.5" y="63.0566">Upload to S3</text><line style="stroke:#383838;stroke-width:1.0;" x1="191.5" x2="181.5" y1="97.1094" y2="93.1094"/><line style="stroke:#383838;stroke-width:1.0;" x1="191.5" x2="181.5" y1="97.1094" y2="101.1094"/><line style="stroke:#383838;stroke-width:1.0;" x1="30.5" x2="192.5" y1="97.1094" y2="97.1094"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="139" x="37.5" y="92.3672">Notification of upload</text><path d="M155.5,112.1094 L229.5,112.1094 L229.5,119.1094 L219.5,129.1094 L155.5,129.1094 L155.5,112.1094 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="46.6211" style="stroke:#000000;stroke-width:2.0;" width="343.5" x="155.5" y="112.1094"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="29" x="170.5" y="125.6777">loop</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="76" x="244.5" y="124.7441">[Healthcheck]</text><line style="stroke:#383838;stroke-width:1.0;" x1="451.5" x2="441.5" y1="150.7305" y2="146.7305"/><line style="stroke:#383838;stroke-width:1.0;" x1="451.5" x2="441.5" y1="150.7305" y2="154.7305"/><line style="stroke:#383838;stroke-width:1.0;" x1="193.5" x2="452.5" y1="150.7305" y2="150.7305"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="103" x="200.5" y="145.9883">checkonuploads</text><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="453.5" x2="495.5" y1="187.041" y2="187.041"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="495.5" x2="495.5" y1="187.041" y2="200.041"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="454.5" x2="495.5" y1="200.041" y2="200.041"/><line style="stroke:#383838;stroke-width:1.0;" x1="454.5" x2="464.5" y1="200.041" y2="196.041"/><line style="stroke:#383838;stroke-width:1.0;" x1="454.5" x2="464.5" y1="200.041" y2="204.041"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="460.5" y="182.2988">processupload</text><path d="M458,213.041 L458,284.041 L697,284.041 L697,223.041 L687,213.041 L458,213.041 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M687,213.041 L687,223.041 L697,223.041 L687,213.041 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="128" x="464" y="230.6094">Background daemon</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124" x="464" y="245.9199">that waits for newly</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="218" x="464" y="261.2305">uploaded files to convert and send</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="149" x="464" y="276.541">to the CDN / Cloudfiles</text><line style="stroke:#383838;stroke-width:1.0;" x1="311.5" x2="321.5" y1="310.5938" y2="306.5938"/><line style="stroke:#383838;stroke-width:1.0;" x1="311.5" x2="321.5" y1="310.5938" y2="314.5938"/><line style="stroke:#383838;stroke-width:1.0;" x1="311.5" x2="452.5" y1="310.5938" y2="310.5938"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="118" x="328.5" y="305.8516">uploadtocloudfiles</text><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="559.5" x2="601.5" y1="339.9043" y2="339.9043"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="601.5" x2="601.5" y1="339.9043" y2="352.9043"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="560.5" x2="601.5" y1="352.9043" y2="352.9043"/><line style="stroke:#383838;stroke-width:1.0;" x1="560.5" x2="570.5" y1="352.9043" y2="348.9043"/><line style="stroke:#383838;stroke-width:1.0;" x1="560.5" x2="570.5" y1="352.9043" y2="356.9043"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="103" x="566.5" y="335.1621">checkonuploads</text><line style="stroke:#383838;stroke-width:1.0;" x1="30.5" x2="40.5" y1="382.2148" y2="378.2148"/><line style="stroke:#383838;stroke-width:1.0;" x1="30.5" x2="40.5" y1="382.2148" y2="386.2148"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="30.5" x2="558.5" y1="382.2148" y2="382.2148"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="95" x="47.5" y="377.4727">downloadready</text><path d="M564,395.2148 L564,466.2148 L715,466.2148 L715,405.2148 L705,395.2148 L564,395.2148 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M705,395.2148 L705,405.2148 L715,405.2148 L705,395.2148 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="129" x="570" y="412.7832">This deamon checks</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="88" x="570" y="428.0938">for completed</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="570" y="443.4043">uploads and informs</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="570" y="458.7148">the client</text><!--MD5=[0bd33b619a2efdc9e0581217b58a9fd0]
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title Upload process
+
+participant client
+participant server
+participant s3
+participant cloudfiles
+client->>s3: Upload to S3
+client->>server: Notification of upload
+loop Healthcheck
+        server->>one_run: checkonuploads
+end
+one_run- ->> one_run: processupload
+Note right of one_run
+    Background daemon
+    that waits for newly
+    uploaded files to convert and send
+    to the CDN / Cloudfiles
+end Note
+one_run->>cloudfiles: uploadtocloudfiles
+tartar_daemon- ->>tartar_daemon: checkonuploads
+tartar_daemon- ->>client: downloadready
+Note right of tartar_daemon
+    This deamon checks
+    for completed
+    uploads and informs
+    the client
+end Note
+
+@enduml
+
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+
+participant client
+participant server
+participant s3
+participant cloudfiles
+client->>s3: Upload to S3
+client->>server: Notification of upload
+loop Healthcheck
+        server->>one_run: checkonuploads
+end
+one_run- ->> one_run: processupload
+Note right of one_run
+    Background daemon
+    that waits for newly
+    uploaded files to convert and send
+    to the CDN / Cloudfiles
+end Note
+one_run->>cloudfiles: uploadtocloudfiles
+tartar_daemon- ->>tartar_daemon: checkonuploads
+tartar_daemon- ->>client: downloadready
+Note right of tartar_daemon
+    This deamon checks
+    for completed
+    uploads and informs
+    the client
+end Note
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 15:40:07 EAT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

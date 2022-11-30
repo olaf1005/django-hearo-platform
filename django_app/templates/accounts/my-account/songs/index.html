@@ -1,0 +1,26 @@
+{% extends 'accounts/my-account/index.html' %}
+
+{% block myAccountInnerPage %}
+
+{% with user.person.view as view %}
+
+<h3>Songs</h3>
+
+<p>Upload songs to your profile.</p>
+
+<iframe width="100%" height="200px" src="/my-account/songs/upload/" name="songUpload" frameborder="0" id="songUploadFrame">
+	<p>Your browser must support iframes to upload files.</p>
+</iframe>
+
+<table id="uploadedSongs" cellspacing="0" cellpadding="10px">
+<tr><th>Title</th><th>Length</th><th>Price</th><th>Delete</th></tr>
+{% for song in view.song_set.all %}
+	<tr><td>{{song.title}}</td><td class="center">{{song.get_formatted_length}}</td><td class="center price">{% if song.download_type == "normal" %}{{song.price}}{% else %}-{% endif %}</td><td class="center"><a href="/my-account/songs/delete?songid={{song.id}}">Delete</a></td></tr>
+{% empty %}
+	<tr><td colspan="4"><p>No uploaded songs.</p></td></tr>
+{% endfor %}
+</table>
+
+{% endwith %}
+
+{% endblock %}

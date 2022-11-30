@@ -1,0 +1,86 @@
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title Hedera Spring API
+
+Actor "App" as app
+participant "Spring API" as springapi
+participant "Parent" as parent
+participant "Children.." as child
+participant "Hashgraph" as hashgraph
+
+box "Web Apps" #LightBlue
+	participant app
+	participant springapi
+end box
+
+box "Smart Contracts" #LightGreen
+	participant parent
+	participant child
+end box
+
+box "Hedera" #Orange
+	participant hashgraph
+end box
+
+app->>springapi : transferFrom
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    One account transfers JAM on behalf of another
+end Note
+' Note right of springapi #Pink
+'     Swagger documentation needs to be updated
+' end Note
+Note right of springapi
+    * json (Dict) (Required)
+        * myaccNum (? Required/Optional) (String) "0.0.21166"
+        * mypvtKey": "302e......",
+        * toSolidityAddress (String) (? Required/Optional)
+        * tokenOwnerSolidityAddress (String) (? Required/Optional)
+        * valueInJamDecimals (Required) (? Required/Optional) 56788000
+end Note
+
+springapi->>parent : transferFrom
+parent->>child : transferFrom
+child->>child : transferFrom child A -> child B
+child-->child : return success
+child-->parent : return success
+parent-->springapi : return success
+springapi-->app : return success
+
+
+
+app->>springapi : transfer
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Transfer JAM tokens from one hedera account to another solidity address
+end Note
+' Note right of springapi #Pink
+'     Swagger documentation and implementation need to be updated.
+'     Note: Do we want to change this from accepting myaccNum to mySolidityAddress?
+' end Note
+Note right of springapi
+    * json (Dict) (Required)
+        * myaccNum (String) (Required) "0.0.21166",
+        * mypvtKey (String) (Required) "302e......",
+        * toSolidityAddress (String) (Required)
+        * valueInJamDecimals (Int) (Required) 56788000
+end Note
+
+springapi->>parent : transfer
+parent-->parent : getAccountSolidityAddress(myaccNum)
+parent-->parent : getFromAddressContractShard(fromSolidityAddress)
+parent-->parent : getToAddressContractShard(toSolidityAddress)
+parent-->parent : transfer(contractA, contractB, \nfromSolidityAddress, toSolidityAddress, value)
+parent-->springapi : return success
+springapi-->app : return success
+
+@enduml

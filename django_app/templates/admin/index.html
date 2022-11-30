@@ -1,0 +1,130 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_static bootstrapped_goodies_tags %}
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/dashboard.css" %}" />{% endblock %}
+
+{% block coltype %}colMS{% endblock %}
+
+{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
+
+{% block breadcrumbs %}
+<ul class="breadcrumb">
+<li>{% trans 'Home' %}</li>
+</ul>
+{% endblock %}
+
+{% block content-navbar-collapse %}
+{% endblock %}
+
+{% block extrahead %}
+<script>
+function regenerate_key(){
+    console.info('regenerating keys...');
+    // Prompt for password
+    if (confirm('Are you sure? \n\nif you already had keys this is a dangerous and irreversible procedure.')){
+        var password = prompt("Please enter the password you'd like to use to encrypt the keys?");
+        window.location = "/admin/support/regenerate_encryption_keys/?password="+password;
+    }
+}
+</script>
+{% endblock %}
+
+{% block object-tools %}
+<ul class="nav navbar-nav visible-lg">
+    <li class="dropdown">
+        <a role="button" href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Applications" %} <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            {% for app in app_list %}
+            <li>
+                <a href="#"><strong>{% render_app_name app %}</strong></a>
+            </li>
+            {% for model in app.models %}
+            <li>
+                {% if model.admin_url %}
+                    <a href="{{ model.admin_url }}">{{ model.name }}</a>
+                {% else %}
+                   {{ model.name }}
+                {% endif %}
+            </li>
+            {% endfor %}
+            {% if not forloop.last %}
+            <li role="presentation" class="divider"></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </li>
+</ul>
+{% endblock %}
+
+
+{% block content %}
+<div class="row row-offcanvas row-offcanvas-right">
+    {% comment %} <div id="content-main" class="col-sm-12"> {% endcomment %}
+    <div id="content-main" class="col-xs-12 col-sm-9">
+
+        <div class="tabbable">
+            {% for app in app_list %}
+                {% include "admin/bootstrapped_extra/app_name.html" %}
+                {% render_app_description app %}
+                <table summary="{% blocktrans with name=app.name %}Models available in the {{ name }} application.{% endblocktrans %}" class="table table-striped table-bordered">
+                {% for model in app.models %}
+                    <tr>
+                        <th scope="row">
+                            {% if model.admin_url %}
+                            <a href="{{ model.admin_url }}">{{ model.name }}</a>
+                            {% else %}
+                            {{ model.name }}
+                            {% endif %}
+
+                            {% if model.add_url or model.admin_url%}
+                            <div class="pull-right">
+                                {% if model.add_url %}
+                                <a href="{{ model.add_url }}" class="btn btn-xs addlink"><span class="glyphicon glyphicon-plus"></span>
+                                {% trans 'Add' %}</a>
+                                {% endif %}
+                                {% if model.admin_url %}
+                                <a href="{{ model.admin_url }}" class="btn btn-xs changelink"><span class="glyphicon glyphicon-edit"></span>
+                                {% trans 'Change' %}</a>
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                        </th>
+                    </tr>
+                {% endfor %}
+                </table>
+            {% empty %}
+                <p>{% trans "You don't have permission to edit anything." %}</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block sidebar %}
+{% load account_tags %}
+<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+<div class="list-group">
+    {% comment %} <a href="#" class="list-group-item active">Stats</a> {% endcomment %}
+    {% comment %} <a href="/admin/export_user_emails/" class="list-group-item"><small>Users</small><span style="font-weight: bold; font-size: 18px; margin-left: 10px;">{% num_users %}</span></a> {% endcomment %}
+    {% comment %} <a href="/admin/export_user_emails/" class="list-group-item"><small>Wallets</small><span style="font-weight: bold; font-size: 18px; margin-left: 10px;">{% num_users_with_wallets %}</span></a> {% endcomment %}
+    {% comment %} <a href="/admin/export_user_emails/" class="list-group-item"><small>Transactions</small><span style="font-weight: bold; font-size: 18px; margin-left: 10px;">{% num_transactions %}</span></a> {% endcomment %}
+    <a href="#" class="list-group-item active">Export</a>
+    <a href="/admin/export_user_emails/" class="list-group-item">Export user emails</a>
+</div>
+<div class="list-group">
+    <a href="#" class="list-group-item active">Quick Actions</a>
+    <a href="/support/download_openpgp_private_key/" class="list-group-item"><b>Download my openpgp private keys</b></a>
+    <a href="/admin/support/download_openpgp_public_key/" class="list-group-item">Download my openpgp public keys</a>
+    <a href="#" onclick="regenerate_key()" class="list-group-item">Generate new recovery keys</a>
+</div>
+<div class="list-group">
+    <a href="#" class="list-group-item active">Support</a>
+    <a href="/admin/support/passwordresetrequest/" class="list-group-item">Find a password reset request</a>
+    <a href="/admin/support/passwordresetrequest/add/" class="list-group-item"><b>Add a password reset request</b></a>
+    <a href="/admin/support/generalrequest/" class="list-group-item">Find a general request</a>
+    <a href="/admin/support/generalrequest/add/" class="list-group-item">Add a general request</a>
+    </div>
+</div>
+
+{# needed for sidebar to work on index #}
+</div>
+{% endblock %}

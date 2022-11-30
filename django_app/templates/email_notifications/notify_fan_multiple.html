@@ -1,0 +1,29 @@
+{% extends "email_notifications/base_email.html" %}
+
+{% block subject %}
+You have new fans!
+{% endblock %}
+
+{% block html_body %}
+
+  <p>
+    Hi {{profile.short_name}},
+    <br><br>
+    You have the following new fans:
+    <ul>
+      {% for feed in feeds %}
+        <li>
+          <a href="https://{{ BASE_URL }}/profile/{{feed.item.faner.keyword}}">{{feed.item.faner.name}}</a>
+          {% if feed.feed_type == 'fan_user' %}
+            has fanned your profile
+          {% elif feed.feed_type == 'fan_song' %}
+            has fanned your song {{feed.item.faned_song.title}}
+          {% elif feed.feed_type == 'fan_album' %}
+            has fanned your album {{feed.item.faned_album.title}}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </p>
+
+{% endblock %}

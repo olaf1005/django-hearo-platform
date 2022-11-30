@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1125px" preserveAspectRatio="none" style="width:304px;height:1125px;background:#FFFFFF;" version="1.1" viewBox="0 0 304 1125" width="304px" zoomAndPan="magnify"><defs/><g><ellipse cx="144.5" cy="20" fill="#000000" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="60" x2="207.5" y1="50" y2="50"/><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="98" x="11" y="108.5"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="65" x="29" y="132.7402">User logs in</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="109" x="153" y="70"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="76" x="171" y="94.2402">User registers</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="141" x="137" y="147"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="108" x="155" y="171.2402">Request verification</text><line style="stroke:#000000;stroke-width:1.5;" x1="60" x2="207.5" y1="209" y2="209"/><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="162" x="63.5" y="281.5"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="129" x="81.5" y="305.7402">Check if user has wallet</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="105" x="92" y="396"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="72" x="110" y="420.2402">Create wallet</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="148" x="70.5" y="458"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="115" x="88.5" y="482.2402">Create recovery keys</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="179" x="55" y="520"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="146" x="73" y="544.2402">Associate wallet with token</text><polygon fill="#F8F8F8" points="102,343.5,187,343.5,199,355.5,187,367.5,102,367.5,90,355.5,102,343.5" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="12" x="153.5" y="380.9702">no</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="75" x="107" y="358.4702">User has wallet</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="18" x="204" y="347.9702">yes</text><polygon fill="#F8F8F8" points="144.5,582,156.5,594,144.5,606,132.5,594,144.5,582" style="stroke:#383838;stroke-width:1.0;"/><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="154" x="67.5" y="678.5"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="121" x="85.5" y="702.7402">Transfer starter tokens</text><polygon fill="#F8F8F8" points="59,626,230,626,242,638,230,650,59,650,47,638,59,626" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="12" x="153.5" y="663.4702">no</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="161" x="64" y="640.9702">User has received starter tokens</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="18" x="247" y="630.4702">yes</text><polygon fill="#F8F8F8" points="144.5,740.5,156.5,752.5,144.5,764.5,132.5,752.5,144.5,740.5" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#F8F8F8" points="89,229,200,229,212,241,200,253,89,253,77,241,89,229" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="18" x="153.5" y="266.4702">yes</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="101" x="94" y="243.9702">User email is verified</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="12" x="217" y="233.4702">no</text><ellipse cx="256" cy="241" fill="#FFFFFF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"/><ellipse cx="256" cy="241" fill="#000000" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;"/><rect fill="#FFFFFF" height="236.5" rx="4" ry="4" style="stroke:#000000;stroke-width:2.0;" width="250" x="18" y="833.4702"/><path d="M219,833.4702 L219,850.4702 L209,860.4702 L18,860.4702 " fill="none" style="stroke:#000000;stroke-width:2.0;"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="181" x="26" y="850.2505">Process unprocessed listens</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="132" x="78.5" y="921.4702"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="99" x="96.5" y="945.7104">Get amount to pay</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="185" x="52" y="993.9702"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="152" x="70" y="1018.2104">May payment for each listen</text><polygon fill="#F8F8F8" points="92,877.4702,197,877.4702,209,889.4702,197,901.4702,92,901.4702,80,889.4702,92,877.4702" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="95" x="97" y="892.4404">Has unpaid listens?</text><polygon fill="#F8F8F8" points="34.5,784.5,254.5,784.5,266.5,796.5,254.5,808.5,34.5,808.5,22.5,796.5,34.5,784.5" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="18" x="153.5" y="821.9702">yes</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="210" x="39.5" y="799.4702">User has listens that they have not yet paid</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="12" x="271.5" y="788.9702">no</text><polygon fill="#F8F8F8" points="144.5,1089.9702,156.5,1101.9702,144.5,1113.9702,132.5,1101.9702,144.5,1089.9702" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="207.5" x2="207.5" y1="112" y2="147"/><polygon fill="#000000" points="203.5,137,207.5,147,211.5,137,207.5,141" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="60" x2="60" y1="51.5" y2="108.5"/><polygon fill="#000000" points="56,98.5,60,108.5,64,98.5,60,102.5" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="207.5" x2="207.5" y1="51.5" y2="70"/><polygon fill="#000000" points="203.5,60,207.5,70,211.5,60,207.5,64" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="60" x2="60" y1="150.5" y2="209"/><polygon fill="#000000" points="56,199,60,209,64,199,60,203" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="207.5" x2="207.5" y1="189" y2="209"/><polygon fill="#000000" points="203.5,199,207.5,209,211.5,199,207.5,203" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="30" y2="50"/><polygon fill="#000000" points="140.5,40,144.5,50,148.5,40,144.5,44" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="438" y2="458"/><polygon fill="#000000" points="140.5,448,144.5,458,148.5,448,144.5,452" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="500" y2="520"/><polygon fill="#000000" points="140.5,510,144.5,520,148.5,510,144.5,514" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="367.5" y2="396"/><polygon fill="#000000" points="140.5,386,144.5,396,148.5,386,144.5,390" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="199" x2="244" y1="355.5" y2="355.5"/><polygon fill="#000000" points="240,474,244,484,248,474,244,478" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="244" x2="244" y1="355.5" y2="594"/><line style="stroke:#000000;stroke-width:1.5;" x1="244" x2="156.5" y1="594" y2="594"/><polygon fill="#000000" points="166.5,590,156.5,594,166.5,598,162.5,594" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="562" y2="582"/><polygon fill="#000000" points="140.5,572,144.5,582,148.5,572,144.5,576" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="323.5" y2="343.5"/><polygon fill="#000000" points="140.5,333.5,144.5,343.5,148.5,333.5,144.5,337.5" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="650" y2="678.5"/><polygon fill="#000000" points="140.5,668.5,144.5,678.5,148.5,668.5,144.5,672.5" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="242" x2="254" y1="638" y2="638"/><polygon fill="#000000" points="250,694.5,254,704.5,258,694.5,254,698.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="254" x2="254" y1="638" y2="752.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="254" x2="156.5" y1="752.5" y2="752.5"/><polygon fill="#000000" points="166.5,748.5,156.5,752.5,166.5,756.5,162.5,752.5" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="720.5" y2="740.5"/><polygon fill="#000000" points="140.5,730.5,144.5,740.5,148.5,730.5,144.5,734.5" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="606" y2="626"/><polygon fill="#000000" points="140.5,616,144.5,626,148.5,616,144.5,620" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="253" y2="281.5"/><polygon fill="#000000" points="140.5,271.5,144.5,281.5,148.5,271.5,144.5,275.5" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="212" x2="245" y1="241" y2="241"/><polygon fill="#000000" points="235,237,245,241,235,245,239,241" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="764.5" y2="784.5"/><polygon fill="#000000" points="140.5,774.5,144.5,784.5,148.5,774.5,144.5,778.5" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="210.5" y2="229"/><polygon fill="#000000" points="140.5,219,144.5,229,148.5,219,144.5,223" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="963.4702" y2="993.9702"/><polygon fill="#000000" points="140.5,983.9702,144.5,993.9702,148.5,983.9702,144.5,987.9702" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="901.4702" y2="921.4702"/><polygon fill="#000000" points="140.5,911.4702,144.5,921.4702,148.5,911.4702,144.5,915.4702" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="1035.9702" y2="1045.9702"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="249" y1="1045.9702" y2="1045.9702"/><polygon fill="#000000" points="245,973.9702,249,963.9702,253,973.9702,249,969.9702" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="249" x2="249" y1="889.4702" y2="1045.9702"/><line style="stroke:#000000;stroke-width:1.5;" x1="249" x2="209" y1="889.4702" y2="889.4702"/><polygon fill="#000000" points="219,885.4702,209,889.4702,219,893.4702,215,889.4702" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="80" x2="40" y1="889.4702" y2="889.4702"/><polygon fill="#000000" points="36,959.9702,40,969.9702,44,959.9702,40,963.9702" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="40" x2="40" y1="889.4702" y2="1057.9702"/><line style="stroke:#000000;stroke-width:1.5;" x1="40" x2="144.5" y1="1057.9702" y2="1057.9702"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="1057.9702" y2="1089.9702"/><polygon fill="#000000" points="140.5,1079.9702,144.5,1089.9702,148.5,1079.9702,144.5,1083.9702" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="144.5" x2="144.5" y1="808.5" y2="877.4702"/><polygon fill="#000000" points="140.5,867.4702,144.5,877.4702,148.5,867.4702,144.5,871.4702" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="266.5" x2="278.5" y1="796.5" y2="796.5"/><polygon fill="#000000" points="274.5,946.9702,278.5,956.9702,282.5,946.9702,278.5,950.9702" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="278.5" x2="278.5" y1="796.5" y2="1101.9702"/><line style="stroke:#000000;stroke-width:1.5;" x1="278.5" x2="156.5" y1="1101.9702" y2="1101.9702"/><polygon fill="#000000" points="166.5,1097.9702,156.5,1101.9702,166.5,1105.9702,162.5,1101.9702" style="stroke:#000000;stroke-width:1.0;"/><!--MD5=[4181661c5235deebb80d9ff0b3521f8f]
+@startuml record listens
+
+!includeurl https://gist.githubusercontent.com/dnordberg/86dd9e5fff0447b41beb220c7f5a6c9a/raw/5b43d8bd0f3c97d8aba7c45b420d0661ffc18f56/black-and-white.pu
+
+' title Bulk transfer
+
+start
+split
+: User logs in;
+split again
+: User registers;
+: Request verification;
+end split
+    if (User email is verified) then (yes)
+        : Check if user has wallet;
+        if (User has wallet) then (yes)
+        else (no)
+            : Create wallet;
+            : Create recovery keys;
+            : Associate wallet with token;
+        endif
+        if (User has received starter tokens) then (yes)
+        else (no)
+            : Transfer starter tokens;
+        endif
+    else (no)
+        stop
+    endif
+
+    if (User has listens that they have not yet paid) then (yes)
+        partition "Process unprocessed listens" {
+            while (Has unpaid listens?)
+                : Get amount to pay;
+                : May payment for each listen;
+            endwhile
+        }
+    else (no)
+
+    endif
+
+@enduml
+
+@startuml record listens
+
+
+skinparam style strictuml
+skinparam defaultFontName  Helvetica
+skinparam sequenceMessageAlign center
+skinparam monochrome true
+skinparam shadowing             false
+skinparam roundcorner           8
+skinparam ParticipantPadding    40
+skinparam BoxPadding            40
+skinparam Padding               5
+
+skinparam activity {
+	ArrowColor Black
+	BackgroundColor White
+	BorderColor Black
+	BorderThickness 1
+}
+
+skinparam actor {
+	BackgroundColor White
+	BorderColor Black
+}
+
+skinparam usecase {
+	ArrowColor Black
+	BackgroundColor White
+	BorderColor Black
+	BorderThickness 1
+}
+
+skinparam class {
+	ArrowColor Black
+	BackgroundColor White
+	BorderColor Black
+	BorderThickness 1
+}
+
+
+skinparam object {
+	ArrowColor Black
+	BackgroundColor White
+	BorderColor Black
+}
+
+skinparam package {
+	BackgroundColor White
+	BorderColor Black
+}
+
+
+skinparam component {
+	BackgroundColor White
+	InterfaceBackgroundColor White
+	BorderColor Black
+	InterfaceBorderColor Black
+}
+
+skinparam note {
+	BackgroundColor White
+	BorderColor Black
+}
+
+skinparam state {
+	ArrowColor Black
+	BackgroundColor White
+	BorderColor Black
+}
+
+skinparam sequence {
+	ArrowColor Black
+	BackgroundColor White
+	ParticipantBackgroundColor White
+	BorderColor Black
+	LifeLineBorderColor Black
+	ParticipantBorderColor Black
+	BoxLineColor Black
+}
+
+skinparam interface {
+	BackgroundColor White
+	BorderColor Black
+}
+
+
+start
+split
+: User logs in;
+split again
+: User registers;
+: Request verification;
+end split
+    if (User email is verified) then (yes)
+        : Check if user has wallet;
+        if (User has wallet) then (yes)
+        else (no)
+            : Create wallet;
+            : Create recovery keys;
+            : Associate wallet with token;
+        endif
+        if (User has received starter tokens) then (yes)
+        else (no)
+            : Transfer starter tokens;
+        endif
+    else (no)
+        stop
+    endif
+
+    if (User has listens that they have not yet paid) then (yes)
+        partition "Process unprocessed listens" {
+            while (Has unpaid listens?)
+                : Get amount to pay;
+                : May payment for each listen;
+            endwhile
+        }
+    else (no)
+
+    endif
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 15:40:07 EAT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

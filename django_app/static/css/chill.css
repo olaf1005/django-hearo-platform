@@ -1,0 +1,39 @@
+.chill_container {
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    left: 0px;
+    border: 1px solid rgba(0,0,0,0.3);
+    position: fixed;
+    z-index: 20000000007;
+}
+
+.chill_entry {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 4px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.96);
+    z-index: 20000000007;
+}
+
+.chill_entry .usertab {
+    margin: 0px;
+}
+
+.chill_entry:last-child {
+    border: none;
+}
+
+.chill_entry:hover {
+    background: rgba(240,250,250,0.96);
+}
+
+.chill_entry.empty {
+    padding: 15px;
+    color: #CCC;
+    cursor: default;
+}
+
+.chill_entry.empty:hover {
+    background: rgba(255,255,255,0.9);
+}

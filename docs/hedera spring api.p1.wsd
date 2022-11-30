@@ -1,0 +1,80 @@
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title Hedera Spring API
+
+Actor "App" as app
+participant "HTS" as hts
+participant "Parent" as parent
+participant "Children.." as child
+participant "Hashgraph" as hashgraph
+
+box "Web Apps" #LightBlue
+	participant app
+	participant hts
+end box
+
+box "Smart Contracts" #LightGreen
+	participant parent
+	participant child
+end box
+
+box "Hedera" #Orange
+	participant hashgraph
+end box
+
+app->>hts : account
+Note right of hts
+    POST
+end Note
+Note right of hts
+    Create an account on hedera
+    with certain balance
+    (transferred from default account)
+end Note
+Note right of hts
+    * startBalance (String) (Default: 0)
+end Note
+' Note right of hts #Pink
+'     Implementation needs to be updated
+' end Note
+
+hts ->> parent : account
+parent ->> hashgraph : createAccount(initialBalance)
+hashgraph-->parent: return hederaAccountId
+parent ->> child : createAccountWithBalance(account, startBalance)
+child --> parent : return success
+parent --> hts : return account info
+Note right of hts
+    {
+        “solidityAddress": "xxx",
+        "myaccNum": "0.0.61538",
+        "mypvtKey": "xxx",
+        "pubKey": "xxx"
+    }
+end Note
+
+hts --> app : return account info
+
+app->>hts : hbarBalance
+Note right of hts
+    GET
+end Note
+Note right of hts
+    Get balance in tinyBars of an account id
+end Note
+Note right of hts
+    * accountId (String) (Required)
+end Note
+
+hts->>hashgraph : getAccountBalance(accountId)
+hashgraph-->parent: return balance
+parent-->hts : return balance
+hts-->app : return balance
+
+
+@enduml

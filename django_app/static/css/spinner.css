@@ -1,0 +1,71 @@
+
+.spinner {
+  width: 25px;
+  height: 25px;
+  margin: 0px auto;
+  position: relative;
+  -webkit-animation: rotation 1s infinite linear;
+  -moz-animation: rotation 1s infinite linear;
+  -o-animation: rotation 1s infinite linear;
+  animation: rotation 1s infinite linear;
+  border:2px solid rgba(255, 255, 255, 0.2);
+  border-radius:100%;
+}
+
+.spinner--small {
+  width: 10px;
+  height: 10px;
+}
+
+.spinner--medium {
+  width: 15px;
+  height: 15px;
+}
+
+.spinner--large {
+  width: 45px;
+  height: 45px;
+}
+
+.spinner:before {
+   content:"";
+   display:block;
+   position:absolute;
+   left:-2px;
+   top:-2px;
+   height:100%;
+   width:100%;
+   border-top:2px solid white;
+   border-left:2px solid transparent;
+   border-bottom:2px solid transparent;
+   border-right:2px solid transparent;
+   border-radius:100%;
+}
+
+@-webkit-keyframes rotation {
+   from {-webkit-transform: rotate(0deg);}
+   to {-webkit-transform: rotate(359deg);}
+}
+@-moz-keyframes rotation {
+   from {-moz-transform: rotate(0deg);}
+   to {-moz-transform: rotate(359deg);}
+}
+@-o-keyframes rotation {
+   from {-o-transform: rotate(0deg);}
+   to {-o-transform: rotate(359deg);}
+}
+@keyframes rotation {
+   from {transform: rotate(0deg);}
+   to {transform: rotate(359deg);}
+}
+
+/* additions for ios mobile, spinner is slightly too far right */
+
+/* Safari 6.1+ (8.0 is the latest version of Safari at this time) */
+
+@media screen and (max-device-width: 480px) and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+  .play-button--small div.spinner{
+    left: -4px !important;
+  }
+}
+

@@ -1,0 +1,25 @@
+{% extends "email_notifications/base_email.html" %}
+
+{% block subject %}
+Forgot Password Recovery System for {{ BASE_URL }}
+{% endblock %}
+
+{% block html_body %}
+
+
+<p>For security purposes, we have reset your
+password to: {{new_password }}</p>
+
+<p>
+The next time you login, you will be
+redirected to your settings where you can reset
+it.
+</p>
+<p>
+Please note: Once you've changed your password you will be able to
+listen to music and continue receiving royalties for listens of your
+music, however, you should contact support inorder to fully unlock
+your wallet and perform any other transactions.
+</p>
+
+{% endblock %}

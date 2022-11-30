@@ -1,0 +1,32 @@
+@startuml Hearo components
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+actor User
+
+cloud "Docker" {
+  [App]
+  [HTS]
+  [TarTar]
+  database Postgres
+  database Rethinkdb
+  database Elasticsearch
+  database Redis
+}
+[HederaNetwork]
+
+User --> App
+App <--> HTS
+HederaNetwork <...> HTS
+App <--> TarTar
+App <--> Postgres
+App <--> Rethinkdb
+App <-- Elasticsearch
+App <-- Redis
+TarTar <--> Rethinkdb
+
+
+@enduml

@@ -1,0 +1,62 @@
+[
+    {
+        "pk": 1,
+        "model": "accounts.location",
+        "fields": {
+            "city": "",
+            "most_exact": "Houston, TX, USA",
+            "country": "US",
+            "short_state": "",
+            "long_state": "",
+            "lat": 29.7601927,
+            "lng": -95.36938959999999,
+            "secondary": "Houston, TX",
+            "zip_code": ""
+        }
+    },
+    {
+        "pk": 2,
+        "model": "accounts.location",
+        "fields": {
+            "city": "",
+            "most_exact": "Austin, TX, USA",
+            "country": "US",
+            "short_state": "",
+            "long_state": "",
+            "lat": 29.7601927,
+            "lng": -95.36938959999999,
+            "secondary": "Austin, TX",
+            "zip_code": ""
+        }
+    },
+    {
+        "pk": 3,
+        "model": "accounts.location",
+        "fields": {
+            "city": "",
+            "most_exact": "Miami, FL, USA",
+            "country": "US",
+            "short_state": "",
+            "long_state": "",
+            "lat": 29.7601927,
+            "lng": -95.36938959999999,
+            "secondary": "Miami, FL",
+            "zip_code": ""
+        }
+    },
+    {
+        "pk": 4,
+        "model": "accounts.location",
+        "fields": {
+            "city": "",
+            "most_exact": "Paris, France",
+            "country": "US",
+            "short_state": "",
+            "long_state": "",
+            "lat": 29.7601927,
+            "lng": -95.36938959999999,
+            "secondary": "Paris, France",
+            "zip_code": ""
+        }
+    }
+]

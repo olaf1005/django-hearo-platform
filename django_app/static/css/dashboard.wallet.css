@@ -1,0 +1,43 @@
+#content.dashboard.wallet #myacct-content code {
+  overflow-wrap: break-word;
+}
+#content.dashboard.wallet #myacct-content #wallet_widgets {
+  width: 100%;
+  position: relative;
+}
+#content.dashboard.wallet #myacct-content #wallet_widgets .left_side {
+  width: 50%;
+  padding: 10px;
+}
+#content.dashboard.wallet #myacct-content #wallet_widgets .right_side {
+  width: 45%;
+  padding: 10px;
+}
+#content.dashboard.wallet #myacct-content #wallet_widgets .wallet_balance {
+  font-size: 2em;
+  color: whitesmoke;
+}
+#content.dashboard.wallet #myacct-content .widget {
+  margin-bottom: 20px;
+  border: 1px solid #ababab;
+}
+#content.dashboard.wallet #myacct-content .widget .widget_header h3 {
+  border-bottom: 1px solid #ababab;
+  padding: 10px;
+}
+#content.dashboard.wallet #myacct-content .widget .widget_content {
+  padding: 10px;
+}
+#content.dashboard.wallet #myacct-content .global__container,
+#content.dashboard.wallet #myacct-content input,
+#content.dashboard.wallet #myacct-content .transaction-flow__billing-address-container,
+#content.dashboard.wallet #myacct-content .buy-checkout__cc-step-content div {
+  box-shadow: none;
+  background: #191919;
+}
+#content.dashboard.wallet #myacct-content ul.wallet_activity li {
+  margin-bottom: 10px;
+}
+#content.dashboard.wallet #myacct-content ul.wallet_activity .token_value {
+  color: lightblue;
+}

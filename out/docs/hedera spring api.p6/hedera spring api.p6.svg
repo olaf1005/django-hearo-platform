@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1108px" preserveAspectRatio="none" style="width:780px;height:1108px;background:#00000000;" version="1.1" viewBox="0 0 780 1108" width="780px" zoomAndPan="magnify"><defs/><g><rect fill="#CCCCCC" height="1089.668" style="stroke:#383838;stroke-width:1.0;" width="207.5" x="1" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="68" x="70.75" y="18.5684">Web Apps</text><rect fill="#C7C7C7" height="1089.668" style="stroke:#383838;stroke-width:1.0;" width="284.5" x="269" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="107" x="357.75" y="18.5684">Smart Contracts</text><rect fill="#ADADAD" height="1089.668" style="stroke:#383838;stroke-width:1.0;" width="97" x="671.5" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="49" x="695.5" y="18.5684">Hedera</text><rect fill="#FFFFFF" height="134.5527" style="stroke:#000000;stroke-width:2.0;" width="511.5" x="263" y="891.4941"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="22" x2="22" y1="104.7988" y2="1101.668"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="161.5" x2="161.5" y1="104.7988" y2="1101.668"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="302" x2="302" y1="104.7988" y2="1101.668"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="508.5" x2="508.5" y1="104.7988" y2="1101.668"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="719.5" x2="719.5" y1="104.7988" y2="1101.668"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="5" y="101.8457">App</text><ellipse cx="22" cy="35.3105" fill="#F8F8F8" rx="8" ry="8" style="stroke:#383838;stroke-width:2.0;"/><path d="M22,43.3105 L22,70.3105 M9,51.3105 L35,51.3105 M22,70.3105 L9,85.3105 M22,70.3105 L35,85.3105 " fill="none" style="stroke:#383838;stroke-width:2.0;"/><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="85" x="119.5" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="126.5" y="93.8457">Spring API</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="58" x="273" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="280" y="93.8457">Parent</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="81" x="468.5" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="475.5" y="93.8457">Children..</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="89" x="675.5" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="682.5" y="93.8457">Hashgraph</text><line style="stroke:#383838;stroke-width:1.0;" x1="160" x2="150" y1="136.1094" y2="132.1094"/><line style="stroke:#383838;stroke-width:1.0;" x1="160" x2="150" y1="136.1094" y2="140.1094"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="161" y1="136.1094" y2="136.1094"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="81" x="29" y="131.3672">transferFrom</text><path d="M167,149.1094 L167,174.1094 L220,174.1094 L220,159.1094 L210,149.1094 L167,149.1094 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M210,149.1094 L210,159.1094 L220,159.1094 L210,149.1094 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="173" y="166.6777">POST</text><path d="M167,184.4199 L167,209.4199 L487,209.4199 L487,194.4199 L477,184.4199 L167,184.4199 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M477,184.4199 L477,194.4199 L487,194.4199 L477,184.4199 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="299" x="173" y="201.9883">One account transfers JAM on behalf of another</text><path d="M167,219.7305 L167,320.7305 L612,320.7305 L612,229.7305 L602,219.7305 L167,219.7305 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M602,219.7305 L602,229.7305 L612,229.7305 L602,219.7305 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="178.5" cy="232.541" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="184" y="237.2988">json (Dict) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="344" x="189" y="252.6094">* myaccNum (? Required/Optional) (String) "0.0.21166"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="153" x="189" y="267.9199">* mypvtKey": "302e......",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="307" x="189" y="283.2305">* toSolidityAddress (String) (? Required/Optional)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="370" x="189" y="298.541">* tokenOwnerSolidityAddress (String) (? Required/Optional)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="408" x="189" y="313.8516">* valueInJamDecimals (Required) (? Required/Optional) 56788000</text><line style="stroke:#383838;stroke-width:1.0;" x1="300" x2="290" y1="347.9043" y2="343.9043"/><line style="stroke:#383838;stroke-width:1.0;" x1="300" x2="290" y1="347.9043" y2="351.9043"/><line style="stroke:#383838;stroke-width:1.0;" x1="162" x2="301" y1="347.9043" y2="347.9043"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="81" x="169" y="343.1621">transferFrom</text><line style="stroke:#383838;stroke-width:1.0;" x1="507" x2="497" y1="377.2148" y2="373.2148"/><line style="stroke:#383838;stroke-width:1.0;" x1="507" x2="497" y1="377.2148" y2="381.2148"/><line style="stroke:#383838;stroke-width:1.0;" x1="302" x2="508" y1="377.2148" y2="377.2148"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="81" x="309" y="372.4727">transferFrom</text><line style="stroke:#383838;stroke-width:1.0;" x1="509" x2="551" y1="406.5254" y2="406.5254"/><line style="stroke:#383838;stroke-width:1.0;" x1="551" x2="551" y1="406.5254" y2="419.5254"/><line style="stroke:#383838;stroke-width:1.0;" x1="510" x2="551" y1="419.5254" y2="419.5254"/><line style="stroke:#383838;stroke-width:1.0;" x1="510" x2="520" y1="419.5254" y2="415.5254"/><line style="stroke:#383838;stroke-width:1.0;" x1="510" x2="520" y1="419.5254" y2="423.5254"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="197" x="516" y="401.7832">transferFrom child A -&gt; child B</text><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="509" x2="551" y1="448.8359" y2="448.8359"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="551" x2="551" y1="448.8359" y2="461.8359"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="510" x2="551" y1="461.8359" y2="461.8359"/><polygon fill="#383838" points="520,457.8359,510,461.8359,520,465.8359" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="516" y="444.0938">return success</text><polygon fill="#383838" points="313,487.1465,303,491.1465,313,495.1465" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="307" x2="508" y1="491.1465" y2="491.1465"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="319" y="486.4043">return success</text><polygon fill="#383838" points="173,516.457,163,520.457,173,524.457" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="167" x2="301" y1="520.457" y2="520.457"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="179" y="515.7148">return success</text><polygon fill="#383838" points="33,545.7676,23,549.7676,33,553.7676" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="161" y1="549.7676" y2="549.7676"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="39" y="545.0254">return success</text><line style="stroke:#383838;stroke-width:1.0;" x1="160" x2="150" y1="579.0781" y2="575.0781"/><line style="stroke:#383838;stroke-width:1.0;" x1="160" x2="150" y1="579.0781" y2="583.0781"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="161" y1="579.0781" y2="579.0781"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="29" y="574.3359">transferOwnership</text><path d="M167,592.0781 L167,617.0781 L220,617.0781 L220,602.0781 L210,592.0781 L167,592.0781 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M210,592.0781 L210,602.0781 L220,602.0781 L210,592.0781 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="173" y="609.6465">POST</text><path d="M167,627.3887 L167,652.3887 L429,652.3887 L429,637.3887 L419,627.3887 L167,627.3887 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M419,627.3887 L419,637.3887 L429,637.3887 L419,627.3887 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="241" x="173" y="644.957">Change owner of Jam Token Contracts</text><path d="M167,662.6992 L167,748.6992 L548,748.6992 L548,672.6992 L538,662.6992 L167,662.6992 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M538,662.6992 L538,672.6992 L548,672.6992 L538,662.6992 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="178.5" cy="675.5098" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136" x="184" y="680.2676">body (Dict) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="336" x="189" y="695.5781">* currAccNum (String) (? Required/Optional) "0.0.903"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="331" x="189" y="710.8887">* currPvtKey (String) (? Required/Optional) "302e......"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="344" x="189" y="726.1992">* newAccNum (String) (? Required/Optional) "0.0.1117"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="331" x="189" y="741.5098">* newPvtKey (String) (? Required/Optional) "302e......"</text><line style="stroke:#383838;stroke-width:1.0;" x1="300" x2="290" y1="775.5625" y2="771.5625"/><line style="stroke:#383838;stroke-width:1.0;" x1="300" x2="290" y1="775.5625" y2="779.5625"/><line style="stroke:#383838;stroke-width:1.0;" x1="162" x2="301" y1="775.5625" y2="775.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="169" y="770.8203">transferOwnership</text><line style="stroke:#383838;stroke-width:1.0;" x1="302" x2="344" y1="804.873" y2="804.873"/><line style="stroke:#383838;stroke-width:1.0;" x1="344" x2="344" y1="804.873" y2="817.873"/><line style="stroke:#383838;stroke-width:1.0;" x1="303" x2="344" y1="817.873" y2="817.873"/><line style="stroke:#383838;stroke-width:1.0;" x1="303" x2="313" y1="817.873" y2="813.873"/><line style="stroke:#383838;stroke-width:1.0;" x1="303" x2="313" y1="817.873" y2="821.873"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="123" x="309" y="800.1309">_transferOwnership</text><line style="stroke:#383838;stroke-width:1.0;" x1="718" x2="708" y1="847.1836" y2="843.1836"/><line style="stroke:#383838;stroke-width:1.0;" x1="718" x2="708" y1="847.1836" y2="851.1836"/><line style="stroke:#383838;stroke-width:1.0;" x1="302" x2="719" y1="847.1836" y2="847.1836"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112" x="309" y="842.4414">changeOwnership</text><polygon fill="#383838" points="313,872.4941,303,876.4941,313,880.4941" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="307" x2="719" y1="876.4941" y2="876.4941"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="319" y="871.752">return success</text><path d="M263,891.4941 L337,891.4941 L337,898.4941 L327,908.4941 L263,908.4941 L263,891.4941 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="134.5527" style="stroke:#000000;stroke-width:2.0;" width="511.5" x="263" y="891.4941"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="29" x="278" y="905.0625">loop</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="114" x="352" y="904.1289">["For each contract"]</text><line style="stroke:#383838;stroke-width:1.0;" x1="507" x2="497" y1="930.1152" y2="926.1152"/><line style="stroke:#383838;stroke-width:1.0;" x1="507" x2="497" y1="930.1152" y2="934.1152"/><line style="stroke:#383838;stroke-width:1.0;" x1="302" x2="508" y1="930.1152" y2="930.1152"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="183" x="309" y="925.373">_transferOwnership(contract)</text><line style="stroke:#383838;stroke-width:1.0;" x1="718" x2="708" y1="959.4258" y2="955.4258"/><line style="stroke:#383838;stroke-width:1.0;" x1="718" x2="708" y1="959.4258" y2="963.4258"/><line style="stroke:#383838;stroke-width:1.0;" x1="509" x2="719" y1="959.4258" y2="959.4258"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112" x="516" y="954.6836">changeOwnership</text><polygon fill="#383838" points="520,984.7363,510,988.7363,520,992.7363" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="514" x2="719" y1="988.7363" y2="988.7363"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="526" y="983.9941">return success</text><polygon fill="#383838" points="313,1014.0469,303,1018.0469,313,1022.0469" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="307" x2="508" y1="1018.0469" y2="1018.0469"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="319" y="1013.3047">return success</text><polygon fill="#383838" points="173,1050.3574,163,1054.3574,173,1058.3574" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="167" x2="301" y1="1054.3574" y2="1054.3574"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="179" y="1049.6152">return success</text><polygon fill="#383838" points="33,1079.668,23,1083.668,33,1087.668" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="161" y1="1083.668" y2="1083.668"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="39" y="1078.9258">return success</text><!--MD5=[ac04ad6066cacdb2a47882cf4d6efbd6]
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title Hedera Spring API
+
+Actor "App" as app
+participant "Spring API" as springapi
+participant "Parent" as parent
+participant "Children.." as child
+participant "Hashgraph" as hashgraph
+
+box "Web Apps" #LightBlue
+	participant app
+	participant springapi
+end box
+
+box "Smart Contracts" #LightGreen
+	participant parent
+	participant child
+end box
+
+box "Hedera" #Orange
+	participant hashgraph
+end box
+
+app->>springapi : transferFrom
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    One account transfers JAM on behalf of another
+end Note
+' Note right of springapi #Pink
+'     Swagger documentation needs to be updated
+' end Note
+Note right of springapi
+    * json (Dict) (Required)
+        * myaccNum (? Required/Optional) (String) "0.0.21166"
+        * mypvtKey": "302e......",
+        * toSolidityAddress (String) (? Required/Optional)
+        * tokenOwnerSolidityAddress (String) (? Required/Optional)
+        * valueInJamDecimals (Required) (? Required/Optional) 56788000
+end Note
+
+springapi->>parent : transferFrom
+parent->>child : transferFrom
+child->>child : transferFrom child A -> child B
+child- ->child : return success
+child- ->parent : return success
+parent- ->springapi : return success
+springapi- ->app : return success
+
+app->>springapi : transferOwnership
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Change owner of Jam Token Contracts
+end Note
+' Note right of springapi #Pink
+'     Swagger documentation needs to be updated
+' end Note
+Note right of springapi
+    * body (Dict) (Required)
+        * currAccNum (String) (? Required/Optional) "0.0.903"
+        * currPvtKey (String) (? Required/Optional) "302e......"
+        * newAccNum (String) (? Required/Optional) "0.0.1117"
+        * newPvtKey (String) (? Required/Optional) "302e......"
+end Note
+
+springapi->>parent : transferOwnership
+parent->>parent : _transferOwnership
+parent->>hashgraph: changeOwnership
+hashgraph- ->parent : return success
+loop "For each contract"
+    parent->>child : _transferOwnership(contract)
+    child->>hashgraph : changeOwnership
+    hashgraph- ->child : return success
+    child- ->parent : return success
+end
+parent- ->springapi : return success
+springapi- ->app : return success
+
+
+@enduml
+
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+
+Actor "App" as app
+participant "Spring API" as springapi
+participant "Parent" as parent
+participant "Children.." as child
+participant "Hashgraph" as hashgraph
+
+box "Web Apps" #LightBlue
+	participant app
+	participant springapi
+end box
+
+box "Smart Contracts" #LightGreen
+	participant parent
+	participant child
+end box
+
+box "Hedera" #Orange
+	participant hashgraph
+end box
+
+app->>springapi : transferFrom
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    One account transfers JAM on behalf of another
+end Note
+Note right of springapi
+    * json (Dict) (Required)
+        * myaccNum (? Required/Optional) (String) "0.0.21166"
+        * mypvtKey": "302e......",
+        * toSolidityAddress (String) (? Required/Optional)
+        * tokenOwnerSolidityAddress (String) (? Required/Optional)
+        * valueInJamDecimals (Required) (? Required/Optional) 56788000
+end Note
+
+springapi->>parent : transferFrom
+parent->>child : transferFrom
+child->>child : transferFrom child A -> child B
+child- ->child : return success
+child- ->parent : return success
+parent- ->springapi : return success
+springapi- ->app : return success
+
+app->>springapi : transferOwnership
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Change owner of Jam Token Contracts
+end Note
+Note right of springapi
+    * body (Dict) (Required)
+        * currAccNum (String) (? Required/Optional) "0.0.903"
+        * currPvtKey (String) (? Required/Optional) "302e......"
+        * newAccNum (String) (? Required/Optional) "0.0.1117"
+        * newPvtKey (String) (? Required/Optional) "302e......"
+end Note
+
+springapi->>parent : transferOwnership
+parent->>parent : _transferOwnership
+parent->>hashgraph: changeOwnership
+hashgraph- ->parent : return success
+loop "For each contract"
+    parent->>child : _transferOwnership(contract)
+    child->>hashgraph : changeOwnership
+    hashgraph- ->child : return success
+    child- ->parent : return success
+end
+parent- ->springapi : return success
+springapi- ->app : return success
+
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 15:40:07 EAT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

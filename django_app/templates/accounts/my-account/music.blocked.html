@@ -1,0 +1,21 @@
+{% extends 'accounts/my-account/index.html' %}
+
+{% block title %}My Account Music (Blocked) - Tune.fm{% endblock %}
+
+{% block myAccountInnerPage %}
+
+{% with user.person.view as view %}
+
+{% load elements %}
+
+<div class="content">
+<div style="font-family: Museo; font-weight: 600; margin: 200px 0; text-align: center; font-size: 20px;">
+  Our upload system is being upgraded. Music uploads should be back up tomorrow!
+</div>
+</div>
+
+
+
+<!-- End check for agreement check -->
+{% endwith %}
+{% endblock %}

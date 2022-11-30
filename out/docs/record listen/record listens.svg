@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="941px" preserveAspectRatio="none" style="width:2349px;height:941px;background:#FFFFFF;" version="1.1" viewBox="0 0 2349 941" width="2349px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="150" x="1115" y="11"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="117" x="1133" y="35.2402">User listens to a song</text><polygon fill="#F8F8F8" points="116,131.9702,184,131.9702,196,143.9702,184,155.9702,116,155.9702,104,143.9702,116,131.9702" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="18" x="159" y="169.4404">yes</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="58" x="121" y="146.9404">Song is free</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="278" x="11" y="190.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="245" x="29" y="215.1807">Record listen but don't create a token transfer</text><polygon fill="#F8F8F8" points="684.375,131.9702,810.375,131.9702,822.375,143.9702,810.375,155.9702,684.375,155.9702,672.375,143.9702,684.375,131.9702" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="18" x="756.375" y="169.4404">yes</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="116" x="689.375" y="146.9404">Song is first stream free</text><polygon fill="#F8F8F8" points="693.375,190.9404,801.375,190.9404,813.375,202.9404,801.375,214.9404,693.375,214.9404,681.375,202.9404,693.375,190.9404" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="98" x="698.375" y="205.9106">First stream of song</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="18" x="658.375" y="195.4106">yes</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="12" x="818.375" y="195.4106">no</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="278" x="299" y="224.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="245" x="317" y="249.1807">Record listen but don't create a token transfer</text><polygon fill="#F8F8F8" points="984.25,224.9404,1189.25,224.9404,1201.25,236.9404,1189.25,248.9404,984.25,248.9404,972.25,236.9404,984.25,224.9404" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="195" x="989.25" y="239.9106">Free listen seconds has been exceeded</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="18" x="949.25" y="229.4106">yes</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="12" x="1206.25" y="229.4106">no</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="196" x="771.5" y="258.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="163" x="789.5" y="283.1807">Create token transfer for listen</text><rect fill="#FFFFFF" height="346" rx="4" ry="4" style="stroke:#000000;stroke-width:2.0;" width="396" x="671.5" y="335.9404"/><path d="M884.5,335.9404 L884.5,352.9404 L874.5,362.9404 L671.5,362.9404 " fill="none" style="stroke:#000000;stroke-width:2.0;"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="193" x="679.5" y="352.7207">Create token transfer for listen</text><rect fill="#FFFFFF" height="129" rx="4" ry="4" style="stroke:#000000;stroke-width:2.0;" width="376" x="681.5" y="379.9404"/><path d="M917.5,379.9404 L917.5,396.9404 L907.5,406.9404 L681.5,406.9404 " fill="none" style="stroke:#000000;stroke-width:2.0;"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="216" x="689.5" y="396.7207">Calculate value and facilitation fee</text><rect fill="#FFFFFF" height="66" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="356" x="691.5" y="423.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="326" x="706.5" y="448.1807">Value = Seconds to pay / 60 * JAM Per min * token multiplier</text><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="267" x="706.5" y="460.1807">Faciliation fee = value * faciliation fee percentage</text><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="183" x="706.5" y="472.1807">New value = value - faciliation fee</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="206" x="766.5" y="543.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="173" x="784.5" y="568.1807">Check song profile membership</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="226" x="756.5" y="620.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="193" x="774.5" y="645.1807">Split revenue between membership</text><polygon fill="#F8F8F8" points="769.5,716.9404,969.5,716.9404,981.5,728.9404,969.5,740.9404,769.5,740.9404,757.5,728.9404,769.5,716.9404" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="190" x="774.5" y="731.9106">Failed to create token transfer for listen</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="18" x="734.5" y="721.4106">yes</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="12" x="986.5" y="721.4106">no</text><rect fill="#FFFFFF" height="54" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="281" x="587" y="750.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="182" x="605" y="775.1807">Send email to user to inform them</text><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="251" x="602" y="787.1807">that they can create a wallet to receive transfer</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="247" x="888" y="750.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="214" x="906" y="775.1807">Issue payment for transaction faciliation</text><polygon fill="#F8F8F8" points="869.5,810.9404,881.5,822.9404,869.5,834.9404,857.5,822.9404,869.5,810.9404" style="stroke:#383838;stroke-width:1.0;"/><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="278" x="1165" y="258.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="245" x="1183" y="283.1807">Record listen but don't create a token transfer</text><ellipse cx="1304" cy="346.9404" fill="#FFFFFF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"/><ellipse cx="1304" cy="346.9404" fill="#000000" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;"/><polygon fill="#F8F8F8" points="747.375,844.9404,759.375,856.9404,747.375,868.9404,735.375,856.9404,747.375,844.9404" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#F8F8F8" points="1918.25,131.9702,1987.25,131.9702,1999.25,143.9702,1987.25,155.9702,1918.25,155.9702,1906.25,143.9702,1918.25,131.9702" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="18" x="1961.75" y="169.4404">yes</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="59" x="1923.25" y="146.9404">Song is paid</text><polygon fill="#F8F8F8" points="1850.25,190.9404,2055.25,190.9404,2067.25,202.9404,2055.25,214.9404,1850.25,214.9404,1838.25,202.9404,1850.25,190.9404" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="195" x="1855.25" y="205.9106">Free listen seconds has been exceeded</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="18" x="1815.25" y="195.4106">yes</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="12" x="2072.25" y="195.4106">no</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="196" x="1637.5" y="224.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="163" x="1655.5" y="249.1807">Create token transfer for listen</text><rect fill="#FFFFFF" height="347" rx="4" ry="4" style="stroke:#000000;stroke-width:2.0;" width="396" x="1537.5" y="301.9404"/><path d="M1750.5,301.9404 L1750.5,318.9404 L1740.5,328.9404 L1537.5,328.9404 " fill="none" style="stroke:#000000;stroke-width:2.0;"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="193" x="1545.5" y="318.7207">Create token transfer for listen</text><rect fill="#FFFFFF" height="130" rx="4" ry="4" style="stroke:#000000;stroke-width:2.0;" width="376" x="1547.5" y="345.9404"/><path d="M1783.5,345.9404 L1783.5,362.9404 L1773.5,372.9404 L1547.5,372.9404 " fill="none" style="stroke:#000000;stroke-width:2.0;"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="216" x="1555.5" y="362.7207">Calculate value and facilitation fee</text><rect fill="#FFFFFF" height="66" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="356" x="1557.5" y="389.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="326" x="1572.5" y="414.1807">Value = Seconds to pay / 60 * JAM Per min * token multiplier</text><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="267" x="1572.5" y="426.1807">Faciliation fee = value * faciliation fee percentage</text><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="183" x="1572.5" y="438.1807">New value = value - faciliation fee</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="206" x="1632.5" y="509.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="173" x="1650.5" y="534.1807">Check song profile membership</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="226" x="1622.5" y="586.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="193" x="1640.5" y="611.1807">Split revenue between membership</text><polygon fill="#F8F8F8" points="1635.5,682.9404,1835.5,682.9404,1847.5,694.9404,1835.5,706.9404,1635.5,706.9404,1623.5,694.9404,1635.5,682.9404" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="190" x="1640.5" y="697.9106">Failed to create token transfer for listen</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="18" x="1600.5" y="687.4106">yes</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="12" x="1852.5" y="687.4106">no</text><rect fill="#FFFFFF" height="54" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="281" x="1453" y="716.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="182" x="1471" y="741.1807">Send email to user to inform them</text><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="251" x="1468" y="753.1807">that they can create a wallet to receive transfer</text><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="247" x="1754" y="716.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="214" x="1772" y="741.1807">Issue payment for transaction faciliation</text><polygon fill="#F8F8F8" points="1735.5,776.9404,1747.5,788.9404,1735.5,800.9404,1723.5,788.9404,1735.5,776.9404" style="stroke:#383838;stroke-width:1.0;"/><rect fill="#FFFFFF" height="42" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="278" x="2031" y="224.9404"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="245" x="2049" y="249.1807">Record listen but don't create a token transfer</text><ellipse cx="2170" cy="312.9404" fill="#FFFFFF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"/><ellipse cx="2170" cy="312.9404" fill="#000000" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;"/><ellipse cx="1190" cy="919.9404" fill="#FFFFFF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"/><ellipse cx="1190" cy="919.9404" fill="#000000" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;"/><polygon fill="#F8F8F8" points="1117.5,73,1262.5,73,1274.5,85,1262.5,97,1117.5,97,1105.5,85,1117.5,73" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="18" x="1199" y="110.4702">yes</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="135" x="1122.5" y="87.9702">Song is not users own song</text><text fill="#000000" font-family="Helvetica" font-size="11" lengthAdjust="spacing" textLength="12" x="1279.5" y="77.4702">no</text><ellipse cx="1318.5" cy="85" fill="#FFFFFF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"/><ellipse cx="1318.5" cy="85" fill="#000000" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="869.5" x2="869.5" y1="489.9404" y2="543.9404"/><polygon fill="#000000" points="865.5,533.9404,869.5,543.9404,873.5,533.9404,869.5,537.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="869.5" x2="869.5" y1="585.9404" y2="620.9404"/><polygon fill="#000000" points="865.5,610.9404,869.5,620.9404,873.5,610.9404,869.5,614.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="869.5" x2="869.5" y1="300.9404" y2="423.9404"/><polygon fill="#000000" points="865.5,413.9404,869.5,423.9404,873.5,413.9404,869.5,417.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="757.5" x2="727.5" y1="728.9404" y2="728.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="727.5" x2="727.5" y1="728.9404" y2="750.9404"/><polygon fill="#000000" points="723.5,740.9404,727.5,750.9404,731.5,740.9404,727.5,744.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="981.5" x2="1011.5" y1="728.9404" y2="728.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="1011.5" x2="1011.5" y1="728.9404" y2="750.9404"/><polygon fill="#000000" points="1007.5,740.9404,1011.5,750.9404,1015.5,740.9404,1011.5,744.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="727.5" x2="727.5" y1="804.9404" y2="822.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="727.5" x2="857.5" y1="822.9404" y2="822.9404"/><polygon fill="#000000" points="847.5,818.9404,857.5,822.9404,847.5,826.9404,851.5,822.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1011.5" x2="1011.5" y1="792.9404" y2="822.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="1011.5" x2="881.5" y1="822.9404" y2="822.9404"/><polygon fill="#000000" points="891.5,818.9404,881.5,822.9404,891.5,826.9404,887.5,822.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="869.5" x2="869.5" y1="662.9404" y2="716.9404"/><polygon fill="#000000" points="865.5,706.9404,869.5,716.9404,873.5,706.9404,869.5,710.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1304" x2="1304" y1="300.9404" y2="335.9404"/><polygon fill="#000000" points="1300,325.9404,1304,335.9404,1308,325.9404,1304,329.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="972.25" x2="869.5" y1="236.9404" y2="236.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="869.5" x2="869.5" y1="236.9404" y2="258.9404"/><polygon fill="#000000" points="865.5,248.9404,869.5,258.9404,873.5,248.9404,869.5,252.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1201.25" x2="1304" y1="236.9404" y2="236.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="1304" x2="1304" y1="236.9404" y2="258.9404"/><polygon fill="#000000" points="1300,248.9404,1304,258.9404,1308,248.9404,1304,252.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="869.5" x2="869.5" y1="834.9404" y2="856.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="869.5" x2="759.375" y1="856.9404" y2="856.9404"/><polygon fill="#000000" points="769.375,852.9404,759.375,856.9404,769.375,860.9404,765.375,856.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="681.375" x2="438" y1="202.9404" y2="202.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="438" x2="438" y1="202.9404" y2="224.9404"/><polygon fill="#000000" points="434,214.9404,438,224.9404,442,214.9404,438,218.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="813.375" x2="1086.75" y1="202.9404" y2="202.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="1086.75" x2="1086.75" y1="202.9404" y2="224.9404"/><polygon fill="#000000" points="1082.75,214.9404,1086.75,224.9404,1090.75,214.9404,1086.75,218.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="438" x2="438" y1="266.9404" y2="856.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="438" x2="735.375" y1="856.9404" y2="856.9404"/><polygon fill="#000000" points="725.375,852.9404,735.375,856.9404,725.375,860.9404,729.375,856.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1735.5" x2="1735.5" y1="455.9404" y2="509.9404"/><polygon fill="#000000" points="1731.5,499.9404,1735.5,509.9404,1739.5,499.9404,1735.5,503.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1735.5" x2="1735.5" y1="551.9404" y2="586.9404"/><polygon fill="#000000" points="1731.5,576.9404,1735.5,586.9404,1739.5,576.9404,1735.5,580.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1735.5" x2="1735.5" y1="266.9404" y2="389.9404"/><polygon fill="#000000" points="1731.5,379.9404,1735.5,389.9404,1739.5,379.9404,1735.5,383.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1623.5" x2="1593.5" y1="694.9404" y2="694.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="1593.5" x2="1593.5" y1="694.9404" y2="716.9404"/><polygon fill="#000000" points="1589.5,706.9404,1593.5,716.9404,1597.5,706.9404,1593.5,710.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1847.5" x2="1877.5" y1="694.9404" y2="694.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="1877.5" x2="1877.5" y1="694.9404" y2="716.9404"/><polygon fill="#000000" points="1873.5,706.9404,1877.5,716.9404,1881.5,706.9404,1877.5,710.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1593.5" x2="1593.5" y1="770.9404" y2="788.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="1593.5" x2="1723.5" y1="788.9404" y2="788.9404"/><polygon fill="#000000" points="1713.5,784.9404,1723.5,788.9404,1713.5,792.9404,1717.5,788.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1877.5" x2="1877.5" y1="758.9404" y2="788.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="1877.5" x2="1747.5" y1="788.9404" y2="788.9404"/><polygon fill="#000000" points="1757.5,784.9404,1747.5,788.9404,1757.5,792.9404,1753.5,788.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1735.5" x2="1735.5" y1="628.9404" y2="682.9404"/><polygon fill="#000000" points="1731.5,672.9404,1735.5,682.9404,1739.5,672.9404,1735.5,676.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="2170" x2="2170" y1="266.9404" y2="301.9404"/><polygon fill="#000000" points="2166,291.9404,2170,301.9404,2174,291.9404,2170,295.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1838.25" x2="1735.5" y1="202.9404" y2="202.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="1735.5" x2="1735.5" y1="202.9404" y2="224.9404"/><polygon fill="#000000" points="1731.5,214.9404,1735.5,224.9404,1739.5,214.9404,1735.5,218.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="2067.25" x2="2170" y1="202.9404" y2="202.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="2170" x2="2170" y1="202.9404" y2="224.9404"/><polygon fill="#000000" points="2166,214.9404,2170,224.9404,2174,214.9404,2170,218.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1735.5" x2="1735.5" y1="800.9404" y2="806.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="1735.5" x2="1952.75" y1="806.9404" y2="806.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="1952.75" x2="1952.75" y1="806.9404" y2="888.9404"/><polygon fill="#000000" points="1948.75,878.9404,1952.75,888.9404,1956.75,878.9404,1952.75,882.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="150" x2="150" y1="155.9702" y2="190.9404"/><polygon fill="#000000" points="146,180.9404,150,190.9404,154,180.9404,150,184.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="150" x2="150" y1="232.9404" y2="888.9404"/><polygon fill="#000000" points="146,878.9404,150,888.9404,154,878.9404,150,882.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="747.375" x2="747.375" y1="155.9702" y2="190.9404"/><polygon fill="#000000" points="743.375,180.9404,747.375,190.9404,751.375,180.9404,747.375,184.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="747.375" x2="747.375" y1="868.9404" y2="888.9404"/><polygon fill="#000000" points="743.375,878.9404,747.375,888.9404,751.375,878.9404,747.375,882.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1952.75" x2="1952.75" y1="155.9702" y2="190.9404"/><polygon fill="#000000" points="1948.75,180.9404,1952.75,190.9404,1956.75,180.9404,1952.75,184.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="196" x2="672.375" y1="143.9702" y2="143.9702"/><polygon fill="#000000" points="662.375,139.9702,672.375,143.9702,662.375,147.9702,666.375,143.9702" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="822.375" x2="1906.25" y1="143.9702" y2="143.9702"/><polygon fill="#000000" points="1896.25,139.9702,1906.25,143.9702,1896.25,147.9702,1900.25,143.9702" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1190" x2="1190" y1="97" y2="116.9702"/><line style="stroke:#000000;stroke-width:1.5;" x1="1190" x2="150" y1="116.9702" y2="116.9702"/><line style="stroke:#000000;stroke-width:1.5;" x1="150" x2="150" y1="116.9702" y2="131.9702"/><polygon fill="#000000" points="146,121.9702,150,131.9702,154,121.9702,150,125.9702" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1999.25" x2="2323" y1="143.9702" y2="143.9702"/><line style="stroke:#000000;stroke-width:1.5;" x1="2323" x2="2323" y1="143.9702" y2="523.4404"/><line style="stroke:#000000;stroke-width:1.5;" x1="2323" x2="2323" y1="523.4404" y2="888.9404"/><polygon fill="#000000" points="2319,878.9404,2323,888.9404,2327,878.9404,2323,882.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="150" x2="2323" y1="888.9404" y2="888.9404"/><line style="stroke:#000000;stroke-width:1.5;" x1="1190" x2="1190" y1="888.9404" y2="908.9404"/><polygon fill="#000000" points="1186,898.9404,1190,908.9404,1194,898.9404,1190,902.9404" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1274.5" x2="1307.5" y1="85" y2="85"/><polygon fill="#000000" points="1297.5,81,1307.5,85,1297.5,89,1301.5,85" style="stroke:#000000;stroke-width:1.0;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1190" x2="1190" y1="53" y2="73"/><polygon fill="#000000" points="1186,63,1190,73,1194,63,1190,67" style="stroke:#000000;stroke-width:1.0;"/><!--MD5=[f171ed58fd244fd7b9b6621eb96b8b59]
+@startuml record listens
+
+!includeurl https://gist.githubusercontent.com/dnordberg/86dd9e5fff0447b41beb220c7f5a6c9a/raw/5b43d8bd0f3c97d8aba7c45b420d0661ffc18f56/black-and-white.pu
+
+' title Bulk transfer
+: User listens to a song;
+if (Song is not users own song) then (yes)
+
+    if (Song is free) then (yes)
+        : Record listen but don't create a token transfer;
+    elseif (Song is first stream free) then (yes)
+        if (First stream of song) then (yes)
+            : Record listen but don't create a token transfer;
+        else (no)
+            if (Free listen seconds has been exceeded) then (yes)
+                : Create token transfer for listen;
+                partition "Create token transfer for listen" {
+                    partition "Calculate value and facilitation fee" {
+                        :Value = Seconds to pay / 60 * JAM Per min * token multiplier
+                        Faciliation fee = value * faciliation fee percentage
+                        New value = value - faciliation fee;
+                    }
+                    : Check song profile membership;
+                    : Split revenue between membership;
+                }
+                if (Failed to create token transfer for listen) then (yes)
+                    : Send email to user to inform them
+                    that they can create a wallet to receive transfer;
+                else (no)
+                    : Issue payment for transaction faciliation;
+                endif
+            else (no)
+                : Record listen but don't create a token transfer;
+                stop
+            endif
+        endif
+    elseif (Song is paid) then (yes)
+        if (Free listen seconds has been exceeded) then (yes)
+            : Create token transfer for listen;
+            partition "Create token transfer for listen" {
+                partition "Calculate value and facilitation fee" {
+                    :Value = Seconds to pay / 60 * JAM Per min * token multiplier
+                    Faciliation fee = value * faciliation fee percentage
+                    New value = value - faciliation fee;
+                }
+                : Check song profile membership;
+                : Split revenue between membership;
+            }
+            if (Failed to create token transfer for listen) then (yes)
+                : Send email to user to inform them
+                that they can create a wallet to receive transfer;
+            else (no)
+                : Issue payment for transaction faciliation;
+            endif
+        else (no)
+            : Record listen but don't create a token transfer;
+            stop
+        endif
+    endif
+
+    stop
+else (no)
+    stop
+endif
+
+@enduml
+
+@startuml record listens
+
+
+skinparam style strictuml
+skinparam defaultFontName  Helvetica
+skinparam sequenceMessageAlign center
+skinparam monochrome true
+skinparam shadowing             false
+skinparam roundcorner           8
+skinparam ParticipantPadding    40
+skinparam BoxPadding            40
+skinparam Padding               5
+
+skinparam activity {
+	ArrowColor Black
+	BackgroundColor White
+	BorderColor Black
+	BorderThickness 1
+}
+
+skinparam actor {
+	BackgroundColor White
+	BorderColor Black
+}
+
+skinparam usecase {
+	ArrowColor Black
+	BackgroundColor White
+	BorderColor Black
+	BorderThickness 1
+}
+
+skinparam class {
+	ArrowColor Black
+	BackgroundColor White
+	BorderColor Black
+	BorderThickness 1
+}
+
+
+skinparam object {
+	ArrowColor Black
+	BackgroundColor White
+	BorderColor Black
+}
+
+skinparam package {
+	BackgroundColor White
+	BorderColor Black
+}
+
+
+skinparam component {
+	BackgroundColor White
+	InterfaceBackgroundColor White
+	BorderColor Black
+	InterfaceBorderColor Black
+}
+
+skinparam note {
+	BackgroundColor White
+	BorderColor Black
+}
+
+skinparam state {
+	ArrowColor Black
+	BackgroundColor White
+	BorderColor Black
+}
+
+skinparam sequence {
+	ArrowColor Black
+	BackgroundColor White
+	ParticipantBackgroundColor White
+	BorderColor Black
+	LifeLineBorderColor Black
+	ParticipantBorderColor Black
+	BoxLineColor Black
+}
+
+skinparam interface {
+	BackgroundColor White
+	BorderColor Black
+}
+
+: User listens to a song;
+if (Song is not users own song) then (yes)
+
+    if (Song is free) then (yes)
+        : Record listen but don't create a token transfer;
+    elseif (Song is first stream free) then (yes)
+        if (First stream of song) then (yes)
+            : Record listen but don't create a token transfer;
+        else (no)
+            if (Free listen seconds has been exceeded) then (yes)
+                : Create token transfer for listen;
+                partition "Create token transfer for listen" {
+                    partition "Calculate value and facilitation fee" {
+                        :Value = Seconds to pay / 60 * JAM Per min * token multiplier
+                        Faciliation fee = value * faciliation fee percentage
+                        New value = value - faciliation fee;
+                    }
+                    : Check song profile membership;
+                    : Split revenue between membership;
+                }
+                if (Failed to create token transfer for listen) then (yes)
+                    : Send email to user to inform them
+                    that they can create a wallet to receive transfer;
+                else (no)
+                    : Issue payment for transaction faciliation;
+                endif
+            else (no)
+                : Record listen but don't create a token transfer;
+                stop
+            endif
+        endif
+    elseif (Song is paid) then (yes)
+        if (Free listen seconds has been exceeded) then (yes)
+            : Create token transfer for listen;
+            partition "Create token transfer for listen" {
+                partition "Calculate value and facilitation fee" {
+                    :Value = Seconds to pay / 60 * JAM Per min * token multiplier
+                    Faciliation fee = value * faciliation fee percentage
+                    New value = value - faciliation fee;
+                }
+                : Check song profile membership;
+                : Split revenue between membership;
+            }
+            if (Failed to create token transfer for listen) then (yes)
+                : Send email to user to inform them
+                that they can create a wallet to receive transfer;
+            else (no)
+                : Issue payment for transaction faciliation;
+            endif
+        else (no)
+            : Record listen but don't create a token transfer;
+            stop
+        endif
+    endif
+
+    stop
+else (no)
+    stop
+endif
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 15:40:07 EAT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

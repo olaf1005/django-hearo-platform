@@ -1,0 +1,112 @@
+{% with user.person.view as view %}
+
+<div id="header__content" {% if not user.is_authenticated %} class="unauth" {% endif %}>
+
+  <!-- tune.fm logo transparent link overlay -->
+  <a href="/" id="logo-link" {% if not user.is_authenticated %}class="ajax"{% endif %}>{% include "tune.svg" %}</a>
+  <!-- tune.fm logo vector -->
+
+  <!-- <a id="open-filters" class="header__action-button header__action-button--filters"></a> -->
+
+  <section id="main_menu__search">
+    <a data-target="#main_menu__search" class="trigger" id="main_menu__search__trigger">search</a>
+    <input id="search-bar" type="text" name="query" autocomplete="off"{% if not user.is_authenticated %} class="short"{% endif %}/>
+    <a class="close" href="#">&times;</a>
+  </section>
+  <!-- Login form -->
+  {% if not user.is_authenticated %}
+    <button type="button" class="header__account__icon login_hover_trigger"></button>
+    <div id="login-form" class="login_hover_trigger">
+        {% if next %}<input type="hidden" id="next" name="next" value="{{next}}" />{% endif %}
+        <input type="text" name="email" id="id_email" value="email" onfocus="clickclear(this, 'email', 'dark')" onblur="clickrecall(this,'email', 'dark')" />
+        <input type="password" name="password" id="id_password" value="password" onfocus="clickclear(this, 'password', 'dark')" onblur="clickrecall(this, 'password', 'dark')" />
+        <button id="submit-login" class="small red" onclick="loginFunc()">login</button>
+    </div>
+    <div id="loginErrorMessage" style="display: none;"></div>
+
+
+
+    <!-- About -->
+    <a href="https://tune.fm" target="_blank" class="header__action-button header__action-button--info about_hover_trigger"></a>
+    <ul id="header__about__dropdown" class="about_hover_trigger unauth" style="display:none;">
+      <li>
+        <p>
+          {{ BASE_URL|title }} is a global music economy that enables
+          fans to discover new music from artists around the
+          world. Support artists directly by streaming their music, and earn JAM tokens discovering new music.
+          <i>When the music gets played, the artist gets paid.</i>
+        </p>
+        <a href="/about/" target="_blank" class="link-btn blue">Learn more</a>
+      </li>
+    </ul>
+
+    <!-- Blog -->
+    <a href="https://medium.com/{{ MEDIUM_HANDLE }}" class="header__action-button header__action-button--blog" target="_blank"></a>
+  {% endif %}
+
+  <!-- Account mgmt -->
+  {% if user.is_authenticated %}
+    <a class="header__account__icon dropdown_hover" href="{{view.get_absolute_url}}"></a>
+    <div id="accountInfo">
+
+        <div class="header__account" id="headerUsertab">
+          <a class="header__account__picture dropdown_hover imageLink" href="{{view.get_absolute_url}}">
+              <img src="{{view.get_thumb}}" alt="{{view.short_name}}'s photo" id="currentAccountPhoto" />
+          </a>
+
+          <div class="header__account__name ajax ellipsis dropdown_hover">
+              <a id="drop_down_name" href="{{view.get_absolute_url}}">{{view.short_name}}</a>
+          </div>
+        </div>
+
+        <!-- Mail -->
+        <a href="/mail/inbox/" class="header__action-button header__action-button--envelope">
+          {% with mail_count=view.get_unread.count %}
+            <div id="fanmail-envelope" class="header__action-button--envelope__count" {% if mail_count == 0 %}style="display: none"{% endif %}>{{mail_count}}</div>
+          {% endwith %}
+        </a>
+
+        <!-- My Account -->
+        <a href="/my-account/" class="header__action-button header__action-button--gear"></a>
+
+        <!-- Discovery Feed -->
+        <a href="{% url 'accounts_index' %}" class="header__action-button header__action-button--headphones"></a>
+
+        <!-- Blog -->
+        <!-- <a href="https://medium.com/{{ MEDIUM_HANDLE }}" class="header__action-button header__action-button--blog" target="_blank"></a> -->
+
+        <a href="https://tune.fm" target="_blank" class="header__action-button header__action-button--info about_hover_trigger"></a>
+
+        <ul id="header__about__dropdown" class="about_hover_trigger" style="display:none;">
+          <li>
+            <p>
+                {{ BASE_URL|title }} is a global music economy that enables
+                fans to discover new music from artists around the
+                world. Support artists directly by streaming their music, and earn JAM tokens discovering new music.
+                <i>When the music gets played, the artist gets paid.</i>
+            </p>
+            <a href="/about/" target="_blank" class="link-btn blue">Learn more</a>
+          </li>
+        </ul>
+
+        <ul class="header__account__dropdown dropdown_hover" style="display:none; height: auto; max-height: 95vh; overflow: auto; z-index: 100000;">
+            <li onclick="document.location='/my-account/';"><a href="/my-account/">Dashboard</a></li>
+            <li onclick="document.location='/mail/inbox/';"><a href="/mail/inbox/">Fanmail</a></li>
+            <li onclick="document.location='/my-account/songs/';" style="border-bottom: 1px solid #333;"><a href="/my-account/songs/">Upload Music</a></li>
+
+            <span{% if user.person.get_accounts|length < 1 %} style="display:none;"{% endif %}>
+            {% for prof in user.person.get_accounts %}
+            <li onclick="document.location='/profile/{{prof.keyword}}/about/?switchid={{prof.id}}';">
+            <a{% if prof == view %} style="color: #5abff2;"{% endif %} href="/profile/{{prof.keyword}}/about/?switchid={{prof.id}}">{{prof.short_name}}</a>
+            </li>
+            {% endfor %}
+            </span>
+
+            <li onclick="document.location='/logout/';" style="border-top: 1px solid #333;"><a href="/logout/">Logout</a></li>
+        </ul>
+     </div>
+  {% endif %}
+</div>
+{% endwith %}
+
+

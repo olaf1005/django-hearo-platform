@@ -1,0 +1,59 @@
+@startuml hedera integration
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+set namespaceSeparator ::
+
+package Account {
+    Class Wallet {
+        + id: pk
+        --
+        + user: User
+        + openpgp_key: varchar
+        + hedera_account_id: varchar
+        + hedera_private_key: varchar
+        + hedera_public_key: varchar
+        + token_balance: int
+        + token_balance_last_update: date
+        + date_added: datetime
+        + received_starter_tokens: boolean
+        + account_associated_with_token: boolean
+    }
+
+    Wallet -> User
+
+    Class WalletRecovery {
+        + id: pk
+        --
+        + wallet: Wallet
+        + date_added: date
+        + encrypted_key: varchar
+        + recovery_key_hashes: ArrayField
+        --
+        + get_encrypted_key_object()
+    }
+
+    WalletRecovery -> User
+}
+
+package Media {
+    class Listen {
+        + id: pk
+        --
+        + song: Song
+        + user: User
+        + seconds: int
+        + datetime: datetime
+        + datetime_processed: datetime
+        + free: boolean
+        --
+        + make_payment(privkey)
+    }
+    Listen -> Song
+    Listen -> User
+}
+
+@enduml

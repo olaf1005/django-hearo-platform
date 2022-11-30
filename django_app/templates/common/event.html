@@ -1,0 +1,12 @@
+{% load elements %}
+
+<div class="event" onclick="openEventLightbox({{event.id}},'t')">
+    <div class="cal">
+        <h2>{{event.starts|date:"M"}}</h2>
+        <h1>{{event.starts|date:"d"}}</h1>
+    </div>
+    <div class="event_info">
+        <h3 class="ellipsis">{{event.title}}</h3>
+        <h5 class="ellipsis">{% if event.location %}{{event.location}}{% endif %}</h5>
+    </div>
+</div>

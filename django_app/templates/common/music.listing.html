@@ -1,0 +1,63 @@
+{% if title %}
+<div class="music listing {% if instrument_genre_string != None %}taller{% endif %}" {% if location %}lat="{{ location.lat }}" lng="{{ location.lng }}" location="{{ location.most_exact }}" country="{{ location.country }}"{% endif %}>{% load elements %}
+  <a href="{{ profileurl }}" class="profile-ajax ajax">
+    <div class="artwork-frame">
+      <img class="artwork-full" src="/{{ image }}" alt="{{ title }} {{ subtitle }}"/>
+    </div>
+  </a>
+
+  <div class="music-listing__metadata">
+    <a href="{{ profileurl }}" class="profile-ajax ajax">
+      <div class="title">
+        {{ title }}
+      </div>
+      <div class="subtitle">
+        {{ subtitle }}
+      </div>
+    </a>
+
+    <div class="artist-meta">
+      {% if location %}
+      <span class="location">
+        {{ location }}
+      </span>
+      {% endif %}
+
+      {% if instrument_genre_string and instrument_genre_string != '' %}
+      <span class="instrument_genre">
+        {{ instrument_genre_string }}
+      </span>
+      {% endif %}
+    </div>
+
+    {% if entity != view %}
+      <div class="listing-buttons">
+        {% fanbutton entity view %}
+        {% reviewbutton entity %}
+        {% if entity_type == "artist" %}
+          {% tipbutton entity %}
+        {% endif %}
+        {% if entity_type != "artist" %}
+          {% downloadbutton entity %}
+        {% endif %}
+	{% if not request.user_agent.is_mobile %}
+    {% else %}
+	{% if entity_type == "song" %}
+	{% sharebutton entity %}
+	{% endif %}
+	{% endif %}
+      </div>
+    {% endif %}
+  </div>
+
+  {% if play_button_id != None %}
+    <button action="play" class="play-button play-button--large" play-id="{{ play_button_id }}" play-type="{{ play_button_type }}">
+      <div class="spinner"></div>
+    </button>
+  {% endif %}
+
+  {% if entity == view %}
+    <div class="thatsyou">(that's you!)</div>
+  {% endif %}
+</div>
+{% endif %}

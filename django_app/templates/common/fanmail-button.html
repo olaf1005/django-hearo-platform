@@ -1,0 +1,4 @@
+{% load elements %}
+{% if not profile.fanmail_private %}
+<button class="fanmail white hide" onclick="javascript: fanmail.show_mail_lightbox({ name: '{{ profile.name }}', img_path: '{{ profile.get_mini_thumb }}', url: '{{ profile.get_absolute_url }}', keyword: '{{ profile.keyword }}' });" profileid="{{ profile.id }}">&nbsp;</button>
+{% endif %}

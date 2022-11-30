@@ -1,0 +1,69 @@
+{% extends base %}
+{% block content %}
+<style type="text/css">
+#page { width: auto }
+
+</style>
+{% load staticfiles %}
+<script src="{% static 'js/views/join.js' %}">
+</script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function() {
+  var addthisScript = document.createElement('script');
+  addthisScript.setAttribute('src', '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-511e3f9a5244646e&async=1&domready=1');
+  var container = document.getElementById('addthis-container');
+  container.innerHTML = '';
+  if (window.addthis) {
+    window.addthis = null;
+    window._adr = null;
+    window._atc = null;
+    window._atd = null;
+    window._ate = null;
+    window._atr = null;
+    window._atw = null;
+  }
+  container.appendChild(addthisScript);
+});
+
+//]]>
+</script>
+<div id="video-and-registration">
+  <div id="sunburst">
+    <ul id="register-progress">
+      <li>Signup</li>
+      <li>Social</li>
+      <li>Welcome</li>
+    </ul>
+    <div id="onboarding">
+      <a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F{{ BASE_URL }}" target="_blank" class="social-share facebook">Share on facebook</a>
+      <a href="http://twitter.com/share?url=http%3A%2F%2F{{ BASE_URL }}&via={{ TWITTER_HANDLE }}&text=I%20just%20registed%20at%20{{ TWITTER_HANDLE }}%20-%20the%20global%20music%20marketplace%20and%20local%20music%20community%20for%20artist%20and%20fans." target="_blank" class="social-share twitter">Share on Twitter</a>
+      <div class="invite">
+	<h3><span class='feedback_success feedback' id="band_invites_sent" style="display: none; ">invite(s) sent</span>
+	  <span class='feedback_error feedback' id="band_invites_error" style="display: none; ">error inviting</span>
+	</h3>
+	<input type="text" id="band_invites" name="invite" autocomplete="off" role="textbox" fillertext="emails" maxlength="200">
+	<div class="next-btn" id="submit_band_invite">invite</div>
+	<div id="invite-help">
+	  <span class="arrow">
+	  </span>
+	  <p>Invite all your friends, artists, musicians, bandmates, and music fans you know!</p>
+	  <span>You can separate multiple email addresses with a comma.</span>
+	</div>
+      </div>
+      <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style" addthis:url="http://{{ BASE_URL }}" addthis:title="Join the global music economy for artists and fans.">
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count" fb:like:href="http://www.facebook.com/{{ FACEBOOK_HANDLE }}">
+	</a>
+	<a class="addthis_button_twitter_follow_native" tw:screen_name="{{ TWITTER_HANDLE }}">
+	</a>
+      </div>
+      <span id="addthis-container">
+      </span>
+      <!-- AddThis Button END -->
+      <input type="hidden" id="progress" {% if progress %} value="{{ progress }}"{% endif %} />
+      <a href="{% url 'join_welcome' %}" class="next-btn">Next</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

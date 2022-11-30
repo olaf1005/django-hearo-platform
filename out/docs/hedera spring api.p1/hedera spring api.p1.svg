@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="867px" preserveAspectRatio="none" style="width:792px;height:867px;background:#00000000;" version="1.1" viewBox="0 0 792 867" width="792px" zoomAndPan="magnify"><defs/><g><rect fill="#CCCCCC" height="848.1836" style="stroke:#383838;stroke-width:1.0;" width="190.5" x="1" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="68" x="62.25" y="18.5684">Web Apps</text><rect fill="#C7C7C7" height="848.1836" style="stroke:#383838;stroke-width:1.0;" width="408.5" x="279" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="107" x="429.75" y="18.5684">Smart Contracts</text><rect fill="#ADADAD" height="848.1836" style="stroke:#383838;stroke-width:1.0;" width="97" x="689.5" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="49" x="713.5" y="18.5684">Hedera</text><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="22" x2="22" y1="104.7988" y2="860.1836"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="166.5" x2="166.5" y1="104.7988" y2="860.1836"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="312" x2="312" y1="104.7988" y2="860.1836"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="642.5" x2="642.5" y1="104.7988" y2="860.1836"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="737.5" x2="737.5" y1="104.7988" y2="860.1836"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="5" y="101.8457">App</text><ellipse cx="22" cy="35.3105" fill="#F8F8F8" rx="8" ry="8" style="stroke:#383838;stroke-width:2.0;"/><path d="M22,43.3105 L22,70.3105 M9,51.3105 L35,51.3105 M22,70.3105 L9,85.3105 M22,70.3105 L35,85.3105 " fill="none" style="stroke:#383838;stroke-width:2.0;"/><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="41" x="146.5" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="153.5" y="93.8457">HTS</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="58" x="283" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="290" y="93.8457">Parent</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="81" x="602.5" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="609.5" y="93.8457">Children..</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="89" x="693.5" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="700.5" y="93.8457">Hashgraph</text><line style="stroke:#383838;stroke-width:1.0;" x1="165" x2="155" y1="136.1094" y2="132.1094"/><line style="stroke:#383838;stroke-width:1.0;" x1="165" x2="155" y1="136.1094" y2="140.1094"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="166" y1="136.1094" y2="136.1094"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="29" y="131.3672">account</text><path d="M172,149.1094 L172,174.1094 L225,174.1094 L225,159.1094 L215,149.1094 L172,149.1094 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M215,149.1094 L215,159.1094 L225,159.1094 L215,149.1094 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="178" y="166.6777">POST</text><path d="M172,184.4199 L172,239.4199 L406,239.4199 L406,194.4199 L396,184.4199 L172,184.4199 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M396,184.4199 L396,194.4199 L406,194.4199 L396,184.4199 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="179" x="178" y="201.9883">Create an account on hedera</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="126" x="178" y="217.2988">with certain balance</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="213" x="178" y="232.6094">(transferred from default account)</text><path d="M172,250.3516 L172,275.3516 L403,275.3516 L403,260.3516 L393,250.3516 L172,250.3516 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M393,250.3516 L393,260.3516 L403,260.3516 L393,250.3516 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="183.5" cy="263.1621" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="199" x="189" y="267.9199">startBalance (String) (Default: 0)</text><line style="stroke:#383838;stroke-width:1.0;" x1="310" x2="300" y1="301.9727" y2="297.9727"/><line style="stroke:#383838;stroke-width:1.0;" x1="310" x2="300" y1="301.9727" y2="305.9727"/><line style="stroke:#383838;stroke-width:1.0;" x1="167" x2="311" y1="301.9727" y2="301.9727"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="174" y="297.2305">account</text><line style="stroke:#383838;stroke-width:1.0;" x1="736" x2="726" y1="331.2832" y2="327.2832"/><line style="stroke:#383838;stroke-width:1.0;" x1="736" x2="726" y1="331.2832" y2="335.2832"/><line style="stroke:#383838;stroke-width:1.0;" x1="312" x2="737" y1="331.2832" y2="331.2832"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="181" x="319" y="326.541">createAccount(initialBalance)</text><polygon fill="#383838" points="323,356.5938,313,360.5938,323,364.5938" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="317" x2="737" y1="360.5938" y2="360.5938"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148" x="329" y="355.8516">return hederaAccountId</text><line style="stroke:#383838;stroke-width:1.0;" x1="641" x2="631" y1="389.9043" y2="385.9043"/><line style="stroke:#383838;stroke-width:1.0;" x1="641" x2="631" y1="389.9043" y2="393.9043"/><line style="stroke:#383838;stroke-width:1.0;" x1="312" x2="642" y1="389.9043" y2="389.9043"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="307" x="319" y="385.1621">createAccountWithBalance(account, startBalance)</text><polygon fill="#383838" points="323,415.2148,313,419.2148,323,423.2148" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="317" x2="642" y1="419.2148" y2="419.2148"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="329" y="414.4727">return success</text><polygon fill="#383838" points="178,444.5254,168,448.5254,178,452.5254" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="172" x2="311" y1="448.5254" y2="448.5254"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="121" x="184" y="443.7832">return account info</text><path d="M172,461.5254 L172,562.5254 L375,562.5254 L375,471.5254 L365,461.5254 L172,461.5254 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M365,461.5254 L365,471.5254 L375,471.5254 L365,461.5254 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="178" y="479.0938">{</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="154" x="194" y="494.4043">“solidityAddress": "xxx",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="166" x="194" y="509.7148">"myaccNum": "0.0.61538",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117" x="194" y="525.0254">"mypvtKey": "xxx",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="194" y="540.3359">"pubKey": "xxx"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="178" y="555.6465">}</text><polygon fill="#383838" points="33,585.6992,23,589.6992,33,593.6992" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="166" y1="589.6992" y2="589.6992"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="121" x="39" y="584.957">return account info</text><line style="stroke:#383838;stroke-width:1.0;" x1="165" x2="155" y1="619.0098" y2="615.0098"/><line style="stroke:#383838;stroke-width:1.0;" x1="165" x2="155" y1="619.0098" y2="623.0098"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="166" y1="619.0098" y2="619.0098"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="75" x="29" y="614.2676">hbarBalance</text><path d="M172,632.0098 L172,657.0098 L217,657.0098 L217,642.0098 L207,632.0098 L172,632.0098 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M207,632.0098 L207,642.0098 L217,642.0098 L207,632.0098 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="178" y="649.5781">GET</text><path d="M172,667.3203 L172,692.3203 L442,692.3203 L442,677.3203 L432,667.3203 L172,667.3203 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M432,667.3203 L432,677.3203 L442,677.3203 L432,667.3203 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="249" x="178" y="684.8887">Get balance in tinyBars of an account id</text><path d="M172,702.6309 L172,727.6309 L382,727.6309 L382,712.6309 L372,702.6309 L172,702.6309 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M372,702.6309 L372,712.6309 L382,712.6309 L372,702.6309 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="183.5" cy="715.4414" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="178" x="189" y="720.1992">accountId (String) (Required)</text><line style="stroke:#383838;stroke-width:1.0;" x1="736" x2="726" y1="754.252" y2="750.252"/><line style="stroke:#383838;stroke-width:1.0;" x1="736" x2="726" y1="754.252" y2="758.252"/><line style="stroke:#383838;stroke-width:1.0;" x1="167" x2="737" y1="754.252" y2="754.252"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="189" x="174" y="749.5098">getAccountBalance(accountId)</text><polygon fill="#383838" points="323,779.5625,313,783.5625,323,787.5625" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="317" x2="737" y1="783.5625" y2="783.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="329" y="778.8203">return balance</text><polygon fill="#383838" points="178,808.873,168,812.873,178,816.873" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="172" x2="311" y1="812.873" y2="812.873"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="184" y="808.1309">return balance</text><polygon fill="#383838" points="33,838.1836,23,842.1836,33,846.1836" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="166" y1="842.1836" y2="842.1836"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="39" y="837.4414">return balance</text><!--MD5=[81798922ae83b3acbafb3071ecafd461]
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title Hedera Spring API
+
+Actor "App" as app
+participant "HTS" as hts
+participant "Parent" as parent
+participant "Children.." as child
+participant "Hashgraph" as hashgraph
+
+box "Web Apps" #LightBlue
+	participant app
+	participant hts
+end box
+
+box "Smart Contracts" #LightGreen
+	participant parent
+	participant child
+end box
+
+box "Hedera" #Orange
+	participant hashgraph
+end box
+
+app->>hts : account
+Note right of hts
+    POST
+end Note
+Note right of hts
+    Create an account on hedera
+    with certain balance
+    (transferred from default account)
+end Note
+Note right of hts
+    * startBalance (String) (Default: 0)
+end Note
+' Note right of hts #Pink
+'     Implementation needs to be updated
+' end Note
+
+hts ->> parent : account
+parent ->> hashgraph : createAccount(initialBalance)
+hashgraph- ->parent: return hederaAccountId
+parent ->> child : createAccountWithBalance(account, startBalance)
+child - -> parent : return success
+parent - -> hts : return account info
+Note right of hts
+    {
+        “solidityAddress": "xxx",
+        "myaccNum": "0.0.61538",
+        "mypvtKey": "xxx",
+        "pubKey": "xxx"
+    }
+end Note
+
+hts - -> app : return account info
+
+app->>hts : hbarBalance
+Note right of hts
+    GET
+end Note
+Note right of hts
+    Get balance in tinyBars of an account id
+end Note
+Note right of hts
+    * accountId (String) (Required)
+end Note
+
+hts->>hashgraph : getAccountBalance(accountId)
+hashgraph- ->parent: return balance
+parent- ->hts : return balance
+hts- ->app : return balance
+
+
+@enduml
+
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+
+Actor "App" as app
+participant "HTS" as hts
+participant "Parent" as parent
+participant "Children.." as child
+participant "Hashgraph" as hashgraph
+
+box "Web Apps" #LightBlue
+	participant app
+	participant hts
+end box
+
+box "Smart Contracts" #LightGreen
+	participant parent
+	participant child
+end box
+
+box "Hedera" #Orange
+	participant hashgraph
+end box
+
+app->>hts : account
+Note right of hts
+    POST
+end Note
+Note right of hts
+    Create an account on hedera
+    with certain balance
+    (transferred from default account)
+end Note
+Note right of hts
+    * startBalance (String) (Default: 0)
+end Note
+
+hts ->> parent : account
+parent ->> hashgraph : createAccount(initialBalance)
+hashgraph- ->parent: return hederaAccountId
+parent ->> child : createAccountWithBalance(account, startBalance)
+child - -> parent : return success
+parent - -> hts : return account info
+Note right of hts
+    {
+        “solidityAddress": "xxx",
+        "myaccNum": "0.0.61538",
+        "mypvtKey": "xxx",
+        "pubKey": "xxx"
+    }
+end Note
+
+hts - -> app : return account info
+
+app->>hts : hbarBalance
+Note right of hts
+    GET
+end Note
+Note right of hts
+    Get balance in tinyBars of an account id
+end Note
+Note right of hts
+    * accountId (String) (Required)
+end Note
+
+hts->>hashgraph : getAccountBalance(accountId)
+hashgraph- ->parent: return balance
+parent- ->hts : return balance
+hts- ->app : return balance
+
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 15:40:07 EAT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

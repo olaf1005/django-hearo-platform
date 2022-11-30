@@ -1,0 +1,15 @@
+<button
+    action="review"
+    class="bttn--special-review bttn--size-small"
+    count="{{ count }}"
+    elem-type="{{ type }}"
+    elem-id="{{ id }}"
+    elem-title="{{ title }}"
+    {% if profile %}profile="{{profile}}" {% endif %}
+    >
+    <i class="material-icons-round" style="font-size: 11px;">edit</i>
+    {% if view == element %}You have {{ count }} review{{ count|pluralize }}
+    {% else %}
+    {% if count != 0 %}{{ count }} review{% if count > 1 %}s{% endif %}
+    {% else %}Review{% endif %} {% endif %}
+</button>

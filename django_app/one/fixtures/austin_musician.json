@@ -1,0 +1,50 @@
+[
+    {
+        "pk": 2, 
+        "model": "accounts.musician", 
+        "fields": {
+            "profileID": "Cowboy One"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "accounts.profile", 
+        "fields": {
+            "location": 2, 
+            "rank_all": 0, 
+            "short_name": "Cowboy One", 
+            "rank_month": 0, 
+            "rank_today": 0, 
+            "name": "Cowboy One", 
+            "keyword": "CowboyOne", 
+            "rank_week": 30, 
+            "rank_year": 0, 
+            "user": 2
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "accounts.person", 
+        "fields": {
+            "profile": 2, 
+            "musician": 2, 
+            "user": 2, 
+            "is_musician": true, 
+            "view": 2
+        }
+    },  
+    {
+        "pk": 2, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "cowboy@example.com", 
+            "first_name": "Cowboy", 
+            "last_name": "One", 
+            "is_active": true, 
+            "last_login": "2021-02-22T21:01:32.723", 
+            "password": "pbkdf2_sha256$20000$vMVSNpeDP3C3$YSKzNJZSyIailw0SH2D27DlUilzn+nBiIluzocQZ0dU=",
+            "email": "cowboy@example.com", 
+            "date_joined": "2021-02-22T21:01:32.723"
+        }
+    }
+]

@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="5146px" preserveAspectRatio="none" style="width:1392px;height:5146px;background:#00000000;" version="1.1" viewBox="0 0 1392 5146" width="1392px" zoomAndPan="magnify"><defs/><g><rect fill="#CCCCCC" height="5127.6289" style="stroke:#383838;stroke-width:1.0;" width="237.5" x="1" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="68" x="85.75" y="18.5684">Web Apps</text><rect fill="#C7C7C7" height="5127.6289" style="stroke:#383838;stroke-width:1.0;" width="476.5" x="689" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="107" x="873.75" y="18.5684">Smart Contracts</text><rect fill="#ADADAD" height="5127.6289" style="stroke:#383838;stroke-width:1.0;" width="97" x="1283.5" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="49" x="1307.5" y="18.5684">Hedera</text><rect fill="#FFFFFF" height="88.9316" style="stroke:#000000;stroke-width:2.0;" width="703.5" x="683" y="1106.3574"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="22" x2="22" y1="104.7988" y2="5139.6289"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="191.5" x2="191.5" y1="104.7988" y2="5139.6289"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="722" x2="722" y1="104.7988" y2="5139.6289"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1120.5" x2="1120.5" y1="104.7988" y2="5139.6289"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1331.5" x2="1331.5" y1="104.7988" y2="5139.6289"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="5" y="101.8457">App</text><ellipse cx="22" cy="35.3105" fill="#F8F8F8" rx="8" ry="8" style="stroke:#383838;stroke-width:2.0;"/><path d="M22,43.3105 L22,70.3105 M9,51.3105 L35,51.3105 M22,70.3105 L9,85.3105 M22,70.3105 L35,85.3105 " fill="none" style="stroke:#383838;stroke-width:2.0;"/><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="85" x="149.5" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="156.5" y="93.8457">Spring API</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="58" x="693" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="700" y="93.8457">Parent</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="81" x="1080.5" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="1087.5" y="93.8457">Children..</text><rect fill="#F8F8F8" height="30.4883" style="stroke:#383838;stroke-width:1.5;" width="89" x="1287.5" y="73.3105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="1294.5" y="93.8457">Hashgraph</text><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="136.1094" y2="132.1094"/><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="136.1094" y2="140.1094"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="191" y1="136.1094" y2="136.1094"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="57" x="29" y="131.3672">/account</text><path d="M197,149.1094 L197,174.1094 L250,174.1094 L250,159.1094 L240,149.1094 L197,149.1094 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M240,149.1094 L240,159.1094 L250,159.1094 L240,149.1094 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="203" y="166.6777">POST</text><path d="M197,184.4199 L197,239.4199 L431,239.4199 L431,194.4199 L421,184.4199 L197,184.4199 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M421,184.4199 L421,194.4199 L431,194.4199 L421,184.4199 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="179" x="203" y="201.9883">Create an account on hedera</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="126" x="203" y="217.2988">with certain balance</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="213" x="203" y="232.6094">(transferred from default account)</text><path d="M197,250.3516 L197,275.3516 L428,275.3516 L428,260.3516 L418,250.3516 L197,250.3516 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M418,250.3516 L418,260.3516 L428,260.3516 L418,250.3516 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="208.5" cy="263.1621" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="199" x="214" y="267.9199">startBalance (String) (Default: 0)</text><path d="M197,285.6621 L197,310.6621 L449,310.6621 L449,295.6621 L439,285.6621 L197,285.6621 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><path d="M439,285.6621 L439,295.6621 L449,295.6621 L439,285.6621 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="231" x="203" y="303.2305">Implementation needs to be updated</text><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="337.2832" y2="333.2832"/><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="337.2832" y2="341.2832"/><line style="stroke:#383838;stroke-width:1.0;" x1="192" x2="721" y1="337.2832" y2="337.2832"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="199" y="332.541">account</text><line style="stroke:#383838;stroke-width:1.0;" x1="1330" x2="1320" y1="366.5938" y2="362.5938"/><line style="stroke:#383838;stroke-width:1.0;" x1="1330" x2="1320" y1="366.5938" y2="370.5938"/><line style="stroke:#383838;stroke-width:1.0;" x1="722" x2="1331" y1="366.5938" y2="366.5938"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="181" x="729" y="361.8516">createAccount(initialBalance)</text><polygon fill="#383838" points="733,391.9043,723,395.9043,733,399.9043" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="727" x2="1331" y1="395.9043" y2="395.9043"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148" x="739" y="391.1621">return hederaAccountId</text><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="722" x2="764" y1="425.2148" y2="425.2148"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="764" x2="764" y1="425.2148" y2="438.2148"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="723" x2="764" y1="438.2148" y2="438.2148"/><polygon fill="#383838" points="733,434.2148,723,438.2148,733,442.2148" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="232" x="729" y="420.4727">getSolidityAddress(hederaAccountId)</text><line style="stroke:#383838;stroke-width:1.0;" x1="722" x2="764" y1="467.5254" y2="467.5254"/><line style="stroke:#383838;stroke-width:1.0;" x1="764" x2="764" y1="467.5254" y2="480.5254"/><line style="stroke:#383838;stroke-width:1.0;" x1="723" x2="764" y1="480.5254" y2="480.5254"/><line style="stroke:#383838;stroke-width:1.0;" x1="723" x2="733" y1="480.5254" y2="476.5254"/><line style="stroke:#383838;stroke-width:1.0;" x1="723" x2="733" y1="480.5254" y2="484.5254"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="214" x="729" y="462.7832">+determineShard(solidityAddress)</text><line style="stroke:#383838;stroke-width:1.0;" x1="1119" x2="1109" y1="509.8359" y2="505.8359"/><line style="stroke:#383838;stroke-width:1.0;" x1="1119" x2="1109" y1="509.8359" y2="513.8359"/><line style="stroke:#383838;stroke-width:1.0;" x1="722" x2="1120" y1="509.8359" y2="509.8359"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="317" x="729" y="505.0938">+createAccountWithBalance(account, startBalance)</text><polygon fill="#383838" points="733,535.1465,723,539.1465,733,543.1465" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="727" x2="1120" y1="539.1465" y2="539.1465"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="739" y="534.4043">return success</text><polygon fill="#383838" points="203,564.457,193,568.457,203,572.457" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="197" x2="721" y1="568.457" y2="568.457"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="121" x="209" y="563.7148">return account info</text><path d="M197,581.457 L197,682.457 L400,682.457 L400,591.457 L390,581.457 L197,581.457 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M390,581.457 L390,591.457 L400,591.457 L390,581.457 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="203" y="599.0254">{</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="154" x="219" y="614.3359">“solidityAddress": "xxx",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="166" x="219" y="629.6465">"myaccNum": "0.0.61538",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117" x="219" y="644.957">"mypvtKey": "xxx",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="219" y="660.2676">"pubKey": "xxx"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="203" y="675.5781">}</text><polygon fill="#383838" points="33,705.6309,23,709.6309,33,713.6309" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="191" y1="709.6309" y2="709.6309"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="704.8887">return "</text><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="738.9414" y2="734.9414"/><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="738.9414" y2="742.9414"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="191" y1="738.9414" y2="738.9414"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="75" x="29" y="734.1992">hbarBalance</text><path d="M197,751.9414 L197,776.9414 L242,776.9414 L242,761.9414 L232,751.9414 L197,751.9414 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M232,751.9414 L232,761.9414 L242,761.9414 L232,751.9414 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="203" y="769.5098">GET</text><path d="M197,787.252 L197,812.252 L467,812.252 L467,797.252 L457,787.252 L197,787.252 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M457,787.252 L457,797.252 L467,797.252 L457,787.252 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="249" x="203" y="804.8203">Get balance in tinyBars of an account id</text><path d="M197,822.5625 L197,847.5625 L407,847.5625 L407,832.5625 L397,822.5625 L197,822.5625 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M397,822.5625 L397,832.5625 L407,832.5625 L397,822.5625 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="208.5" cy="835.373" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="178" x="214" y="840.1309">accountId (String) (Required)</text><line style="stroke:#383838;stroke-width:1.0;" x1="1330" x2="1320" y1="874.1836" y2="870.1836"/><line style="stroke:#383838;stroke-width:1.0;" x1="1330" x2="1320" y1="874.1836" y2="878.1836"/><line style="stroke:#383838;stroke-width:1.0;" x1="192" x2="1331" y1="874.1836" y2="874.1836"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="189" x="199" y="869.4414">getAccountBalance(accountId)</text><polygon fill="#383838" points="733,899.4941,723,903.4941,733,907.4941" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="727" x2="1331" y1="903.4941" y2="903.4941"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="739" y="898.752">return balance</text><polygon fill="#383838" points="203,928.8047,193,932.8047,203,936.8047" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="197" x2="721" y1="932.8047" y2="932.8047"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="209" y="928.0625">return balance</text><polygon fill="#383838" points="33,958.1152,23,962.1152,33,966.1152" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="191" y1="962.1152" y2="962.1152"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="957.373">return "</text><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="991.4258" y2="987.4258"/><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="991.4258" y2="995.4258"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="191" y1="991.4258" y2="991.4258"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="146" x="29" y="986.6836">+hbarBalanceContracts</text><path d="M197,1004.4258 L197,1029.4258 L242,1029.4258 L242,1014.4258 L232,1004.4258 L197,1004.4258 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><path d="M232,1004.4258 L232,1014.4258 L242,1014.4258 L232,1004.4258 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="203" y="1021.9941">GET</text><path d="M197,1039.7363 L197,1064.7363 L534,1064.7363 L534,1049.7363 L524,1039.7363 L197,1039.7363 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><path d="M524,1039.7363 L524,1049.7363 L534,1049.7363 L524,1039.7363 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="316" x="203" y="1057.3047">Get balance in tinyBars of each contract registered</text><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="1091.3574" y2="1087.3574"/><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="1091.3574" y2="1095.3574"/><line style="stroke:#383838;stroke-width:1.0;" x1="192" x2="721" y1="1091.3574" y2="1091.3574"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="163" x="199" y="1086.6152">getBalancesForContracts()</text><path d="M683,1106.3574 L757,1106.3574 L757,1113.3574 L747,1123.3574 L683,1123.3574 L683,1106.3574 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="88.9316" style="stroke:#000000;stroke-width:2.0;" width="703.5" x="683" y="1106.3574"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="29" x="698" y="1119.9258">loop</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="114" x="772" y="1118.9922">["For each contract"]</text><line style="stroke:#383838;stroke-width:1.0;" x1="1330" x2="1320" y1="1144.9785" y2="1140.9785"/><line style="stroke:#383838;stroke-width:1.0;" x1="1330" x2="1320" y1="1144.9785" y2="1148.9785"/><line style="stroke:#383838;stroke-width:1.0;" x1="722" x2="1331" y1="1144.9785" y2="1144.9785"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="191" x="729" y="1140.2363">getAccountBalance(contractId)</text><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="722" x2="764" y1="1174.2891" y2="1174.2891"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="764" x2="764" y1="1174.2891" y2="1187.2891"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="723" x2="764" y1="1187.2891" y2="1187.2891"/><polygon fill="#383838" points="733,1183.2891,723,1187.2891,733,1191.2891" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="97" x="729" y="1169.5469">return balances</text><polygon fill="#383838" points="203,1219.5996,193,1223.5996,203,1227.5996" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="197" x2="721" y1="1223.5996" y2="1223.5996"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="255" x="209" y="1218.8574">return array of contract ids and balances</text><polygon fill="#383838" points="33,1248.9102,23,1252.9102,33,1256.9102" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="191" y1="1252.9102" y2="1252.9102"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="1248.168">return "</text><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="1282.2207" y2="1278.2207"/><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="1282.2207" y2="1286.2207"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="191" y1="1282.2207" y2="1282.2207"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="80" x="29" y="1277.4785">hbarTransfer</text><path d="M197,1295.2207 L197,1320.2207 L250,1320.2207 L250,1305.2207 L240,1295.2207 L197,1295.2207 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M240,1295.2207 L240,1305.2207 L250,1305.2207 L240,1295.2207 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="203" y="1312.7891">POST</text><path d="M197,1330.5313 L197,1355.5313 L460,1355.5313 L460,1340.5313 L450,1330.5313 L197,1330.5313 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M450,1330.5313 L450,1340.5313 L460,1340.5313 L450,1330.5313 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="242" x="203" y="1348.0996">Transfer tinyBars from default account</text><path d="M197,1365.8418 L197,1390.8418 L501,1390.8418 L501,1375.8418 L491,1365.8418 L197,1365.8418 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><path d="M491,1365.8418 L491,1375.8418 L501,1375.8418 L491,1365.8418 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="283" x="203" y="1383.4102">Swagger documentation needs to be updated</text><path d="M197,1401.1523 L197,1472.1523 L589,1472.1523 L589,1411.1523 L579,1401.1523 L197,1401.1523 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><path d="M579,1401.1523 L579,1411.1523 L589,1411.1523 L579,1401.1523 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="208.5" cy="1413.9629" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="294" x="214" y="1418.7207">amount (+long) (Required) Amount in tiny bars</text><ellipse cx="208.5" cy="1429.2734" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="360" x="214" y="1434.0313">myAccNum (String) (Required) Transfer from this account</text><ellipse cx="208.5" cy="1444.584" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="347" x="214" y="1449.3418">myPvtKey (String) (Required) Private key of this account</text><ellipse cx="208.5" cy="1459.8945" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="348" x="214" y="1464.6523">toAccountId (String) (Required) Transfer to this account</text><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="1498.7051" y2="1494.7051"/><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="1498.7051" y2="1502.7051"/><line style="stroke:#383838;stroke-width:1.0;" x1="192" x2="721" y1="1498.7051" y2="1498.7051"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="506" x="199" y="1493.9629">transferCrypto(String myAccNum, String myPvtKey, String toAccId, long amount)</text><polygon fill="#383838" points="1320,1524.0156,1330,1528.0156,1320,1532.0156" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="722" x2="1326" y1="1528.0156" y2="1528.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="219" x="729" y="1523.2734">transferCryptoTo(toAccId, amount)</text><polygon fill="#383838" points="733,1553.3262,723,1557.3262,733,1561.3262" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="727" x2="1331" y1="1557.3262" y2="1557.3262"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="739" y="1552.584">return success</text><polygon fill="#383838" points="33,1582.6367,23,1586.6367,33,1590.6367" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="191" y1="1586.6367" y2="1586.6367"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="1581.8945">return "</text><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="1615.9473" y2="1611.9473"/><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="1615.9473" y2="1619.9473"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="191" y1="1615.9473" y2="1615.9473"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="69" x="29" y="1611.2051">allBalances</text><path d="M197,1628.9473 L197,1653.9473 L242,1653.9473 L242,1638.9473 L232,1628.9473 L197,1628.9473 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M232,1628.9473 L232,1638.9473 L242,1638.9473 L232,1628.9473 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="203" y="1646.5156">GET</text><path d="M197,1664.2578 L197,1704.2578 L591,1704.2578 L591,1674.2578 L581,1664.2578 L197,1664.2578 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><path d="M581,1664.2578 L581,1674.2578 L591,1674.2578 L581,1664.2578 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="341" x="203" y="1681.8262">Implementation and Swagger docs need to be updated</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="373" x="203" y="1697.1367">(Also, do we actually want this in the new implementation?)</text><path d="M197,1714.8789 L197,1739.8789 L460,1739.8789 L460,1724.8789 L450,1714.8789 L197,1714.8789 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M450,1714.8789 L450,1724.8789 L460,1724.8789 L450,1714.8789 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="242" x="203" y="1732.4473">+ Returns all balances for all accounts</text><path d="M197,1750.1895 L197,1775.1895 L566,1775.1895 L566,1760.1895 L556,1750.1895 L197,1750.1895 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><path d="M556,1750.1895 L556,1760.1895 L566,1760.1895 L556,1750.1895 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="348" x="203" y="1767.7578">Swagger docs need to be updated (numOfUsers is long)</text><path d="M197,1785.5 L197,1825.5 L658,1825.5 L658,1795.5 L648,1785.5 L197,1785.5 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M648,1785.5 L648,1795.5 L658,1795.5 L648,1785.5 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="208.5" cy="1798.3105" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="429" x="214" y="1803.0684">numOfUsers (long) (Required) : Number of users to estimate fees for</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="439" x="203" y="1818.3789">+ contractId (String) (Required) : Contract Id for which to get balances</text><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="1852.4316" y2="1848.4316"/><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="1852.4316" y2="1856.4316"/><line style="stroke:#383838;stroke-width:1.0;" x1="192" x2="721" y1="1852.4316" y2="1852.4316"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="227" x="199" y="1847.6895">allBalances(numOfUsers, contractId)</text><line style="stroke:#383838;stroke-width:1.0;" x1="1119" x2="1109" y1="1881.7422" y2="1877.7422"/><line style="stroke:#383838;stroke-width:1.0;" x1="1119" x2="1109" y1="1881.7422" y2="1885.7422"/><line style="stroke:#383838;stroke-width:1.0;" x1="722" x2="1120" y1="1881.7422" y2="1881.7422"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="155" x="729" y="1877">allBalances(numOfUsers)</text><polygon fill="#383838" points="733,1907.0527,723,1911.0527,733,1915.0527" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="727" x2="1120" y1="1911.0527" y2="1911.0527"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="208" x="739" y="1906.3105">return array mapping of balances</text><polygon fill="#383838" points="203,1951.6738,193,1955.6738,203,1959.6738" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="197" x2="721" y1="1955.6738" y2="1955.6738"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="208" x="209" y="1935.6211">return array mapping of balances</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="208" x="213" y="1950.9316">["SolidityAddress1-Balance1", …]</text><polygon fill="#383838" points="33,1980.9844,23,1984.9844,33,1988.9844" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="191" y1="1984.9844" y2="1984.9844"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="1980.2422">return "</text><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="2014.2949" y2="2010.2949"/><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="2014.2949" y2="2018.2949"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="191" y1="2014.2949" y2="2014.2949"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62" x="29" y="2009.5527">allowance</text><path d="M197,2027.2949 L197,2052.2949 L250,2052.2949 L250,2037.2949 L240,2027.2949 L197,2027.2949 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M240,2027.2949 L240,2037.2949 L250,2037.2949 L240,2027.2949 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="203" y="2044.8633">POST</text><path d="M197,2062.6055 L197,2087.6055 L460,2087.6055 L460,2072.6055 L450,2062.6055 L197,2062.6055 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M450,2062.6055 L450,2072.6055 L460,2072.6055 L450,2062.6055 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="242" x="203" y="2080.1738">Transfer tinyBars from default account</text><path d="M197,2097.916 L197,2183.916 L635,2183.916 L635,2107.916 L625,2097.916 L197,2097.916 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><path d="M625,2097.916 L625,2107.916 L635,2107.916 L625,2097.916 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="208.5" cy="2110.7266" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="214" y="2115.4844">json (Dict) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="401" x="219" y="2130.7949">* myaccNum (String) (? Required/Optional) Example "0.0.21166"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="326" x="219" y="2146.1055">* mypvtKey (String) (? Required/Optional) "302e......"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="344" x="219" y="2161.416">* spenderSolidityAddress (String) (? Required/Optional)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="370" x="219" y="2176.7266">* tokenOwnerSolidityAddress (String) (? Required/Optional)</text><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="2210.7793" y2="2206.7793"/><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="2210.7793" y2="2214.7793"/><line style="stroke:#383838;stroke-width:1.0;" x1="192" x2="721" y1="2210.7793" y2="2210.7793"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62" x="199" y="2206.0371">allowance</text><line style="stroke:#383838;stroke-width:1.0;" x1="1119" x2="1109" y1="2240.0898" y2="2236.0898"/><line style="stroke:#383838;stroke-width:1.0;" x1="1119" x2="1109" y1="2240.0898" y2="2244.0898"/><line style="stroke:#383838;stroke-width:1.0;" x1="722" x2="1120" y1="2240.0898" y2="2240.0898"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="310" x="729" y="2235.3477">allowance(address tokenOwner, address spender)</text><polygon fill="#383838" points="733,2265.4004,723,2269.4004,733,2273.4004" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="727" x2="1120" y1="2269.4004" y2="2269.4004"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="257" x="739" y="2264.6582">returns string allowance in Jam Decimals</text><polygon fill="#383838" points="203,2294.7109,193,2298.7109,203,2302.7109" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="197" x2="721" y1="2298.7109" y2="2298.7109"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="209" y="2293.9688">return "</text><polygon fill="#383838" points="33,2324.0215,23,2328.0215,33,2332.0215" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="191" y1="2328.0215" y2="2328.0215"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="2323.2793">return "</text><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="2357.332" y2="2353.332"/><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="2357.332" y2="2361.332"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="191" y1="2357.332" y2="2357.332"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="29" y="2352.5898">approve</text><path d="M197,2370.332 L197,2395.332 L250,2395.332 L250,2380.332 L240,2370.332 L197,2370.332 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M240,2370.332 L240,2380.332 L250,2380.332 L240,2370.332 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="203" y="2387.9004">POST</text><path d="M197,2405.6426 L197,2430.6426 L673,2430.6426 L673,2415.6426 L663,2405.6426 L197,2405.6426 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M663,2405.6426 L663,2415.6426 L673,2415.6426 L663,2405.6426 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="455" x="203" y="2423.2109">A hedera account approves a solidity address to spend JAM on its behalf</text><path d="M197,2440.9531 L197,2526.9531 L586,2526.9531 L586,2450.9531 L576,2440.9531 L197,2440.9531 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><path d="M576,2440.9531 L576,2450.9531 L586,2450.9531 L576,2440.9531 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="208.5" cy="2453.7637" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="214" y="2458.5215">json (Dict) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="344" x="219" y="2473.832">* spenderSolidityAddress (String) (? Required/Optional)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="352" x="219" y="2489.1426">* useraccNum (String) (? Required/Optional) "0.0.21166"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="201" x="219" y="2504.4531">* userpvtKey (String) "302e......",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="165" x="219" y="2519.7637">* valueInJamDecimals (Int)</text><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="2553.8164" y2="2549.8164"/><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="2553.8164" y2="2557.8164"/><line style="stroke:#383838;stroke-width:1.0;" x1="192" x2="721" y1="2553.8164" y2="2553.8164"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="199" y="2549.0742">approve</text><polygon fill="#383838" points="1109,2579.127,1119,2583.127,1109,2587.127" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="722" x2="1115" y1="2583.127" y2="2583.127"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="375" x="729" y="2578.3848">approve(address tokenOwner, address spender, uint _value)</text><polygon fill="#383838" points="733,2608.4375,723,2612.4375,733,2616.4375" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="727" x2="1120" y1="2612.4375" y2="2612.4375"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="739" y="2607.6953">return success</text><polygon fill="#383838" points="203,2637.748,193,2641.748,203,2645.748" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="197" x2="721" y1="2641.748" y2="2641.748"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="209" y="2637.0059">return success</text><polygon fill="#383838" points="33,2667.0586,23,2671.0586,33,2675.0586" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="191" y1="2671.0586" y2="2671.0586"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="2666.3164">return "</text><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="2700.3691" y2="2696.3691"/><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="2700.3691" y2="2704.3691"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="191" y1="2700.3691" y2="2700.3691"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="63" x="29" y="2695.627">balanceOf</text><path d="M197,2713.3691 L197,2738.3691 L250,2738.3691 L250,2723.3691 L240,2713.3691 L197,2713.3691 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M240,2713.3691 L240,2723.3691 L250,2723.3691 L240,2713.3691 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="203" y="2730.9375">POST</text><path d="M197,2748.6797 L197,2773.6797 L476,2773.6797 L476,2758.6797 L466,2748.6797 L197,2748.6797 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M466,2748.6797 L466,2758.6797 L476,2758.6797 L466,2748.6797 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="258" x="203" y="2766.248">Check balance JAM Tokens of an address</text><path d="M197,2783.9902 L197,2854.9902 L543,2854.9902 L543,2793.9902 L533,2783.9902 L197,2783.9902 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><path d="M533,2783.9902 L533,2793.9902 L543,2793.9902 L533,2783.9902 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="208.5" cy="2796.8008" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="214" y="2801.5586">json (Dict) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="283" x="219" y="2816.8691">* myaccNum (String) (? Required) "0.0.21166"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="265" x="219" y="2832.1797">* mypvtKey (String) (? Required) "302e......"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="309" x="219" y="2847.4902">* tokenOwnerSolidityAddress (String) (? Required)</text><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="2881.543" y2="2877.543"/><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="2881.543" y2="2885.543"/><line style="stroke:#383838;stroke-width:1.0;" x1="192" x2="721" y1="2881.543" y2="2881.543"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="63" x="199" y="2876.8008">balanceOf</text><line style="stroke:#383838;stroke-width:1.0;" x1="1119" x2="1109" y1="2910.8535" y2="2906.8535"/><line style="stroke:#383838;stroke-width:1.0;" x1="1119" x2="1109" y1="2910.8535" y2="2914.8535"/><line style="stroke:#383838;stroke-width:1.0;" x1="722" x2="1120" y1="2910.8535" y2="2910.8535"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="63" x="729" y="2906.1113">balanceOf</text><polygon fill="#383838" points="733,2936.1641,723,2940.1641,733,2944.1641" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="727" x2="1120" y1="2940.1641" y2="2940.1641"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="236" x="739" y="2935.4219">return string balance in Jam Decimals</text><polygon fill="#383838" points="203,2965.4746,193,2969.4746,203,2973.4746" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="197" x2="721" y1="2969.4746" y2="2969.4746"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="236" x="209" y="2964.7324">return string balance in Jam Decimals</text><polygon fill="#383838" points="33,2994.7852,23,2998.7852,33,3002.7852" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="191" y1="2998.7852" y2="2998.7852"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="2994.043">return "</text><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="3028.0957" y2="3024.0957"/><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="3028.0957" y2="3032.0957"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="191" y1="3028.0957" y2="3028.0957"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112" x="29" y="3023.3535">bulkTransferFrom</text><path d="M197,3041.0957 L197,3066.0957 L250,3066.0957 L250,3051.0957 L240,3041.0957 L197,3041.0957 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M240,3041.0957 L240,3051.0957 L250,3051.0957 L240,3041.0957 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="203" y="3058.6641">POST</text><path d="M197,3076.4063 L197,3116.4063 L508,3116.4063 L508,3086.4063 L498,3076.4063 L197,3076.4063 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M498,3076.4063 L498,3086.4063 L508,3086.4063 L498,3076.4063 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="290" x="203" y="3093.9746">Client account transfers from many addresses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="213" x="203" y="3109.2852">to other addresses on their behalf</text><path d="M197,3127.0273 L197,3152.0273 L501,3152.0273 L501,3137.0273 L491,3127.0273 L197,3127.0273 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><path d="M491,3127.0273 L491,3137.0273 L501,3137.0273 L491,3127.0273 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="283" x="203" y="3144.5957">Swagger documentation needs to be updated</text><path d="M197,3162.3379 L197,3279.3379 L636,3279.3379 L636,3172.3379 L626,3162.3379 L197,3162.3379 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M626,3162.3379 L626,3172.3379 L636,3172.3379 L626,3162.3379 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="208.5" cy="3175.1484" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="214" y="3179.9063">json (Dict) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="321" x="219" y="3195.2168">* payload (Array of dictionary mappings) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="235" y="3210.5273">[{</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="370" x="251" y="3225.8379">"tokenOwnerSolidityAddress": from_user_solidity_address,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="290" x="251" y="3241.1484">"toSolidityAddress": to_user_solidity_address,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="255" x="251" y="3256.459">"valueInJamDecimals": transaction_value</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="235" y="3271.7695">}, ..]</text><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="3305.8223" y2="3301.8223"/><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="3305.8223" y2="3309.8223"/><line style="stroke:#383838;stroke-width:1.0;" x1="192" x2="721" y1="3305.8223" y2="3305.8223"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112" x="199" y="3301.0801">bulkTransferFrom</text><line style="stroke:#383838;stroke-width:1.0;" x1="1119" x2="1109" y1="3335.1328" y2="3331.1328"/><line style="stroke:#383838;stroke-width:1.0;" x1="1119" x2="1109" y1="3335.1328" y2="3339.1328"/><line style="stroke:#383838;stroke-width:1.0;" x1="722" x2="1120" y1="3335.1328" y2="3335.1328"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="80" x="729" y="3330.3906">bulkTransfer</text><polygon fill="#383838" points="733,3360.4434,723,3364.4434,733,3368.4434" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="727" x2="1120" y1="3364.4434" y2="3364.4434"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="297" x="739" y="3359.7012">return string result of transactions on the child</text><polygon fill="#383838" points="203,3405.0645,193,3409.0645,203,3413.0645" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="197" x2="721" y1="3409.0645" y2="3409.0645"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="323" x="209" y="3389.0117">return string result of all transactions in the format</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="276" x="213" y="3404.3223">000110 where 0 indicates failure, 1 success</text><polygon fill="#383838" points="33,3434.375,23,3438.375,33,3442.375" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="191" y1="3438.375" y2="3438.375"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="3433.6328">return "</text><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="3467.6855" y2="3463.6855"/><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="3467.6855" y2="3471.6855"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="191" y1="3467.6855" y2="3467.6855"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="25" x="29" y="3462.9434">info</text><path d="M197,3480.6855 L197,3505.6855 L242,3505.6855 L242,3490.6855 L232,3480.6855 L197,3480.6855 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M232,3480.6855 L232,3490.6855 L242,3490.6855 L232,3480.6855 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="203" y="3498.2539">GET</text><path d="M197,3515.9961 L197,3540.9961 L473,3540.9961 L473,3525.9961 L463,3515.9961 L197,3515.9961 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M463,3515.9961 L463,3525.9961 L473,3525.9961 L463,3515.9961 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="255" x="203" y="3533.5645">Swagger return info needs to be updated</text><path d="M197,3551.3066 L197,3576.3066 L450,3576.3066 L450,3561.3066 L440,3551.3066 L197,3551.3066 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M440,3551.3066 L440,3561.3066 L450,3561.3066 L440,3551.3066 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="232" x="203" y="3568.875">Get basic smart contract information</text><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="3602.9277" y2="3598.9277"/><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="3602.9277" y2="3606.9277"/><line style="stroke:#383838;stroke-width:1.0;" x1="192" x2="721" y1="3602.9277" y2="3602.9277"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="25" x="199" y="3598.1855">info</text><polygon fill="#383838" points="203,3628.2383,193,3632.2383,203,3636.2383" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="197" x2="721" y1="3632.2383" y2="3632.2383"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="209" y="3627.4961">returns contract info</text><path d="M197,3645.2383 L197,3777.2383 L736,3777.2383 L736,3655.2383 L726,3645.2383 L197,3645.2383 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M726,3645.2383 L726,3655.2383 L736,3655.2383 L726,3645.2383 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="203" y="3662.8066">{</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="128" x="219" y="3678.1172">"Owner": "0.0.1117",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="502" x="219" y="3693.4277">"ContractSolidityAddress": "00000000000000000000000000000000000052aa",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="102" x="219" y="3708.7383">"Symbol": "JAM",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="254" x="219" y="3724.0488">"Total Supply": "100000000000000000",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="219" y="3739.3594">"Decimals": "5",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="87" x="219" y="3754.6699">"Name": "Jam"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="203" y="3769.9805">}</text><polygon fill="#383838" points="33,3800.0332,23,3804.0332,33,3808.0332" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="191" y1="3804.0332" y2="3804.0332"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="3799.291">return "</text><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="3833.3438" y2="3829.3438"/><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="3833.3438" y2="3837.3438"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="191" y1="3833.3438" y2="3833.3438"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="29" y="3828.6016">transfer</text><path d="M197,3846.3438 L197,3871.3438 L250,3871.3438 L250,3856.3438 L240,3846.3438 L197,3846.3438 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M240,3846.3438 L240,3856.3438 L250,3856.3438 L240,3846.3438 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="203" y="3863.9121">POST</text><path d="M197,3881.6543 L197,3906.6543 L679,3906.6543 L679,3891.6543 L669,3881.6543 L197,3881.6543 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M669,3881.6543 L669,3891.6543 L679,3891.6543 L669,3881.6543 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="461" x="203" y="3899.2227">Transfer JAM tokens from one hedera account to another solidity address</text><path d="M197,3916.9648 L197,3956.9648 L739,3956.9648 L739,3926.9648 L729,3916.9648 L197,3916.9648 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><path d="M729,3916.9648 L729,3926.9648 L739,3926.9648 L729,3916.9648 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="410" x="203" y="3934.5332">Swagger documentation and implementation need to be updated.</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="521" x="203" y="3949.8438">Note: Do we want to change this from accepting myaccNum to mySolidityAddress?</text><path d="M197,3967.5859 L197,4053.5859 L534,4053.5859 L534,3977.5859 L524,3967.5859 L197,3967.5859 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M524,3967.5859 L524,3977.5859 L534,3977.5859 L524,3967.5859 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="208.5" cy="3980.3965" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="214" y="3985.1543">json (Dict) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="278" x="219" y="4000.4648">* myaccNum (String) (Required) "0.0.21166",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="260" x="219" y="4015.7754">* mypvtKey (String) (Required) "302e......",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="237" x="219" y="4031.0859">* toSolidityAddress (String) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="300" x="219" y="4046.3965">* valueInJamDecimals (Int) (Required) 56788000</text><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="4080.4492" y2="4076.4492"/><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="4080.4492" y2="4084.4492"/><line style="stroke:#383838;stroke-width:1.0;" x1="192" x2="721" y1="4080.4492" y2="4080.4492"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="199" y="4075.707">transfer</text><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="722" x2="764" y1="4109.7598" y2="4109.7598"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="764" x2="764" y1="4109.7598" y2="4122.7598"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="723" x2="764" y1="4122.7598" y2="4122.7598"/><polygon fill="#383838" points="733,4118.7598,723,4122.7598,733,4126.7598" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="248" x="729" y="4105.0176">getAccountSolidityAddress(myaccNum)</text><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="722" x2="764" y1="4152.0703" y2="4152.0703"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="764" x2="764" y1="4152.0703" y2="4165.0703"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="723" x2="764" y1="4165.0703" y2="4165.0703"/><polygon fill="#383838" points="733,4161.0703,723,4165.0703,733,4169.0703" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="328" x="729" y="4147.3281">getFromAddressContractShard(fromSolidityAddress)</text><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="722" x2="764" y1="4194.3809" y2="4194.3809"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="764" x2="764" y1="4194.3809" y2="4207.3809"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="723" x2="764" y1="4207.3809" y2="4207.3809"/><polygon fill="#383838" points="733,4203.3809,723,4207.3809,733,4211.3809" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="295" x="729" y="4189.6387">getToAddressContractShard(toSolidityAddress)</text><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="722" x2="764" y1="4252.002" y2="4252.002"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="764" x2="764" y1="4252.002" y2="4265.002"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="723" x2="764" y1="4265.002" y2="4265.002"/><polygon fill="#383838" points="733,4261.002,723,4265.002,733,4269.002" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="185" x="729" y="4231.9492">transfer(contractA, contractB,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="292" x="729" y="4247.2598">fromSolidityAddress, toSolidityAddress, value)</text><polygon fill="#383838" points="203,4290.3125,193,4294.3125,203,4298.3125" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="197" x2="721" y1="4294.3125" y2="4294.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="209" y="4289.5703">return success</text><polygon fill="#383838" points="33,4319.623,23,4323.623,33,4327.623" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="191" y1="4323.623" y2="4323.623"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="4318.8809">return "</text><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="4352.9336" y2="4348.9336"/><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="4352.9336" y2="4356.9336"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="191" y1="4352.9336" y2="4352.9336"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="81" x="29" y="4348.1914">transferFrom</text><path d="M197,4365.9336 L197,4390.9336 L250,4390.9336 L250,4375.9336 L240,4365.9336 L197,4365.9336 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M240,4365.9336 L240,4375.9336 L250,4375.9336 L240,4365.9336 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="203" y="4383.502">POST</text><path d="M197,4401.2441 L197,4426.2441 L517,4426.2441 L517,4411.2441 L507,4401.2441 L197,4401.2441 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M507,4401.2441 L507,4411.2441 L517,4411.2441 L507,4401.2441 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="299" x="203" y="4418.8125">One account transfers JAM on behalf of another</text><path d="M197,4436.5547 L197,4461.5547 L501,4461.5547 L501,4446.5547 L491,4436.5547 L197,4436.5547 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><path d="M491,4436.5547 L491,4446.5547 L501,4446.5547 L491,4436.5547 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="283" x="203" y="4454.123">Swagger documentation needs to be updated</text><path d="M197,4471.8652 L197,4572.8652 L642,4572.8652 L642,4481.8652 L632,4471.8652 L197,4471.8652 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M632,4471.8652 L632,4481.8652 L642,4481.8652 L632,4471.8652 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="208.5" cy="4484.6758" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="214" y="4489.4336">json (Dict) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="344" x="219" y="4504.7441">* myaccNum (? Required/Optional) (String) "0.0.21166"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="153" x="219" y="4520.0547">* mypvtKey": "302e......",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="307" x="219" y="4535.3652">* toSolidityAddress (String) (? Required/Optional)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="370" x="219" y="4550.6758">* tokenOwnerSolidityAddress (String) (? Required/Optional)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="408" x="219" y="4565.9863">* valueInJamDecimals (Required) (? Required/Optional) 56788000</text><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="4600.0391" y2="4596.0391"/><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="4600.0391" y2="4604.0391"/><line style="stroke:#383838;stroke-width:1.0;" x1="192" x2="721" y1="4600.0391" y2="4600.0391"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="81" x="199" y="4595.2969">transferFrom</text><polygon fill="#383838" points="203,4625.3496,193,4629.3496,203,4633.3496" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="197" x2="721" y1="4629.3496" y2="4629.3496"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="209" y="4624.6074">return success</text><polygon fill="#383838" points="33,4654.6602,23,4658.6602,33,4662.6602" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="191" y1="4658.6602" y2="4658.6602"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="4653.918">return "</text><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="4687.9707" y2="4683.9707"/><line style="stroke:#383838;stroke-width:1.0;" x1="190" x2="180" y1="4687.9707" y2="4691.9707"/><line style="stroke:#383838;stroke-width:1.0;" x1="22" x2="191" y1="4687.9707" y2="4687.9707"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="29" y="4683.2285">transferOwnership</text><path d="M197,4700.9707 L197,4725.9707 L250,4725.9707 L250,4710.9707 L240,4700.9707 L197,4700.9707 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M240,4700.9707 L240,4710.9707 L250,4710.9707 L240,4700.9707 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="203" y="4718.5391">POST</text><path d="M197,4736.2813 L197,4761.2813 L452,4761.2813 L452,4746.2813 L442,4736.2813 L197,4736.2813 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M442,4736.2813 L442,4746.2813 L452,4746.2813 L442,4736.2813 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="234" x="203" y="4753.8496">Change owner of Jam Token Contract</text><path d="M197,4771.5918 L197,4796.5918 L501,4796.5918 L501,4781.5918 L491,4771.5918 L197,4771.5918 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><path d="M491,4771.5918 L491,4781.5918 L501,4781.5918 L491,4771.5918 " fill="#D4D4D4" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="283" x="203" y="4789.1602">Swagger documentation needs to be updated</text><path d="M197,4806.9023 L197,4892.9023 L578,4892.9023 L578,4816.9023 L568,4806.9023 L197,4806.9023 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><path d="M568,4806.9023 L568,4816.9023 L578,4816.9023 L568,4806.9023 " fill="#EBEBEB" style="stroke:#383838;stroke-width:1.0;"/><ellipse cx="208.5" cy="4819.7129" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136" x="214" y="4824.4707">body (Dict) (Required)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="336" x="219" y="4839.7813">* currAccNum (String) (? Required/Optional) "0.0.903"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="331" x="219" y="4855.0918">* currPvtKey (String) (? Required/Optional) "302e......"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="344" x="219" y="4870.4023">* newAccNum (String) (? Required/Optional) "0.0.1117"</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="331" x="219" y="4885.7129">* newPvtKey (String) (? Required/Optional) "302e......"</text><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="4919.7656" y2="4915.7656"/><line style="stroke:#383838;stroke-width:1.0;" x1="720" x2="710" y1="4919.7656" y2="4923.7656"/><line style="stroke:#383838;stroke-width:1.0;" x1="192" x2="721" y1="4919.7656" y2="4919.7656"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="81" x="199" y="4915.0234">transferFrom</text><line style="stroke:#383838;stroke-width:1.0;" x1="1119" x2="1109" y1="4949.0762" y2="4945.0762"/><line style="stroke:#383838;stroke-width:1.0;" x1="1119" x2="1109" y1="4949.0762" y2="4953.0762"/><line style="stroke:#383838;stroke-width:1.0;" x1="722" x2="1120" y1="4949.0762" y2="4949.0762"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="81" x="729" y="4944.334">transferFrom</text><line style="stroke:#383838;stroke-width:1.0;" x1="1121" x2="1163" y1="4978.3867" y2="4978.3867"/><line style="stroke:#383838;stroke-width:1.0;" x1="1163" x2="1163" y1="4978.3867" y2="4991.3867"/><line style="stroke:#383838;stroke-width:1.0;" x1="1122" x2="1163" y1="4991.3867" y2="4991.3867"/><line style="stroke:#383838;stroke-width:1.0;" x1="1122" x2="1132" y1="4991.3867" y2="4987.3867"/><line style="stroke:#383838;stroke-width:1.0;" x1="1122" x2="1132" y1="4991.3867" y2="4995.3867"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="197" x="1128" y="4973.6445">transferFrom child A -&gt; child B</text><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="1121" x2="1163" y1="5020.6973" y2="5020.6973"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="1163" x2="1163" y1="5020.6973" y2="5033.6973"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="1122" x2="1163" y1="5033.6973" y2="5033.6973"/><polygon fill="#383838" points="1132,5029.6973,1122,5033.6973,1132,5037.6973" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="1128" y="5015.9551">return success</text><polygon fill="#383838" points="33,5059.0078,23,5063.0078,33,5067.0078" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="27" x2="191" y1="5063.0078" y2="5063.0078"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="39" y="5058.2656">return "</text><line style="stroke:#383838;stroke-width:1.0;" x1="1330" x2="1320" y1="5092.3184" y2="5088.3184"/><line style="stroke:#383838;stroke-width:1.0;" x1="1330" x2="1320" y1="5092.3184" y2="5096.3184"/><line style="stroke:#383838;stroke-width:1.0;" x1="192" x2="1331" y1="5092.3184" y2="5092.3184"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="199" y="5087.5762">transferOwnership</text><polygon fill="#383838" points="203,5117.6289,193,5121.6289,203,5125.6289" style="stroke:#383838;stroke-width:1.0;"/><line style="stroke:#383838;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="197" x2="1331" y1="5121.6289" y2="5121.6289"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="209" y="5116.8867">return success</text><!--MD5=[bb10aecd79c28d78cc8a8eaf21980c25]
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title Hedera Spring API
+
+Actor "App" as app
+participant "Spring API" as springapi
+participant "Parent" as parent
+participant "Children.." as child
+participant "Hashgraph" as hashgraph
+
+box "Web Apps" #LightBlue
+	participant app
+	participant springapi
+end box
+
+box "Smart Contracts" #LightGreen
+	participant parent
+	participant child
+end box
+
+box "Hedera" #Orange
+	participant hashgraph
+end box
+
+app->>springapi : /account
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Create an account on hedera
+    with certain balance
+    (transferred from default account)
+end Note
+Note right of springapi
+    * startBalance (String) (Default: 0)
+end Note
+Note right of springapi #Pink
+    Implementation needs to be updated
+end Note
+
+springapi ->> parent : account
+parent ->> hashgraph : createAccount(initialBalance)
+hashgraph- ->parent: return hederaAccountId
+parent- ->parent: getSolidityAddress(hederaAccountId)
+parent ->> parent : +determineShard(solidityAddress)
+parent ->> child : +createAccountWithBalance(account, startBalance)
+child - -> parent : return success
+parent - -> springapi : return account info
+Note right of springapi
+    {
+        “solidityAddress": "xxx",
+        "myaccNum": "0.0.61538",
+        "mypvtKey": "xxx",
+        "pubKey": "xxx"
+    }
+end Note
+
+springapi - -> app : return "
+
+app->>springapi : hbarBalance
+Note right of springapi
+    GET
+end Note
+Note right of springapi
+    Get balance in tinyBars of an account id
+end Note
+Note right of springapi
+    * accountId (String) (Required)
+end Note
+
+springapi->>hashgraph : getAccountBalance(accountId)
+hashgraph- ->parent: return balance
+parent- ->springapi : return balance
+springapi- ->app : return "
+
+app->>springapi : +hbarBalanceContracts
+Note right of springapi #Pink
+    GET
+end Note
+Note right of springapi #Pink
+    Get balance in tinyBars of each contract registered
+end Note
+
+springapi->>parent : getBalancesForContracts()
+loop "For each contract"
+    parent->>hashgraph : getAccountBalance(contractId)
+    parent- ->parent : return balances
+end
+parent- ->springapi : return array of contract ids and balances
+springapi- ->app : return "
+
+app->>springapi : hbarTransfer
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Transfer tinyBars from default account
+end Note
+Note right of springapi #Pink
+    Swagger documentation needs to be updated
+end Note
+Note right of springapi #Pink
+    * amount (+long) (Required) Amount in tiny bars
+    * myAccNum (String) (Required) Transfer from this account
+    * myPvtKey (String) (Required) Private key of this account
+    * toAccountId (String) (Required) Transfer to this account
+end Note
+
+springapi->>parent : transferCrypto(String myAccNum, String myPvtKey, String toAccId, long amount)
+parent- ->hashgraph : transferCryptoTo(toAccId, amount)
+hashgraph- ->parent : return success
+springapi- ->app : return "
+
+app->>springapi : allBalances
+Note right of springapi
+    GET
+end Note
+Note right of springapi #Pink
+   Implementation and Swagger docs need to be updated
+   (Also, do we actually want this in the new implementation?)
+end Note
+Note right of springapi
+   + Returns all balances for all accounts
+end Note
+Note right of springapi #Pink
+   Swagger docs need to be updated (numOfUsers is long)
+end Note
+Note right of springapi
+   * numOfUsers (long) (Required) : Number of users to estimate fees for
+   + contractId (String) (Required) : Contract Id for which to get balances
+end Note
+
+springapi->>parent : allBalances(numOfUsers, contractId)
+parent->>child : allBalances(numOfUsers)
+child- ->parent: return array mapping of balances
+parent- ->springapi : return array mapping of balances \n ["SolidityAddress1-Balance1", …]
+springapi- ->app : return "
+
+app->>springapi : allowance
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Transfer tinyBars from default account
+end Note
+Note right of springapi #Pink
+    * json (Dict) (Required)
+        * myaccNum (String) (? Required/Optional) Example "0.0.21166"
+        * mypvtKey (String) (? Required/Optional) "302e......"
+        * spenderSolidityAddress (String) (? Required/Optional)
+        * tokenOwnerSolidityAddress (String) (? Required/Optional)
+end Note
+
+springapi->>parent : allowance
+parent->>child : allowance(address tokenOwner, address spender)
+child- ->parent : returns string allowance in Jam Decimals
+parent- ->springapi : return "
+springapi- ->app : return "
+
+app->>springapi : approve
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    A hedera account approves a solidity address to spend JAM on its behalf
+end Note
+Note right of springapi #Pink
+    * json (Dict) (Required)
+        * spenderSolidityAddress (String) (? Required/Optional)
+        * useraccNum (String) (? Required/Optional) "0.0.21166"
+        * userpvtKey (String) "302e......",
+        * valueInJamDecimals (Int)
+end Note
+
+springapi->>parent : approve
+parent- ->child: approve(address tokenOwner, address spender, uint _value)
+child- ->parent: return success
+parent- ->springapi : return success
+springapi- ->app : return "
+
+app->>springapi : balanceOf
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Check balance JAM Tokens of an address
+end Note
+Note right of springapi #Pink
+    * json (Dict) (Required)
+        * myaccNum (String) (? Required) "0.0.21166"
+        * mypvtKey (String) (? Required) "302e......"
+        * tokenOwnerSolidityAddress (String) (? Required)
+end Note
+
+springapi->>parent : balanceOf
+parent->>child : balanceOf
+child- ->parent : return string balance in Jam Decimals
+parent- ->springapi : return string balance in Jam Decimals
+springapi- ->app : return "
+
+app->>springapi : bulkTransferFrom
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Client account transfers from many addresses
+    to other addresses on their behalf
+end Note
+Note right of springapi #Pink
+    Swagger documentation needs to be updated
+end Note
+Note right of springapi
+    * json (Dict) (Required)
+        * payload (Array of dictionary mappings) (Required)
+            [{
+                "tokenOwnerSolidityAddress": from_user_solidity_address,
+                "toSolidityAddress": to_user_solidity_address,
+                "valueInJamDecimals": transaction_value
+            }, ..]
+end Note
+
+springapi->>parent : bulkTransferFrom
+parent->>child: bulkTransfer
+child- ->parent : return string result of transactions on the child
+parent- ->springapi : return string result of all transactions in the format \n 000110 where 0 indicates failure, 1 success
+springapi- ->app : return "
+
+app->>springapi : info
+Note right of springapi
+    GET
+end Note
+Note right of springapi
+    Swagger return info needs to be updated
+end Note
+Note right of springapi
+    Get basic smart contract information
+end Note
+
+springapi->>parent : info
+parent- ->springapi : returns contract info
+
+Note right of springapi
+    {
+        "Owner": "0.0.1117",
+        "ContractSolidityAddress": "00000000000000000000000000000000000052aa",
+        "Symbol": "JAM",
+        "Total Supply": "100000000000000000",
+        "Decimals": "5",
+        "Name": "Jam"
+    }
+end Note
+
+springapi- ->app : return "
+
+app->>springapi : transfer
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Transfer JAM tokens from one hedera account to another solidity address
+end Note
+Note right of springapi #Pink
+    Swagger documentation and implementation need to be updated.
+    Note: Do we want to change this from accepting myaccNum to mySolidityAddress?
+end Note
+Note right of springapi
+    * json (Dict) (Required)
+        * myaccNum (String) (Required) "0.0.21166",
+        * mypvtKey (String) (Required) "302e......",
+        * toSolidityAddress (String) (Required)
+        * valueInJamDecimals (Int) (Required) 56788000
+end Note
+
+springapi->>parent : transfer
+parent- ->parent : getAccountSolidityAddress(myaccNum)
+parent- ->parent : getFromAddressContractShard(fromSolidityAddress)
+parent- ->parent : getToAddressContractShard(toSolidityAddress)
+parent- ->parent : transfer(contractA, contractB, \nfromSolidityAddress, toSolidityAddress, value)
+parent- ->springapi : return success
+springapi- ->app : return "
+
+app->>springapi : transferFrom
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    One account transfers JAM on behalf of another
+end Note
+Note right of springapi #Pink
+    Swagger documentation needs to be updated
+end Note
+Note right of springapi
+    * json (Dict) (Required)
+        * myaccNum (? Required/Optional) (String) "0.0.21166"
+        * mypvtKey": "302e......",
+        * toSolidityAddress (String) (? Required/Optional)
+        * tokenOwnerSolidityAddress (String) (? Required/Optional)
+        * valueInJamDecimals (Required) (? Required/Optional) 56788000
+end Note
+
+springapi->>parent : transferFrom
+parent- ->springapi : return success
+springapi- ->app : return "
+
+app->>springapi : transferOwnership
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Change owner of Jam Token Contract
+end Note
+Note right of springapi #Pink
+    Swagger documentation needs to be updated
+end Note
+Note right of springapi
+    * body (Dict) (Required)
+        * currAccNum (String) (? Required/Optional) "0.0.903"
+        * currPvtKey (String) (? Required/Optional) "302e......"
+        * newAccNum (String) (? Required/Optional) "0.0.1117"
+        * newPvtKey (String) (? Required/Optional) "302e......"
+end Note
+
+springapi->>parent : transferFrom
+parent->>child : transferFrom
+child->>child : transferFrom child A -> child B
+child- ->child : return success
+springapi- ->app : return "
+
+springapi->>hashgraph : transferOwnership
+hashgraph- ->springapi : return success
+
+@enduml
+
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+
+Actor "App" as app
+participant "Spring API" as springapi
+participant "Parent" as parent
+participant "Children.." as child
+participant "Hashgraph" as hashgraph
+
+box "Web Apps" #LightBlue
+	participant app
+	participant springapi
+end box
+
+box "Smart Contracts" #LightGreen
+	participant parent
+	participant child
+end box
+
+box "Hedera" #Orange
+	participant hashgraph
+end box
+
+app->>springapi : /account
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Create an account on hedera
+    with certain balance
+    (transferred from default account)
+end Note
+Note right of springapi
+    * startBalance (String) (Default: 0)
+end Note
+Note right of springapi #Pink
+    Implementation needs to be updated
+end Note
+
+springapi ->> parent : account
+parent ->> hashgraph : createAccount(initialBalance)
+hashgraph- ->parent: return hederaAccountId
+parent- ->parent: getSolidityAddress(hederaAccountId)
+parent ->> parent : +determineShard(solidityAddress)
+parent ->> child : +createAccountWithBalance(account, startBalance)
+child - -> parent : return success
+parent - -> springapi : return account info
+Note right of springapi
+    {
+        “solidityAddress": "xxx",
+        "myaccNum": "0.0.61538",
+        "mypvtKey": "xxx",
+        "pubKey": "xxx"
+    }
+end Note
+
+springapi - -> app : return "
+
+app->>springapi : hbarBalance
+Note right of springapi
+    GET
+end Note
+Note right of springapi
+    Get balance in tinyBars of an account id
+end Note
+Note right of springapi
+    * accountId (String) (Required)
+end Note
+
+springapi->>hashgraph : getAccountBalance(accountId)
+hashgraph- ->parent: return balance
+parent- ->springapi : return balance
+springapi- ->app : return "
+
+app->>springapi : +hbarBalanceContracts
+Note right of springapi #Pink
+    GET
+end Note
+Note right of springapi #Pink
+    Get balance in tinyBars of each contract registered
+end Note
+
+springapi->>parent : getBalancesForContracts()
+loop "For each contract"
+    parent->>hashgraph : getAccountBalance(contractId)
+    parent- ->parent : return balances
+end
+parent- ->springapi : return array of contract ids and balances
+springapi- ->app : return "
+
+app->>springapi : hbarTransfer
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Transfer tinyBars from default account
+end Note
+Note right of springapi #Pink
+    Swagger documentation needs to be updated
+end Note
+Note right of springapi #Pink
+    * amount (+long) (Required) Amount in tiny bars
+    * myAccNum (String) (Required) Transfer from this account
+    * myPvtKey (String) (Required) Private key of this account
+    * toAccountId (String) (Required) Transfer to this account
+end Note
+
+springapi->>parent : transferCrypto(String myAccNum, String myPvtKey, String toAccId, long amount)
+parent- ->hashgraph : transferCryptoTo(toAccId, amount)
+hashgraph- ->parent : return success
+springapi- ->app : return "
+
+app->>springapi : allBalances
+Note right of springapi
+    GET
+end Note
+Note right of springapi #Pink
+   Implementation and Swagger docs need to be updated
+   (Also, do we actually want this in the new implementation?)
+end Note
+Note right of springapi
+   + Returns all balances for all accounts
+end Note
+Note right of springapi #Pink
+   Swagger docs need to be updated (numOfUsers is long)
+end Note
+Note right of springapi
+   * numOfUsers (long) (Required) : Number of users to estimate fees for
+   + contractId (String) (Required) : Contract Id for which to get balances
+end Note
+
+springapi->>parent : allBalances(numOfUsers, contractId)
+parent->>child : allBalances(numOfUsers)
+child- ->parent: return array mapping of balances
+parent- ->springapi : return array mapping of balances \n ["SolidityAddress1-Balance1", …]
+springapi- ->app : return "
+
+app->>springapi : allowance
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Transfer tinyBars from default account
+end Note
+Note right of springapi #Pink
+    * json (Dict) (Required)
+        * myaccNum (String) (? Required/Optional) Example "0.0.21166"
+        * mypvtKey (String) (? Required/Optional) "302e......"
+        * spenderSolidityAddress (String) (? Required/Optional)
+        * tokenOwnerSolidityAddress (String) (? Required/Optional)
+end Note
+
+springapi->>parent : allowance
+parent->>child : allowance(address tokenOwner, address spender)
+child- ->parent : returns string allowance in Jam Decimals
+parent- ->springapi : return "
+springapi- ->app : return "
+
+app->>springapi : approve
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    A hedera account approves a solidity address to spend JAM on its behalf
+end Note
+Note right of springapi #Pink
+    * json (Dict) (Required)
+        * spenderSolidityAddress (String) (? Required/Optional)
+        * useraccNum (String) (? Required/Optional) "0.0.21166"
+        * userpvtKey (String) "302e......",
+        * valueInJamDecimals (Int)
+end Note
+
+springapi->>parent : approve
+parent- ->child: approve(address tokenOwner, address spender, uint _value)
+child- ->parent: return success
+parent- ->springapi : return success
+springapi- ->app : return "
+
+app->>springapi : balanceOf
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Check balance JAM Tokens of an address
+end Note
+Note right of springapi #Pink
+    * json (Dict) (Required)
+        * myaccNum (String) (? Required) "0.0.21166"
+        * mypvtKey (String) (? Required) "302e......"
+        * tokenOwnerSolidityAddress (String) (? Required)
+end Note
+
+springapi->>parent : balanceOf
+parent->>child : balanceOf
+child- ->parent : return string balance in Jam Decimals
+parent- ->springapi : return string balance in Jam Decimals
+springapi- ->app : return "
+
+app->>springapi : bulkTransferFrom
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Client account transfers from many addresses
+    to other addresses on their behalf
+end Note
+Note right of springapi #Pink
+    Swagger documentation needs to be updated
+end Note
+Note right of springapi
+    * json (Dict) (Required)
+        * payload (Array of dictionary mappings) (Required)
+            [{
+                "tokenOwnerSolidityAddress": from_user_solidity_address,
+                "toSolidityAddress": to_user_solidity_address,
+                "valueInJamDecimals": transaction_value
+            }, ..]
+end Note
+
+springapi->>parent : bulkTransferFrom
+parent->>child: bulkTransfer
+child- ->parent : return string result of transactions on the child
+parent- ->springapi : return string result of all transactions in the format \n 000110 where 0 indicates failure, 1 success
+springapi- ->app : return "
+
+app->>springapi : info
+Note right of springapi
+    GET
+end Note
+Note right of springapi
+    Swagger return info needs to be updated
+end Note
+Note right of springapi
+    Get basic smart contract information
+end Note
+
+springapi->>parent : info
+parent- ->springapi : returns contract info
+
+Note right of springapi
+    {
+        "Owner": "0.0.1117",
+        "ContractSolidityAddress": "00000000000000000000000000000000000052aa",
+        "Symbol": "JAM",
+        "Total Supply": "100000000000000000",
+        "Decimals": "5",
+        "Name": "Jam"
+    }
+end Note
+
+springapi- ->app : return "
+
+app->>springapi : transfer
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Transfer JAM tokens from one hedera account to another solidity address
+end Note
+Note right of springapi #Pink
+    Swagger documentation and implementation need to be updated.
+    Note: Do we want to change this from accepting myaccNum to mySolidityAddress?
+end Note
+Note right of springapi
+    * json (Dict) (Required)
+        * myaccNum (String) (Required) "0.0.21166",
+        * mypvtKey (String) (Required) "302e......",
+        * toSolidityAddress (String) (Required)
+        * valueInJamDecimals (Int) (Required) 56788000
+end Note
+
+springapi->>parent : transfer
+parent- ->parent : getAccountSolidityAddress(myaccNum)
+parent- ->parent : getFromAddressContractShard(fromSolidityAddress)
+parent- ->parent : getToAddressContractShard(toSolidityAddress)
+parent- ->parent : transfer(contractA, contractB, \nfromSolidityAddress, toSolidityAddress, value)
+parent- ->springapi : return success
+springapi- ->app : return "
+
+app->>springapi : transferFrom
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    One account transfers JAM on behalf of another
+end Note
+Note right of springapi #Pink
+    Swagger documentation needs to be updated
+end Note
+Note right of springapi
+    * json (Dict) (Required)
+        * myaccNum (? Required/Optional) (String) "0.0.21166"
+        * mypvtKey": "302e......",
+        * toSolidityAddress (String) (? Required/Optional)
+        * tokenOwnerSolidityAddress (String) (? Required/Optional)
+        * valueInJamDecimals (Required) (? Required/Optional) 56788000
+end Note
+
+springapi->>parent : transferFrom
+parent- ->springapi : return success
+springapi- ->app : return "
+
+app->>springapi : transferOwnership
+Note right of springapi
+    POST
+end Note
+Note right of springapi
+    Change owner of Jam Token Contract
+end Note
+Note right of springapi #Pink
+    Swagger documentation needs to be updated
+end Note
+Note right of springapi
+    * body (Dict) (Required)
+        * currAccNum (String) (? Required/Optional) "0.0.903"
+        * currPvtKey (String) (? Required/Optional) "302e......"
+        * newAccNum (String) (? Required/Optional) "0.0.1117"
+        * newPvtKey (String) (? Required/Optional) "302e......"
+end Note
+
+springapi->>parent : transferFrom
+parent->>child : transferFrom
+child->>child : transferFrom child A -> child B
+child- ->child : return success
+springapi- ->app : return "
+
+springapi->>hashgraph : transferOwnership
+hashgraph- ->springapi : return success
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 15:40:07 EAT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

@@ -1,0 +1,122 @@
+#banner_settings_container{
+   width:680px;
+   height: 340px;
+   position:relative;
+   top: -30px;
+}
+
+#banner_settings_table label {
+    font-family: 'StyreneA-Regular', sans-serif;
+    font-size:15px;
+    background-color:transparent;
+    color:black;
+    padding:5px;
+    margin-right:15px;
+    cursor: pointer;
+    border-radius:6px;
+}
+
+label#bupload_button_text {
+    font-family: 'StyreneA-Regular', sans-serif;
+    font-size: 14px;
+    color: #FFF;
+}
+
+label#bupload_label, label.default_sky {
+    width: 110px;
+    height: 84px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#id_font_selector label {
+    margin-right:15px;
+}
+
+#id_font_selector{
+    margin-left:18px;
+    padding-top:5px;
+    display:inline;
+}
+
+#banner_settings_table tr {
+    height: 57px;
+}
+
+#save_button.save_banner {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    height: 18px;
+}
+
+#cancel_crop {
+    font-size: 14px;
+    height: 38px;
+}
+
+#submit_crop {
+    font-size: 14px;
+    height: 38px;
+}
+
+#banner_upload_button{
+    position:relative;
+    left:2px;
+    top:0px;
+}
+
+#filenamefield{
+    left:14px;
+    top:-7px;
+    position:relative;
+    font-size:12px;
+}
+
+
+#bupload_button:hover{
+    background:#45afe0;
+}
+
+.blabel{
+    color:black;
+}
+
+#banner_settings_container > .label_banner_pic{
+    font-family: 'StyreneA-Regular', sans-serif;
+    font-size:15px;
+    background:black;
+    color:white;
+    padding:5px;
+    margin-left:20px;
+    cursor: pointer;
+    border-radius:6px;
+
+}
+
+#bupload_button_text{
+    position:relative;
+    top:8px;
+    font-size:13px;
+}
+
+
+#banner_settings_table {
+    padding: 5px;
+    float: left;
+    width: 290px;
+}
+
+#banner_form {
+    height:209px;
+}
+
+img#custom_banner_preview{
+    width:500px;
+    height:84px;
+}
+
+#empty_banner_pic {
+    padding-top:30px;
+    border:0px;
+}

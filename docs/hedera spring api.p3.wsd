@@ -1,0 +1,113 @@
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title HTS API
+
+Actor "App" as app
+participant "HTS" as hts
+participant "Parent" as parent
+participant "Children.." as child
+participant "Hashgraph" as hashgraph
+
+box "Web Apps" #LightBlue
+	participant app
+	participant hts
+end box
+
+box "Smart Contracts" #LightGreen
+	participant parent
+	participant child
+end box
+
+box "Hedera" #Orange
+	participant hashgraph
+end box
+
+app->>hts : approve
+Note right of hts
+    POST
+end Note
+Note right of hts
+    A hedera account approves a solidity address to spend JAM on its behalf
+end Note
+' Note right of hts #Pink
+'     * json (Dict) (Required)
+'         * spenderSolidityAddress (String) (? Required/Optional)
+'         * useraccNum (String) (? Required/Optional) "0.0.21166"
+'         * userpvtKey (String) "302e......",
+'         * valueInJamDecimals (Int)
+' end Note
+Note right of hts
+    * json (Dict) (Required)
+        * spenderSolidityAddress (String) (? Required/Optional)
+        * useraccNum (String) (? Required/Optional) "0.0.21166"
+        * userpvtKey (String) "302e......",
+        * valueInJamDecimals (Int)
+end Note
+
+hts->>parent : approve
+parent-->child: approve(address tokenOwner, address spender, uint _value)
+child-->parent: return success
+parent-->hts : return success
+hts-->app : return success
+
+app->>hts : balanceOf
+Note right of hts
+    POST
+end Note
+Note right of hts
+    Check balance JAM Tokens of an address
+end Note
+' Note right of hts #Pink
+'     * json (Dict) (Required)
+'         * myaccNum (String) (? Required) "0.0.21166"
+'         * mypvtKey (String) (? Required) "302e......"
+'         * tokenOwnerSolidityAddress (String) (? Required)
+' end Note
+Note right of hts
+    * json (Dict) (Required)
+        * myaccNum (String) (? Required) "0.0.21166"
+        * mypvtKey (String) (? Required) "302e......"
+        * tokenOwnerSolidityAddress (String) (? Required)
+end Note
+
+hts->>parent : balanceOf
+parent->>child : balanceOf
+child-->parent : return string balance in Jam Decimals
+parent-->hts : return string balance in Jam Decimals
+hts-->app : return "
+
+app->>hts : bulkTransferFrom
+Note right of hts
+    POST
+end Note
+Note right of hts
+    Client account transfers from many addresses
+    to other addresses on their behalf
+end Note
+' Note right of hts #Pink
+'     Swagger documentation needs to be updated
+' end Note
+Note right of hts
+    * json (Dict) (Required)
+        * payload (Array of dictionary mappings) (Required)
+            [{
+                "tokenOwnerSolidityAddress": from_user_solidity_address,
+                "toSolidityAddress": to_user_solidity_address,
+                "valueInJamDecimals": transaction_value
+            }, ..]
+end Note
+
+hts->>parent : bulkTransferFrom
+parent->>child: bulkTransfer
+child-->parent : return string result of transactions on the child
+parent-->hts : return string result of all transactions in the format \n 000110 where 0 indicates failure, 1 success
+hts-->app : return "
+
+
+
+@enduml

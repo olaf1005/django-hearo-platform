@@ -1,0 +1,34 @@
+{% extends base %}
+{% block content %}
+{% if url %}
+<script type="text/javascript">
+$(document).ready(function(){
+    var url = '{{url}}';
+    var form = $(createElem('form', { 'action': url }));
+    $(document.body).append(form);
+    form.submit();
+});
+</script>
+<div id="error-message">
+  <h1>
+    Download Ready
+  </h1>
+  <p>
+  Your download should begin shortly. Thanks!
+  </p>
+</div>
+{% else %}
+<script type="text/javascript">
+$(document).ready(function(){
+  var dlid = '{{dlid}}' || null;
+  hearo.pending_download = dlid;
+});
+</script>
+<div id="error-message">
+  <h1>
+    Download not yet ready
+  </h1>
+</div>
+{% endif %}
+{% endblock %}
+

@@ -1,0 +1,37 @@
+[
+    {
+        "pk": 1, 
+        "model": "media.musicupload", 
+        "fields": {
+            "profile": 1, 
+            "upload_date": "2014-02-03", 
+            "rank_year": 0, 
+            "keyword": "", 
+            "rank_month": 0, 
+            "deleted": false, 
+            "downloads": 1, 
+            "suspicious": false, 
+            "rank_week": 0, 
+            "fans": 0, 
+            "splash_featured": false, 
+            "download_type": "normal", 
+            "rank_all": 0, 
+            "portion_donated": null, 
+            "price": "10", 
+            "rank_today": 0
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "media.song", 
+        "fields": {
+            "visible": true, 
+            "processing": false, 
+            "track_num": null, 
+            "length": null, 
+            "file": "", 
+            "online": true, 
+            "title": "Song Title"
+        }
+    }
+]

@@ -1,0 +1,16 @@
+{% load elements %}
+<tr class="user_listing">
+    <td class="usertab_cell">
+        {% usertab profile %}
+    </td>
+    <td class="fanmail_cell" width="50">
+
+        {% if not profile.fanmail_private%}
+            {% mail profile "0px" "0px" %}
+        {% endif %}
+
+    </td>
+    <td class="fanbutton_cell" width="50">
+        {% fanbutton profile view %}
+    </td>
+</tr>

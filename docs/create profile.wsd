@@ -1,0 +1,16 @@
+@startuml User registration
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+(*) --> "Create profile"
+--> "Create private and public keys"
+--> "Create wallet"
+--> "Encrypt private key with password"
+--> "Encrypt private keys with permutations of keys 2 out of x keys"
+--> "Grant allowance to Hearo trading account"
+--> (*)
+
+@enduml

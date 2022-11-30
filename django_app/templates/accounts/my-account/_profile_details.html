@@ -1,0 +1,210 @@
+  <div formusicians>
+    <div row class="2 cols">
+      <div cell id="setlocation" class="short" style="width: 35%">
+	<div>
+	  <label class="greyline short" for="id_city">Set Your Location</label>
+	  <input class="standard short" id="id_city" type="text" name="city" maxlength="100" value="{{view.location.most_exact}}" placeholder="Where in the world are you?">
+	</div>
+      </div>
+      <div cell class="musician_question_text" style="width: 50%;float:right"><!--{{{-->
+	<div>
+	  <div row class="2 cols">
+	    <div cell class="question">
+	      <input type="checkbox" id='id_is_musician' {% if view.person.is_musician %} checked="checked" {% endif %}>
+	      <label for="id_is_musician">I'm a musician.</label>
+	    </div>
+	    <div cell musicianonly>
+	      <input type="checkbox" id='id_write_music' {%if view.person.musician.write_music%}checked='yes'{% endif %}>
+	      <label for="id_write_music" class="musical_question_text">I'm a songwriter.</label>
+	    </div>
+	  </div>
+	  <div row class="2 cols">
+	    <div cell class="question">
+	      <input type="checkbox" id="id_producer" {%if view.person.producer%}checked='yes'{% endif %}>
+	      <label for="id_producer">I'm a producer.</label>
+	    </div>
+	    <div cell class="question">
+	      <input type="checkbox" id="id_dj" {%if view.person.musician.dj%}checked='yes'{% endif %}>
+	      <label for="id_dj">I'm a DJ.</label>
+	    </div>
+	  </div>
+	  <div row class="2 cols">
+	    <div cell class="question">
+	      <input type="checkbox" id="id_engineer" {%if view.person.engineer%}checked='yes'{% endif %}>
+	      <label for="id_engineer">I'm a sound engineer.</label>
+	    </div>
+	    <div cell class="question">
+	      <input type="checkbox" id="id_teacher" {%if view.person.musician.teacher%}checked='yes'{% endif %}>
+	      <label for="id_teacher">I'm a teacher.</label>
+	    </div>
+	  </div>
+	  <div row class="2 cols">
+	    <div cell class="question">
+	      <!-- Filler -->
+	    </div>
+	    <div cell class="question">
+	      <input type="checkbox" id='id_join_band' {%if view.person.musician.join_band%}checked='yes'{% endif %}>
+	      <label for="id_join_band">I'm looking for a band.</label>
+	    </div>
+
+	  </div>
+	</div>
+      </div><!--}}}-->
+    </div>
+
+    <div row class="2 cols"><!--{{{-->
+      <div>
+	<div>
+	  <label class="greyline" for="id_genre">Genre</label>
+	  <input type="text" id="id_genres" class="standard" name="genres" value="{{my_genres|default_if_none:""}}" placeholder="What genres do you play?">
+	</div>
+      </div>
+      <div>
+	<div>
+	  <label class="greyline" for="instrumentsList" style="margin-left: 6px">Instrument</label>
+	  <input name="instruments" type="text" class="standard" id="id_instruments" value="{{ my_instruments|default_if_none:"" }}" placeholder="What instruments do you play?"></input>
+	</div>
+      </div>
+    </div><!--}}}-->
+
+    {% if not short_profile %}
+    <div row class="2 cols"><!--{{{-->
+      <div cell>
+        <div>
+          <label class="greyline biography" for="id_biography">Bio</label>
+          <textarea id="id_biography" class="standard" name="biography" placeholder="Write something about yourself!">{{view.biography|default_if_none:""}}</textarea>
+        </div>
+      </div>
+      <div cell>
+        <div>
+          <label class="greyline" for="id_goals">Goals</label>
+          <textarea id="id_goals" name="goals" class="standard" placeholder="Are you looking to get signed? Do you want to produce a record? Are you looking for new students? Etc.">{{view.goals|default_if_none:""}}</textarea>
+        </div>
+      </div>
+    </div><!--}}}-->
+    <div row class="2 cols">
+      <div cell>
+        <div>
+          <label class="greyline" for="id_experience">Experience</label>
+          <textarea id="id_experience" class="standard" name="experience" placeholder="Write about some of your musical accomplishments.">{{view.experience|default_if_none:""}}</textarea>
+        </div>
+      </div>
+      <div cell>
+        <div>
+          <label class="greyline" for="id_influences">Influences</label>
+          <textarea id="id_influences" name="influences" class="standard" placeholder="What musicians do you look up to or strive to sound like?">{{view.influences|default_if_none:""}}</textarea>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <div forbands>
+    <div row class="2 cols">
+      <div cell id="setlocation">
+	<div>
+	  <label class="greyline" for="id_city">Set Your Location</label>
+	  <input class="standard" id="id_city" type="text" name="city" maxlength="100" value="{{view.location.most_exact}}" placeholder="Where in the world are you?">
+	</div>
+      </div>
+      <div cell>
+	<div>
+	  <label class="greyline" for="id_genre">Genre</label>
+	  <input type="text" id="id_genres" class="standard" name="genres" value="{{my_genres|default_if_none:""}}" placeholder="What genres do you play?">
+	</div>
+      </div>
+    </div>
+
+    {% if not short_profile %}
+    <div row class="2 cols">
+      <div cell>
+	<div>
+	  <label class="greyline" for="id_experience">Experience</label>
+	  <textarea id="id_experience" class="standard" name="experience" placeholder="Write about some of your musical accomplishments.">{{view.experience|default_if_none:""}}</textarea>
+	</div>
+      </div>
+      <div cell>
+	<div>
+	  <label class="greyline" for="id_influences">Influences</label>
+	  <textarea id="id_influences" name="influences" class="standard" placeholder="What musicians do you look up to or strive to sound like?">{{view.influences|default_if_none:""}}</textarea>
+	</div>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <div row class="2 cols" forfans>
+    <div cell id="setlocation">
+      <div>
+	<label class="greyline" for="id_city">Set Your Location</label>
+	<input class="standard" id="id_city" type="text" name="city" maxlength="100" value="{{view.location.most_exact}}" placeholder="Where in the world are you?">
+      </div>
+    </div>
+  </div>
+
+  <div row class="2 cols" forvenues>
+    <div cell id="setlocation">
+      <div>
+	<label class="greyline" for="id_city">Set Your Location</label>
+	<input class="standard" id="id_city" type="text" name="city" maxlength="100" value="{{view.location.most_exact}}" placeholder="Where in the world are you?">
+      </div>
+    </div>
+    <div cell>
+      <div>
+	<label class="greyline" for="id_genre">Genre</label>
+	<input type="text" id="id_genres" class="standard" name="genres" value="{{my_genres|default_if_none:""}}" placeholder="What genres do you play?">
+      </div>
+    </div>
+
+    {% if not short_profile %}
+    <div cell>
+      <div>
+	<label class="greyline" for="id_biography">Info</label>
+	<textarea id="id_biography" class="standard" name="biography" placeholder="Write something about the venue!">{{view.biography|default_if_none:""}}</textarea>
+      </div>
+    </div>
+    <!-- <div cell> -->
+    <!--   <div> -->
+	<!-- <label class="greyline" for="id_goals">Goals</label> -->
+	<!-- <textarea id="id_goals" name="goals" class="standard" placeholder="Are you looking to get signed? Do you want to produce a record? Are you looking for new students? Etc.">{{view.goals|default_if_none:""}}</textarea> -->
+    <!--   </div> -->
+    <!-- </div> -->
+    {% endif %}
+
+  </div>
+
+
+  <div row class="2 cols" forlabels>
+    <div cell id="setlocation">
+      <div>
+	<label class="greyline" for="id_city">Set Your Location</label>
+	<input class="standard" id="id_city" type="text" name="city" maxlength="100" value="{{view.location.most_exact}}" placeholder="Where in the world are you?">
+      </div>
+    </div>
+    <div cell>
+      <div>
+	<label class="greyline" for="id_genre">Genre</label>
+	<input type="text" id="id_genres" class="standard" name="genres" value="{{my_genres|default_if_none:""}}" placeholder="What genres do you play?">
+      </div>
+    </div>
+
+    {% if not short_profile %}
+    <div cell>
+      <div>
+	<label class="greyline" for="id_biography">Info</label>
+	<textarea id="id_biography" class="standard" name="biography" placeholder="Write something about the venue!">{{view.biography|default_if_none:""}}</textarea>
+      </div>
+    </div>
+    <!-- <div cell> -->
+    <!--   <div> -->
+	<!-- <label class="greyline" for="id_goals">Goals</label> -->
+	<!-- <textarea id="id_goals" name="goals" class="standard" placeholder="Are you looking to get signed? Do you want to produce a record? Are you looking for new students? Etc.">{{view.goals|default_if_none:""}}</textarea> -->
+    <!--   </div> -->
+    <!-- </div> -->
+    {% endif %}
+
+  </div>
+
+

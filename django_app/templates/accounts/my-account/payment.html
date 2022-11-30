@@ -1,0 +1,236 @@
+{% extends 'accounts/my-account/index.html' %}
+
+{% block title %}My Account Payments - Tune.fm{% endblock %}
+
+{% block myAccountInnerPage %}
+
+{% include "accounts/my-account/_view_name.html" %}
+
+{% with user.person.view as view %}
+{% load elements %}
+<input type="hidden" id="selected_view" value="payment"/>
+
+<!--
+    <div class="hearotip tooltipbottom" id="paymentpagetooltip">
+        <div class="tooltip_description" style="display:none" title="Payment Page">
+            If you’re selling music on Tune.fm, this is how you’re getting paid.  We made it intuitive and fun to make money with us.  As your fans purchase your music, you will notice your balance increasing.  That is amount of money you are making!  Tune.fm takes a 10% commission of all music sales on the site.  The balance you see has already been adjusted to reflect our commission, credit card fees, and bank fees.  When you are ready to collect your money, enter your Bank Account and Routing number, click “Save,” and then click the “Cash Out” button.  The money will directly transfer into your account within 3-5 business days.  You will receive a receipt via email.
+        </div>
+    </div>
+    -->
+<div class="myacct-content-payments">
+  <div class="2 cols">
+
+    <div col>
+      <h2>My Bank Account Info</h2>
+
+      <div class="content half" id="bank-info">
+        <label class="greyline short" for="bank-acct-holder">Account holder's name</label>
+        <input type="text" id="bank-acct-holder" class="standard" placeholder="Account holder's name" maxlength="60" value="{{bank.account_holder_name}}" />
+
+        <div class="2 cols">
+          <div col>
+            <label class="greyline short" for="bank-acct-number">Account number</label>
+            <input type="text" id="bank-acct-number" class="standard half" placeholder="Account number" maxlength="17" value="{{bank.account_number}}"/>
+          </div>
+          <div col>
+            <label class="greyline short" for="bank-routing-number">Routing number</label>
+            <input type="text" id="bank-routing-number" class="standard half" placeholder="Routing number" maxlength="9" value="{{bank.routing_number}}"/>
+          </div>
+        </div>
+
+        <div id="security-msg">
+          <p>
+          We take security very seriously.
+          Your banking information is kept private and your money is managed securely by <a href="http://svb.com" target="_blank">Silicon Valley Bank</a>.
+          </p>
+          <br>
+          <p>
+          If you have any questions, please contact us at <a href="mailto:security@hearo.fm" target="_blank">security@hearo.fm</a>.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div col>
+
+      <h2>Cash Out</h2>
+
+      {% if profile.is_international and can_cash_out %}
+      <div class="content half" id="cash-out">
+        <div id="my-balance">
+          <p>
+          Congrats, you've made money on Tune! We are working on supporting international payouts.
+          </p>
+          <br>
+          <p>
+          We're going to let you know as soon as we do so you can cash out your credit with us.
+          </p>
+          <br>
+          <p>
+          Please contact us with questions or concerns at <a href="mailto:feedback@hearo.fm">feedback@hearo.fm</a>.
+          </p>
+        </div>
+
+        <div id="cash-out-button-container" class="disabled">
+          <button class="green disabled">
+            You've made <span class="dolla">{{ view.get_total_profit }}</span>
+          </button>
+        </div>
+      </div>
+      {% elif can_cash_out %}
+      <div class="content half" id="cash-out">
+        <div id="my-balance">
+          <p>
+          Please make sure your bank account info is correct, then push the button below to confirm that you want us to wire your profits of <emph>{{ view.get_total_profit }}</emph> to you.
+          </p>
+          <br>
+          <p>
+          It should take between <emph>2-5 days</emph> for the transaction to go through.
+          </p>
+        </div>
+
+        <div id="cash-out-button-container" class="disabled">
+          <button class="green disabled" id="green-cash-out-button">
+            Cash Out <span class="dolla">{{ view.get_total_profit }}</span>
+          </button>
+        </div>
+      </div>
+
+      {% elif has_made_profit %}
+      <div class="content half" id="cash-out">
+        <div id="my-balance">
+          You need to make more than $0.50 to cash out.
+        </div>
+      </div>
+
+      {% else %}
+
+      <div class="content half" id="cash-out">
+        <div id="my-balance">
+          You haven't made any money{% if has_made_money_before %} since the last time you cashed out.{% else %}!{% endif %}
+        </div>
+      </div>
+
+      {% endif %}
+
+      <div class="content half" id="tryna-make-that-dolla">
+        <p>Thank you! The transaction has been completed on our end.</p>
+        <p>Come back when you've made some more money to cash out again ;)</p>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <div id="all-receipts">
+
+    <h2>Unpaid Downloads</h2>
+    <div class="content" id="receipts">
+      <table>
+        <tr class="header-row">
+          <th> Date </th>
+          <th> Song/album purchased </th>
+          <th> User who purchased </th>
+          <th> Price </th>
+          <th> CC fee (variable) </th>
+          <th> Tune's 10% </th>
+          <th> Your profit </th>
+          <!-- This is stupid <th> Give back! </th> -->
+        </tr>
+
+        {% for download in view.get_downloads_unpaid reversed %}
+        <tr class="payment_mediaRow">
+          <td class="receipt_info">{{download.charge.date.month}}/{{download.charge.date.day}}/{{download.charge.date.year}} </td>
+          <td class="receipt_info"> {{download.media.get_name}} </td>
+          <td> {% if not download.charge.profile.downloads_private %}
+            {% usertab download.charge.profile %}
+            {% endif %} </td>
+          <td class="receipt_info"> {{download.pretty_price}} </td>
+          <td class="receipt_info"> {{download.pretty_stripe_fee}} </td>
+          <td class="receipt_info"> {{download.pretty_hearo_fee}} </td>
+          <td class="receipt_info emphasize"> {{download.pretty_profit}} </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="8" class="empty">
+            Your music hasn't been downloaded yet.
+          </td>
+        </tr>
+        {% endfor %}
+
+        <tr id="receipt-totals">
+          <th> Totals: </th>
+          <th> {{view.num_downloads_unpaid}} </th>
+          <th> {{view.num_users_unpaid}} User{% if view.num_users_unpaid > 1 %}s{% endif %} </th>
+          <th> {{view.get_total_price}} </th>
+          <th> {{view.get_total_stripe_fee}} </th>
+          <th> {{view.get_total_hearo_fee}} </th>
+          <th> {{view.get_total_profit}} </th>
+        </tr>
+      </table>
+    </div>
+
+
+    {% if view.get_receipts %}
+
+    <h2>Previous Cash-Outs</h2>
+
+    <div class="content" id="receipts">
+      <!-- receipted downloads -->
+      {% for receipt in view.get_receipts reversed %}
+      <div class="collapsed_receipt" onClick="$('#receipt-{{ receipt.id }}').toggle();">
+        &raquo; {{ receipt.time_cashed }} - {{ receipt.get_total_profit }} - {{ receipt.get_state_display }}
+      </div>
+      <table class="expanding_receipt" id="receipt-{{ receipt.id }}">
+        <tr class="header-row">
+          <th> Date </th>
+          <th> Song or album purchased </th>
+          <th> User who purchased </th>
+          <th> Price </th>
+          <th> CC fee (variable) </th>
+          <th> Tune commission </th>
+          <th> Profit </th>
+        </tr>
+
+        {% for download in receipt.downloads.all %}
+        <tr class="payment_mediaRow">
+          <td class='receipt_info'>{{download.charge.date.month}}/{{download.charge.date.day}}/{{download.charge.date.year}} </td>
+          <td class='receipt_info'> {{download.media.get_name}} </td>
+          <td> {% if not download.charge.profile.downloads_private %}
+            {% usertab download.charge.profile %}
+            {% endif %} </td>
+          <td class='receipt_info'> {{download.pretty_price}} </td>
+          <td class='receipt_info'> {{download.pretty_stripe_fee}} </td>
+          <td class='receipt_info'> {{download.pretty_hearo_fee}} </td>
+          <td class='receipt_info'> {{download.pretty_profit}} </td>
+        </tr>
+
+        {% empty %}
+        <div>None.</div>
+
+        {% endfor %}
+        <tr class="receipt_totals">
+          <th> Totals: </th>
+          <th> {{receipt.num_downloads}} </th>
+          <th> {{receipt.num_users}} User{% if receipt.num_users > 1 %}s{% endif %} </th>
+          <th> {{receipt.get_total_price}} </th>
+          <th> {{receipt.get_total_stripe_fee}} </th>
+          <th> {{receipt.get_total_hearo_fee}} </th>
+          <th> {{receipt.get_total_profit}} </th>
+        </tr>
+      </table>
+      {% endfor %}
+    </div>
+
+
+  </div>
+</div>
+{% endif %}
+
+
+{% endwith %}
+{% endblock %}
+

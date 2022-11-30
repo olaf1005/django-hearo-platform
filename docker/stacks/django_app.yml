@@ -1,0 +1,124 @@
+version: '3.6'
+
+volumes:
+    app:
+
+networks:
+    cluster:
+
+services:
+    django_app: &django_app_default
+        # This can also be set in scripts/settings.local.sh
+        image: $IMAGE_DJANGO_APP_DEV
+        tty: true # color log output
+        networks:
+            - cluster
+        volumes:
+            - ../../django_app:/app:delagated
+            - ../../../media:/media:cached
+            - ../../../mixingbowl:/mixingbowl:cached
+        ports:
+            - 8000:8000 # django
+            - 5678:5678
+        depends_on:
+            - postgres
+        environment:
+            - GIT_RELEASE=$P_GIT_RELEASE
+            - DEBUG=1
+            - TARTAR_CONFIG=dev.config
+            - RETHINKDB_HOST=rethinkdb
+            - RETHINKDB_DB_NAME=dev
+            - TARTAR_DEBUG_LEVEL=DEBUG
+            - TARTAR_LOGGER=rainbow
+            - EMAIL_HOST=$EMAIL_HOST
+            - EMAIL_HOST_USER=$EMAIL_HOST_USER
+            - EMAIL_HOST_PASSWORD=$EMAIL_HOST_PASSWORD
+            - MEMCACHED_HOST=memcached:11211
+            - ELASTICSEARCH_HOST=elasticsearch:9200
+            - SENDGRID_EMAIL_VALIDATION_API_KEY=$SENDGRID_EMAIL_VALIDATION_API_KEY
+            - QUICKEMAILVERIFICATION_API_KEY=$QUICKEMAILVERIFICATION_API_KEY
+            - PG_DB_NAME=$PG_DB_NAME
+            - PG_HOST=$PG_DB_HOST
+            - PG_USER=$PG_DB_USER
+            - PG_PASS=$PG_PASS
+            - SECRET_KEY=$SECRET_KEY
+            # - SENTRY_DSN=
+            - DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+            - REQUIRE_VERIFICATION_FOR_LOGIN=1
+            - NOTIFICATIONS_EMAIL=notifications@tune.fm
+            - DEV_RETHINKDB_SETUP=0
+            - GOOGLE_MAPS_GEOCODING_API_KEY=$GOOGLE_MAPS_GEOCODING_API_KEY
+            - YOUTUBE_DATA_API_KEY=$YOUTUBE_DATA_API_KEY
+            - S3_BUCKET=hearo_uploadedsongs
+            - S3_SECRET_KEY=$S3_SECRET_KEY
+            - S3_ACCESS_KEY=$S3_ACCESS_KEY
+            - H_HTS_API_URL=http://hts:8080
+            - CLOUDFILES_USERNAME=$CLOUDFILES_USERNAME
+            - CLOUDFILES_PASSWORD=$CLOUDFILES_PASSWORD
+            - CLOUDFILES_REGION=$CLOUDFILES_REGION
+        command: /bin/sh -c "python manage.py collectstatic --noinput && gunicorn wsgi:application gunicorn --workers=1 --worker-class=gevent --timeout=500 --graceful-timeout=10 --log-level=INFO -b :8000 --reload"
+        # command: /bin/sh -c "while true; do sleep 100; done"
+        logging:
+            # limit logs retained on host to 25MB
+            driver: "json-file"
+            options:
+                max-size: "500k"
+                max-file: "50"
+
+    # tartar_img_run:
+    #     <<: *django_app_default
+    #     command: /bin/sh -c "python img_run.py"
+    #     ports: []
+
+    # tartar_down_run:
+    #     <<: *django_app_default
+    #     command: /bin/sh -c "python down_run.py"
+    #     ports: []
+
+    # tartar_one_run:
+    #     <<: *django_app_default
+    #     command: /bin/sh -c "python one_run.py"
+    #     ports: []
+
+    # tartar_daemon:
+    #     <<: *django_app_default
+    #     command: /bin/sh -c "python tartar_daemon.py"
+    #     ports: []
+
+    # # We can't have any blank env passed since that breaks crontab + env
+    # # If crontab reports an error, its likely due to a blank env parameter
+    # # it either needs to be removed if not used or updated
+    # django_app_cron:
+    #     <<: *django_app_default
+    #     command: /bin/bash -c "{ env; cat crontab; } | crontab && cron -f"
+    #     ports: []
+
+    # notebook: &notebook_default
+    #     <<: *django_app_default
+    #     volumes:
+    #         - ../../django_app:/app:cached
+    #         - ../../../media:/media:cached
+    #         - ../../../mixingbowl:/mixingbowl:cached
+    #         - ../../notebooks:/notebooks:cached
+    #     ports:
+    #         - '8001:8001'
+    #     environment:
+    #         - DEBUG=1
+    #     command: jupyter lab --ip 0.0.0.0 --port 8001 --allow-root --no-browser --notebook-dir /notebooks/ --NotebookApp.iopub_data_rate_limit=10000000
+    #     logging:
+    #         # limit logs retained on host to 25MB
+    #         driver: "json-file"
+    #         options:
+    #             max-size: "500k"
+    #             max-file: "50"
+
+    # notebook_cron:
+    #     <<: *notebook_default
+    #     ports: []
+    #     command: /bin/bash -c "{ env; cat crontab_bi; } | crontab && cron -f"
+    #     logging:
+    #         # limit logs retained on host to 25MB
+    #         driver: "json-file"
+    #         options:
+    #             max-size: "500k"
+    #             max-file: "50"

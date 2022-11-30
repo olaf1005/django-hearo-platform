@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    {% comment %} {% load compress %} {% endcomment %}
+    {% load static %}
+    {% load elements %}
+    {% load mathfilters %}
+    {% load static from staticfiles %}
+    {% with user.person.view as view %}
+
+    <title>{% block title %}Discover new music on tune.fm{% endblock %}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    {% comment %} {% compress css %} {% endcomment %}
+    <link type="text/css" rel="stylesheet" href="{% static "css/compile.css" %}" />
+    {% comment %} {% endcompress %} {% endcomment %}
+    <link type="text/css" rel="stylesheet" href="{% static "css/iestyle.css" %}" />
+    {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" /> {% endcomment %}
+    <style>
+        .cc-window.cc-banner.cc-type-info {
+            z-index: 10000;
+            top: 40px;
+            height: 60px;
+        }
+    </style>
+
+    <!-- jQuery plugin styles -->
+
+    <!-- jQuery local/CDN -->
+    {% if SERVER %}
+    {% comment %} <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> {% endcomment %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    {% else %}
+    <script type="text/javascript" src="/public/lib/jquery/jquery-1.8.0.min.js"></script>
+    {% endif %}
+
+    <!-- jQuery plugins -->
+    <!-- jQuery.ui local/CDN -->
+    {% if SERVER %}
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    {% else %}
+    <script type="text/javascript" src="{% static 'lib/jquery/jquery-ui.min.js' %}"></script>
+    {% endif %}
+
+    {% include '_js.html' %}
+
+    {% mustache_partials %}
+
+    <!-- Just a couple cute globals -->
+    <script type="text/javascript">
+        window.csrfTOKEN = '{{ csrf_token }}';
+        window.loginFunc = logIn;
+        $.browser.is_mobile = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="Tune.FM helps you discover a world of new independent music. Support and listen to new music independent artists for free online." />
+    <meta name="keywords" content="discover new music,independent music,independent artists,new music,independent music websites,independent rock music,new house music">
+    <link rel="shortcut icon" type="image/x-icon" href="/public/images/favicon.ico" />
+
+    {% if SERVER %}
+    <!-- google analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174110339-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-174110339-1');
+
+        $(document).ready(function() {
+            {% if user.is_authenticated %}
+            LOGGED_IN = true;
+            gtag('set', {'user_id': {{ user.id }} }); // Set the user ID using signed-in user_id.
+            setupPing();
+            {% else %}
+            LOGGED_IN = false;
+            {% endif %}
+        });
+    </script>
+    {% else %}
+    <script>
+        window.gtag = function() {
+            try {
+                console.log.apply(console, arguments);
+            } catch (err) {}
+        }
+    </script>
+    {% endif %}
+
+    {% block head %}{% endblock %}
+
+    <link rel="apple-touch-icon" href="/public/images/icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/public/images/icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/public/images/icons/apple-touch-icon-114x114.png" />
+
+</head>
+
+<body {% if browser %}class="{{ browser }}" {% endif %}>
+
+    <div id="bgWrapper">
+
+        <div id="header-bar">
+            {% include "header.html" %}
+        </div>
+        <div id="page" {% if pageclass %} class="{{ pageclass }}" {% endif %}>
+            <!-- You monkeys dont know how indent -->
+
+            <div id="content" {% if contentclass %} class="{{ contentclass }}" {% endif %}>
+                <!-- Beginning of content -->
+                {% block content %}{% endblock %}
+                <!-- End of content -->
+            </div>
+
+            <div id="playlist" class="player-dropup">
+                <button id="playlist-clearall" class="small blue shown-when-direct-parent-not-empty" onclick="$('.playlist button.delete').click()">
+                    <span>Clear all</span>
+                </button>
+                <div id="playlist-content" class="player-dropup__content"></div>
+                <div class="shown-when-direct-parent-empty layout--abs-center-parent">
+                    <div class="layout--abs-center type--subtle" style="color: #666;">
+                        Your play queue is empty
+                    </div>
+                </div>
+            </div>
+
+            <div id="downloads" class="player-dropup"></div>
+
+            <div id="pending-downloads">
+                <div class="pending-download">
+                    <div class="hearo-album-icon"></div>
+                    preparing download...
+                </div>
+            </div>
+        </div>
+
+        <div id="music-player">
+
+            <div id="jP" class="jp-jplayer"></div>
+
+            <button id="open-play-queue">
+                <div class="playlist-icon"><i class="material-icons-round">queue_music</i></div>
+                <div class="counter" toggle="top" value="0">
+                    <div class="counter-number counter-number--top">0</div>
+                    <div class="counter-number counter-number--bottom">0</div>
+                </div>
+                <span class="list-icon"></span>
+            </button>
+
+            <div id="currently-playing">
+              <img id="artist-profile-img" width="80" height="80" />
+              <div id="current-song-title"></div>
+              <a title="Go to profile" id="artist-profile-link" href="#"></a>
+                <div id="current-song-artist"></div>
+              </a>
+            </div>
+
+            <span id="playback-controls">
+                <!-- TODO: not yet implemented -->
+                <!-- <button id="back" clasS="music-control ajax"> -->
+                <!--   <div class="sprite"></div> -->
+                <!-- </button> -->
+
+                <button id="play-pause" class="music-control play ajax">
+                    <div class="sprite"></div>
+                </button>
+
+                <button id="forward" class="music-control ajax">
+                    <div class="sprite"></div>
+                </button>
+            </span>
+
+            <div id="vol-adjuster" class="ui-widget ui-widget-content ui-corner-all">
+                <button type="button" id="volume-icon" class="music-control">
+                    <i class="material-icons-round">volume_up</i>
+                </button>
+                <div class="ui-slider-handle ui-state-default ui-corner-all"></div>
+                <!-- <svg id="volume-mask" width="80" height="40">
+                    <defs>
+                      <linearGradient id="red-player-gradient" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="25%" stop-color="#d01700" />
+                        <stop offset="63%" stop-color="#c11700" />
+                      </linearGradient>
+                    </defs>
+                    <polygon points="0,0 0,40 80,0" fill="url(#red-player-gradient)">
+                  </svg> -->
+            </div>
+
+            <button id="open-download-queue">
+                <div class="spinner"></div>
+                <div class="wallet-icon"></div>
+                <!-- <div class="label"><i class="material-icons-round">account_balance_wallet</i></div> -->
+                <div class="counter" toggle="top" value="0">
+                    {% if user.is_authenticated %}
+                    <div class="counter-number counter-number--top">Ɉ{{user.wallet.token_balance|token_jam_value}}</div>
+                    <!-- <div class="counter-number counter-number--bottom"></div> -->
+                    {% endif %}
+                </div>
+                <span class="list-icon"></span>
+            </button>
+
+            <div id="player-traffic-light-buttons">
+                <button action="fan" id="fan-current" class="red traffic-light bttn--special-fan" fanned="true" elem-type="song"><i class="material-icons-round" style="font-size: 11px;">favorite_border</i> </button>
+                <button action="review" id="review-current" class="orange traffic-light bttn--special-review" elem-type="song"><i class="material-icons-round" style="font-size: 11px;">edit</i> Review</button>
+                {% comment %} <button action="download" id="download-current" class="green traffic-light" elem-type="song">Download</button> {% endcomment %}
+            </div>
+
+            <div id="song-and-tracker">
+                <div id="song-time-meter">
+                    <div class="bar ui-widget ui-widget-content ui-corner-all"></div>
+                    <div id="song-time-remaining"></div>
+                    <div id="loading-indicator">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- page end -->
+    </div>
+    <!--bgWrapper end-->
+
+    <!-- For the fanmail lightbox -->
+    <div class="inboxCompose forLightbox">
+        <div id="compose_bubble">
+            <div class="tail"></div>
+            <div class="bulk">
+                <input type="text" fillertext="To" />
+                <input type="text" fillertext="Subject" id="subject" />
+                <textarea resize="noresize"></textarea>
+                <button class="blue" id="send_button">Send</button>
+            </div>
+        </div>
+    </div>
+    <div id="darkness" style="display: none">
+        <div class="arrow left"></div>
+        <div class="arrow right"></div>
+        <div id="focus-element"></div>
+    </div>
+    <div class="md-overlay"></div>
+    {% comment %}
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#000"
+                },
+                "button": {
+                    "background": "#f1d600"
+                }
+            }
+        });
+    </script>
+    {% endcomment %}
+</body>
+
+{% comment %}
+<script>
+    var $buoop = {
+        required: {
+            e: -6,
+            f: -6,
+            o: -6,
+            s: -6,
+            c: -6
+        },
+        insecure: true,
+        api: 2020.02
+    };
+
+    function $buo_f() {
+        var e = document.createElement("script");
+        e.src = "//browser-update.org/update.min.js";
+        document.body.appendChild(e);
+    };
+    try {
+        document.addEventListener("DOMContentLoaded", $buo_f, false)
+    } catch (e) {
+        window.attachEvent("onload", $buo_f)
+    }
+</script>
+{% endcomment %}
+
+<script src="//cdn.ravenjs.com/3.26.4/raven.min.js" crossorigin="anonymous"></script>
+<script>
+    // Ignore list based off: https://gist.github.com/1878283
+    var ravenOptions = {
+        // Will cause a deprecation warning, but the demise of `ignoreErrors` is still under discussion.
+        // See: https://github.com/getsentry/raven-js/issues/73
+        ignoreErrors: [
+            // Random plugins/extensions
+            'top.GLOBALS',
+            // See: http://blog.errorception.com/2012/03/tale-of-unfindable-js-error.html
+            'originalCreateNotification',
+            'canvas.contentDocument',
+            'MyApp_RemoveAllHighlights',
+            'http://tt.epicplay.com',
+            'Can\'t find variable: ZiteReader',
+            'jigsaw is not defined',
+            'ComboSearch is not defined',
+            'http://loading.retry.widdit.com/',
+            'atomicFindClose',
+            // Facebook borked
+            'fb_xd_fragment',
+            // ISP "optimizing" proxy - `Cache-Control: no-transform` seems to reduce this. (thanks @acdha)
+            // See http://stackoverflow.com/questions/4113268/how-to-stop-javascript-injection-from-vodafone-proxy
+            'bmi_SafeAddOnload',
+            'EBCallBackMessageReceived',
+            // See http://toolbar.conduit.com/Developer/HtmlAndGadget/Methods/JSInjection.aspx
+            'conduitPage',
+            // Generic error code from errors outside the security sandbox
+            // You can delete this if using raven.js > 1.0, which ignores these automatically.
+            'Script error.'
+        ],
+        ignoreUrls: [
+            // Facebook flakiness
+            /graph\.facebook\.com/i,
+            // Facebook blocked
+            /connect\.facebook\.net\/en_US\/all\.js/i,
+            // Woopra flakiness
+            /eatdifferent\.com\.woopra-ns\.com/i,
+            /static\.woopra\.com\/js\/woopra\.js/i,
+            // Chrome extensions
+            /extensions\//i,
+            /^chrome:\/\//i,
+            // Other plugins
+            /127\.0\.0\.1:4001\/isrunning/i, // Cacaoweb
+            /webappstoolbarba\.texthelp\.com\//i,
+            /metrics\.itunes\.apple\.com\.edgesuite\.net\//i
+        ]
+    };
+    Raven.config(['localhost', '127.0.0.1', '0.0.0.0'].indexOf(window.location.hostname) > -1 ? false : 'https://9976aee739954bb59bd88967b804bbc0@sentry.io/18183', ravenOptions).install();
+</script>
+</html>
+{% endwith %}

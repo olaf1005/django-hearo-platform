@@ -1,0 +1,288 @@
+//clearfix
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+#content.join{
+  margin: 0;
+  #register-progress{
+    margin: 20px auto 40px;
+    width: 90%;
+    max-width: 800px;
+    .clearfix();
+    li{
+      position: relative;
+      padding: 15px 10px;
+      float: left;
+      width: 33%;
+      background: #FFF;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      color: #FFF;
+      text-align: center;
+      font-size: 13px;
+      // border-bottom: 3px solid #b3651b;
+      background: #222222;
+
+      &:after{
+        position: absolute;
+        top: 50%; right: 0;
+        margin: -16px -16px 0 0 ;
+        border-left: inherit; border-bottom: inherit;
+        width: 30px; height: 30px;
+        border-radius: 0 0 0 .2em;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        background: #222222;
+        content: '';
+        z-index: 1;
+        border-top: 1px solid rgba(255, 255, 255, 0.61);
+        border-bottom: 0;
+        border-left: 0;
+        border-right: 1px solid rgba(255, 255, 255, 0.61);
+      }
+      &.completed{
+        border-bottom: 3px solid #2FACFF;
+      }
+    }
+  }
+  #sunburst {
+    padding-top: 40px;
+    width: 100%;
+    z-index: 100;
+    -moz-transition:height 0.2s ease-out;
+    -webkit-transition:height 0.2s ease-out;
+    -o-transition:height 0.2s ease-out;
+    transition:height 0.2s ease-out;
+    text-align: center;
+  }
+  #onboarding {
+    margin: 0px auto;
+    max-width: 960px;
+    display: block;
+    padding-bottom: 100px;
+    text-align: center;
+  }
+  .jam-token {
+    background-image: url();
+  }
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    margin: 20px 0;
+    line-height: 1.4;
+    text-align: center;
+  }
+  @media (max-width:480px) {
+    input[type="text"],input[type="password"]{
+      max-width: 80%;
+      .border-box();
+    }
+  }
+  .error {
+    .roboto400;
+    font-size: 16px;
+  }
+  &.signup{
+    #accept-checkbox {
+      margin: 10px 0;
+      a {
+        text-decoration: underline;
+        color: #999999;
+      }
+    }
+    .musician_question_text{
+      .clearfix();
+      width: 42%;
+      text-align: left;
+      margin: 20px auto 30px;
+      div.checkbox{
+        margin: 10px 0;
+        float: left;
+        width: 60%;
+        padding-left: 47px;
+      }
+    }
+    @media (max-width:480px) {
+      .musician_question_text{
+        width: 90%;
+        margin: 0 auto;
+        div.checkbox{
+          float: none;
+          width: 100%;
+        }
+      }
+    }
+  }
+  &.social{
+    #onboarding{
+      padding-bottom: 290px;
+      #hearo-video{
+        padding-bottom: 40px;
+        max-width: 100%;
+      }
+    }
+    div.addthis_toolbox {
+      text-align: center;
+      width: 310px;
+      margin: 20px auto 30px;
+    }
+  }
+  &.welcome{
+    h2{
+      font-family: 'Permanent Marker', cursive;
+      font-size: 40px;
+    }
+    #directory{
+      text-align: left;
+      margin-top: 20px;
+      @media screen and (min-width:@desktop) {
+        #directory-list .music.listing{
+          width:  22%;
+          width: -moz-calc(~"( 100% - 30px ) / 4");
+          width: -webkit-calc(~"( 100% - 30px ) / 4");
+          width: calc(~"( 100% - 30px ) / 4");
+        }
+      }
+    }
+  }
+  .error{
+    display: none;
+    background: darkRed;
+    color: #FFF;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+
+
+/* Invite */
+#page,#content.join {
+
+  .next-btn {
+    display: block;
+    margin: 20px auto;
+    width: 340px;
+    border-radius: 50px;
+    max-width: 100%;
+    height: 55px;
+    line-height: 35px;
+    .box-shadow(inset 0 0 1px @black70);
+    padding: 10px;
+    background: white;
+    font-size: 26px;
+    .roboto400;
+    color: white;
+    .blue-mid-gradient;
+    border: none;
+    .border-box();
+    &.spinning {
+      .button-text {
+        display: none;
+      }
+    }
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.25;
+    }
+    &:hover {
+      .blue-light-gradient;
+    }
+    &:active {
+      .blue-dark-gradient;
+    }
+  }
+  .invite{
+    margin-top: 40px;
+    text-align: center;
+    h3{
+      position: relative;
+      padding: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .feedback{
+      border-radius: 0;
+      box-shadow: none;
+      font-size: 14px;
+      padding: 5px 10px;
+      max-width: 200px;
+      margin: 0px auto;
+      position: absolute;
+      right: 0;
+      top: 7px;
+    }
+    .next-btn{
+      vertical-align: top;
+      margin-top: 7px;
+      display: inline-block;
+      width: auto;
+      height: auto;
+      font-size: 19px;
+      padding: 8px 10px 7px;
+      cursor: pointer;
+    }
+    #invite-help{
+      background: #FFF;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.13);
+      position: relative;
+      margin-top: 6px;
+      p{
+        font-size: 14px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 0
+      }
+      .arrow{
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 9px solid #FFF;
+        top: -8px;
+      }
+    }
+  }
+}
+
+#content.join , .invite{
+  input[type="text"], input[type="password"] {
+    color: rgb(204, 204, 204);
+    border: none;
+    background: #333333;
+    .border-radius();
+    padding: 10px;
+    .box-shadow(0 0 1px @black60);
+    font-size: 26px;
+    width: 320px;
+    margin: 7px 0;
+    box-sizing: initial;
+    -moz-box-sizing: inital;
+    .roboto400;
+  }
+}

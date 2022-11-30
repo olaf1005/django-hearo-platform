@@ -1,0 +1,26 @@
+<div class="album listing download{{ #is_nyp }} nyp{{ /is_nyp }}">
+
+  {{# cover }}
+  <div class="al-cover al-cover--download">
+    <a href="/profile/{{artist.keyword}}"><img src="{{ small }}" width="60" /></a>
+  </div>
+  {{/ cover }}
+
+  <div class="al-name al-name--download">
+    <div>{{ title }}</div>
+  </div>
+
+  <div class="sl-price sl-price--download">
+    {{ #is_nyp }}
+      <input type="text" class="nyp-input" value="{{price}}" pattern="^\d+(\.|\,)\d{2}$" />
+    {{ /is_nyp }}
+    {{ ^is_nyp }}
+      {{ price }}
+    {{ /is_nyp }}
+  </div>
+
+  <div>
+    <button class="delete"></button>
+  </div>
+
+</div>

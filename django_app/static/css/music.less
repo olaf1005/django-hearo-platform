@@ -1,0 +1,90 @@
+@import "helpers.less";
+
+#content.music {
+  #filters-container {
+    width:960px;
+    height:100px;
+    position:relative;
+    top:-100px;
+    margin:0px auto;
+    position:relative;
+    padding-top:100px;
+    margin-bottom:10px;
+    text-align:center;
+    .dark-inset;
+  }
+
+  #header {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    color: @black80;
+  }
+
+  #subheader {
+    .roboto600;
+    font-size: 12px;
+    margin-top: 10px;
+    color: @black70;
+  }
+
+  #feeds_filters {
+
+    .filter_module {
+      width: 171px;
+
+
+      input.standard {
+        font-size: 14px;
+        padding: 8px;
+        width: 130px;
+      }
+
+
+      button#filter {
+        height: 34px;
+      }
+    }
+  }
+
+  .box {
+    .border-radius();
+    width: 311px;
+    margin: 0px 5px;
+    background: transparent;
+    border: none;
+
+    .empty {
+      padding: 80px 0px;
+      width: 100%;
+      text-align: center;
+      font-family: 'StyreneA-Regular', sans-serif;
+      color: black;
+      font-size: 16px;
+    }
+
+    h4 {
+      width: 311px;
+    }
+
+    &#songs_box {
+      margin-right: 0;
+      margin-left: 6px;
+    }
+
+    &#artists_box {
+      margin-left: -1px;
+      margin-right: 6px;
+    }
+
+    .loader {
+      width: 311px;
+      height: 500px;
+      .white-to-trans-vertical;
+
+      .spinner {
+        margin: 0px auto;
+        margin-top: 100px;
+      }
+    }
+  }
+}

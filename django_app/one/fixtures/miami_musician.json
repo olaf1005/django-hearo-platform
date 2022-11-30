@@ -1,0 +1,50 @@
+[
+    {
+        "pk": 3, 
+        "model": "accounts.musician", 
+        "fields": {
+            "profileID": "John Doe"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "accounts.profile", 
+        "fields": {
+            "location": 3, 
+            "rank_all": 0, 
+            "short_name": "John Doe", 
+            "rank_month": 0, 
+            "rank_today": 0, 
+            "name": "John Doe", 
+            "keyword": "JohnDoe", 
+            "rank_week": 100, 
+            "rank_year": 0, 
+            "user": 3
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "accounts.person", 
+        "fields": {
+            "profile": 3, 
+            "musician": 3, 
+            "user": 3, 
+            "is_musician": true, 
+            "view": 3
+        }
+    },  
+    {
+        "pk": 3, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "john@example.com", 
+            "first_name": "John", 
+            "last_name": "Doe", 
+            "is_active": true, 
+            "last_login": "2011-01-21T11:01:11.721", 
+            "password": "pbkdf2_sha256$10000$vMVSNpeDP1C1$YSKzNJZSyIailw0SH2D27DlUilzn+nBiIluzocQZ0dU=",
+            "email": "john@example.com", 
+            "date_joined": "2011-01-21T11:01:11.721"
+        }
+    }
+]

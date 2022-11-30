@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="536px" preserveAspectRatio="none" style="width:392px;height:536px;background:#00000000;" version="1.1" viewBox="0 0 392 536" width="392px" zoomAndPan="magnify"><defs/><g><ellipse cx="196.5" cy="16" fill="#000000" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"/><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="99" x="147" y="66"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="79" x="157" y="87.6016">Create profile</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="197" x="98" y="140"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="177" x="108" y="161.6016">Create private and public keys</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="95" x="149" y="214"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="75" x="159" y="235.6016">Create wallet</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="218" x="87.5" y="288"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="198" x="97.5" y="309.6016">Encrypt private key with password</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="379" x="7" y="362"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="359" x="17" y="383.6016">Encrypt private keys with permutations of keys 2 out of x keys</text><rect fill="#F8F8F8" height="34.1328" rx="12.5" ry="12.5" style="stroke:#383838;stroke-width:1.5;" width="259" x="67" y="436"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="239" x="77" y="457.6016">Grant allowance to Hearo trading account</text><ellipse cx="196.5" cy="520" rx="10" ry="10" style="stroke:#000000;stroke-width:1.0;fill:none;"/><ellipse cx="197" cy="520.5" fill="#000000" rx="6" ry="6" style="stroke:none;stroke-width:1.0;"/><!--MD5=[ff0e286fd08b8c6255283e78e80369ef]
+link start to Create profile--><path d="M196.5,26.04 C196.5,34.93 196.5,48.84 196.5,60.57 " fill="none" id="start-to-Create profile" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="196.5,65.78,200.5,56.78,196.5,60.78,192.5,56.78,196.5,65.78" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[b6167dc272b50c464b9a3bb018654326]
+link Create profile to Create private and public keys--><path d="M196.5,100.34 C196.5,110.46 196.5,123.58 196.5,134.54 " fill="none" id="Create profile-to-Create private and public keys" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="196.5,139.73,200.5,130.73,196.5,134.73,192.5,130.73,196.5,139.73" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[5515675829ada51dd4172a241572dd92]
+link Create private and public keys to Create wallet--><path d="M196.5,174.34 C196.5,184.46 196.5,197.58 196.5,208.54 " fill="none" id="Create private and public keys-to-Create wallet" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="196.5,213.73,200.5,204.73,196.5,208.73,192.5,204.73,196.5,213.73" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[a345a7d9dc321e0679616ba9d31e7a9a]
+link Create wallet to Encrypt private key with password--><path d="M196.5,248.34 C196.5,258.46 196.5,271.58 196.5,282.54 " fill="none" id="Create wallet-to-Encrypt private key with password" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="196.5,287.73,200.5,278.73,196.5,282.73,192.5,278.73,196.5,287.73" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[7921961db6c079e7dd3cd110bd6ab203]
+link Encrypt private key with password to Encrypt private keys with permutations of keys 2 out of x keys--><path d="M196.5,322.34 C196.5,332.46 196.5,345.58 196.5,356.54 " fill="none" id="Encrypt private key with password-to-Encrypt private keys with permutations of keys 2 out of x keys" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="196.5,361.73,200.5,352.73,196.5,356.73,192.5,352.73,196.5,361.73" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[12cca626aa60ebf536e499355227b646]
+link Encrypt private keys with permutations of keys 2 out of x keys to Grant allowance to Hearo trading account--><path d="M196.5,396.34 C196.5,406.46 196.5,419.58 196.5,430.54 " fill="none" id="Encrypt private keys with permutations of keys 2 out of x keys-to-Grant allowance to Hearo trading account" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="196.5,435.73,200.5,426.73,196.5,430.73,192.5,426.73,196.5,435.73" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[efa1465fcedbb8fa01ca4c0cf29bc690]
+link Grant allowance to Hearo trading account to end--><path d="M196.5,470.07 C196.5,480.6 196.5,494.25 196.5,504.46 " fill="none" id="Grant allowance to Hearo trading account-to-end" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="#383838" points="196.5,509.74,200.5,500.74,196.5,504.74,192.5,500.74,196.5,509.74" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[44549346b1041e9859381b65faa4e1ac]
+@startuml User registration
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+(*) - -> "Create profile"
+- -> "Create private and public keys"
+- -> "Create wallet"
+- -> "Encrypt private key with password"
+- -> "Encrypt private keys with permutations of keys 2 out of x keys"
+- -> "Grant allowance to Hearo trading account"
+- -> (*)
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 15:40:07 EAT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

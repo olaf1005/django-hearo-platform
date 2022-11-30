@@ -1,0 +1,22 @@
+{% extends base %}
+
+{% block title %}Wallet Decryption Failed - Tune.fm{% endblock %}
+
+{% block content %}
+<div id="wallet-decryption-failed">
+    <br><br>
+    <br><br><h1 style="color:#ffffff;">Sorry, we failed to decrypt your wallet</h1><br><br>
+    <div style="color:#ffffff;">
+    This may be an internal issue or an issue with the Hedera Network.
+    <br/>
+    <br/>
+    We have been notified and will attempt to fix the problem as soon as possible.
+    You can also contact support at <a href="mailto: support@tune.fm">support@tune.fm</a>.
+    <br/>
+    <br/>
+    For now, feel free to <a href="/" style="color: darkred; font-weight: bold;">explore</a> and enjoy the music before your wallet has been created.
+  </div>
+</div>
+
+{% csrf_token %}
+{% endblock %}

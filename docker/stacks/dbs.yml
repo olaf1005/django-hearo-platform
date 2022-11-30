@@ -1,0 +1,137 @@
+version: '3.6'
+
+volumes:
+    rethinkdbdata1:
+    # redisdata:
+    pgdata:
+    esdata:
+    eslogs:
+
+networks:
+    cluster:
+
+services:
+
+    elasticsearch:
+        tty: true # color log output
+        image: $IMAGE_ELASTICSEARCH
+        networks:
+            - cluster
+        environment:
+            - discovery.type=single-node
+        volumes:
+            - esdata:/usr/share/elasticsearch/data
+            - eslogs:/usr/share/elasticsearch/logs
+        logging:
+            # limit logs retained on host to 25MB
+            driver: "json-file"
+            options:
+                max-size: "500k"
+                max-file: "50"
+
+    # pgadmin:
+    #     tty: true # color log output
+    #     image: $IMAGE_PGADMIN
+    #     networks:
+    #         - cluster
+    #     ports:
+    #         - '5050:5050'
+    #     depends_on:
+    #         - postgres
+    #     logging:
+    #         # limit logs retained on host to 25MB
+    #         driver: "json-file"
+    #         options:
+    #             max-size: "500k"
+    #             max-file: "50"
+
+    postgres:
+        image: $IMAGE_POSTGRES
+        networks:
+            - cluster
+        volumes:
+            - pgdata:/var/lib/postgresql/data
+        environment:
+            POSTGRES_PASSWORD: $PG_PASS
+            POSTGRES_USER: $PG_DB_USER
+            POSTGRES_DB: hearo_prod
+        ports:
+            - "5432:5432"
+        deploy:
+            mode: replicated
+            replicas: 1
+            restart_policy:
+                condition: on-failure
+                delay: 3s
+                max_attempts: 3
+                window: 120s
+        logging:
+            driver: json-file
+            options:
+                max-size: 500k
+                max-file: '50'
+
+    # redis:
+    #     tty: true # color log output
+    #     # image: redis:4-alpine3.8
+    #     image: $IMAGE_REDIS
+    #     volumes:
+    #         - redisdata:/data
+    #     networks:
+    #         cluster:
+    #             aliases:
+    #                 - redis
+    #     logging:
+    #         # limit logs retained on host to 25MB
+    #         driver: "json-file"
+    #         options:
+    #             max-size: "500k"
+    #             max-file: "50"
+
+    rethinkdb:
+        tty: true
+        image: $IMAGE_RETHINKDB
+        volumes:
+            - 'rethinkdbdata1:/data'
+            - ../../django_app/upgrade_rethinkdb:/upgrade_rethinkdb:delegated
+        networks:
+            - cluster
+        ports:
+            - '8080:8080' # web admin
+            - '28015:28015'
+        deploy:
+            mode: replicated
+            replicas: 1
+            restart_policy:
+                condition: on-failure
+                delay: 3s
+                max_attempts: 3
+                window: 120s
+        logging:
+            driver: json-file
+            options:
+                max-size: 500k
+                max-file: '50'
+
+    memcached:
+        tty: true
+        image: $IMAGE_MEMCACHED
+        ports:
+            - '11211:11211'
+        networks:
+            - cluster
+        deploy:
+            mode: replicated
+            replicas: 1
+            restart_policy:
+                condition: on-failure
+                delay: 3s
+                max_attempts: 3
+                window: 120s
+        logging:
+            driver: json-file
+            options:
+                max-size: 500k
+                max-file: '50'
+
+

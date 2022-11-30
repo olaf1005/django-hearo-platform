@@ -1,0 +1,27 @@
+.md-content > div#edit_membership h4 {
+  border-bottom: 1px solid grey;
+}
+.md-content > div#edit_membership div#members {
+  padding: 10px;
+}
+.md-content > div#edit_membership div#pending {
+  padding: 10px;
+}
+.md-content > div#edit_membership div#admins {
+  padding: 10px;
+}
+.md-content > div#edit_membership div#invite {
+  padding: 10px;
+}
+.md-content > div#edit_membership input.percentage_membership_split {
+  background: none;
+  border: 1px solid silver;
+  border-radius: 10px;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+  margin-left: 20px;
+  width: 30px;
+  float: right;
+  margin-top: 4px;
+}

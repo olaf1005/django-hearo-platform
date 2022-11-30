@@ -1,0 +1,9 @@
+<!-- This is the template tag for usertabs in the directory. The only difference is that the name is not abbreviated (due to the surplus of space) -->
+
+<div class="usertab" user="{{ profile.keyword }}">
+  <a class="name" href="/profile/{{ profile.keyword }}">
+    <img class="picture" src='{{profile.get_mini_thumb }}'>
+    {{ profile.name }}
+  </a>
+</div>
+

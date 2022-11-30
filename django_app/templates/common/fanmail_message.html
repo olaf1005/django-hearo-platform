@@ -1,0 +1,33 @@
+{% load elements %}
+
+<div class="fanmail_message" messageid="{{ message.id }}" {% if not message.read %}unread{% endif %}>
+  {% if not message.read %}
+    <div class="unread_dot"></div>
+  {% endif %}
+  <div class="delete_button"></div>
+  {% if not message.to_profile == message.from_profile %}
+    {% mail message.from_profile %}
+  {% endif %}
+  <div class="sender">
+    {% usertab message.from_profile %}
+  </div>
+  <div class="message">
+    <div class="bulk">
+      <span class="subject">
+        {{ message.subject }}
+      </span>
+      <div class="body">
+      <span class="body">
+        {% if html%}
+        {{ message.body|safe }}
+        {% else%}
+        {{ message.body }}
+        {% endif %}
+      </span>
+      </div>
+    </div>
+  <div class="timestamp">
+    {{ timestamp }}
+  </div>
+  </div>
+</div>

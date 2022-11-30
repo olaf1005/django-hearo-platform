@@ -1,0 +1,41 @@
+@startuml record listens
+
+!includeurl https://gist.githubusercontent.com/dnordberg/86dd9e5fff0447b41beb220c7f5a6c9a/raw/5b43d8bd0f3c97d8aba7c45b420d0661ffc18f56/black-and-white.pu
+
+' title Bulk transfer
+
+start
+split
+: User logs in;
+split again
+: User registers;
+: Request verification;
+end split
+    if (User email is verified) then (yes)
+        : Check if user has wallet;
+        if (User has wallet) then (yes)
+        else (no)
+            : Create wallet;
+            : Create recovery keys;
+            : Associate wallet with token;
+        endif
+        if (User has received starter tokens) then (yes)
+        else (no)
+            : Transfer starter tokens;
+        endif
+    else (no)
+        stop
+    endif
+
+    if (User has listens that they have not yet paid) then (yes)
+        partition "Process unprocessed listens" {
+            while (Has unpaid listens?)
+                : Get amount to pay;
+                : May payment for each listen;
+            endwhile
+        }
+    else (no)
+
+    endif
+
+@enduml

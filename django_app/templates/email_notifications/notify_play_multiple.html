@@ -1,0 +1,29 @@
+{% extends "email_notifications/base_email.html" %}
+
+{% block subject %}
+Your music was recently played
+{% endblock %}
+
+{% block html_body %}
+
+  <p>
+    Hi {{profile.short_name}},
+    <br><br>
+    Your following media was played:
+    <ul>
+      {% for feed in feeds %}
+        <li>
+          <a href="https://{{ BASE_URL }}/profile/{{feed.from_profile.keyword}}">{{feed.from_profile.name}}</a>
+          {% if feed.feed_type == 'played_song' %}
+            played your song {{feed.item.played_song.title}}
+          {% elif feed.feed_type == 'played_album' %}
+            played your album {{feed.item.album.title}}
+          {% elif feed.feed_type == 'played_radio' %}
+            played your radio
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </p>
+
+{% endblock %}

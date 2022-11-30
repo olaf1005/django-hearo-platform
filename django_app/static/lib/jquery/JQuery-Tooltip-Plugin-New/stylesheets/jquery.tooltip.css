@@ -1,0 +1,144 @@
+div.jquery-gdakram-tooltip { 
+  width: 340px;
+  color: white;
+  font-family:"StyreneA-Regular";
+  font-size: 12px;
+	position: absolute;
+	z-index: 100;
+	top: 0px;
+	left: -80px;
+  margin-left:-52px;
+	display: none;
+  min-height:0px;
+  text-align:center;
+}
+
+div.jquery-gdakram-tooltip div.content { 
+  -moz-border-radius: .5em; 
+  -webkit-border-radius: .5em;
+  border-radius: .5em;
+  background-color: #3399CC;
+  max-width: 200px;
+  min-height: 0px;
+  padding:10px;
+  min-width:120px;
+  margin:0px auto;
+  position:relative;
+  float:left;
+  text-align:left;
+}
+
+div.jquery-gdakram-tooltip div.content h1 {
+  font-size: 16px;
+  border-bottom: 1px solid #C4C4C4;
+  padding-bottom: 5px;
+  font-family:"StyreneA-Regular";
+}
+
+div.jquery-gdakram-tooltip div.up_arrow {
+  background : url('/public/images/tooltip_images/bluecarrotup.png') 60px 0px no-repeat;
+  width: 100%;
+  height: 6px;
+  margin-top:8px;
+  margin-left:56px;
+}
+
+div.jquery-gdakram-tooltip div.down_arrow {
+  background : url('/public/images/tooltip_images/bluecarrotdown.png') 60px 0px no-repeat;
+  width: 100%;
+  height: 20px;
+  margin-left:56px;
+  margin-bottom:0px;
+  z-index:2000000004;
+
+}
+
+div.jquery-gdakram-tooltip div.left_arrow {
+  height: 100%;
+}
+
+div.jquery-gdakram-tooltip div.left_arrow {
+  float:left;
+  background : url('/public/images/tooltip_images/bluecarrotleft.png') 0px 0px no-repeat;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 40px;
+  left: 0px;
+}
+
+.hearotip {
+  position: absolute;
+  width:15px;
+  height:15px;
+  display:inline-block;
+  background-image:url(/public/images/tooltip_images/smallquestion.png);
+  cursor:pointer;
+  z-index:101;
+}
+
+#fandlibtooltip {
+  top: 821px;
+  left: 940px;
+
+}
+
+#fanfeedtooltip {
+  margin-left:64px;
+
+}
+
+#musicpagetooltip {
+  margin-top:2px;
+  margin-left: 7px
+}
+
+#directorypagetooltip {
+  margin-left: 652px;
+  margin-top: 9px;
+}
+
+#showspagetooltip {
+  margin-left: 10px;
+  margin-top: 3px;
+
+}
+
+#songuploadtooltip {
+  margin-left: 8px;
+  margin-top: 3px;
+
+}
+
+#groupstooltip {
+  margin-left: 683px;
+  margin-top: -21px;
+
+}
+
+#whitebartooltip {
+  top: 7px;
+  right: 40px;
+}
+
+#cardpagetooltip {
+  top:354px;
+}
+
+#paymentpagetooltip {
+  left: 215px;
+  top: 4px;
+}
+
+#cashouttooltip {
+  left: 628px;
+  top: 170px;
+}
+
+#downloadqueuetooltip {
+  left:5px;
+}
+
+#playqueuetooltip {
+  right:5px;
+}

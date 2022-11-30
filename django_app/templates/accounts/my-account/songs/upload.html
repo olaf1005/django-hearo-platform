@@ -1,0 +1,48 @@
+{% with user.person.view as view %}
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/public/css/iframe.css" />
+<script type="text/javascript" src="/public/jquery/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="/public/jquery/iframe.js"></script>	
+</head>
+<body>
+{% if saved %}
+<p>Your song has been uploaded. It may take a couple of minutes for it to appear on your profile. <a href="/my-account/song-upload">Upload another?</a></p>
+{% endif %}
+
+{% if uploaded %}
+<script type="text/javascript">
+$(document).ready(function() {
+	$.get("/my-account/convert-audio?songid={/literal}{$songid}{literal}");
+});
+</script>
+
+
+<p>Your song <em>{{song.file.name}}</em> has been uploaded.</p>
+<form method="post" action="/my-account/songs/upload/" id="songDetailsForm">
+{% csrf_token %}
+<input type="hidden" name="songid" value="{{song.id}}" />
+<table cellspacing="0" class="songInfoForm">
+	<tr><td><label for="songTitle">Title</label></td><td><input type="text" id="songTitle" name="title" value="{$metaData.title|escape}" /></td></tr>
+	<tr><td><label for="songPrice">Price</label></td><td>
+	<select name="price" id="songPrice">
+		<option value="notForSale">Not for sale (Stream only)</option>
+		<option value="nameOwnPrice">Name your own price</option>
+		<option value="0">FREE</option>
+		<option value="{$smarty.section.prices.index}">{$smarty.section.prices.index|formatPrice}</option>
+	</select></td></tr>
+</table>
+<div><input type="submit" value="Submit" /></div>
+</form>
+{% else %}
+<form method="post" enctype="multipart/form-data" action="/my-account/songs/upload/" id="songUploadForm">
+{% csrf_token %}
+<input type="file" name="newSong" /> <input type="submit" value="Upload" id="submitSong" />
+</form>
+{% endif %}
+
+</body>
+</html>
+
+{% endwith %}

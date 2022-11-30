@@ -1,0 +1,243 @@
+{% extends 'accounts/my-account/index.html' %}
+
+{% block title %}My Account Music - {{ BASE_URL|title }}{% endblock %}
+
+{% block myAccountInnerPage %}
+
+{% with user.person.view as view %}
+
+{% include "accounts/my-account/_view_name.html" %}
+
+<script type="text/javascript">
+  hearo.geography = {
+    countries: {{countries|safe}}
+  };
+</script>
+
+
+{% load elements %}
+
+{# TODO: confirm if this is correct since we changed this to get_account_type #}
+{% if person.get_account_type == 'fan' %}
+<div id="error-info-message">Please note, <strong>fans</strong> can not
+  have music displayed on their profile. You need to update your profile type
+settings to Artist to add music.</div>
+
+{% else %}
+
+{% if not signed_agreement %}
+<div class="content" hideonagreement>
+  <div id="sign_agreement">
+    <h1>Artist Agreement</h1>
+    <p id="instructions">
+      Before uploading music, please read and accept the <a href="https://{{ BASE_URL }}/artist-agreement/" target="_blank">Artist Agreement</a> and provide a legal address.<br>Your address won't be shared; it's just required for you to comply with the artist agreement.
+    </p>
+    <div row class="2 cols" id="address_and_summary">
+      <div cell>
+        <div id="legal_address">
+          <h3>Address:</h3>
+          <input type="text" id="add_line1" class="standard small siamese top" placeholder="Line 1"/>
+          <input type="text" id="add_line2" class="standard small siamese bottom" placeholder="Line 2"/>
+          <input type="text" id="add_city" class="standard small left" placeholder="City"/>
+          <input type="text" usonly id="add_state" class="standard small siamese right" placeholder="ST"/>
+          <input type="text" usonly id="add_zip" class="standard small" placeholder="Zip code"/>
+          <input type="text" id="add_country" class="standard small" placeholder="Country"/>
+        </div>
+      </div>
+      <div cell>
+        <div id="summary_of_terms">
+          <h3>Agreement Summary:</h3>
+          <ul>
+              <li>You own the master and publishing rights to the music you upload</li>
+              <li>You grant tune.fm (hearo.fm Inc.) a non-exclusive license to stream your music</li>
+              <li>All payments for streaming and/or other products and services are made with JAM tokens</li>
+              <li>Tune.fm will receive a 10% commision on all JAM payments processed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- <div id="international-disclaimer">
+      <p>
+        <emph>Note:</emph> we are currently working on supporting international payouts.
+      </p>
+      <p>
+        In the meantime you can still sell your music and accumulate credit with Hearo.
+      </p>
+      <p>
+        Email us at <a href="mailto:feedback@hearo.fm">feedback@hearo.fm</a> with questions and concerns.
+      </p>
+    </div> -->
+    <p id="checkbox">
+      <input type="checkbox" class="small" id="artist_agreement" /><label for="artist_agreement">I have read and accept the <a href="https://{{ BASE_URL }}/artist-agreement/" target="_blank">Artist Agreement</a>.</label>
+    </p>
+      <button class="blue disabled" id="i_agree">I Agree</button>
+      <br/>
+
+      <div id="error-info-message" style="display: none;">That doesn't seem to be a valid address.</div>
+      <br>
+  </div>
+</div>
+{% endif %}
+
+
+<h1 id="singles-header" {% if not signed_agreement %} showonagreement style="display: none; opacity: 0" {% endif %}>Singles</h1>
+
+<div class="content" id="singles" droptarget {% if not signed_agreement %} showonagreement style="display: none; opacity: 0" {% endif %}>
+  <div class="songs-container" id="nonalbum">
+    <div id="songs" class="songs-list"{% if not non_album %} style="display: none" {% endif %} showonupload>
+      {% songlisting_pending %}
+      <div class="uploaded-already" id="uploaded-singles">
+      {% for song in non_album %}
+        {% songlisting_admin song %}
+      {% endfor %}
+      </div>
+    </div>
+
+    <div class="music-uploader">
+
+        <div class="upload_hint sys">
+          {% if not non_album and not has_music %}
+            <img src="/public/images/upload.music.files.png" hideonupload />
+            <h1 hideonupload>Upload some music!</h1>
+          {% endif %}
+
+            <button class="button blue choose-files">
+              Choose Files
+              <input class="hidden music_upload_input" name="file" type="file" multiple />
+            </button>
+            <!--or drag and drop them here.-->
+
+          <h3 style="width: 100%;">Please upload only lossless <emph>FLAC</emph>, <emph>WAV</emph>, or <emph>AIFF</emph> files.
+          <br>
+          <emph>We don't allow MP3's</emph> or other formats. <a class="explain-like-im-5" onclick="$('#why-mp3-are-not-ok').toggle()">Why?</a>
+          <br>
+          <div style="display:none" id="why-mp3-are-not-ok">We only accept uncompressed master files so we can create all the download formats fans want. <br> Lossy (compressed) files don't allow us to convert them without losing sound quality.</div></h3>
+      </div>
+    </div>
+
+    <div id="drop_hint">
+      Drop here to upload!
+    </div>
+  </div>
+</div>
+
+<div class="2 cols" id="create-another-album"{% if not albums %}style="display: none"{% endif %} showonfirstalbum>
+  <div cell>
+    <span>
+      <h1 id="albums-header">Albums</h1>
+    </span>
+  </div>
+  <div cell>
+    <button class="green" id="new-album">Create Another Album</button>
+  </div>
+</div>
+
+<div class="content" id="create-first-album" showonagreement hideonfirstalbum style="{% if not signed_agreement %}display: none; opacity: 0{% endif %}{% if albums %}; display: none{% endif %}"
+{% if albums %}display: none{% endif %}>
+  <div id="create-album">
+    <div class="sys">
+    <img src="/public/images/make.album.png" />
+    <h1>Organize your music into albums.</h1>
+    <h2>Upload album covers.</h2>
+    <!-- <h2>Price full albums at a discount.</h2> -->
+
+    <button class="green" id="new-album">Create An Album</button>
+    </div>
+  </div>
+</div>
+
+{% if albums %}
+  {% for album in albums %}
+      {% album_admin_view album %}
+  {% endfor %}
+{% endif %}
+
+
+<div class="content" {% if not signed_agreement %} showonagreement style="display: none; opacity: 0" {% endif %}>
+  <div id="info" class="2 cols module">
+    <div cell>
+      <h2>Earn JAM tokens from streams!</h2>
+      <div class="details">
+        As fans stream your music, you can earn <emph>JAM</emph> tokens for every second they stream. When the music gets played, the artist gets paid.
+      </div>
+    </div>
+    <div cell>
+      <h2>Promote your music with JAM!</h2>
+      <div class="details">
+        You can promote your music by making the first stream for new listeners free, or you can set a budget of JAM tokens to pay out to 1st time listeners!
+      </div>
+    </div>
+    <!-- <div cell>
+      <h2>in any format!</h2>
+      <div class="details">
+        Tune.fm lets users download music in <br> <emph>mp3 320</emph>, <emph>mp3 v0</emph>, <emph>AAC</emph>, <emph>Ogg</emph>, <emph>FLAC</emph>, or <emph>Apple Lossless</emph>.
+      </div>
+    </div> -->
+  </div>
+</div>
+
+{% if signed_agreement %}
+
+<div class="content" id="legal_container">
+    <h2>Legal Address</h2>
+    <div>
+      <p>
+        This address is never made public, but is a legal requirement for uploading music.
+      </p>
+
+      <div id="legal-address">
+          <label>Address</label><br>
+          <input id="id_paddress1" class="standard" type="text" value="{{view.p_address1}}" maxlength="200" fillertext="1st address line"><br><br>
+          <input id="id_paddress2" class="standard" type="text" value="{{view.p_address2}}" maxlength="200" fillertext="2nd address line">
+          <br><br><br>
+          <label>City</label><br>
+          <input id="id_pcity"  class="standard" type="text" value="{{view.p_city}}" maxlength="200" fillertext="City"><br>
+          <br><br>
+          {% if profile.is_international %}
+          <div class="ib">
+          <label>State</label><br>
+          <input id="id_pstate"  class="standard" type="text" value="{{view.p_state}}" maxlength="2" size="2" fillertext=" - - " style="text-transform: uppercase; width:30px;">
+          </div>
+          <div class="ib">
+          <label>Zip Code</label><br>
+          <input id="id_pzip"  class="standard" type="text" value="{{view.p_zip}}" maxlength="200" style="width:50px" fillertext=" ----- ">
+          <br><br>
+          </div>
+          {% endif %}
+          <label>Country</label><br>
+          <input id="id_pcountry"  class="standard" type="text" value="{{view.p_country}}" maxlength="200" fillertext="City"><br>
+      </div>
+    </div>
+</div>
+
+<div class="content" id="second-legal-container">
+    <h2>Artist Agreement</h2>
+    <p>Summary of the basic terms:</p>
+    <ul id="artist_agreement_list">
+        <li>You own the master and publishing rights to the music you upload</li>
+        <li>You grant tune.fm (hearo.fm Inc.) a non-exclusive license to stream your music</li>
+        <li>All payments for streaming and/or other products and services are made with JAM tokens</li>
+        <li>Tune.fm will receive a 10% commision on all JAM payments processed</li>
+    </ul>
+    <h2>Other legal documents</h2>
+    <ul>
+      <li>
+        <a target="_newtab" class="registration_document other_legal_docs ajax" href="/terms/">Terms Of Use</a>
+      </li>
+      <li>
+        <a class="ajax registration_document other_legal_docs" target="_newtab" href="/privacy-policy/">Privacy Policy</a></span>
+      </li>
+      <li>
+        <a class="ajax registration_document other_legal_docs" target="_newtab" href="/artist-agreement/">Artist Agreement</a></span>
+      </li><br><br>
+    </ul>
+</div>
+
+
+{% endif %}
+
+{% endif %}
+
+<!-- End check for agreement check -->
+{% endwith %}
+{% endblock %}

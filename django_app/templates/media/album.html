@@ -1,0 +1,20 @@
+{% extends base %}
+
+{% block content %}
+<a href="#" class="ajax playAlbum {% album.id %}">
+{{album.title}}
+<div>
+<img src="/{{album.album_cover}}" style="max-height: 200px; max-width: 200px;"/>
+</div>
+</a>
+<div><a href="/profile/{{album.profile.keyword}}">
+Artist: {{album.profile.name}}</a></div>
+<div>Fans : {{album.fans}}</div>
+<div>Total plays : {{plays}}</div>
+<h4>Songs</h4>
+{% for song in album.songs.all %}
+<div><a href="/media/song/{{song.keyword}}">{{song.title}}</a>
+<a href="#" class="ajax playSong {{song.id}}">{{song.plays.count}} plays</a>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,8 @@
+<div class="empty_media">
+  {% if profile == viewer %}
+    You don't have any {{ topic }}s.
+    <br>
+    <a href="{{ actionlink }}">{{ actionverb }} {% if an %}an{% else %}a{% endif %} {{ topic }}<div class="continue_arrow"></div></a>
+  {% else %}
+    {{ profile.name }} doesn't have any {{ topic }}s.{% endif %}
+</div>

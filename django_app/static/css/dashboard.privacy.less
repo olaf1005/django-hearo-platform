@@ -1,0 +1,32 @@
+@import "helpers.less";
+
+#content.dashboard.privacy {
+    div.email_notifications {
+        float: right;
+        width: 50%;
+
+        div.myAccount_subheader {
+            margin-bottom: 20px;
+        }
+
+        div.row {
+            margin: 12px 0;
+
+            label {
+                font-size: 16px;
+            }
+        }
+    }
+    h2 {
+        margin-top: 5px;
+    }
+    @media (max-width:960px) {
+        div.email_notifications {
+        float: none;
+        width: 100%;
+        }
+        #notify_fan_threshold, #notify_play_threshold {
+        width: 5% !important;
+        }
+    }
+}

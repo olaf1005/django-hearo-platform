@@ -1,0 +1,99 @@
+{% load elements %}
+<div class="content album" droptarget>
+  <div class="album listing" albumid="{{ album.id }}">
+    <div class="2 cols album-info large">
+      <div cell class="cover">
+      {% if album.small_cover %}
+        <div style="background: url('/{{ album.small_cover }}')" class="hover-show cover-image-div">
+           <div class="upload-cover hover-show-target">
+            <p>
+              <div class="button blue small">
+                <input id="music_input" class="hidden cover-upload" name="file" type="file" multiple />
+                <span>Change album cover</span>
+              </div></p>
+          </div>
+        </div>
+
+      {% else %}
+        <div style="background: url('/public/images/album.cover.empty.png')" class="cover-image-div">
+          <div class="upload-cover">
+            <p>
+              <button class="blue small" style="width: 100px; height: 34px;">
+                Choose image
+                <input id="music_input" class="hidden cover-upload" name="file" type="file" multiple />
+              </button></p>
+            <p deleteonupload>or drop a file here to</p>
+            <p deleteonupload>upload an album cover.</p>
+          </div>
+        </div>
+      {% endif %}
+      </div>
+
+      <div cell class="info">
+        <div class="title">
+          <p class="album-title"><span>{{ album.title }}</span><button class="inline-subtle button blue" defaultval="Rename">Rename</button></p>
+          <p class="album-year">
+            <span class="light">released</span>
+            <span class="year">{{ album.year_released }}</span>
+            <button class="inline-subtle button blue" defaultval="Change year">Change year</button>
+          </p>
+        </div>
+
+        <div class="pricing">
+          <div class="availability">
+            <!--
+            <ul class="earl" value="{% if album.download_type == "none" %}Stream only{% else %}Downloadable{% endif %}">
+              <li>Stream only</li>
+              <li>Downloadable</li>
+            </ul>
+            <input type="checkbox" class="small downloadable" id="downloadable_{{ album.id }}" {% if album.download_type != "none" %}checked="yes"{% endif %}/>
+            <label for="downloadable_{{ album.id }}" class="downloadable">Downloadable as full album</label>
+
+            -->
+
+            <!-- <div class="price-controls" {% if album.download_type == "none" %}class="cloaked" style="opacity: 0"{% endif %}>
+              <span class="light">for</span>
+              <label class="inline-edit left-half" for="price{{ album.id }}">$</label>
+              <input type="text" id="price{{ album.id }}" maxlength="4" albumid="{{ album.id }}" class="inline-edit {% if album.download_type == "name_price" %}middle{% else %}right-half{% endif %}" value="{{ album.price }}" />
+              <label class="inline-edit right-half small-text" for="price{{ album.id }}" {% if not album.download_type == "name_price" %}style="display: none;"{% endif %}>suggested</label>
+            </div>
+            <div class="nyp-opt" {% if album.download_type == "none" %}class="cloaked" style="opacity: 0"{% endif %}>
+              <label class="inline-edit right-half small-text" for="price{{ album.id }}" id="suggested" {% if not song.download_type == "name_price" %}style="display: none;"{% endif %}>suggested</label>
+              <input type="checkbox" class="small nyp" id="nyp_{{ album.id }}" {% if album.download_type == "name_price" %}checked="yes"{% endif %}/><label for="nyp_{{ album.id }}">Name Your Price</label>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="songs-count">
+          <p>{% if not album.get_online_songs.count %}No{% else %}{{ album.get_online_songs.count }}{% endif %} songs, elapsed length {{ album.get_elapsed_length }}.</p>
+        </div>
+        <button class="delete"></button>
+      </div>
+    </div>
+
+    <div cell class="songs-container">
+      <div class="songs-list">
+        {% songlisting_pending %}
+        <div class="uploaded-already" id="uploaded-songs-album-{{ album.id }}">
+        {% if album.songs.all.count %}
+          {% for song in album.get_songs %}
+              {% songlisting_admin song %}
+          {% endfor %}
+        {% endif %}
+        </div>
+      </div>
+
+      <div class="music-uploader">
+        <div class="sys empty">
+            <button class="button blue" style="height: 20px; padding: 12px; width: 105px; width: 140px;">
+              Choose Files
+              <input class="hidden music_upload_input" albumid="{{ album.id }}" name="file" type="file" multiple />
+            </button>
+          <h2 style="display:inline-block;font-size:16px;position:relative;top:-12px;left:4px;">  to upload them, or drag existing singles here to add them to this album with </h2>
+          <div style="width:35px;height:35px;display:inline-block;background-image:url(/public/images/grip.light.png);"></div>
+          <h3>Please upload only lossless <emph>FLAC</emph>, <emph>WAV</emph>, or <emph>AIFF</emph> files.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

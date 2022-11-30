@@ -1,0 +1,101 @@
+@import "helpers.less";
+
+#content.home {
+  #primary-content {
+    max-width: 100%;
+    .border-radius(4px);
+    margin: 25px 10px 0 10px;
+    position: relative;
+
+    a {
+      color: @outer-blue-active;
+
+      &:hover {
+        color: @outer-blue;
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      padding: 0;
+      font-size: 14px;
+      &#fan-feed{
+        padding-top: 10px;
+      }
+
+      li {
+        border-bottom: 1px solid #d1d1d1;
+        .border-radius(5px);
+        width:  30%;
+        width: -moz-calc(~"33.33% - 7px");
+        width: -webkit-calc(~"33.33% - 7px");
+        width: calc(~"33.33% - 7px");
+        .border-box();
+        float: left;
+        background: #292929;
+        color: white;
+        margin: 0 0 10px 0;
+        padding: 15px;
+
+        blockquote {
+          color: grey;
+          padding: 10px 0 10px 10px;
+          &:before{
+            content: "\201C";
+            font-family: "Georgia", serif;
+            font-size: 30px;
+            opacity: .2;
+          }
+        }
+
+        div.music {
+          margin: 20px auto;
+          max-width: 240px;
+          border: 1px solid #d1d1d1;
+          width: 100%;
+        }
+
+        div.date {
+          font-size: 11px;
+          color: grey;
+          float: none;
+          padding-top: 10px;
+        }
+      }
+    }
+    .feed-message{
+      margin: 100px auto 70px; 
+      text-align: center;
+      font-size: 20px;
+      border-radius: 5px;
+      .bttn--color-blue();
+      a{
+        color: #FFF;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        .border-box();
+      }
+    }
+    #feed-finished{
+      display: none;
+      margin: 20px auto 70px;
+    }
+  }
+}
+
+#content.home {
+  #primary-content {
+    @media (max-width:600px) {
+      #fan-feed {
+        li {
+          width:  47%;
+          width: -moz-calc(~"50% - 5px");
+          width: -webkit-calc(~"50% - 5px");
+          width: calc(~"50% - 5px");
+        }
+      }
+    }
+  }
+}

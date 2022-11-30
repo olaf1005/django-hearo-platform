@@ -1,0 +1,93 @@
+{% extends base %}
+
+{% block content %}
+<style type="text/css">
+    ul#navigation li.jam a { color: #139ee4; }
+    ul#navigation li.jam a:hover { color: #96dcff; }
+</style>
+<script type="text/javascript">
+
+	csrfTOKEN = '{{ csrf_token }}';
+	profileID = '{{ user.profile.id }}';
+	jamLever = {'True':true,'False':false}['{{down_to_jam}}'];
+    $(document).ready(function(){
+        setupJam();
+        $(".hearotip").tooltip().addClass('tooltipbottom');
+    });
+</script>
+
+
+<div id="directoryPage">
+<div id="wrapper" class='infinite_scrolling jam'>
+	<!-- DOWN TO JAM
+    <div id="prompt_down_to_jam">down to jam?</div>
+    <div id="jam_lever_base"></div>
+    <img src="/public/images/jam_lever/{% if down_to_jam %}leverDown{% else %}leverUp{% endif %}.png" style="position:absolute;top:39px;right:-4px" class="jamLever" id="lever" onclick="flipLever(0)"/>
+	-->
+
+	<div id="topContainer">
+	    <div class="hearotip" id="directorypagetooltip">
+	        <div class="tooltip_description" style="display:none" title="directory page">
+				Find musicians, teachers, producers, bands, or venues.  Toggle between “People” to find individuals, and “Groups” to find bands or venues.  Discover people around you to organize jam sessions, find a music teacher, a producer for your new song, or connect with bands that are looking for a new member!  The possibilities are endless.
+	        </div>
+    	</div>
+	<div id="topControls">	
+
+  <ul id="slider">
+    <li>People</li>
+    <li>Groups</li>
+  </ul>
+	
+	<div id="filters">
+
+<!--    <div id="prompt_on_air">who's on air?</div> -->
+
+		<div class="filter_module">
+			<div class="controls" id="type_dropdown_container">
+			</div>
+		</div>
+		<div class="filter_module">
+			<div class="controls">
+				<input type="text" class="standard" id="Location" placeholder="Location"/>
+			</div>
+		</div>
+
+		<div class="filter_module">
+			<div class="controls">
+				<input type="text" class="standard" id="Genre" placeholder="Genres" />
+			</div>
+		</div>
+		<div class="filter_module">
+			<div class="controls">
+				<input type="text" class="standard" id="Instrument" placeholder="Instruments" />
+			</div>
+		</div>
+        <div class="filter_module auto_update" > 
+            <button id='jam_filter' class="blue" type="submit">Filter</button>
+        </div>
+	</div>
+	
+	</div>
+	<div id="map_container" style="display:none">
+		<div id="map_top_clip"></div>		<div id="map_bottom_clip"></div>
+        <div id="map_canvas" align="left"></div>
+	</div>
+<br><br>
+<div class="userList">
+        <div class="jam_now_directory">
+            <div id="directory_label" class="ellipsis">
+            </div>
+        </div>
+		<div class="jam_now_directory_listing_wrapper" id="jam_directory">
+			<div id="no_results" style="display:none;top:80px;left:290px">
+				<img src='/public/images/loader.png' />
+				<span id="no_results_text">no results</span>
+			</div>
+			<div class="loader" style='position:relative; top: 100px; left:290px';>
+				<img src='/public/images/loader.png' />
+			</div>
+		</div>
+</div>
+</div>
+</div>
+{% endblock %}

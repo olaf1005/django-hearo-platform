@@ -1,0 +1,8 @@
+{% for feed in feeds %}
+  <li>
+  	{{feed.fan_body}}
+    <div class="date">
+      {{feed.created_at|date:"D, M d, f a"}}
+    </div>
+  </li>
+{% endfor %}

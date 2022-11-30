@@ -1,0 +1,147 @@
+/* Mix-ins */
+
+.box-shadow(@prop) {
+  /*box-shadow: @prop;
+  -moz-box-shadow: @prop;
+  -webkit-box-shadow: @prop;*/
+}
+
+.box-shadows(...) {
+  /* This is how we allow truly arbitrary arguments... it's kind of stupid but it works. */
+  /*@props: ~`"@{arguments}".replace(/[\[\]]/g, '')`;
+  box-shadow: @props;
+  -moz-box-shadow: @props;
+  -webkit-box-shadow: @props;*/
+}
+
+.text-shadow(@val) {
+  text-shadow: @val;
+  -moz-text-shadow: @val;
+  -webkit-text-shadow: @val;
+}
+
+.dimen(@width, @height){
+  width: ~`"@{width}" + "px"`;
+  height: ~`"@{height}" + "px"`;
+}
+
+.overflow-y-height(@width){
+  height: auto !important;
+  max-height: ~`"@{width}" + "px"`;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.dimenperc(@width, @height){
+  width: ~`"@{width}" + "%"`;
+  height: ~`"@{height}" + "%"`;
+}
+
+.border-radii(@tl, @tr, @br, @bl) {
+  border-top-left-radius: @tl;
+  border-top-right-radius: @tr;
+  border-bottom-left-radius: @bl;
+  border-bottom-right-radius: @br;
+}
+
+.border-radius(@radius: 4px) {
+  border-radius: @radius;
+}
+
+.border-radius-top(@radius : 4px) {
+  .border-radii(@radius, @radius, 0, 0);
+}
+
+.border-radius-bottom(@radius: 4px) {
+  .border-radii(0, 0, @radius, @radius);
+}
+
+.bgimg(@src) {
+  background-image: url("/public/images/@{src}");
+}
+
+.bgsize-cover{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.gradient(@direction, @first, @second) {
+  background-color: @first; // Fallback
+  background-image: linear-gradient(@direction, @first, @second);
+  background-image: -o-linear-gradient(@direction, @first, @second);
+  background-image: -moz-linear-gradient(@direction, @first, @second);
+  background-image: -webkit-linear-gradient(@direction, @first, @second);
+  background-image: -ms-linear-gradient(@direction, @first, @second);
+}
+
+.radial-gradient(@first, @second) {
+  background-color: @first;
+  background-image: radial-gradient(circle, @first, @second);
+  background-image: -o-radial-gradient(circle, @first, @second);
+  background-image: -moz-radial-gradient(circle, @first, @second);
+  background-image: -webkit-radial-gradient(circle, @first, @second);
+  background-image: -ms-radial-gradient(circle, @first, @second);
+}
+
+.transition(...) {
+  @props: ~`"@{arguments}".replace(/[\[\]\,]/g, '')`;
+  -moz-transition: @props;
+  -webkit-transition: @props;
+  -o-transition: @props;
+  transition: @props;
+}
+
+.transitions(...) {
+  @props: ~`"@{arguments}".replace(/[\[\]]/g, '')`;
+  -moz-transition: @props;
+  -webkit-transition: @props;
+  -o-transition: @props;
+  transition: @props;
+}
+
+.transition-delay(@dur) {
+  transition-delay: @dur;
+  -o-transition-delay: @dur;
+  -moz-transition-delay: @dur;
+  -webkit-transition-delay: @dur;
+}
+
+.spinner-size(@size, @thickness) {
+  .spinner {
+    width: @size!important;
+    height: @size!important;
+    border-width: @thickness;
+  }
+  .spinner:before {
+    border-width: @thickness;
+    left: -@thickness;
+    top: -@thickness;
+  }
+}
+
+.spinner-color(@fg, @bg: rgba(255,255,255,0.2)) {
+  .spinner {
+    border-color: @bg!important;
+  }
+
+  .spinner:before {
+    border-top-color: @fg!important;
+  }
+}
+
+.placeholder-color(@fg) {
+  ::-webkit-input-placeholder {
+      color: @fg;
+  }
+  :-moz-placeholder {
+      color: @fg;
+  }
+  ::-moz-placeholder {
+      color: @fg;
+  }
+  :-ms-input-placeholder {
+      color: @fg;
+  }
+}

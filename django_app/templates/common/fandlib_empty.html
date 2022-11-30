@@ -1,0 +1,16 @@
+{% load elements %}
+
+<div class="empty_media" style="{% if none_conditional %}display:none;{% endif %}">
+  {% if profile == viewer %}
+    You haven't fan'd any {{ topic }}s.
+    <br>
+    {% if topic != 'fan' %}
+    	<a href="/music">Go fan some {{ topic }}s!<div class="continue_arrow"></div></a>
+    {% else %}
+    	<a href="/directory">Go fan some {{ topic }}s!<div class="continue_arrow"></div></a>
+    {% endif %}
+
+  {% else %}
+    {{ profile.name }} hasn't fan'd any {{ topic }}s.
+  {% endif %}
+</div>

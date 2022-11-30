@@ -1,0 +1,158 @@
+{% extends base %} {% load elements %} {% load humanize %} {% block content %}
+<style type="text/css">
+    ul#navigation li.jam a {
+        color: #139ee4;
+    }
+
+    ul#navigation li.jam a:hover {
+        color: #96dcff;
+    }
+
+    #siteBlurb a.button {
+        color: white;
+        font-family: helvetica-light;
+        border: 1px solid white;
+        border-radius: 3px;
+        top: -4px;
+        padding: 8px 8px 6px 8px;
+        text-align: center;
+        font-size: 16px;
+        background: transparent;
+        margin-right: 10px;
+    }
+
+    #siteBlurb a.button:hover {
+        color: silver;
+        border: 1px solid silver;
+    }
+
+    @media screen and (max-width: 720px) {
+        #siteBlurb {
+            display: inline !important;
+        }
+
+        #siteBlurb span {
+            display: none;
+        }
+
+        .addthis_sharing_toolbox {
+            display: none !important;
+        }
+
+        #directory {
+            margin: 15px !important;
+        }
+
+        #siteBlurb a.button {
+            color: white;
+            font-family: helvetica-light;
+            border: 1px solid white;
+            border-radius: 3px;
+            top: 10px;
+            padding: 8px 8px 6px 8px;
+            text-align: center;
+            font-size: 16px;
+            background: transparent;
+            margin-right: 10px;
+            position: relative;
+        }
+
+        .jvectormap-container {
+            top: 20px !important;
+        }
+    }
+</style>
+
+<div class="filter-bar">
+    {% include "hearo_one_filters.html" %}
+</div>
+<div id="world-map">
+    {% comment %} <div id="siteBlurb">
+        <a href="/my-account/wallet/" class="button">JAM WALLET</a>
+        <span>the global music economy</span>
+    </div> {% endcomment %}
+    {% comment %} <div class="addthis_sharing_toolbox"></div> {% endcomment %}
+    {% comment %} <div id="share-buttons">
+        <span id="addthis-container"> </span>
+    </div> {% endcomment %}
+</div>
+<div id="back-button">
+    <a href="#" onclick="switchMap('world');">Back to world</a>
+</div>
+<div id="directory">
+    <div class="directory__placeholder-text" id="directory-list-empty-indicator">
+        No results found.
+    </div>
+    <div id="directory-list"></div>
+    <div class="directory__placeholder-text" id="directory-list-loading-indicator">
+        <div class="spinner spinner--large"></div>
+    </div>
+</div>
+<div id="modal-container">
+    <div id="modal-backdrop"></div>
+    <div class="loading-spinner">
+        <div class="spinner spinner--large"></div>
+        <div class="keyboard-help">
+            <img src="/public/images/keyboard.png" />
+            <span>use left/right keyboard buttons to navigate profiles</span>
+        </div>
+    </div>
+    <img src="/public/images/lightbox/left.png" class="modal-left-arrow" />
+    <img src="/public/images/lightbox/quit.png" class="modal-quit" />
+    <img src="/public/images/lightbox/right.png" class="modal-right-arrow" />
+    <div id="content"></div>
+</div>
+<script type="text/javascript">
+    //<![CDATA[
+
+    hearo.directory = {
+       countries:   {{ countries_json|safe }} //Expects a hash of country/number pairs
+       , coords:      {{ coords_json|safe }} //Expects a list of lists
+       , instruments: []
+       , genres:      []
+       , filters:     {{ filters|jsonify|safe }}
+    }
+    hearo.filters = new hearo.views.Filters()
+    hearo.search = new hearo.views.Search()
+    //]]>
+</script>
+
+{% comment %} <script type="text/javascript">
+    //<![CDATA[
+    addthis_config = {
+        data_track_clickback: false,
+        username: "ra-511e3f9a5244646e",
+        eua: true,
+        services_exclude: "gmail, tumbler",
+        services_exclude_natural: "",
+    };
+    addthis_share = {
+        passthrough: {
+            twitter: {
+                text: "I found some awesome music on tune.fm",
+            },
+        },
+    };
+    $(document).ready(function() {
+        var addthisScript = document.createElement("script");
+        addthisScript.setAttribute(
+            "src",
+            "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-511e3f9a5244646e&async=1&domready=1"
+        );
+        var container = document.getElementById("addthis-container");
+        container.innerHTML = "";
+        if (window.addthis) {
+            window.addthis = null;
+            window._adr = null;
+            window._atc = null;
+            window._atd = null;
+            window._ate = null;
+            window._atr = null;
+            window._atw = null;
+        }
+        container.appendChild(addthisScript);
+    });
+    //]]>
+</script> {% endcomment %}
+
+{% endblock %}

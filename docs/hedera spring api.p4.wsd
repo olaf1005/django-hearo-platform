@@ -1,0 +1,86 @@
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title HTS API
+
+Actor "App" as app
+participant "HTS" as hts
+participant "Parent" as parent
+participant "Children.." as child
+participant "Hashgraph" as hashgraph
+
+box "Web Apps" #LightBlue
+	participant app
+	participant hts
+end box
+
+box "Smart Contracts" #LightGreen
+	participant parent
+	participant child
+end box
+
+box "Hedera" #Orange
+	participant hashgraph
+end box
+
+app->>hts : info
+Note right of hts
+    GET
+end Note
+Note right of hts
+    Swagger return info needs to be updated
+end Note
+Note right of hts
+    Get basic smart contract information
+end Note
+
+hts->>parent : info
+parent-->hts : returns contract info
+
+Note right of hts
+    {
+        "Owner": "0.0.1117",
+        "ContractSolidityAddress": "00000000000000000000000000000000000052aa",
+        "Symbol": "JAM",
+        "Total Supply": "100000000000000000",
+        "Decimals": "5",
+        "Name": "Jam"
+    }
+end Note
+
+hts-->app : return contract info
+
+
+app->>hts : transfer
+Note right of hts
+    POST
+end Note
+Note right of hts
+    Transfer JAM tokens from one hedera account to another solidity address
+end Note
+' Note right of hts #Pink
+'     Swagger documentation and implementation need to be updated.
+'     Note: Do we want to change this from accepting myaccNum to mySolidityAddress?
+' end Note
+Note right of hts
+    * json (Dict) (Required)
+        * myaccNum (String) (Required) "0.0.21166",
+        * mypvtKey (String) (Required) "302e......",
+        * toSolidityAddress (String) (Required)
+        * valueInJamDecimals (Int) (Required) 56788000
+end Note
+
+hts->>parent : transfer
+parent-->parent : getAccountSolidityAddress(myaccNum)
+parent-->parent : getFromAddressContractShard(fromSolidityAddress)
+parent-->parent : getToAddressContractShard(toSolidityAddress)
+parent-->parent : transfer(contractA, contractB, \nfromSolidityAddress, toSolidityAddress, value)
+parent-->hts : return success
+hts-->app : return success
+
+
+@enduml

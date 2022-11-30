@@ -1,0 +1,473 @@
+@import "helpers.less";
+
+#content.dashboard.music {
+  #myacct-content > div.content {
+    padding: 0px;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    &.message {
+      display: none;
+    }
+
+    &.album {
+      .border-radii(0px, 4px, 4px, 4px);
+    }
+
+    .album left-half {
+    margin-left: -3px;
+    }
+
+    > div {
+      padding: 10px;
+    }
+
+    emph {
+      .roboto600;
+      color: #999999;
+    }
+
+    div#sign_agreement {
+      padding: 0;
+      .vmiddle;
+      .dimen(958, 500);
+      text-align: center;
+      .roboto400;
+
+      #address_and_summary {
+        width: 550px;
+        margin: 0px auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #ffffff;
+        .roboto400;
+
+        #legal_address {
+          width: 200px;
+          margin: 0px auto;
+          text-align: left;
+
+          input[type="text"] {
+            width: 178px;
+
+            &#add_city, &#add_state, &#add_zip, &#add_country {
+              margin-top: 5px;
+            }
+
+            &#add_city {
+              &.siamese {
+                width: 132px;
+              }
+            }
+
+            &#add_state {
+              margin-left: -4px;
+              width: 25px;
+            }
+
+            &#add_zip {
+              width: 100px;
+            }
+
+            &[usonly] {
+              display: none;
+            }
+          }
+        }
+
+
+        #summary_of_terms {
+          width: 250px;
+          margin: 0px auto;
+          text-align: left;
+
+          ul {
+
+            li {
+              margin: 5px 0px;
+              color: #ffffff;
+              line-height: 1.2;
+            //   list-style: url("/public/images/dash.png");
+            }
+          }
+        }
+      }
+
+      #address_error {
+        margin-top: 15px;
+        .roboto600;
+        display: none;
+      }
+
+      #international-disclaimer {
+        display: none;
+        margin: 10px 0 20px 0;
+      }
+
+      a {
+        text-decoration: underline;
+
+      }
+
+      button#i_agree {
+        min-width: 68px;
+      }
+
+      p {
+        line-height: 1.3;
+
+        &#instructions {
+          margin-bottom: 10px;
+        }
+
+        &#checkbox {
+          margin: 10px 0px 20px 0px;
+        }
+      }
+    }
+
+    div#nonalbum {
+      padding: 0;
+      width: 958px;
+      padding-bottom: 80px;
+      position: relative;
+      overflow: hidden;
+      //background: @white80;
+
+      button {
+        position: relative;
+      }
+
+      #songs {
+        margin-top: -41px;
+        position: relative;
+
+        .song.listing:nth-child(2){
+          .border-radius-top();
+        }
+      }
+
+      #uploaded_music {
+
+        .upload_hint {
+          width: 100%;
+
+          img {
+            margin-bottom: 20px;
+          }
+
+          > div {
+            text-align: center;
+            .vmiddle;
+            width: 958px;
+          }
+        }
+      }
+
+      .upload_hint {
+        margin-top: 15px;
+        .roboto400;
+
+        h3 {
+          line-height: 1.4;
+          margin-top: 10px;
+        }
+      }
+
+      #empty {
+        .vmiddle;
+        .dimen(958, 500);
+        text-align: center;
+        color: #ffffff;
+        font-size: 20px;
+        cursor: default;
+        .roboto600;
+      }
+
+      #drop_hint {
+        .dimen(958, 200);
+        .vmiddle;
+        display: none;
+        text-align: center;
+        font-family: 'StyreneA-Regular', sans-serif;
+        font-size: 20px;
+      }
+    }
+
+    div#info {
+      padding: 0px;
+
+      h2 {
+        font-size: 20px;
+        margin: 0;
+      }
+
+      > div {
+        text-align: center;
+        padding: 20px 0px;
+        .roboto600;
+
+        > div.details {
+          padding: 0px 15px;
+          text-align: left;
+          margin-top: 15px;
+          color: #ffffff;
+          font-size: 16px;
+          font-family: 'StyreneA-Regular', sans-serif;
+          line-height: 1.3;
+        }
+      }
+
+      > div:not(:first-child) > div.details {
+        border-left: @thin10percent;
+      }
+    }
+
+
+    div.album {
+      padding: 0px;
+
+      div.album-info {
+        .border-radius();
+        overflow: hidden;
+      }
+
+      div.album-info.small {
+        height: 100px;
+      }
+
+      div.album-info {
+        height: 201px;
+
+        div.cover {
+          width: 200px;
+          height: 200px;
+          border-right: @thin10percent;
+          border-bottom: @thin10percent;
+
+          > div {
+            .dimen(200, 200);
+
+            div.upload-cover {
+              .roboto400;
+              font-size: 11px;
+              line-height: 2;
+              text-align: center;
+              padding-top: 85px;
+
+              button {
+                position: relative;
+              }
+            }
+          }
+        }
+
+        div.info {
+          border-bottom: 1px solid rgba(0,0,0,0.15);
+          height: 200px;
+          position: relative;
+          width: 756px;
+
+          .title {
+
+
+            p.album-title {
+              font-size: 30px;
+              margin: 20px 0px 5px 40px;
+
+
+              button {
+                position: relative;
+                bottom: 2px;
+              }
+            }
+
+            p.album-year {
+              font-size: 20px;
+              margin: 5px 40px;
+
+              input[type="text"] {
+                width: 45px;
+              }
+
+              span.light {
+                padding-right: 5px;
+              }
+            }
+          }
+
+          div.pricing {
+
+            div.availability {
+              margin: 20px 40px;
+              margin-left: 30px;
+              text-align: left;
+
+              label.downloadable {
+                font-family: "Verdana";
+                color: #ffffff;
+              }
+
+              > div {
+                display: inline-block;
+              }
+
+              div.price-controls {
+                font-size: 14px;
+              }
+
+              div.earl {
+                text-align: left;
+                display: inline-block;
+              }
+
+              span.light {
+                margin-left: 10px;
+              }
+            }
+          }
+
+          div.songs-count {
+            color: #ffffff;
+            margin-left: 40px;
+            line-height: 1.2;
+          }
+
+          button.delete {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+          }
+        }
+      }
+
+      div.songs {
+        width: 100%;
+        overflow: hidden;
+
+        div.songs-list {
+          margin-top: -41px;
+        }
+
+        div.empty {
+          margin-top: 40px;
+        }
+
+        div.music-uploader {
+          margin: 50px 0px;
+        }
+      }
+    }
+  }
+
+  div#create-first-album {
+    margin: 20px 0px;
+
+    img {
+      margin: 20px 0px;
+    }
+    button {
+      margin: 20px 0px;
+    }
+  }
+
+
+  div#create-another-album {
+    margin-top: 30px;
+
+    > div:last-child {
+      text-align: right;
+    }
+  }
+
+  div#legal_container, div#second-legal-container {
+    width: 450px;
+    float: left;
+    position: relative;
+
+    div {
+      &#legal-address {
+        padding: 10px 30px;
+
+        input {
+          width: 90%;
+          background: none;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 20px;
+      .roboto600;
+      padding: 10px 25px;
+    }
+
+    p {
+      .roboto400;
+      padding: 10px 30px;
+    }
+
+    input[type="text"] {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+
+  div#second-legal-container {
+    width: 450px;
+    float: right;
+
+    ul {
+      padding: 10px 30px;
+      width: 370px;
+      color: #ffffff;
+      list-style: square;
+      .roboto400;
+      position: relative;
+      left: 30px;
+      line-height: 21px;
+    }
+  }
+
+  a.explain-like-im-5 {
+    opacity: 0.5;
+    border-bottom: 1px dotted #ffffff;
+  }
+
+  div#why-mp3-are-not-ok {
+    margin-top: 10px;
+    color: #ffffff;
+  }
+  h1#singles-header {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: 445px;
+  }
+    h1#albums-header {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: 445px;
+  }
+}
+
+/* some new additions for upload errors */
+.song.listing.error {
+    padding: 0px !important;
+    /* border-color: rgba(0,0,0,0.9); */
+    background-color: rgba(255, 246, 170, 0.3)!important;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.7);
+    font-family: 'StyreneA-Regular', sans-serif;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.song.listing.error > div {
+    padding-left: 10px;
+}
+
+.choose-files {
+  width: 200px;
+  height: 40px;
+}

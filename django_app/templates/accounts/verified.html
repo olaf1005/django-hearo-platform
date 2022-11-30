@@ -1,0 +1,17 @@
+{% extends base %}
+
+{% block title %}Account Verified - {{ BASE_URL }}{% endblock %}
+
+{% block content %}
+{% if saved %}
+<div class="verified">
+  <h2>{{name}}, your account is now verified!</h2>
+  <a href="/join/" class="link-btn blue">Enjoy {{ BASE_URL }}</a>
+</div>
+{% else %}
+
+<div class="verified">
+  <h2>We didn't get a valid verification url. Sorry!</h2>
+</div>
+{% endif %}
+{% endblock %}

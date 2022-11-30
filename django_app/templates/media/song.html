@@ -1,0 +1,27 @@
+{% extends base_embed %}
+{% block title %}{{ song.profile.name }} - {{ song.title }}{% endblock %}
+{% block content %}
+{% if embed %}
+{{ as_listing}}
+<audio id="player" controls="controls" style="width:225px; display: none;">
+  <source src="{{song.streaming_url}}"/>
+</audio>
+{% else %}
+<br>
+{{ as_listing}}
+{% endif %}
+<script type="text/javascript">
+$(document).ready(function(){
+  var player = document.getElementById('player');
+  $('.play-button').click(function(){
+    if (player.paused){
+      player.play();
+      $('.play-button').removeClass('play-button--large').addClass('pause-button--large');
+    } else {
+      player.pause();
+      $('.play-button').addClass('play-button--large').removeClass('pause-button--large');
+    }
+  });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,13 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  button.bttn--special-share {
+    zoom: 1;
+    position: relative;
+    top: 7px;
+    padding-top: 15px;
+    padding-bottom: 7px;
+  }
+  div.song button.bttn--special-share {
+    top: 8px;
+  }
+
+}

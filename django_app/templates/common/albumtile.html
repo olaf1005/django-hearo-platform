@@ -1,0 +1,16 @@
+{% load elements %}
+
+<div class="search_album_cover album_tile" revealalbum="{{ album.id }}">
+	<img class="search_albums_cover_image" src="{{ cover }}"/>
+	<a class="ajax playAlbum {{album.id}}" albumid="{{ album.id }}">
+		<div class="song-play-button"></div>
+	</a>
+	<div class="album_tile_fan">
+	    {% fanbutton album view %}
+	</div>
+	<div class="album_tile_title ellipsis">
+		{{album.title}}
+	</div>
+</div>
+
+

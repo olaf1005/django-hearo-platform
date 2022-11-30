@@ -1,0 +1,1611 @@
+.loggedInAs{
+  height:30px;
+}
+.loggedInAs_tab img{
+  width:30px;
+  height:30px;
+}
+.loggedInAs_tab{
+  background:white;
+}
+.myAccount_header{
+  margin:0px 0px 0px 10px;
+}
+.myAccount_header span{
+  font-size:25px;
+  font-family: 'Permanent Marker', cursive;
+}
+.myAccount_viewMy{
+  border-radius:4px;
+  font-size:12px;
+  padding:6px;
+  color:#424242;
+  height:40px;
+  background:rgba(255,255,255,0.6);
+  text-decoration:none;
+  margin:0px 0px 0px 10px;
+}
+
+.myAccount_viewMy:hover{
+  color:#000;
+  background:rgba(255,255,255,1);
+}
+
+#myAccount_categories{
+  float: right;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: -40px;
+  padding-top: 30px;
+}
+
+#myAccount_categories{
+  float: right;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: -40px;
+  padding-top: 30px;
+}
+
+
+.myAccount_tabGroup{
+  padding:15px;
+  border-radius:8px;
+  background:url('/public/images/patterns/blue_thread_pattern.png');
+  box-shadow:inset 0 0 5px #4093cc;
+}
+
+#myAccount_categories_title{
+  float: left;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: -9px;
+
+
+}
+/* inset gray box that contains the word DASHBOARD */
+.myAccount_title_tab{
+  width: 120px;
+  height: 10px;
+  margin: 0px auto;
+  position:relative;
+  border-radius:12px;
+  box-shadow:inset 0 0 10px #c0c0c0;
+  background:rgba(0,0,0,0.03);
+  margin-bottom:10px;
+  padding-top: 15px;
+  padding-bottom: 51px;
+  padding-left: 20px;
+  padding-right: 85px;
+}
+
+
+.myAccount_textareas input[type=text], .myAccount_textareas select, .myAccount_textareas .committedInput{
+  width:350px;
+  position:relative;
+  top:5px;
+  padding:10px;
+  resize:none;
+  font-family:"StyreneA-Regular";
+}
+
+.myAccount_textareas .committedInput{
+  background: rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  padding: 11px;
+}
+
+.myAccount_textareas input[type=password]{
+  width:400px;
+  position:relative;
+  top:5px;
+  padding:10px;
+  resize:none;
+}
+
+.myAccount_textareas select{
+  padding:0px;
+}
+.myAccount_uploadFile{
+  position:relative;
+  top:7px;
+  height:20px;
+  width:305px;
+  background:#FFF;
+  padding:6px;
+  border:1px solid #CCC;
+}
+.myAccount_uploadButton{
+  border:none;
+  width:91px;
+  height:50px;
+  background:url('/public/images/upload button sprite.png');
+  margin:0px 0px 0px 10px;
+  cursor:pointer;
+  position:relative;
+  bottom:10px;
+}
+.myAccount_uploadButton:hover{
+  background-position:0px -50px;
+}
+
+#cashOutButton::before{
+  content: url('/public/images/cash.png');
+  top: 4px;
+}
+
+#cashOutButton.big-green{
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding: 10px;
+  padding-left: 8px;
+}
+
+#cashOutButton{
+  padding-bottom: 15px
+}
+
+#group_boxes .inset_box{
+  top: 60px;
+  padding: 0px;
+  left: 25px;
+
+}
+
+.myAccount_textareas td:nth-child(odd){
+  width:10%;
+}
+.myAccount_textareas td:nth-child(even){
+  width:50%;
+}
+.myAccount_textareas td{
+  margin-bottom:10px;
+}
+
+
+#download_format {
+  width:400px;
+  font-size:12px;
+  background:rgba(0,0,0,0.8);
+  color:#ebebeb;
+  padding:6px;
+  border-radius:5px;
+  font-family:"StyreneA-Regular";
+  cursor:pointer;
+}
+
+/* questions on the profile tab of the dashboard */
+
+.musician_question_text label {
+  width:400px;
+  font-size:16px;
+  background:transparent;
+  color:black;
+  padding:6px;
+  border-radius:5px;
+  font-family:"StyreneA-Regular";
+  cursor:pointer;
+}
+
+.myAccount_categories_tab, .myAccount_categories_tab:visited{
+  font-size:14px;
+  border-radius:5px;
+  box-shadow: inset 0 0 2px #008ae9, 0 1px 1px rgba(0,0,0,0.2), inset 0 0 9px #FFF;
+  background:url('/public/images/patterns/grey_static.gif');
+  padding:6px;
+  text-decoration:none;
+  font-family:"StyreneA-Regular";
+}
+
+.myAccount_categories_tab:hover{
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  color:#FFF;
+  background:#2b2b2b;
+}
+
+.myAccount_categories_current{
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  color:#FFF;
+  background:#2b2b2b !important;
+  cursor:default;
+}
+
+#myAccount_categories div{
+  color:#000;
+  font-size:26px;
+  height:46px;
+  font-family: 'Permanent Marker', cursive;
+  text-shadow:0 2px 0 #FFF;
+}
+
+#myAccount_categories_title div{
+  color:#000;
+  font-size:42px;
+  height:46px;
+  font-family: 'Permanent Marker', cursive;
+  text-shadow:0 2px 0 #FFF;
+}
+#myAccountLoggedInAs {
+  height:50px;
+  float: left;
+  padding-top: .8em;
+}
+#myAccountLoggedInAs span{
+  margin-top:25px;
+}
+
+#myAccountLoggedInAs span {
+  font-weight: bold;
+}
+
+#myAccountNav {
+  margin: 3em 0 1em 0;
+  padding: 0;
+  text-align: right;
+}
+
+#myAccountNav li {
+  display: inline;
+  margin: 0 .1em 0 0;
+}
+
+#myAccountNav a {
+  background: #274e64;
+  padding: .5em;
+  color: #FFF;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+#myAccountNav a:hover {
+  background: #BBB;
+  color: #000;
+}
+
+#myAccount_innerPage {
+  padding: 0 2em;
+  position:relative;
+  min-height:800px;
+
+}
+
+#myAccount_innerPage table {
+  width:100%;
+  margin: 0 auto 0 auto;
+}
+
+.myAccount_tableHeader{
+  font-size:12px;
+  background:rgba(0,0,0,0.8);
+  color:#ebebeb;
+  border-top-right-radius:5px;
+  border-top-left-radius:5px;
+}
+.myAccount_tableHeader th{
+  padding:6px;
+}
+
+#myAccount_innerPage #bio, #myAccountInnerPage #goals, #myAccountInnerPage #influences, #myAccountInnerPage #experience {
+  width: 400px;
+  height: 100px;
+  color: #222;
+  line-height: 1.3;
+}
+
+#myAccount_save {
+  background: url('/public/images/save-button.png') no-repeat;
+  width:78px;
+  margin: 0px auto;
+  position:absolute;
+  left:443px;
+  top:4px;
+}
+
+#myAccount_save:hover{
+  background-position:0px -50px;
+}
+
+#myAccount_save:active{
+  background-position:0px -100px;
+}
+
+.buttonRow{
+  width:100%;
+  text-align:left;
+}
+
+.city_clarify_opt{
+  padding: 10px;
+  background: white;
+  box-shadow: 0 0 2px #2d8bdb;
+  width: 330px;
+  cursor: pointer;
+}
+
+.city_clarify_opt:hover{
+  color:#323232;
+}
+
+#photoViewer .photo {
+  float: left;
+  width: 245px;
+  text-align: center;
+  margin: 1em;
+  padding: .5em;
+  border: 1px #BBB solid;
+  background: #FFF;
+}
+
+#photoViewer .photoDetails {
+  margin: 0px 0px 0px 110px;
+}
+.photoDetails{
+  height:95px;
+  position:relative;
+}
+
+
+#photoViewer img {
+  float: left;
+}
+.photoDetails a {
+  text-decoration:none;
+}
+
+.myPhotos_isDefault{
+  position:absolute;
+  bottom:0px;
+  color:#969696;
+  cursor:default;
+}
+.myPhotos_icon{
+  margin-right:5px;
+}
+.myPhotos_photoOpt{
+  position:absolute;
+  bottom:0px;
+}
+.myPhotos_photoOpt:hover a{
+  color:#2d88cf;
+}
+.ac_results{
+}
+
+.ac_results li{
+  padding:5px;
+  color:#4892bc;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.ac_even, .ac_odd{
+  background:#FFF;
+  border-bottom:1px solid #ddebf3;
+}
+
+.ac_even:hover, .ac_odd:hover{
+  color:#80c1e6;
+}
+
+.fandlibTab{
+  width:68px;
+  position: relative;
+  float: left;
+  height: 21px;
+  text-align: center;
+  font-size: 14px;
+  color: #FFF;
+  cursor: pointer;
+  padding-top: 6px;
+  text-transform: lowercase;
+}
+
+.fandlibTab.selected{
+  background:url('/public/images/bg_profile_fandlib_tab_selected.png') repeat-x;
+  cursor:default;
+}
+
+.fandlibTab.unselected{
+  background:url('/public/images/bg_profile_fandlib_tab_unselected.png') repeat-x;
+}
+
+.fandlibTab.unselected:hover{
+  background-position:0px -27px;
+}
+
+#account_balance{
+  padding:10px;
+  background:#46af46;
+  box-shadow:inset 0 0 5px #104710;
+  border-radius:9px;
+  display:inline-block;
+  white-space:nowrap;
+  color:#FFF;
+  font-size:20px;
+}
+
+.downloadSongDetails tr {
+  width: 800px !important;
+}
+
+.downloadSongDetails tbody{
+  border-radius: 5px;
+  background:rgba(255,255,255,0.8);
+}
+
+.downloadedSongs {
+  text-decoration:none;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.3);
+  padding: 10px 10px 0px 10px;
+  margin-bottom: 10px;
+  border-top:1px solid #D6D6D6;
+  border-bottom:1px solid #FFF;
+}
+
+.downloadSongDetails .song_title .title{
+  position: relative;
+  bottom: 0px;
+}
+
+
+.downloadedDate{
+  font-size: 14px;
+  color: #858585;
+  margin-bottom: 5px;
+}
+
+/* DEFAULT DOWNLOAD FORMAT SELECTOR. ABSTRACTED FROM JAM.CSS */
+
+#download_list_inset_box {}
+
+/* -------------------------------------------- */
+
+#payment-errors {
+  margin: 10px 0px;
+  font-family: 'StyreneA-Regular', sans-serif;
+  font-size: 1em;
+  max-width: 400px;
+  z-index: 1000000;
+  display: none;
+  float: none;
+  margin-left: 10px;
+  width: 100%;
+  position: inherit;
+  padding-bottom: 15px;
+}
+
+/* Large prompts on create pages */
+
+#large_prompt{
+  width:1000px;
+  height:259px;
+  background:url('/public/images/ray_header.png') no-repeat;
+  position:relative;
+  bottom:20px;
+  right:20px;
+}
+
+#large_prompt prompt{
+  position:absolute;
+  top:50px;
+  left:40px;
+  font-family: 'Permanent Marker', cursive;
+  text-shadow:0 2px 0 #FFF;
+  font-size:40px;
+}
+
+#large_prompt input{
+  width: 430px;
+  box-shadow: 0 0 4px rgba(115, 190, 220, 0.4);
+  font-family: 'StyreneA-Regular', sans-serif;
+  font-size: 24px;
+  position: absolute;
+  top: 120px;
+  left: 50px;
+  padding: 5px;
+  outline: none;
+}
+
+.ib{
+  display:inline-block;
+}
+
+#dashboard_title{
+  font-family: 'Permanent Marker', cursive;
+  color:#000;
+  text-shadow:0 2px 0 #FFF;
+  font-size:32px;
+  width:190px;
+  height:0px;
+  text-align:center;
+  display:inline-block;
+}
+
+#downloadQueue #cardPicker {
+  float:left;
+  width:155px;
+  margin:12px 0 12px 10px;
+}
+
+#addCards.small {
+  width:85px;
+}
+#addCards.large {
+  width:123px;
+  font-size:12px;
+}
+
+#addCards img{
+  margin-right:8px;
+  margin-left:3px;
+}
+#addCards {
+  float:left;
+  margin-top:10px;
+  margin-left:10px;
+  display: inline-block;
+  width: 124px;
+  font-size:12px;
+  text-decoration: none;
+  background: #f79f15;
+  padding: 5px;
+  white-space: nowrap;
+  border-radius: 3px;
+  box-shadow: inset 0 0 5px #f36b07;
+  color:#FFF;
+  border:none;
+}
+
+
+#downloadQueue #downloadSum {
+  display:block;
+  float:right;
+  clear:right;
+  width:100px;
+  text-align:center;
+  margin:3px 0;
+  font-size:26px;
+}
+
+#downloadQueue #downloadSum:before{
+  content:"$";
+}
+
+
+#downloadQueue .total {
+  display:block;
+  width:40px;
+  float:right;
+  margin:3px 0;
+  text-align:right;
+}
+
+.player_row{
+  width:300px;
+}
+
+#stripe_logo{
+  font-family:"StyreneA-Regular";
+  color: #ffffff;
+  font-size: 100%;
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+#stripe_logo img {
+  position: relative;
+  top: 8px;
+  width: 45px;
+}
+
+#credit_card_container{
+  width:285px;
+  height:180px;
+  margin:0px auto;
+  position:relative;
+  left: -312px;
+  border-radius:12px;
+  box-shadow:inset 0 0 10px #c0c0c0;
+  background:rgba(0,0,0,0.03);
+  margin-bottom:10px;
+
+}
+
+#securely_processed_container{
+  width:354px;
+  height:60px;
+  margin:0px auto;
+  position:relative;
+  left: -276px;
+  top: 0px;
+  border-radius:12px;
+  box-shadow:inset 0 0 10px #c0c0c0;
+  background:rgba(0,0,0,0.03);
+  margin-bottom:10px;
+}
+
+#current_credit_cards{
+  width:340px;
+  margin:0px auto;
+  position:relative;
+  left: -280px;
+  top: 20px;
+  border-radius:12px;
+  box-shadow:inset 0 0 10px #c0c0c0;
+  background:rgba(0,0,0,0.03);
+  margin-bottom:10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+.credit-form-row {
+  position: relative;
+  left: 30px;
+  top: 30px;
+}
+
+#add-card-button {
+  position: relative;
+  top: 2px;
+}
+
+
+/* Credit Card */
+.credit_card {
+  width: 280px;
+  height: 172px;
+  border-radius: 8px;
+  background: rgba(250, 250, 250, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 10px;
+  display: inline-block;
+}
+
+.credit_card .card_number {
+  font-family: "Halter";
+  font-size: 15px;
+  color: black;
+  text-shadow: 0px 2px 1px white;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 79px;
+  cursor: default;
+}
+
+.credit_card .delete_button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+
+.credit_card .card_type {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 90px;
+  height: 40px;
+  background-size: 50px;
+  background-repeat: no-repeat;
+}
+
+.credit_card .card_type.MasterCard {
+  background-image: url('/public/images/card-type-mastercard.png');
+}
+
+.credit_card .card_type.Visa {
+  background-image: url('/public/images/card-type-visa.png');
+}
+
+.credit_card .card_type.AmericanExpress {
+  background-image: url('/public/images/card-type-amex.png');
+}
+
+.credit_card .card_type.Discover {
+  background-image: url('/public/images/card-type-discover.png');
+}
+
+.credit_card .card_type.JCB {
+  background-image: url('/public/images/card-type-jcb.png');
+}
+
+.credit_card .card_type.DinersClub {
+  background-image: url('/public/images/card-type-dinersclub.png');
+}
+
+.credit_card .card_type.Unknown {
+  background-image: url('/public/images/card-type-unknown.png');
+}
+
+.card_logo {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.card_logo.MasterCard {
+  background-image: url('/public/images/card-type-mastercard-grey.png');
+}
+
+.card_logo.Visa {
+  background-image: url('/public/images/card-type-visa-grey.png');
+}
+
+.card_logo.AmericanExpress {
+  background-image: url('/public/images/card-type-amex-grey.png');
+}
+
+.card_logo.Discover {
+  background-image: url('/public/images/card-type-discover-grey.png');
+}
+
+.card_logo.JCB {
+  background-image: url('/public/images/card-type-jcb-grey.png');
+}
+
+.card_logo.DinersClub {
+  background-image: url('/public/images/card-type-dinersclub-grey.png');
+}
+
+.cards_supported {
+  border-radius: 12px;
+  margin-top: 15px;
+  padding: 0px 10px;
+  white-space: nowrap;
+  display: inline-block;
+  font-family: 'StyreneA-Regular', sans-serif;
+}
+
+#add_card {
+  width: 280px;
+  height: 172px;
+  border-radius: 8px;
+  background: rgba(250, 250, 250, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 10px;
+  display: inline-block;
+}
+
+#add_card div.title {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-family: 'StyreneA-Regular', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+#add_card div.link-btn .blue {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 16px;
+}
+
+#add_card div.link-btn .blue img{
+  margin-right: 4px;
+
+}
+
+#add_card input {
+  width: 100px;
+  position: absolute;
+  font-family: "Halter";
+  border: none;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  text-shadow: 0px 2px 1px white;
+  outline: none;
+}
+
+#add_card label {
+  background: none;
+  border-radius: none;
+  color: #666;
+  position: absolute;
+}
+
+#add_card input.card_number {
+  width: 250px;
+  left: 10px;
+  top: 60px;
+  font-size: 16px;
+  text-align: center;
+}
+
+#add_card input.card_mm {
+  width: 35px;
+  left: 10px;
+  top: 130px;
+}
+
+#add_card input.card_yyyy {
+  width: 55px;
+  left: 60px;
+  top: 130px;
+}
+
+#add_card input.card_cvc {
+  width: 45px;
+  left: 135px;
+  top: 130px;
+}
+
+#add_card label.card_number {
+  top: 38px;
+  left: 10px;
+}
+
+#add_card label.card_expiration {
+  top: 108px;
+  left: 10px;
+}
+
+#add_card label.card_cvc {
+  top: 108px;
+  left: 135px;
+}
+
+#add_card div.errors {
+
+}
+
+/* the inset gray box for the legal page
+#legal_container{
+width: 424px;
+height: 374px;
+margin: 0px auto;
+position:absolute;
+left: 0;
+margin-bottom:10px;
+padding: 30px;
+font-size: 14px;
+}
+
+#second_legal_container{
+width: 424px;
+height: 374px;
+margin: 0px auto;
+position:absolute;
+right: 0;
+margin-bottom:10px;
+padding: 30px;
+font-size: 14px;
+}
+*/
+
+#reminder{
+  position:absolute;
+  width:637px;
+  top:-54px;
+  right:38px;
+}
+
+#legalErrorMessage {
+  width:414px;
+}
+/* the inset gray box for the user settings page */
+.inset_box{
+  margin-bottom:10px;
+  padding: 30px;
+}
+
+#upload_video_inset_box {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#uploaded_videos_inset_box {
+  position: absolute;
+  top: 184px;
+  left: 0px;
+}
+
+.video_row td{
+  padding:10px;
+}
+.video_row:nth-child(even) {
+  background:rgba(132, 207, 240, 0.16);
+
+}
+
+.video_row:nth-child(odd) {
+  background:rgba(0,0,0,0);
+
+}
+
+#video_table {
+  background-color:white;
+  border-radius:6px;
+}
+
+#album_tab #albums, #album_tab #songs, #album_tab #current_album, #album_tab #current_album_songs{
+  padding: 0px;
+}
+
+#album_tab #albums, #album_tab #songs{
+  padding:10px;
+}
+
+#current_album .empty_media{
+
+}
+
+
+#privacy_explanation{
+  left: 500px;
+  top: 610px;
+  height: 75px;
+  position: absolute;
+  width: 382px;
+  font-size: 18px;
+}
+
+.myAccount_textareas textarea {
+  position: relative;
+  top: 5px;
+  width: 380px;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #CCC;
+  resize: none;
+  font-size:14px;
+}
+
+#my_bank_info{
+  top: 320px;
+  left: 0px;
+}
+
+#my_balance{
+  width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#my_balance .balance_amount{
+  font-family: 'StyreneA-Regular', sans-serif;
+  font-size: 26px;
+}
+
+
+#my_balance .balance_amount{
+  font-family: 'StyreneA-Regular', sans-serif;
+  font-size: 26px;
+}
+
+#cashOutButton{
+  margin-left: 0px;
+  margin-top: 10px;
+}
+
+#cashout_leftbox {
+  float: left;
+}
+
+#svb {
+  width: 200px;
+  height: 50px;
+  font-size: 14px;
+  font-family: 'StyreneA-Regular', sans-serif;
+  background: url("/public/images/svb_logo_small.png") bottom no-repeat;
+  float: right;
+  cursor: pointer;
+}
+
+#vault {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+#vault:hover {
+  -webkit-animation-name: vaultRotate;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function:ease-in-out;
+  cursor:pointer;
+}
+
+@-webkit-keyframes vaultRotate {
+  from {
+    -webkit-transform:rotate(0deg);
+  }
+  to {
+    -webkit-transform:rotate(360deg);
+  }
+}
+
+/* on the dashboard on the profile tab */
+.myAccount_profile_subHeader {
+  font-size:20px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#myAccount_location_container {
+  width: 383px;
+  height: 156px;
+  margin: 0px auto;
+  position: absolute;
+  left: 0px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px silver;
+  background: rgba(0, 0, 0, 0.03);
+  margin-bottom: 10px;
+}
+
+#myAccount_musicalIdentity_container {
+  width: 952px;
+  height: 494px;
+  margin: 0px auto;
+  position: absolute;
+  left: 0px;
+  top: 176px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px silver;
+  background: rgba(0, 0, 0, 0.03);
+  margin-bottom: 10px;
+}
+
+#myAccount_musicalQuestions_container {
+  width: 555px;
+  height: 156px;
+  margin: 0px auto;
+  position: absolute;
+  left: 396px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px silver;
+  background: rgba(0, 0, 0, 0.03);
+  margin-bottom: 10px;
+
+}
+.artist_agreement {
+  font-family: 'Permanent Marker', cursive;
+  font-size:1.2em;
+  text-decoration:underline;
+}
+a.artist_agreement:hover {
+  color: #141491;
+}
+
+#album_tab #albums, #album_tab #songs{
+  height:538px;
+  width : 275px;
+  position:absolute;
+
+}
+#album_tab #albums{
+}
+#album_tab .scrollbox{
+  position: relative;
+}
+#album_tab #albums .scrollbox, #album_tab #songs .scrollbox {
+  height:89%;
+}
+#album_tab #songs .scrollbox{
+  margin-left:15px;
+  width:94%;
+}
+#album_tab #songs{
+  right:12px;
+  overflow:hidden;
+}
+#album_tab .song_container{
+  white-space: nowrap;
+}
+#album_tab #albums h4{
+  margin-left:85px;
+  text-align: center !important;
+  display: inline-block !important;
+}
+#album_tab #albums #add_album{
+  display:inline-block;
+  position: relative;
+  margin-left: 10px;
+  top:0px;
+  cursor: pointer;
+  height: 20px;
+}
+.album_row .delete_button{
+  position:absolute;
+  margin-left:217px;
+  margin-top:4px;
+  z-index: 2;
+}
+#album_tab #current_album{
+  position:absolute;
+  height:296px;
+  width:300px;
+  left:340px;
+}
+
+#album_tab #current_album_songs{
+  height:246px;
+  width:300px;
+  left:340px;
+  position:absolute;
+  top:312px;
+}
+
+#save_success{
+  top:10px;
+  left:35px;
+  font-size:15px;
+  right:35px;
+  position:absolute;
+}
+
+.songsPageSuccess{
+  top: 328px;
+  left: 19px;
+  width: 191px;
+  border-radius: 40px;
+}
+
+#save_error{
+  top:-5px;
+  left:35px;
+  font-size:15px;
+  right:35px;
+  position:absolute;
+}
+#album_songs_save{
+  top:10px;
+  left:164px;
+  font-size:15px;
+  position:absolute;
+}
+
+#album_tab #current_album_songs .scrollbox{
+  height:98%;
+  margin-left:15px;
+  width:93%;
+}
+#album_tab #current_album_songs .scrollbox:hover{
+  overflow-x:auto;
+}
+#album_tab #current_album .empty_media {
+  margin-top:116px !important;
+  text-align:center;
+
+}
+
+#album_tab #current_album_songs .empty_media {
+  margin-top:100px !important;
+  width: 200px;
+  margin-left: 50px;
+  text-align:center;
+}
+
+.make_current{
+  position:absolute;
+  margin-top:9px;
+  width:55px;
+  height:6px;
+  margin-left:165px !important;
+}
+.song_tab{
+  position: relative;
+  top: 5px;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 14px;
+  margin: 5px 0px!important;
+  padding: 0px!important;
+  color: black;
+  text-decoration: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  padding: 4px 5px 5px 8px!important;
+  margin: 4px 0px!important;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0,0,0,.2);
+  max-width:232px;
+}
+#current_album img{
+  width: 275px;
+  height:275px;
+  margin-top: 10px;
+  margin-left: 12px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#album_tab .album_row{
+  margin-left:20px;
+  margin-top:10px;
+  cursor:pointer;
+}
+.album_row .title{
+  background:rgba(0, 0, 0, 0.03);
+  box-shadow:inset 0 0 10px #c0c0c0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: inline-block;
+  position:absolute;
+  height:75px;
+  width:160px;
+
+}
+#current_album_songs .delete_button{
+  display:inline-block;
+  position:relative;
+  top:7px;
+}
+.album_row .edit_button{
+  position: absolute;
+  margin-top: -31px;
+  z-index: 3;
+  padding: 5px;
+  width: 35px;
+  margin-left: 195px;
+}
+.album_row .img{
+  display:inline;
+}
+
+.album_row span{
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+  text-align: center;
+  padding:4px;
+  word-wrap:break-word;
+}
+
+.album_row .title div {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  padding: 4px;
+}
+.album_row img {
+  width:75px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+/* .inset_box{
+  border-radius:4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.7);
+  background:rgba(0,0,0,0.03);
+} */
+.inset_box h4{
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+/*
+.artist_agreement_container {
+width: 800px;
+height: 1354%;
+margin: 0px auto;
+position: absolute;
+left: 0px;
+top: 23px;
+border-radius: 12px;
+box-shadow: inset 0 0 10px silver;
+background: white;
+margin-bottom: 200px;
+padding: 30px;
+}
+
+.terms_of_use_container {
+width: 800px;
+height: 1582%;
+margin: 0px auto;
+position: absolute;
+left: 0px;
+top: 23px;
+border-radius: 12px;
+box-shadow: inset 0 0 10px silver;
+background: white;
+margin-bottom: 200px;
+padding: 30px;
+}
+
+.privacy_policy_container {
+width: 800px;
+height: 830%;
+margin: 0px auto;
+position: absolute;
+left: 0px;
+top: 23px;
+border-radius: 12px;
+box-shadow: inset 0 0 10px silver;
+background: white;
+margin-bottom: 200px;
+padding: 30px;
+}
+
+*/
+#admins h4, #members h4,  h4, #invite h4{
+  width:100%;
+}
+#user_search{
+  font-family: 'StyreneA-Regular', sans-serif;
+  font-size:16px;
+  display:block;
+  margin-left: auto;
+  margin-top: -10px;
+  margin-right: auto;
+  border-radius:3px;
+  background: rgba(255,255,255,.8);
+  box-shadow: inset 0 0 10px #D6D6D6;
+  border: 1px solid #CACACA;
+  height:25px;
+  width:85%;
+  padding-left:10px;
+  margin-bottom: 5px;
+}
+
+
+#group_boxes .user_row{
+  margin-top: 7px;
+  margin-left:4px;
+  position:relative;
+}
+#group_boxes{
+  position: absolute;
+  white-space: nowrap;
+}
+#group_boxes .delete_button{
+  display: inline-block;
+  margin-left: 6px;
+}
+#group_boxes .buttons .delete_button{
+  margin-right: auto;
+  margin-left: auto;
+  display:block;
+}
+#group_boxes .make-admin{
+  padding: 5px;
+  position: absolute;
+  right: 5px;
+  top:-3px;
+
+}
+#group_boxes .usertab{
+  top:-2px;
+
+}
+#group_boxes .scrollbox{
+  height:81%;
+
+}
+#group_boxes #invite .scrollbox{
+  height:73%;
+  margin-top: -5px;
+}
+#invite .user_row{
+  margin-left:10px;
+}
+#review_listing{
+  padding:5px;
+}
+
+#review_listing .review_date{
+  position:relative;
+  font-size:10px;
+  color:#949494;
+  margin-top:2px;
+}
+
+#review_listing .review_body{
+  margin-top:2px;
+}
+#addAnAlbum a {
+  text-decoration: none;
+  font-size: .9em;
+}
+
+#addAnAlbum img {
+  vertical-align: middle;
+}
+
+/*
+Albums
+  */
+
+.album_delete {
+  color: #ff0000;
+}
+.album_delete:hover {
+  cursor: pointer;
+}
+
+.album_edit:hover {
+  cursor: pointer;
+}
+
+.album_tracks_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  background: #eee;
+  padding-left:10px;
+  width: 270px;
+  border: 3px ridge #EAEAEA;
+  border-radius:10px;
+}
+
+.album_tracks_list li {
+  margin: 0 5px 5px 5px;
+  padding: 2px;
+  border: 1px solid gray;
+  width: 260px;
+  background: #ffefd5;
+  text-align: center;
+  cursor: move;
+}
+
+.album_tracks_td {
+  vertical-align: top;
+  width: 300px;
+}
+
+#question_table td {
+  padding-left: 0px;
+  padding-right:0px;
+}
+
+.songRow:nth-child(even), .myAccount_songRow:nth-child(even){
+  background:white;
+
+}
+.songRow:nth-child(odd), .myAccount_songRow:nth-child(odd){
+  background:rgba(224, 246, 255, .8);
+
+}
+
+
+#album_tab #empty_albums_dashboard {
+  top:132px;
+}
+
+#album_tab #songs .empty_media{
+  top: 143px;
+  left: -8px;
+}
+
+#album_tab .song_container .big-green {
+  width: 78px;
+  height: 26px;
+  padding: 3px;
+}
+.artist_agreement_list{
+  list-style-type:square;
+  position: relative;
+  left:20px;
+  line-height: 21px;
+
+}
+
+#downloads_page .inset_box {
+  margin-left: -31px;
+}
+div#download-type{
+  position: relative;
+  min-width: 260px;
+  padding-bottom: 30px;
+}
+div#download-type .dropdown-widget-container{
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+div.my-pages {}
+div.my-pages ul {
+  width 100%;
+}
+div.my-pages ul li:first-child {
+  margin-top: 0px;
+}
+div.my-pages ul li {
+  margin-top: 20px;
+  height: 138px;
+  border-bottom: 1px solid #333;
+}
+div.my-pages ul li div.profile_img {
+  float: left;
+}
+div.my-pages ul li div.profile_img img {
+  width: 124px;
+}
+div.my-pages ul li div.profile_name {
+  margin-top: 10px;
+  margin-left: 146px;
+}
+div.profile_name a:hover{
+  text-decoration: underline;
+}
+div.my-pages ul li div.profile_description {
+  margin-top: 30px;
+  margin-left: 146px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: grey;
+  overflow: hidden;
+}
+div.my-pages ul li div.profile_type {
+  margin-top: 48px;
+  margin-left: 100px;
+  margin-left: 146px;
+}
+.profile_buttons {
+  float: right;
+  position: relative;
+  top: 0;
+  height: 0px;
+  width: 118px;
+  width: 100%;
+  text-align: right;
+}
+.profile_buttons button {
+  font-size: 12px;
+  padding: 4px;
+  margin: 0px;
+  height: 30px;
+}
+div#select-acc-actions {
+  display: block;
+  clear: both;
+}
+div#select-acc-type {
+  display: block;
+}
+table#page-profile-name{
+  height: 75px;
+  width: 100%;
+  border-bottom: 1px solid #333;
+}
+table#page-profile-name td.page-profile-btn{
+  text-align: right;
+}
+
+button.arrow-up, div.button.arrow-up {
+  display: inline !important;
+  width: 13px;
+  height: 13px;
+  background-color: transparent;
+  background-size: 13px;
+  background-repeat: no-repeat;
+  border: none;
+  background-image: url("/public/images/arrow_up.svg");
+  background-position: bottom;
+}
+button.arrow-down, div.button.arrow-down {
+  display: inline !important;
+  width: 13px;
+  height: 13px;
+  background-color: transparent;
+  background-size: 13px;
+  background-repeat: no-repeat;
+  border: none;
+  background-image: url("/public/images/arrow_down.svg");
+  background-position: bottom;
+}

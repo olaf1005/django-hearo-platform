@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="85px" viewBox="0 0 512 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <text id="text-1" font-family="StyreneA-Light, Styrene A" font-size="100" font-weight="300" fill="#FF0057">
+            <tspan x="92" y="76">tune</tspan>
+            <tspan x="329.4" y="76" font-family="StyreneA-Medium, Styrene A" font-weight="400">.fm</tspan>
+        </text>
+        <filter x="-1.8%" y="-7.5%" width="103.6%" height="115.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-14.6%" y="-14.6%" width="129.2%" height="129.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo" transform="translate(-62.000000, -6.000000)" fill="#FF0057">
+            <g id="Group" transform="translate(67.000000, 9.000000)">
+                <g id="tune.fm" fill-opacity="1">
+                    <use filter="url(#filter-2)" xlink:href="#text-1"></use>
+                    <use xlink:href="#text-1"></use>
+                </g>
+                <g id="hearo-token" filter="url(#filter-3)" transform="translate(0.000000, 4.000000)" fill-rule="nonzero">
+                    <path d="M36,72 C16.117749,72 0,55.882251 0,36 C0,16.117749 16.117749,0 36,0 C55.882251,0 72,16.117749 72,36 C72,55.882251 55.882251,72 36,72 Z M60.8021052,36.3987693 C60.8021052,22.0430769 49.6610526,10.3458462 35.8673684,10.3458462 C22.0736842,10.3458462 10.9326316,22.0430769 10.9326316,36.3987693 C10.9326316,46.2350769 16.2378948,54.8750769 24.0631579,59.2615385 C26.0526316,60.7236923 28.3073684,61.2553846 30.0315789,60.4578462 C33.2147368,58.9956923 33.7452632,53.6787693 31.3578948,48.8935385 C28.9705263,43.9753846 24.5936842,41.3169231 21.4105263,42.7790769 C20.7473684,43.1778462 20.0842105,43.7095385 19.6863158,44.3741538 C18.4926316,42.3803077 17.8294737,40.1206154 17.8294737,37.5950769 C17.8294737,29.088 25.92,22.3089231 35.8673684,22.3089231 C45.8147368,22.3089231 53.9052632,29.2209231 53.9052632,37.5950769 C53.9052632,40.1206154 53.1094737,42.5132307 51.9157895,44.64 C51.3852632,43.7095385 50.7221052,43.0449231 49.9263158,42.6461538 C46.7431579,41.184 42.3663158,43.9753846 40.1115789,48.8935385 C37.8568421,53.8116923 38.52,58.9956923 41.7031579,60.4578462 C43.2947368,61.2553846 45.2842105,60.8566154 47.1410526,59.5273846 C55.2315789,55.2738462 60.8021052,46.5009231 60.8021052,36.3987693 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

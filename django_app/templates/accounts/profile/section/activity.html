@@ -1,0 +1,50 @@
+{% load elements mathfilters %}
+<div id="secondary-content">
+    <div id="updates-stream-container">
+        {% if own %}
+        <div id="new-update-box">
+            <div class="activity-grid-container">
+                <div class="activity-input">
+                    <textarea type="text" placeholder="Post an update" class="standard small" id="compose-status"></textarea>
+                </div>
+                <div class="activity-action">
+                    <button class="blue" id="post-status">Post</button>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        {% comment %} <div id="new-update-box">
+            <div class="activity-grid-container">
+                <div class="activity-input">
+                    <textarea type="text" placeholder="Post a comment" class="standard small" id="compose-status"></textarea>
+                </div>
+                <div class="activity-action">
+                    <button class="blue" id="post-status">Post</button>
+                </div>
+            </div>
+        </div> {% endcomment %}
+        {% endif %}
+        <div class="scrollbar" id="scrollbar-screen-updates">
+            <div data-keyword="{{ profile.keyword }}" id="updates-stream-content">
+                {% for feed in user_feed %}
+                {% feedpost feed view %}
+                {% empty %}
+                <div class="empty">
+                    <div class="msg">
+                        {% if own %}
+                        <p>You haven't written any updates yet!</p>
+                        <p>Write an update for your fans.</p>
+                        {% else %}
+                        <p>{{ profile.first_name }} hasn't written any updates yet.</p>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+                <div style="margin: 15px; display: none;" class="loader">
+                    <div style="margin: auto;" class="medium spinner">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

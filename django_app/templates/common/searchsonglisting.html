@@ -1,0 +1,16 @@
+
+{% load elements %}
+<tr class="song_listing" id="media_{{ media.id }}">
+  <td width="40">
+    {% if type == "song" %}
+    <a class="ajax playSong" songid="{{media.id}}">
+    {% else %}
+    <a class="ajax playAlbum {{media.id}} ">
+    {% endif %}
+      <div class="song_play_button"></div>
+    </a>
+  </td>
+  <td class="title" width="300">
+    <span class="title" {% if profile %}style="position: relative; top:5px"{% endif %}>{{ media.title }}</span>
+  </td>
+</tr>

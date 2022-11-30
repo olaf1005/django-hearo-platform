@@ -1,0 +1,95 @@
+@startuml
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+' title Rethink DB models
+
+class process {
+    + created: timestamp
+    + length: int
+    + prikey: int
+    + pubkey: varchar
+    + publicurl: varchar
+    + songid: PK
+    + streamurl: varchar
+    + time: time
+}
+
+process-->songs
+in_process-->songs
+failures-->songs
+changes-->songs
+image_changes-->images
+downloads_lock-->downloads
+
+class songs {
+    + created: timestamp
+    + length: int
+    + prikey: varchar
+    + pubkey: varchar
+    + publicurl: varchar
+    + songid: PK
+    + streamurl: varchar
+    + time: float
+}
+
+class in_process {
+    + songid: PK
+}
+
+class failures {
+    + key: PK
+    + message: varchar
+    + songid: int
+    + time: float
+}
+
+class changes {
+    + songid: PK
+}
+
+class downloads {
+    + canceled: bool
+    + created: timestamp
+    + downloadid: PK
+    + errorstring: varchar
+    + finished: bool
+    + key: varchar
+    + marked: bool
+    + package: varchar
+    + status: varchar
+    + url: varchar
+    + user: int
+    + username: varchar
+}
+
+class downloads_lock {
+    + downloadid: varchar
+}
+
+class images {
+    + imageid: PK
+    + deleted: bool
+    + images: varhcar
+    + marked: int
+    + original: varchar
+    + status: varchar
+    + target: varchar
+    + time_pro: float
+    + time_rea: float
+    + time_reg: float
+    + time_upl: float
+    + user: int
+}
+
+class image_changes {
+   + imageid: PK
+   + info: varchar
+   + status: int
+}
+
+
+@enduml

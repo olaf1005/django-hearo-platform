@@ -1,0 +1,97 @@
+{% extends email_from_template|default:"email_from_template/body.email" %}
+
+{% load context_helpers %}
+
+
+{% block body %}
+{% block html %}
+{% update_context_with_settings_export %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>{% block title %}News{% endblock %}</title>
+</head>
+<body style="margin: 0; padding: 20px 0; background: #ececec">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" background="white">
+    <tr>
+      <td style="padding: 10px 0 30px 0;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border: 1px solid #cccccc; border-collapse: collapse;">
+          <tr>
+            <td align="center" bgcolor="#252525" style="padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;">
+              <a href="{% if DEBUG %}http{% else %}https{% endif %}://{{ BASE_URL }}" target="_blank">
+                <img src="{% if DEBUG %}http{% else %}https{% endif %}://{{ BASE_URL }}/public/images/email/v2/logo.png" />
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td style="color: #153643; font-family: Arial, sans-serif; font-size: 24px;">
+                    <b>{% block subject %}{% endblock %}</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
+                    {% block html_body %}
+                    {% endblock %}
+                    <p>
+                      Best,
+                      <br>
+                      <a href="{% if DEBUG %}http{% else %}https{% endif %}://{{ BASE_URL }}/profile/TheHearoTeam?ref=em1">The Hearo Team</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td bgcolor="#cfcfcf" style="padding: 30px 30px 30px 30px;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td style="color: rgba(0,0,0,0.8); font-family: Arial, sans-serif; font-size: 18px;" width="75%">
+                    Follow {{ BASE_URL }} to stay up to date!
+                  </td>
+                  <td align="right" width="25%">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
+                          <a href="http://www.twitter.com/{{ TWITTER_HANDLE }}" style="color: #ffffff;">
+                            <img src="http://{{ BASE_URL }}/public/images/email/v2/twitter.png" alt="Facebook" width="50" height="50" style="display: block;" border="0" />
+                          </a>
+                        </td>
+                        <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
+                        <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
+                          <a href="http://www.facebook.com/{{ FACEBOOK_HANDLE }}" style="color: #ffffff;">
+                            <img src="{% if DEBUG %}http{% else %}https{% endif %}://{{ BASE_URL }}/public/images/email/v2/facebook.png" alt="Facebook" width="50" height="50" style="display: block;" border="0" />
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr height="50" valign="bottom">
+                  <td style="color: rgba(0,0,0,0.7); font-family: Arial, sans-serif; font-size: 14px;" width="75%">
+                    <span style="opacity: 0.7">
+                      {% block footer %}
+                      <a href="{% if DEBUG %}http{% else %}https{% endif %}://{{ BASE_URL }}/my-account/privacy/?unsubscribe_all=true">
+                      <font color="black">Unsubscribe</font></a> from {{ BASE_URL }} notifications
+                      {% endblock %}
+                    </span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+
+{% endblock %}
+{% endblock %}

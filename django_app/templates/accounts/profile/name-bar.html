@@ -1,0 +1,41 @@
+{% load elements mathfilters %}
+<div class="name-bar">
+    <h1 font="{{ profile.banner.font }}" id="banner-profile-name">{% if profile.banner.display_title %}{{ profile.name }}{% endif %}</h1>
+    {% if profile.is_orgo and profile.organization.is_band and profile.banner.display_genre %}
+    <h2 id="banner-genre-instrument">{{ profile.get_genre }}</h2>
+    {% elif profile.is_person and profile.person.is_musician and profile.banner.display_instrument %}
+    <h2 id="banner-genre-instrument">{{ profile.person.musician.get_instrument }}</h2>
+    {% endif %}
+
+    {% if profile.banner.display_location %}
+    <h2 id="banner-location">{{ profile.location.most_exact }}</h2>
+    {% endif %}
+
+    <div id="profile-buttons">
+        {% if profile != view %}
+        {% fanbutton profile view %}{% reviewbutton profile view %}{% tipbutton profile %}{% fanmailbutton profile %}
+        {% else %}
+        {% reviewbutton profile view %}
+        {% endif %}
+
+        {% if profile.profile_private %}
+        <div>
+            <p>Your profile is currently private <a href="/my-account/privacy/">update your privacy settings</a>.</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <a href="/profile/{{ profile.keyword }}/gallery/" refresh-scope="#main-profile-content[keyword='{{ profile.keyword }}']" artist-dating="true">
+        <div id="main-picture">
+            {% if profile.primary_photo != None %}
+            {% if profile.is_primary_landscape %}
+            <img src="/{{profile.primary_photo.profile_file}}" height="150px" alt="{{ profile.name }}" />
+            {% else %}
+            <img src="/{{profile.primary_photo.profile_file}}" width="150px" alt="{{ profile.name }}" />
+            {% endif %}
+            {% else %}
+            <img src="/public/images/default-music-listing.svg" width="150px" class="noclick" />
+            {% endif %}
+        </div>
+    </a>
+</div>

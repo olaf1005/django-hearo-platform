@@ -1,0 +1,84 @@
+@import "helpers.less";
+
+// these are used for input validation
+
+.input-error {
+  .input-error-message {
+    display: block;
+  }
+}
+
+.input-error-message {
+  display: none;
+  color: red;
+  padding: 20px;
+  font-size: 0.8em;
+}
+
+// mostly these are used in the 404 and 500 pages
+
+#error-message {
+  margin: 0px auto;
+  margin-top: 200px;
+  text-align: center;
+  text-shadow: @white-undershadow;
+  font-size: 18px;
+  .roboto400;
+  line-height: 1.5;
+  padding: 30px;
+  .dark-inset;
+  width: 50%;
+  color: @black80;
+
+  h1 {
+    .roboto600;
+    color: black;
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: black;
+    .roboto600;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#error-info-message {
+  margin: 0px auto;
+  margin-top: 20px;
+  text-align: center;
+  text-shadow: @white-undershadow;
+  font-size: 18px;
+  .roboto400;
+  line-height: 1.5;
+  padding: 30px;
+  .dark-inset;
+  width: 50%;
+  color: @black80;
+
+  h1 {
+    .roboto600;
+    color: black;
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: black;
+    .roboto600;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  span {
+    color: #ffffff;
+  }
+  background: rgba(255, 255, 255, 0.3);
+}

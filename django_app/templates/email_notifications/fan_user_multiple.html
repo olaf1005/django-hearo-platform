@@ -1,0 +1,20 @@
+{% extends "email_notifications/base_email.html" %}
+
+{% block subject %}
+You have a new fan!
+{% endblock %}
+
+{% block html_body %}
+
+  <p>
+    Hi {{profile.short_name}},
+    <br><br>
+    The following users became your fan:
+    <ul>
+      {% for feed in feeds %}
+        <li><a href="https://{{ BASE_URL }}/profile/{{feed.item.faner.keyword}}">{{feed.item.faner.name}}</a></li>
+      {% endfor %}
+    </ul>
+  </p>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+<div id="filters-mask">
+    <div id="filters">
+        <div id="filters-content">
+            <div id="music-filters">
+                <div class="dropdown-widget-container">
+                    <ul class="dropdown-widget" id="ranking-dropdown">
+                        <li val="hottest" class="dropdown-widget__option dropdown-widget__option--selected">Hottest</li>
+                        <li val="newest" class="dropdown-widget__option">Newest</li>
+                    </ul>
+                </div>
+                <div class="dropdown-widget-container">
+                    <ul class="dropdown-widget" id="time-dropdown">
+                        <li val="today" class="dropdown-widget__option">Today</li>
+                        <li val="week" class="dropdown-widget__option">This week</li>
+                        <li val="month" class="dropdown-widget__option dropdown-widget__option--selected">This month</li>
+                        <li val="year" class="dropdown-widget__option">This year</li>
+                        <li val="all" class="dropdown-widget__option">All time</li>
+                    </ul>
+                </div>
+                <ul id="noun-filters">
+                    <li data-val="artists" class="off">Artists <i class="material-icons-round" style="font-size: 15px;vertical-align: middle;">person</i></li>
+                    <li data-val="albums" class="off">Albums <i class="material-icons-round" style="font-size: 15px;vertical-align: middle;">album</i></li>
+                    <li data-val="songs" class="off">Songs <i class="material-icons-round" style="font-size: 15px;vertical-align: middle;">music_note</i></li>
+                    <li data-val="map" class="off">Map <i class="material-icons-round" style="font-size: 15px;vertical-align: middle;">public</i></li>
+                </ul>
+            </div>
+            <content>
+                <div id="search-filters">
+                    <div class="search-filter">
+                        <input type="text" placeholder="location" class="standard small" id="search-location" />
+                    </div>
+                    <div class="search-filter">
+                        <input type="text" placeholder="genre" class="standard small" id="search-genre" />
+                    </div>
+                    <div class="search-filter">
+                        <input type="text" placeholder="instruments" class="standard small" id="search-instrument" />
+                    </div>
+                    <button id="playlist-add-all" title="Add all to playlist" class="material-icons-round icon-image-preview" onclick="hearo.listings.playall()">radio</button>
+                </div>
+            </content>
+            <div id="noun-counts">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1137 @@
+{% extends base %}
+
+{% block content %}
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:"Noto Sans Symbols";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-alt:Calibri;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Comment Text Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+span.MsoCommentReference
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+span.CommentTextChar
+	{mso-style-name:"Comment Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Comment Text";
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+@page WordSection1
+	{size:595.0pt 842.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:959918428;
+	mso-list-template-ids:-2007720518;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:●;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:27.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:▪;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:90.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:●;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:126.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:162.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:▪;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:198.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:●;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:234.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:270.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:▪;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:306.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l1
+	{mso-list-id:1060714943;
+	mso-list-template-ids:1097529554;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:●;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:27.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:▪;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:90.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:●;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:126.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:162.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:▪;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:198.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:●;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:234.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:270.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:▪;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:306.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l2
+	{mso-list-id:1213419590;
+	mso-list-template-ids:-2120289482;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:●;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:45.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:▪;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:●;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:▪;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:●;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:▪;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l3
+	{mso-list-id:1385905506;
+	mso-list-template-ids:379993710;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:●;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:27.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@list l3:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:▪;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:90.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l3:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:●;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:126.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l3:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:162.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@list l3:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:▪;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:198.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l3:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:●;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:234.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+@list l3:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:270.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@list l3:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:▪;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:306.0pt;
+	text-indent:-18.0pt;
+	mso-ascii-font-family:"Noto Sans Symbols";
+	mso-fareast-font-family:"Noto Sans Symbols";
+	mso-hansi-font-family:"Noto Sans Symbols";
+	mso-bidi-font-family:"Noto Sans Symbols";}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<div class ="privacy_policy_container">
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:20.0pt'>TUNE.FM PRIVACY POLICY<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:11.0pt'>Last Updated: 16 Sept 2019<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'>This Privacy Policy explains how Hearo.fm, Inc. [and
+its subsidiaries and affiliated companies] (“<b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'>Hearo</i></b>”, “<b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'>we</i></b>”
+or “<b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'>us</i></b>”)<i
+style='mso-bidi-font-style:normal'> </i>collects, uses, and discloses information
+about you when you access or use our website</span><span lang=EN-US> </span><span
+lang=EN-US style='font-size:11.0pt'>located at www.tune.fm (the “Site”), and
+the tune.fm music marketplace service and other online products and services
+that link to this Privacy Policy (collectively with the Site, the “<b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'>Service</i></b>”).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'>We may change this Privacy Policy from time to
+time.<span style='mso-spacerun:yes'>  </span>If we make changes, we will notify
+you by revising the date at the top of the policy and, in some cases, we may
+provide you with additional notice (such as adding a statement to our website
+homepage or sending you a notification).<span style='mso-spacerun:yes'>
+</span>We encourage you to review the Privacy Policy whenever you access the
+Service or otherwise interact with us to stay informed about our information
+practices and the choices available to you.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:18.0pt'>CONTENTS<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US><a href="#gjdgxs"><span
+style='font-size:11.0pt;color:#50A9CA;text-decoration:none;text-underline:none'>Collection
+of Information</span></a></span><span lang=EN-US style='font-size:11.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US><a
+href="#30j0zll"><span style='font-size:11.0pt;color:#50A9CA;text-decoration:
+none;text-underline:none'>Use of Information</span></a></span><span lang=EN-US
+style='font-size:11.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US><a
+href="#1fob9te"><span style='font-size:11.0pt;color:#50A9CA;text-decoration:
+none;text-underline:none'>Sharing of Information</span></a></span><span
+lang=EN-US style='font-size:11.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US><a
+href="#3znysh7"><span style='font-size:11.0pt;color:#50A9CA;text-decoration:
+none;text-underline:none'>Social Sharing Features</span></a></span><span
+lang=EN-US style='font-size:11.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US><a
+href="#2et92p0"><span style='font-size:11.0pt;color:#50A9CA;text-decoration:
+none;text-underline:none'>Advertising and Analytics Services Provided by Others</span></a></span><span
+lang=EN-US style='font-size:11.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US><a
+href="#3dy6vkm"><span style='font-size:11.0pt;color:#50A9CA;text-decoration:
+none;text-underline:none'>Transfer of Information to the U.S. and Other
+Countries</span></a></span><span lang=EN-US style='font-size:11.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US><a
+href="#1t3h5sf"><span style='font-size:11.0pt;color:#50A9CA;text-decoration:
+none;text-underline:none'>Your Choices</span></a></span><span lang=EN-US
+style='font-size:11.0pt;color:#50A9CA'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US><a
+href="#17dp8vu"><span style='font-size:11.0pt;color:#50A9CA;text-decoration:
+none;text-underline:none'>Contact Us</span></a></span><span lang=EN-US
+style='font-size:11.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><a name=gjdgxs></a><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:18.0pt'>COLLECTION
+OF INFORMATION<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:14.0pt'>Information You Provide to Us<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:0cm'><span lang=EN-US style='font-size:11.0pt'>We collect
+information you provide directly to us.<span style='mso-spacerun:yes'>
+</span>For example, we collect information when you create an account,
+participate in any interactive features of the Service, fill out a form,
+participate in a contest or promotion, make a purchase, upload your music,
+apply for a job, communicate with us via third party social media sites,
+request customer support, send messages or feedback, or otherwise communicate
+with us.<span style='mso-spacerun:yes'>  </span>The types of information we may
+collect include your name, email address, password, and photograph. If you
+choose to upload musical content for the sale on the Service and enter into an
+Artist Agreement, then, in addition to your name, email address and password we
+(or our designated third-party service providers) will also collect your
+mailing address, credit card information, payment information, billing address
+and other information from you. If you choose to purchase JAM Tokens, we (or
+our designated third-party service providers) will collect payment information
+from you and any other information you choose to provide. If you participate in
+any interactive features of the Service, we may collect any information you
+provide in connection with such participation.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:0cm'><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Other Information We Collect When You Use our Service</span></b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:11.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:0cm'><span lang=EN-US style='font-size:11.0pt'>When you access or
+use our Services, we automatically collect information about you, including:<o:p></o:p></span></p>
+
+<p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+6.0pt;margin-left:18.0pt;mso-add-space:auto;text-indent:-18.0pt;mso-list:l2 level1 lfo4'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:11.0pt'>Usage Information:</span></b><span
+lang=EN-US style='font-size:11.0pt'> We collect information about your use of
+the Service, such as playlists you create, content you download, and artists
+you choose to become a fan of.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:17.8pt;text-indent:-18.0pt;mso-list:l2 level1 lfo4'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:11.0pt'>Transactional Information:</span></b><span
+lang=EN-US style='font-size:11.0pt'> When you make a purchase, we collect
+information about the transaction, such as content purchase details, purchase
+price, and date and location of the transaction.<span
+style='mso-spacerun:yes'>  </span>When you upload music, images, or other
+content we may also collect metadata that is contained therein. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:17.8pt;text-indent:-18.0pt;mso-list:l2 level1 lfo4'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:11.0pt'>Log Information:</span></b><span
+lang=EN-US style='font-size:11.0pt'><span style='mso-spacerun:yes'>  </span>We
+collect information related to your access to and use of the Service, including
+the type of browser you use, app version, access times, pages viewed, your IP
+address, and the page you visited before navigating to our Service.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:17.8pt;text-indent:-18.0pt;mso-list:l2 level1 lfo4'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:11.0pt'>Device Information:<span
+style='mso-spacerun:yes'>  </span></span></b><span lang=EN-US style='font-size:
+11.0pt'>We collect information about the computer or device you use to access
+our Service, including the hardware model, operating system and version, and unique
+device identifiers.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:17.8pt;text-indent:-18.0pt;mso-list:l2 level1 lfo4'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:11.0pt'>Information Collected by Cookies and
+Similar Tracking Technologies:</span></b><span lang=EN-US style='font-size:
+11.0pt'><span style='mso-spacerun:yes'>  </span>We (and our service providers)
+use different technologies to collect information, including cookies and web
+beacons.<span style='mso-spacerun:yes'>  </span>Cookies are small data files
+stored on your hard drive or in device memory that help us improve our Services
+and your experience, see which areas and features of our Service are popular,
+and count visits.<span style='mso-spacerun:yes'>  </span>Web beacons (also
+known as “pixel tags” or “clear GIFs”) are electronic images that may be used
+in our Services or emails and help deliver cookies, count visits, and understand
+usage and campaign effectiveness.<span style='mso-spacerun:yes'>  </span>For
+more information about cookies and how to disable them, see </span><span
+lang=EN-US><a href="#1t3h5sf"><span style='color:#50A9CA;text-decoration:none;
+text-underline:none'>Your Choices</span></a></span><span lang=EN-US
+style='font-size:11.0pt'> below.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:0cm'><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Information We Collect from Other Sources</span></b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:11.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'>We may also obtain information about you from other
+sources.<span style='mso-spacerun:yes'>  </span>For example, we may collect
+information about you from third parties, including but not limited to identity
+verification services. Additionally, if you create or log into your account
+through a social media site, we will have access to certain information from
+that site, such as your name, account information, and friends lists, in
+accordance with the authorization procedures determined by such social media
+site.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><a name=30j0zll></a><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:18.0pt'>USE OF INFORMATION<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.0pt'>We use the
+information we collect to administer your account and to facilitate your use of
+the Service.<span style='mso-spacerun:yes'>  </span>We also use the information
+we collect to:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:12.65pt;text-indent:-12.65pt;mso-list:l3 level1 lfo2'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:11.0pt'>Provide,
+maintain and improve our products and services;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:12.65pt;text-indent:-12.65pt;mso-list:l3 level1 lfo2'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:11.0pt'>Send
+you technical notices, updates, security alerts, and support and administrative
+messages and to respond to your comments, questions, and customer service
+requests;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:12.65pt;text-indent:-12.65pt;mso-list:l3 level1 lfo2'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:11.0pt'>Communicate
+with you about products, services, and events offered by Hearo and others, and
+provide news and information we think will be of interest to you (see </span><span
+lang=EN-US><a href="#1t3h5sf"><span style='font-size:11.0pt;color:#50A9CA;
+text-decoration:none;text-underline:none'>Your Choices</span></a></span><span
+lang=EN-US style='font-size:11.0pt'> below for information about how to opt out
+of these communications at any time);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:12.65pt;text-indent:-12.65pt;mso-list:l3 level1 lfo2'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:11.0pt'>Monitor
+and analyze trends, usage, and activities in connection with our Service; <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:12.65pt;text-indent:-12.65pt;mso-list:l3 level1 lfo2'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:11.0pt'>Detect,
+investigate and prevent fraudulent transactions and other illegal activities
+and protect the rights and property of Hearo and others; and<o:p></o:p></span></p>
+
+<div style='mso-element:para-border-div;border:none black 1.0pt;mso-border-alt:
+none black 0cm;padding:0cm 0cm 0cm 0cm'>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:12.65pt;text-indent:-12.65pt;mso-list:l1 level1 lfo1;border:none;
+mso-border-alt:none black 0cm;padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm;
+mso-border-between:0cm none black;mso-padding-between:0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:11.0pt'>Facilitate
+contests, sweepstakes, and promotions and process and deliver entries and
+rewards.<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><a name=1fob9te></a><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:18.0pt'>SHARING
+OF INFORMATION<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.0pt'>We will not share
+data except in the following circumstances:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:12.65pt;text-indent:-12.65pt;mso-list:l0 level1 lfo3'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:11.0pt'>With
+vendors, service providers, and consultants that perform services for us,
+including database hosting and payment processing;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:12.65pt;text-indent:-12.65pt;mso-list:l0 level1 lfo3'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:11.0pt'>In
+response to a request for information if we believe disclosure is in accordance
+with, or required by, any applicable law or legal process, including lawful
+requests by public authorities to meet national security or law enforcement
+requirements;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:12.65pt;text-indent:-12.65pt;mso-list:l0 level1 lfo3'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:11.0pt'>If we
+believe your actions are inconsistent with our user agreements or policies, if
+we believe you have violated the law, or to protect the rights, property, and
+safety of Hearo or others;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:12.65pt;text-indent:-12.65pt;mso-list:l0 level1 lfo3'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:11.0pt'>In
+connection with, or during negotiations of, any merger, sale of company assets,
+financing or acquisition of all or a portion of our business by another
+company; <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:12.65pt;text-indent:-12.65pt;mso-list:l0 level1 lfo3'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:11.0pt'>Between
+and among Hearo and our current and future parents, affiliates, subsidiaries,
+and other companies under common control and ownership; and<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:12.65pt;text-indent:-12.65pt;mso-list:l0 level1 lfo3'><![if !supportLists]><span
+lang=EN-US style='font-size:11.0pt;font-family:"Noto Sans Symbols";mso-fareast-font-family:
+"Noto Sans Symbols";mso-bidi-font-family:"Noto Sans Symbols"'><span
+style='mso-list:Ignore'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:11.0pt'>With
+your consent or at your direction.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'>If you participate in interactive areas of the
+Service, such as becoming a fan of an artist, writing a review, or messaging
+other users, information you provide in connection therewith will be shared
+with other users of the Service;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'>We may also share aggregated or de-identified
+information that cannot reasonably be used </span><span lang=EN-US>by those
+third parties </span><span lang=EN-US style='font-size:11.0pt'>to identify you.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><a name=3znysh7></a><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:18.0pt'>SOCIAL
+SHARING FEATURES</span></b><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:14.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'>The Services may offer social sharing features and
+other integrated tools (such as the Facebook “Like” button), which let you
+share actions you take on our Services with other media, and vice versa.<span
+style='mso-spacerun:yes'>  </span>Your use of such features enables the sharing
+of information with your friends or the public, depending on the settings you
+establish with the entity that provides the social sharing feature.<span
+style='mso-spacerun:yes'>  </span>For more information about the purpose and
+scope of data collection and processing in connection with social sharing
+features, please visit the privacy policies of the entities that provide these
+features.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><a name=2et92p0></a><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:18.0pt'>ADVERTISING AND ANALYTICS SERVICES PROVIDED
+BY OTHERS<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'>We may allow others to provide analytics services and
+serve advertisements on our behalf across the web.<span
+style='mso-spacerun:yes'>  </span>These entities may use cookies, web beacons,
+device identifiers and other technologies to collect information about your use
+of the Services and other websites and applications, including your IP address,
+web browser, pages viewed, time spent on pages, links clicked, and conversion
+information.<span style='mso-spacerun:yes'>  </span>This information may be
+used by Hearo<i style='mso-bidi-font-style:normal'> </i>and others to, among
+other things, analyze and track data, determine the popularity of certain
+content, deliver advertising and content targeted to your interests on our
+Services and other websites, and better understand your online activity.<span
+style='mso-spacerun:yes'>  </span>For more information about interest-based
+ads, or to opt out of having your web browsing information used for behavioral
+advertising purposes, please visit </span><span lang=EN-US><a
+href="http://www.aboutads.info/choices"><span style='font-size:11.0pt;
+color:#50A9CA;text-decoration:none;text-underline:none'>www.aboutads.info/choices</span></a></span><span
+lang=EN-US style='font-size:11.0pt'>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><a name=tyjcwt></a><span
+lang=EN-US style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><a name=3dy6vkm></a><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:18.0pt'>TRANSFER
+OF INFORMATION TO THE U.S. AND OTHER COUNTRIES<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'>Hearo is based in the United States and we process and
+store information in the U.S. [and other countries].<i style='mso-bidi-font-style:
+normal'> </i><span style='mso-spacerun:yes'> </span>Therefore, we and our
+service providers may transfer your information to, or store or access it in,
+jurisdictions that may not provide equivalent levels of data protection as your
+home jurisdiction. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><a name=1t3h5sf></a><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:18.0pt'>YOUR
+CHOICES<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:0cm'><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Account Information<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:0cm'><span lang=EN-US style='font-size:11.0pt'>You may update certain
+account information you provide to us at any time by logging into your account
+or by emailing us at </span><span lang=EN-US><a href="mailto:feedback@hearo.fm"><b
+style='mso-bidi-font-weight:normal'><span style='font-size:11.0pt'>feedback@hearo.fm</span></b></a></span><i
+style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:11.0pt'>.</span></i><span
+lang=EN-US style='font-size:11.0pt'><span style='mso-spacerun:yes'>  </span>If
+you wish to delete or deactivate]your account, please email us at </span><span
+lang=EN-US><a href="mailto:feedback@hearo.fm"><b style='mso-bidi-font-weight:
+normal'><span style='font-size:11.0pt'>feedback@hearo.fm</span></b></a></span><span
+lang=EN-US style='font-size:11.0pt'>, but note that we may retain certain
+information as required by law or for legitimate business purposes.<span
+style='mso-spacerun:yes'>  </span>We may also retain cached or archived copies
+of information about you for a certain period of time.<b style='mso-bidi-font-weight:
+normal'><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:0cm'><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Cookies<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:0cm'><span lang=EN-US style='font-size:11.0pt'>Most web browsers
+are set to accept cookies by default.<span style='mso-spacerun:yes'>  </span>If
+you prefer, you can usually choose to set your browser to remove or reject
+browser cookies.<span style='mso-spacerun:yes'>  </span><i style='mso-bidi-font-style:
+normal'><span style='mso-spacerun:yes'>  </span></i>Please note that if you
+choose to remove or reject cookies, this could affect the availability and functionality
+of our Services.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:0cm'><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Promotional Communications<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:0cm'><span lang=EN-US style='font-size:11.0pt'>You may opt out of
+receiving promotional emails from Hearo by following the instructions in those
+emails.<span style='mso-spacerun:yes'>  </span>If you opt out, we may still
+send you non-promotional emails, such as those about your account or our
+ongoing business relations.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><a name=4d34og8></a><a
+name=2s8eyo1></a><span lang=EN-US style='font-size:11.0pt;color:#50A9CA'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><a name=17dp8vu></a><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:18.0pt;
+color:black'>CONTACT US<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:11.0pt;color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:11.0pt'>If you have any questions about this Privacy Policy,
+please contact us at <a name="_BPDCD_25"></a><a href="mailto:feedback@hearo.fm"><span
+style='mso-bookmark:_BPDCD_25'><b style='mso-bidi-font-weight:normal'>feedback@hearo.fm</b></span><span
+style='mso-bookmark:_BPDCD_25'></span></a><span style='mso-bookmark:_BPDCD_25'></span>.<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=624
+ style='margin-left:5.4pt;border-collapse:collapse;mso-table-layout-alt:fixed;
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=173 valign=top style='width:129.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm'><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='font-size:14.0pt'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=451 valign=top style='width:338.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <div style='mso-element:para-border-div;border:none black 1.0pt;mso-border-alt:
+  none black 0cm;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;border:none;mso-border-alt:
+  none black 0cm;padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm;mso-border-between:
+  0cm none black;mso-padding-between:0cm'><span lang=EN-US style='font-size:
+  11.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+  </div>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+<br><br><br><br><br><br>
+</div>
+{% endblock %}
+

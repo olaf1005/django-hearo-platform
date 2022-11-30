@@ -1,0 +1,148 @@
+/* Rewrite of myAccount.css in LESS */
+/* After this is done I'm tearing that file apart */
+@import "helpers.less";
+
+#content.dashboard.profile {
+  button.delete {
+    height: 28px;
+    vertical-align: bottom;
+  }
+
+  #myacct-content {
+
+    div.cols {
+
+      > div {
+        margin: 7px 0px;
+
+        > div {
+          width: 430px;
+          margin: 0px auto;
+        }
+
+        &#setlocation.short {
+          > div {
+            width: 289px;
+            margin: 0px auto;
+          }
+        }
+      }
+
+      div.musician_question_text {
+        div {
+          margin: 3px 0px;
+        }
+
+        > div {
+          margin: 0px auto;
+          width: 510px;
+
+          > div {
+            div:first-child {
+              width: 42%;
+            }
+            div:last-child {
+              width: 54%;
+            }
+          }
+        }
+      }
+    }
+
+    textarea {
+      height: 120px;
+      line-height: 1.2;
+      background: none;
+    }
+
+    input[type=text], textarea {
+      width: 400px;
+      background: none;
+    }
+
+
+    #id_city.short {
+      width: 289px;
+    }
+  }
+}
+
+/* Also used in social join */
+#account-selector{
+  position: absolute;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  left: 15%;
+  z-index: 2;
+  > span{
+    vertical-align: top;
+    position: relative;
+    top: 16px;
+  }
+  span{
+    font-family: 'StyreneA-Regular', sans-serif;
+    font-size: 18px;
+  }
+  #account-list{
+      font-family: 'StyreneA-Regular', sans-serif;
+      font-size: 16px;
+      text-align: center;
+      background: #FFF;
+      margin: 0;
+      padding: 15px 0;
+      position: relative;
+      outline: 0;
+      overflow: visible;
+      border: 1px solid #CCC;
+      width: 200px;
+      margin-left: 15px;
+      display: inline-block;
+      cursor: pointer;
+      .border-radius();
+      .triangle{
+          position: absolute;
+          right: 10px;
+          top: 21px;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 7px solid rgb(73, 73, 73);
+      }
+  }
+  ul{
+    padding: 0;
+    margin: 0;
+    display: none;
+    background: #FFFFFF;
+    top: 100%;
+    right: 0;
+    z-index: 10000000000;
+    width: 100%;
+    padding-top: 11px;
+    li{
+      list-style: none;
+      color: #4E4B4B;
+      padding: 10px 0;
+      &:hover{
+        background: #EBE5E5;
+      }
+    }
+  }
+  &.open{
+      ul{
+          display: block;
+      }
+  }
+}
+
+@media (max-width:960px) {
+  div.cols.\32 > div {
+    width: 100% !important;
+  }
+  #myacct-content input[type=text],
+  #myacct-content textarea {
+    width: 75% !important;
+  }
+}

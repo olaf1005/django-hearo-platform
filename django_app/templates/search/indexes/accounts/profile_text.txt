@@ -1,0 +1,4 @@
+{{ object.name }}
+{{ object.keyword }}
+{{ object.short_name }}
+{{ object.biography }}

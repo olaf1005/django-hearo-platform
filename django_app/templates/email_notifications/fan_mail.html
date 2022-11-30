@@ -1,0 +1,24 @@
+{% extends "email_notifications/base_email.html" %}
+
+{% block subject %}
+You have a new message
+{% endblock %}
+
+{% block html_body %}
+
+  <p>
+    Hi {{profile.short_name}},
+    <br><br>
+    You have a new message
+    <a href="https://{{ BASE_URL }}/mail/view?messageid={{item.id}}">{{item.subject}}</a>
+    from
+    <a href="https://{{ BASE_URL }}/profile/{{from_profile.keyword}}">{{item.from_profile.name}}</a>:
+    <br><br>
+
+    "{{item.body}}"
+
+    <br><br>
+    <a href="https://{{ BASE_URL }}/mail/view?messageid={{item.id}}">Click here</a> to read the message.
+  </p>
+
+{% endblock %}

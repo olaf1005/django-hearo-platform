@@ -1,0 +1,18 @@
+{% extends "email_notifications/base_email.html" %}
+
+{% block subject %}
+Your Account at {{ BASE_URL }} has been Unlocked Successfully
+{% endblock %}
+
+{% block html_body %}
+
+<p>For security purposes, we have reset your
+password to: {{new_password }}</p>
+
+<p>
+The next time you login, you will be
+redirected to your settings where you can reset
+it.
+</p>
+
+{% endblock %}

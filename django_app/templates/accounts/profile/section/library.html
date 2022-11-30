@@ -1,0 +1,18 @@
+{% load elements mathfilters %}
+<ul class="blue dark" id="fand-content-tabs">
+    <li selected="{% if library_show == 'songs' %}true{% else %}false{% endif %}" opens="#fand-songs">songs</li>
+    <li selected="{% if library_show == 'albums' %}true{% else %}false{% endif %}" opens="#fand-albums">albums</li>
+    <li selected="{% if library_show == 'musicians' %}true{% else %}false{% endif %}" opens="#fand-musicians">artists</li>
+    <li selected="{% if library_show == 'bands' %}true{% else %}false{% endif %}" opens="#fand-bands">bands</li>
+    <li selected="{% if library_show == 'venues' %}true{% else %}false{% endif %}" opens="#fand-venues">venues</li>
+    <li selected="{% if library_show == 'fans' %}true{% else %}false{% endif %}" opens="#fand-fans">fans</li>
+</ul>
+<div style="height: {% if updatesHeightSetting == 32 and not own %}{{ 899|sub:updatesHeightSetting }}{% else %}{{ 868|sub:updatesHeightSetting }}{% endif %}px" class="scrollbar" id="scrollbar-screen-fand-content">
+    <div style="{% if library_show != 'songs' %}display: none;{% endif %}" id="fand-songs">{% for song in fandlib.songs %}  {% musiclisting song.faned_song view %}{% empty %}  {% empty_media_message "songs" profile.first_name own %}{% endfor %}</div>
+    <div style="{% if library_show != 'albums' %}display: none;{% endif %}" id="fand-albums">{% for album in fandlib.albums %}  {% albumlisting album.faned_album view 1 %}{% empty %}  {% empty_media_message "albums" profile.first_name own %}{% endfor %}</div>
+    <div style="{% if library_show != 'musicians' %}display: none;{% endif %}" id="fand-musicians">{% for musician in fandlib.musicians %}  {% musiclisting musician view %}{% empty %}  {% empty_media_message "musicians" profile.first_name own %}{% endfor %}</div>
+    <div style="{% if library_show != 'bands' %}display: none;{% endif %}" id="fand-bands">{% for band in fandlib.bands %}  {% musiclisting band.getProfile view %}{% empty %}  {% empty_media_message "bands" profile.first_name own %}{% endfor %}</div>
+    <div style="{% if library_show != 'venues' %}display: none;{% endif %}" id="fand-venues">{% for venue in fandlib.venues %}  {% musiclisting venue.getProfile view %}{% empty %}  {% empty_media_message "venues" profile.first_name own %}{% endfor %}</div>
+    <div style="{% if library_show != 'fans' %}display: none;{% endif %}" id="fand-fans">{% for fan in fandlib.fans %}  {% musiclisting fan view %}{% empty %}  {% empty_media_message "fans" profile.first_name own %}{% endfor %}</div>
+    <div style="{% if library_show != 'labels' %}display: none;{% endif %}" id="fand-labels">{% for fan in fandlib.labels %}  {% musiclisting label.getProfile view %}{% empty %}  {% empty_media_message "labels" profile.first_name own %}{% endfor %}</div>
+</div>

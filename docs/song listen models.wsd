@@ -1,0 +1,31 @@
+@startuml hedera integration
+
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+skinparam style strictuml
+
+set namespaceSeparator ::
+
+package Media {
+
+    class User {
+    }
+
+    Class Listen {
+        + id: pk
+        --
+        + user: User
+        + song: Song
+        + seconds: Integer
+        + datetime: date
+        + datetime_processed: date
+        + free: boolean
+    }
+
+    Listen -> User
+    Listen -> Song
+}
+
+
+@enduml

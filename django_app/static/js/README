@@ -1,0 +1,4 @@
+To create file(s) with the JSLint template (example):
+
+touch myacct.downloads, myacct.legal, myacct.whatever
+echo | cat template.js | tee myacct*

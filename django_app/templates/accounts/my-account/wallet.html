@@ -1,0 +1,241 @@
+{% extends 'accounts/my-account/index.html' %}
+
+{% block title %}My Account Wallet - Tune.fm{% endblock %}
+
+static/js/dashboard.wallet.js
+
+{% block myAccountInnerPage %}
+
+{% with user.person.view as view %}
+
+{% load elements %}
+
+{% include "accounts/my-account/_view_name_wallet.html" %}
+
+{% if view.allow_send_receive %}
+<!-- MODAL send jam -->
+<div class="md-modal md-effect-1" id="modal-send-jam">
+  <div class="md-content" id="send-jam">
+    <h3>Send JAM</h3>
+    <div id="send-jam-form">
+
+      <div row class="2 cols" style="padding-top: 10px;">
+        <div cell class="short" style="width: 50%; padding-bottom: 10px;">
+          Available balance:
+        </div>
+        <div cell class="short wallet_balance" style="width:50%; padding-bottom: 10px; text-align: right; ">
+          <div id="wallet-balance-value" data-balance="{{wallet.token_balance|token_jam_value}}">Ɉ{{ wallet.token_balance|token_jam_value}} (${{ wallet.token_balance|token_dollar_value }})
+          </div>
+        </div>
+      </div>
+
+      <hr class="hr-spacer">
+      <div row class="1 cols">
+        <div cell class="short" style="width: 100%; padding-bottom: 10px;">
+          <div id="id_to_account-container">
+            <label class="greyline short" for="id_to_account">To account</label>
+            <input class="standard short" style="width: 95% !important;" type="text" placeholder="Hedera account number" id="id_to_account">
+            <div class="input-error-message">Account number is required.</div>
+          </div>
+        </div>
+      </div>
+      <div row class="1 cols">
+        <div cell class="short" style="width: 100%; padding-bottom: 10px;">
+          <div id="id_amount-container">
+            <label class="greyline short" for="id_amount">Amount</label>
+            <input class="standard short" style="width: 95% !important;" type="text" placeholder="Amount in JAM" id="id_amount">
+            <div class="input-error-message">Amount in JAM is required and must be less than the total.</div>
+          </div>
+        </div>
+      </div>
+      <div row class="1 cols">
+        <div cell class="short" style="width: 100%; padding-bottom: 10px;">
+          <div id="id_memo-container">
+            <label class="greyline short" for="id_memo">Memo/Tag</label>
+            <input class="standard short" style="width: 95% !important;" type="text" placeholder="Memo/Tag is optional" id="id_memo">
+            <div class="input-error-message">Exchange requires the memo/tag field to be set.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div id="select-acc-actions">
+          <hr class="hr-spacer-1">
+          <button id="modal-send-jam-btn" class="bttn--size-large blue md-confirm">
+            <div class="button-text">Confirm</div>
+            <div class="spinner spinner--medium">
+            </div>
+          </button>
+
+          <button id="modal-cancel-send" class="bttn--size-large red md-close md-cancel">
+            <span class="button-text">Cancel</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END MODAL -->
+
+<!-- MODAL confirm send jam -->
+<div class="md-modal md-effect-1" id="modal-send-jam-2">
+  <div class="md-content" id="confirm-send-jam">
+    <h3>Confirm send JAM</h3>
+    <div id="confirm-send-jam-form">
+
+      <!-- sending to address -->
+      <div row class="2 cols" style="padding-top: 10px;">
+        <div cell class="short" style="width: 50%; padding-bottom: 10px;">
+          Sending to address:
+        </div>
+        <div cell class="short" style="width:50%; padding-bottom: 10px; text-align: right; ">
+          <div id="id_sending_to"></div>
+        </div>
+      </div>
+
+      <!-- amount -->
+      <div row class="2 cols" style="padding-top: 10px;">
+        <div cell class="short" style="width: 50%; padding-bottom: 10px;">
+          Amount:
+        </div>
+        <div cell class="short" style="width:50%; padding-bottom: 10px; text-align: right; ">
+          <div id="id_sending_amount"></div>
+        </div>
+      </div>
+
+      <!-- memo -->
+      <div row class="2 cols" style="padding-top: 10px;">
+        <div cell class="short" style="width: 50%; padding-bottom: 10px;">
+          Memo:
+        </div>
+        <div cell class="short" style="width:50%; padding-bottom: 10px; text-align: right; ">
+          <div id="id_sending_memo"></div>
+        </div>
+      </div>
+
+      <hr class=" hr-spacer">
+
+      <div row class="1 cols">
+        <div cell class="short" style="width: 100%; padding-bottom: 10px;">
+          <div id="id_pass-container">
+            <label class="greyline short" for="id_pass">Confirm password</label>
+            <input type="password" class="standard short" style="width: 95% !important;" type="text" id="id_pass">
+            <div class="input-error-message">Password was not input or is invalid</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="select-acc-actions">
+        <hr class="hr-spacer-1">
+        <button id="modal-send-jam-btn-2" class="bttn--size-large blue md-confirm">
+          <div class="button-text">Confirm</div>
+          <div class="spinner spinner--medium">
+          </div>
+        </button>
+
+        <button id="modal-cancel-send-2" class="bttn--size-large red md-close md-cancel">
+          <span class="button-text">Cancel</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END MODAL -->
+{% endif %}
+
+<div class="myacct-content">
+
+  <h2>My Wallet</h2>
+  <br />
+  <div row id="wallet_widgets">
+    <div cell>
+      <div class="widget">
+        <div class="widget_header">
+          <h3>Hedera Wallet</h3>
+        </div>
+        {% if hedera_enabled %}
+        {% if wallet %}
+        <div class="widget_content">
+          {% if not starter_tokens %}
+          <p><strong>Failed to transfer starter tokens to your account. There may be
+              an issue with the Hedera network. We will attempt to fix the problem as soon as possible.</strong></p>
+          {% endif %}
+          <div><strong>Hedera Account ID:</strong> <code>{{ wallet.hedera_account_id }}</code></div><br>
+          <div><strong>Hedera Public key:</strong> <code>{{ wallet.hedera_public_key }}</code></div><br>
+          <div><strong>ɈAM Price:</strong> <code>${% exchange_token_dollar_value %}</code></div><br>
+          <div><strong>ɈAM/Minute Rate:</strong> <code>Ɉ{% jam_per_minute %}/minute</code></div><br>
+          <div>
+            <a href="https://app.dragonglass.me/hedera/dapps/tunefm" target="_blank"><button class="button blue">ɈAM Transaction Explorer</button></a>
+          </div>
+        </div>
+        {% else %}
+        <div class="widget_content">
+          <p><strong>Failed to load your wallet. There may be an issue with the Hedera Network. We will attempt to fix the problem as soon as possible. </strong></p>
+        </div>
+        {% endif %}
+        {% else %}
+        <div class="widget_content">
+          <p><strong>Hedera integration seems to be disabled.</strong></p>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div row id="wallet_widgets">
+    <div cell>
+      <div class="widget">
+        <div class="widget_header">
+          <h3>ɈAM Wallet Balance</h3>
+        </div>
+        <div class="widget_content">
+          <div class="wallet_balance">Ɉ{{ wallet.token_balance|token_jam_value}} (${{ wallet.token_balance|token_dollar_value }})</div>
+            {% if unpaid_listens %}<div style="color: red;">-Ɉ{{unpaid_listens|token_jam_value_of_seconds}} (Pending payment)</div>{% endif %}
+          {% if view.allow_send_receive %}
+          <br>
+          <div>
+            <button data-modal="modal-send-jam" class="md-trigger button blue" id="send-jam"><span class="button-text">Send JAM</span></button>
+            <button style="display: none;" data-modal="modal-send-jam-2" class=" md-trigger button blue" id="send-jam-confirm"><span class="button-text">Send JAM Confirmation</span></button>
+            {% comment %} <button data-modal="modal-receive-jam" class="md-trigger button blue" id="receive-jam"><span class="button-text">Receive JAM</span></button> {% endcomment %}
+          </div>
+          {% endif %}
+        </div>
+        </div>
+      </div>
+      <div cell>
+        <div class="widget">
+          <div class="widget_header">
+            <h3>My Activity</h3>
+          </div>
+          <div class="widget_content">
+            <ul class="wallet_activity">
+              {% for listen in listens %}
+              <li>
+                {% ifequal listen.user user %}
+                {# you listened to a users song #}
+                ◀ Listened to <a href="{{ listen.song.get_absolute_url}}">{{ listen.song }}</a> by <a href="{{ listen.song.profile.get_absolute_url }}">{{ listen.song.profile }}</a> for {{ listen.seconds }} seconds
+                <span class="token_value">
+                  <span style="color: red">
+                    (Ɉ{{listen.seconds|token_jam_value_of_seconds}})
+                  </span>
+                </span>
+              </li>
+              {% else %}
+              {# another user listened to one of your songs #}
+              ▶ <a href="{{ listen.user.profile.get_absolute_url }}">{{ listen.user.profile }}</a> listened to <a href="{{ listen.song.get_absolute_url }}">{{ listen.song }}</a> for {{ listen.seconds}} seconds
+              <span class="token_value">
+                <span style="color: green;">
+                  (Ɉ{{listen.seconds|token_jam_value_of_seconds}})
+                </span>
+              </span>
+              {% endifequal %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endwith %}
+
+  {% endblock %}
